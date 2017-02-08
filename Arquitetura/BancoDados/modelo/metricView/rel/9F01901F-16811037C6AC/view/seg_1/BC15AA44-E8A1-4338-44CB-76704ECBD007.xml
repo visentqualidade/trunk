@@ -1,0 +1,261 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_1" id="BC15AA44-E8A1-4338-44CB-76704ECBD007" name="VIEW_SMP7_MUNICIPIO">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>VIEW_SMP7_MUNICIPIO</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>794A7D0A-A468-A62C-4C20-AE2168601413</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL>WITH dados_traducao_sem_vinculo AS&lt;br/&gt;  (SELECT *&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT TO_CHAR(dados.DATA, &apos;dd/MM/yyyy&apos;) AS data,&lt;br/&gt;      dados.PMM                               AS pmm,&lt;br/&gt;      dados.ID_MUNICIPIO,&lt;br/&gt;      dados.MSC,&lt;br/&gt;      dados.CN,&lt;br/&gt;      dados.UF,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(dados.OK1_DRP, 0))), 0)     AS OK1_DRP,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(dados.OK1_DRP_TCT, 0))), 0) AS OK1_DRP_TCT,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(dados.OKT, 0))), 0)         AS OKT,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(dados.OK_ITCP, 0))), 0)     AS OK_ITCP&lt;br/&gt;    FROM VIEW_MSC_VINCULO_SMP7 tab,&lt;br/&gt;      (SELECT *&lt;br/&gt;      FROM CDRVIEW_SMP7_MUNICIPIO dados&lt;br/&gt;      WHERE TRUNC(dados.DATA) = to_date(&apos;09/09/2014&apos;, &apos;dd/MM/yyyy&apos;)&lt;br/&gt;      AND dados.UF            = &apos;DF&apos;&lt;br/&gt;      ) dados&lt;br/&gt;    WHERE TRUNC(tab.DATA) = TRUNC(dados.DATA)&lt;br/&gt;    AND tab.HORA          = dados.HORA&lt;br/&gt;    AND tab.PMM           = dados.PMM&lt;br/&gt;    AND tab.CN            = dados.CN&lt;br/&gt;    AND tab.MSC           = dados.MSC&lt;br/&gt;    AND tab.CODIGO       != &apos;NID&apos;&lt;br/&gt;    GROUP BY dados.PMM,&lt;br/&gt;      dados.ID_MUNICIPIO,&lt;br/&gt;      dados.MSC,&lt;br/&gt;      dados.CN,&lt;br/&gt;      dados.UF,&lt;br/&gt;      dados.DATA&lt;br/&gt;    ) dados&lt;br/&gt;  WHERE 1 = 1&lt;br/&gt;  ),&lt;br/&gt;  MUNICIPIOs AS&lt;br/&gt;  (SELECT DISTINCT dados_traducao_sem_vinculo.ID_MUNICIPIO&lt;br/&gt;  FROM dados_traducao_sem_vinculo&lt;br/&gt;  ),&lt;br/&gt;  dados_smp_MUNICIPIO AS&lt;br/&gt;  (SELECT Data,&lt;br/&gt;    Pmm,&lt;br/&gt;    ID_MUNICIPIO,&lt;br/&gt;    UF,&lt;br/&gt;    CN,&lt;br/&gt;    MSC,&lt;br/&gt;    CASE&lt;br/&gt;      WHEN Smp_B = &apos;0&apos;&lt;br/&gt;      AND Smp_A != &apos;-&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      WHEN Smp_B = &apos;-&apos;&lt;br/&gt;      AND Smp_A  = &apos;-&apos;&lt;br/&gt;      THEN &apos;-&apos;&lt;br/&gt;      WHEN Smp_B != &apos;-&apos;&lt;br/&gt;      AND Smp_A   = &apos;-&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      ELSE NVL(trim(TO_CHAR(ROUND((Smp_A * 100 / Smp_B), 2), &apos;999990D99&apos;)), &apos;-&apos;)&lt;br/&gt;    END                                            AS SMP,&lt;br/&gt;    TO_CHAR(to_date(Data, &apos;dd/MM/yyyy&apos;), &apos;MON-YY&apos;) AS DT_FORMATADA,&lt;br/&gt;    Smp_A,&lt;br/&gt;    Smp_B,&lt;br/&gt;    OK1_DRP,&lt;br/&gt;    OKT,&lt;br/&gt;    OK1_DRP_TCT,&lt;br/&gt;    OK_ITCP&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT Tab.data AS Data,&lt;br/&gt;      Tab.pmm        AS Pmm,&lt;br/&gt;      Tab.ID_MUNICIPIO,&lt;br/&gt;      Tab.UF,&lt;br/&gt;      Tab.CN,&lt;br/&gt;      Tab.MSC,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.OK1_DRP, 0))), 0)                            AS Smp_A,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.OKT, 0)) - SUM(NVL(Tab.OK1_DRP_TCT, 0))), 0) AS Smp_B,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.OK1_DRP, 0))), 0)                            AS OK1_DRP,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.OK1_DRP_TCT, 0))), 0)                        AS OK1_DRP_TCT,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.OKT, 0))), 0)                                AS OKT,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.OK_ITCP, 0))), 0)                            AS OK_ITCP&lt;br/&gt;    FROM VIEW_MSC_CN_ATIVO_SMP7 b,&lt;br/&gt;      dados_traducao_sem_vinculo Tab&lt;br/&gt;    WHERE Tab.MSC                                                               = b.MSC&lt;br/&gt;    AND Tab.CN                                                                  = b.CN&lt;br/&gt;    AND to_date(TO_CHAR(to_date(Tab.data, &apos;dd/MM/yyyy&apos;), &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO&lt;br/&gt;    AND b.STATUS                                                                = &apos;T&apos;&lt;br/&gt;    GROUP BY Tab.data,&lt;br/&gt;      Tab.pmm,&lt;br/&gt;      Tab.ID_MUNICIPIO,&lt;br/&gt;      Tab.UF,&lt;br/&gt;      Tab.CN,&lt;br/&gt;      Tab.MSC&lt;br/&gt;    )&lt;br/&gt;  ),&lt;br/&gt;  agrupadores_smp_MUNICIPIO AS&lt;br/&gt;  (SELECT *&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT DISTINCT dados_smp_MUNICIPIO.Data FROM dados_smp_MUNICIPIO&lt;br/&gt;    ) datas,&lt;br/&gt;    (SELECT DISTINCT dados_smp_MUNICIPIO.Pmm FROM dados_smp_MUNICIPIO&lt;br/&gt;    ) pmms,&lt;br/&gt;    (SELECT DISTINCT MUNICIPIOs.ID_MUNICIPIO id_MUNICIPIO FROM MUNICIPIOs&lt;br/&gt;    ) MUNICIPIO,&lt;br/&gt;    (SELECT DISTINCT dados_smp_MUNICIPIO.MSC,&lt;br/&gt;      dados_smp_MUNICIPIO.CN,&lt;br/&gt;      dados_smp_MUNICIPIO.UF&lt;br/&gt;    FROM dados_smp_MUNICIPIO&lt;br/&gt;    ) msc_cn&lt;br/&gt;  ),&lt;br/&gt;  agrupadores_por_dados AS&lt;br/&gt;  (SELECT agrupadores.Data,&lt;br/&gt;    agrupadores.Pmm,&lt;br/&gt;    agrupadores.UF,&lt;br/&gt;    agrupadores.CN,&lt;br/&gt;    agrupadores.MSC,&lt;br/&gt;    (SELECT municipio&lt;br/&gt;    FROM vm_municipio a&lt;br/&gt;    WHERE a.id_municipio = agrupadores.id_MUNICIPIO&lt;br/&gt;    ) AS municipio,&lt;br/&gt;    NVL(dados.Smp_A, 0) smp_a,&lt;br/&gt;    NVL(dados.Smp_B, 0) smp_b,&lt;br/&gt;    NVL(dados.SMP, 0) Smp,&lt;br/&gt;    NVL(dados.OKT, 0)         AS okt,&lt;br/&gt;    NVL(dados.OK1_DRP, 0)     AS ok1_drp,&lt;br/&gt;    NVL(dados.OK1_DRP_TCT, 0) AS ok1_drp_tct,&lt;br/&gt;    NVL(dados.OK_ITCP, 0)     AS ok_itcp&lt;br/&gt;  FROM dados_smp_MUNICIPIO dados,&lt;br/&gt;    agrupadores_smp_MUNICIPIO agrupadores&lt;br/&gt;  WHERE agrupadores.Data       = dados.Data(+)&lt;br/&gt;  AND agrupadores.Pmm          = dados.Pmm(+)&lt;br/&gt;  AND agrupadores.id_MUNICIPIO = dados.ID_MUNICIPIO(+)&lt;br/&gt;  AND agrupadores.MSC          = dados.MSC(+)&lt;br/&gt;  AND agrupadores.CN           = dados.CN(+)&lt;br/&gt;  AND agrupadores.UF           = dados.UF(+)&lt;br/&gt;  )&lt;br/&gt;SELECT a.Data DATA,&lt;br/&gt;  a.municipio,&lt;br/&gt;  a.Pmm,&lt;br/&gt;  a.UF,&lt;br/&gt;  TO_CHAR(a.CN) AS cn,&lt;br/&gt;  a.MSC,&lt;br/&gt;  CASE&lt;br/&gt;    WHEN a.Smp          != &apos;-&apos;&lt;br/&gt;    AND TO_NUMBER(a.Smp) &gt; 100&lt;br/&gt;    THEN &apos;100,00&apos;&lt;br/&gt;    ELSE REPLACE(a.Smp, &apos;.&apos;, &apos;,&apos;)&lt;br/&gt;  END                                              AS SMP,&lt;br/&gt;  TO_CHAR(to_date(a.Data, &apos;dd/MM/yyyy&apos;), &apos;MON-YY&apos;) AS DT_FORMATADA,&lt;br/&gt;  a.smp_a                                          AS SMP_A,&lt;br/&gt;  a.smp_b                                          AS SMP_B,&lt;br/&gt;  a.okt,&lt;br/&gt;  a.ok1_drp,&lt;br/&gt;  a.ok1_drp_tct,&lt;br/&gt;  a.ok_itcp&lt;br/&gt;FROM agrupadores_por_dados a&lt;br/&gt;ORDER BY 5,&lt;br/&gt;  2,&lt;br/&gt;  1,&lt;br/&gt;  6,&lt;br/&gt;  3</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;With dados_traducao_sem_vinculo As (Select * From (Select TO_CHAR(dados.DATA, &apos;dd/MM/yyyy&apos;) As data, dados.PMM As pmm, dados.ID_MUNICIPIO, dados.MSC, dados.CN, dados.UF, NVL(TO_CHAR(Sum(NVL(dados.OK1_DRP, 0))), 0) As OK1_DRP, NVL(TO_CHAR(Sum(NVL(dados.OK1_DRP_TCT, 0))), 0) As OK1_DRP_TCT, NVL(TO_CHAR(Sum(NVL(dados.OKT, 0))), 0) As OKT, NVL(TO_CHAR(Sum(NVL(dados.OK_ITCP, 0))), 0) As OK_ITCP From VIEW_MSC_VINCULO_SMP7 tab, (Select * From CDRVIEW_SMP7_MUNICIPIO dados Where TRUNC(dados.DATA) = to_date(&apos;09/09/2014&apos;, &apos;dd/MM/yyyy&apos;) And dados.UF = &apos;DF&apos;) dados Where TRUNC(tab.DATA) = TRUNC(dados.DATA) And tab.HORA = dados.HORA And tab.PMM = dados.PMM And tab.CN = dados.CN And tab.MSC = dados.MSC And tab.CODIGO != &apos;NID&apos; Group By dados.PMM, dados.ID_MUNICIPIO, dados.MSC, dados.CN, dados.UF, dados.DATA) dados Where 1 = 1), MUNICIPIOs As (Select Distinct dados_traducao_sem_vinculo.ID_MUNICIPIO From dados_traducao_sem_vinculo), dados_smp_MUNICIPIO As (Select Data, Pmm, ID_MUNICIPIO, UF, CN, MSC, Case When Smp_B = &apos;0&apos; And Smp_A != &apos;-&apos; Then &apos;0,00&apos; When Smp_B = &apos;-&apos; And Smp_A = &apos;-&apos; Then &apos;-&apos; When Smp_B != &apos;-&apos; And Smp_A = &apos;-&apos; Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND((Smp_A * 100 / Smp_B), 2), &apos;999990D99&apos;)), &apos;-&apos;) End As SMP, TO_CHAR(to_date(Data, &apos;dd/MM/yyyy&apos;), &apos;MON-YY&apos;) As DT_FORMATADA, Smp_A, Smp_B, OK1_DRP, OKT, OK1_DRP_TCT, OK_ITCP From (Select Tab.data As Data, Tab.pmm As Pmm, Tab.ID_MUNICIPIO, Tab.UF, Tab.CN, Tab.MSC, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP, 0))), 0) As Smp_A, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0)) - Sum(NVL(Tab.OK1_DRP_TCT, 0))), 0) As Smp_B, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP, 0))), 0) As OK1_DRP, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP_TCT, 0))), 0) As OK1_DRP_TCT, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0))), 0) As OKT, NVL(TO_CHAR(Sum(NVL(Tab.OK_ITCP, 0))), 0) As OK_ITCP From VIEW_MSC_CN_ATIVO_SMP7 b, dados_traducao_sem_vinculo Tab Where Tab.MSC = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(to_date(Tab.data, &apos;dd/MM/yyyy&apos;), &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By Tab.data, Tab.pmm, Tab.ID_MUNICIPIO, Tab.UF, Tab.CN, Tab.MSC)), agrupadores_smp_MUNICIPIO As (Select * From (Select Distinct dados_smp_MUNICIPIO.Data From dados_smp_MUNICIPIO) datas, (Select Distinct dados_smp_MUNICIPIO.Pmm From dados_smp_MUNICIPIO) pmms, (Select Distinct MUNICIPIOs.ID_MUNICIPIO id_MUNICIPIO From MUNICIPIOs) MUNICIPIO, (Select Distinct dados_smp_MUNICIPIO.MSC, dados_smp_MUNICIPIO.CN, dados_smp_MUNICIPIO.UF From dados_smp_MUNICIPIO) msc_cn), agrupadores_por_dados As (Select agrupadores.Data, agrupadores.Pmm, agrupadores.UF, agrupadores.CN, agrupadores.MSC, (Select municipio From vm_municipio a Where a.id_municipio = agrupadores.id_MUNICIPIO) As municipio, NVL(dados.Smp_A, 0) smp_a, NVL(dados.Smp_B, 0) smp_b, NVL(dados.SMP, 0) Smp, NVL(dados.OKT, 0) As okt, NVL(dados.OK1_DRP, 0) As ok1_drp, NVL(dados.OK1_DRP_TCT, 0) As ok1_drp_tct, NVL(dados.OK_ITCP, 0) As ok_itcp From dados_smp_MUNICIPIO dados, agrupadores_smp_MUNICIPIO agrupadores Where agrupadores.Data = dados.Data(+) And agrupadores.Pmm = dados.Pmm(+) And agrupadores.id_MUNICIPIO = dados.ID_MUNICIPIO(+) And agrupadores.MSC = dados.MSC(+) And agrupadores.CN = dados.CN(+) And agrupadores.UF = dados.UF(+)) Select a.Data DATA, a.municipio, a.Pmm, a.UF, TO_CHAR(a.CN) As cn, a.MSC, Case When a.Smp != &apos;-&apos; And TO_NUMBER(a.Smp) &gt; 100 Then &apos;100,00&apos; Else REPLACE(a.Smp, &apos;.&apos;, &apos;,&apos;) End As SMP, TO_CHAR(to_date(a.Data, &apos;dd/MM/yyyy&apos;), &apos;MON-YY&apos;) As DT_FORMATADA, a.smp_a As SMP_A, a.smp_b As SMP_B, a.okt, a.ok1_drp, a.ok1_drp_tct, a.ok_itcp From agrupadores_por_dados a Order By 5, 2, 1, 6, 3&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;With dados_traducao_sem_vinculo As (Select * From (Select TO_CHAR(dados.DATA, &apos;dd/MM/yyyy&apos;) As data, dados.PMM As pmm, dados.ID_MUNICIPIO, dados.MSC, dados.CN, dados.UF, NVL(TO_CHAR(Sum(NVL(dados.OK1_DRP, 0))), 0) As OK1_DRP, NVL(TO_CHAR(Sum(NVL(dados.OK1_DRP_TCT, 0))), 0) As OK1_DRP_TCT, NVL(TO_CHAR(Sum(NVL(dados.OKT, 0))), 0) As OKT, NVL(TO_CHAR(Sum(NVL(dados.OK_ITCP, 0))), 0) As OK_ITCP From VIEW_MSC_VINCULO_SMP7 tab, (Select * From CDRVIEW_SMP7_MUNICIPIO dados Where TRUNC(dados.DATA) = to_date(&apos;09/09/2014&apos;, &apos;dd/MM/yyyy&apos;) And dados.UF = &apos;DF&apos;) dados Where TRUNC(tab.DATA) = TRUNC(dados.DATA) And tab.HORA = dados.HORA And tab.PMM = dados.PMM And tab.CN = dados.CN And tab.MSC = dados.MSC And tab.CODIGO != &apos;NID&apos; Group By dados.PMM, dados.ID_MUNICIPIO, dados.MSC, dados.CN, dados.UF, dados.DATA) dados Where 1 = 1), MUNICIPIOs As (Select Distinct dados_traducao_sem_vinculo.ID_MUNICIPIO From dados_traducao_sem_vinculo), dados_smp_MUNICIPIO As (Select Data, Pmm, ID_MUNICIPIO, UF, CN, MSC, Case When Smp_B = &apos;0&apos; And Smp_A != &apos;-&apos; Then &apos;0,00&apos; When Smp_B = &apos;-&apos; And Smp_A = &apos;-&apos; Then &apos;-&apos; When Smp_B != &apos;-&apos; And Smp_A = &apos;-&apos; Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND((Smp_A * 100 / Smp_B), 2), &apos;999990D99&apos;)), &apos;-&apos;) End As SMP, TO_CHAR(to_date(Data, &apos;dd/MM/yyyy&apos;), &apos;MON-YY&apos;) As DT_FORMATADA, Smp_A, Smp_B, OK1_DRP, OKT, OK1_DRP_TCT, OK_ITCP From (Select Tab.data As Data, Tab.pmm As Pmm, Tab.ID_MUNICIPIO, Tab.UF, Tab.CN, Tab.MSC, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP, 0))), 0) As Smp_A, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0)) - Sum(NVL(Tab.OK1_DRP_TCT, 0))), 0) As Smp_B, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP, 0))), 0) As OK1_DRP, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP_TCT, 0))), 0) As OK1_DRP_TCT, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0))), 0) As OKT, NVL(TO_CHAR(Sum(NVL(Tab.OK_ITCP, 0))), 0) As OK_ITCP From VIEW_MSC_CN_ATIVO_SMP7 b, dados_traducao_sem_vinculo Tab Where Tab.MSC = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(to_date(Tab.data, &apos;dd/MM/yyyy&apos;), &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By Tab.data, Tab.pmm, Tab.ID_MUNICIPIO, Tab.UF, Tab.CN, Tab.MSC)), agrupadores_smp_MUNICIPIO As (Select * From (Select Distinct dados_smp_MUNICIPIO.Data From dados_smp_MUNICIPIO) datas, (Select Distinct dados_smp_MUNICIPIO.Pmm From dados_smp_MUNICIPIO) pmms, (Select Distinct MUNICIPIOs.ID_MUNICIPIO id_MUNICIPIO From MUNICIPIOs) MUNICIPIO, (Select Distinct dados_smp_MUNICIPIO.MSC, dados_smp_MUNICIPIO.CN, dados_smp_MUNICIPIO.UF From dados_smp_MUNICIPIO) msc_cn), agrupadores_por_dados As (Select agrupadores.Data, agrupadores.Pmm, agrupadores.UF, agrupadores.CN, agrupadores.MSC, (Select municipio From vm_municipio a Where a.id_municipio = agrupadores.id_MUNICIPIO) As municipio, NVL(dados.Smp_A, 0) smp_a, NVL(dados.Smp_B, 0) smp_b, NVL(dados.SMP, 0) Smp, NVL(dados.OKT, 0) As okt, NVL(dados.OK1_DRP, 0) As ok1_drp, NVL(dados.OK1_DRP_TCT, 0) As ok1_drp_tct, NVL(dados.OK_ITCP, 0) As ok_itcp From dados_smp_MUNICIPIO dados, agrupadores_smp_MUNICIPIO agrupadores Where agrupadores.Data = dados.Data(+) And agrupadores.Pmm = dados.Pmm(+) And agrupadores.id_MUNICIPIO = dados.ID_MUNICIPIO(+) And agrupadores.MSC = dados.MSC(+) And agrupadores.CN = dados.CN(+) And agrupadores.UF = dados.UF(+)) Select a.Data DATA, a.municipio, a.Pmm, a.UF, TO_CHAR(a.CN) As cn, a.MSC, Case When a.Smp != &apos;-&apos; And TO_NUMBER(a.Smp) &gt; 100 Then &apos;100,00&apos; Else REPLACE(a.Smp, &apos;.&apos;, &apos;,&apos;) End As SMP, TO_CHAR(to_date(a.Data, &apos;dd/MM/yyyy&apos;), &apos;MON-YY&apos;) As DT_FORMATADA, a.smp_a As SMP_A, a.smp_b As SMP_B, a.okt, a.ok1_drp, a.ok1_drp_tct, a.ok_itcp From agrupadores_por_dados a Order By 5, 2, 1, 6, 3&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;agrupadores_por_dados a&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;117&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select * From (Select TO_CHAR(dados.DATA, &apos;dd/MM/yyyy&apos;) As data, dados.PMM As pmm, dados.ID_MUNICIPIO, dados.MSC, dados.CN, dados.UF, NVL(TO_CHAR(Sum(NVL(dados.OK1_DRP, 0))), 0) As OK1_DRP, NVL(TO_CHAR(Sum(NVL(dados.OK1_DRP_TCT, 0))), 0) As OK1_DRP_TCT, NVL(TO_CHAR(Sum(NVL(dados.OKT, 0))), 0) As OKT, NVL(TO_CHAR(Sum(NVL(dados.OK_ITCP, 0))), 0) As OK_ITCP From VIEW_MSC_VINCULO_SMP7 tab, (Select * From CDRVIEW_SMP7_MUNICIPIO dados Where TRUNC(dados.DATA) = to_date(&apos;09/09/2014&apos;, &apos;dd/MM/yyyy&apos;) And dados.UF = &apos;DF&apos;) dados Where TRUNC(tab.DATA) = TRUNC(dados.DATA) And tab.HORA = dados.HORA And tab.PMM = dados.PMM And tab.CN = dados.CN And tab.MSC = dados.MSC And tab.CODIGO != &apos;NID&apos; Group By dados.PMM, dados.ID_MUNICIPIO, dados.MSC, dados.CN, dados.UF, dados.DATA) dados Where 1 = 1&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select TO_CHAR(dados.DATA, &apos;dd/MM/yyyy&apos;) As data, dados.PMM As pmm, dados.ID_MUNICIPIO, dados.MSC, dados.CN, dados.UF, NVL(TO_CHAR(Sum(NVL(dados.OK1_DRP, 0))), 0) As OK1_DRP, NVL(TO_CHAR(Sum(NVL(dados.OK1_DRP_TCT, 0))), 0) As OK1_DRP_TCT, NVL(TO_CHAR(Sum(NVL(dados.OKT, 0))), 0) As OKT, NVL(TO_CHAR(Sum(NVL(dados.OK_ITCP, 0))), 0) As OK_ITCP From VIEW_MSC_VINCULO_SMP7 tab, (Select * From CDRVIEW_SMP7_MUNICIPIO dados Where TRUNC(dados.DATA) = to_date(&apos;09/09/2014&apos;, &apos;dd/MM/yyyy&apos;) And dados.UF = &apos;DF&apos;) dados Where TRUNC(tab.DATA) = TRUNC(dados.DATA) And tab.HORA = dados.HORA And tab.PMM = dados.PMM And tab.CN = dados.CN And tab.MSC = dados.MSC And tab.CODIGO != &apos;NID&apos; Group By dados.PMM, dados.ID_MUNICIPIO, dados.MSC, dados.CN, dados.UF, dados.DATA) dados&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;232&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select TO_CHAR(dados.DATA, &apos;dd/MM/yyyy&apos;) As data, dados.PMM As pmm, dados.ID_MUNICIPIO, dados.MSC, dados.CN, dados.UF, NVL(TO_CHAR(Sum(NVL(dados.OK1_DRP, 0))), 0) As OK1_DRP, NVL(TO_CHAR(Sum(NVL(dados.OK1_DRP_TCT, 0))), 0) As OK1_DRP_TCT, NVL(TO_CHAR(Sum(NVL(dados.OKT, 0))), 0) As OKT, NVL(TO_CHAR(Sum(NVL(dados.OK_ITCP, 0))), 0) As OK_ITCP From VIEW_MSC_VINCULO_SMP7 tab, (Select * From CDRVIEW_SMP7_MUNICIPIO dados Where TRUNC(dados.DATA) = to_date(&apos;09/09/2014&apos;, &apos;dd/MM/yyyy&apos;) And dados.UF = &apos;DF&apos;) dados Where TRUNC(tab.DATA) = TRUNC(dados.DATA) And tab.HORA = dados.HORA And tab.PMM = dados.PMM And tab.CN = dados.CN And tab.MSC = dados.MSC And tab.CODIGO != &apos;NID&apos; Group By dados.PMM, dados.ID_MUNICIPIO, dados.MSC, dados.CN, dados.UF, dados.DATA&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;VIEW_MSC_VINCULO_SMP7 tab&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;207&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;(Select * From CDRVIEW_SMP7_MUNICIPIO dados Where TRUNC(dados.DATA) = to_date(&apos;09/09/2014&apos;, &apos;dd/MM/yyyy&apos;) And dados.UF = &apos;DF&apos;) dados&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;340&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select * From CDRVIEW_SMP7_MUNICIPIO dados Where TRUNC(dados.DATA) = to_date(&apos;09/09/2014&apos;, &apos;dd/MM/yyyy&apos;) And dados.UF = &apos;DF&apos;&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;CDRVIEW_SMP7_MUNICIPIO dados&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;63&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct dados_traducao_sem_vinculo.ID_MUNICIPIO From dados_traducao_sem_vinculo&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_traducao_sem_vinculo&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;135&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Data, Pmm, ID_MUNICIPIO, UF, CN, MSC, Case When Smp_B = &apos;0&apos; And Smp_A != &apos;-&apos; Then &apos;0,00&apos; When Smp_B = &apos;-&apos; And Smp_A = &apos;-&apos; Then &apos;-&apos; When Smp_B != &apos;-&apos; And Smp_A = &apos;-&apos; Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND((Smp_A * 100 / Smp_B), 2), &apos;999990D99&apos;)), &apos;-&apos;) End As SMP, TO_CHAR(to_date(Data, &apos;dd/MM/yyyy&apos;), &apos;MON-YY&apos;) As DT_FORMATADA, Smp_A, Smp_B, OK1_DRP, OKT, OK1_DRP_TCT, OK_ITCP From (Select Tab.data As Data, Tab.pmm As Pmm, Tab.ID_MUNICIPIO, Tab.UF, Tab.CN, Tab.MSC, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP, 0))), 0) As Smp_A, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0)) - Sum(NVL(Tab.OK1_DRP_TCT, 0))), 0) As Smp_B, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP, 0))), 0) As OK1_DRP, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP_TCT, 0))), 0) As OK1_DRP_TCT, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0))), 0) As OKT, NVL(TO_CHAR(Sum(NVL(Tab.OK_ITCP, 0))), 0) As OK_ITCP From VIEW_MSC_CN_ATIVO_SMP7 b, dados_traducao_sem_vinculo Tab Where Tab.MSC = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(to_date(Tab.data, &apos;dd/MM/yyyy&apos;), &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By Tab.data, Tab.pmm, Tab.ID_MUNICIPIO, Tab.UF, Tab.CN, Tab.MSC)&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select Tab.data As Data, Tab.pmm As Pmm, Tab.ID_MUNICIPIO, Tab.UF, Tab.CN, Tab.MSC, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP, 0))), 0) As Smp_A, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0)) - Sum(NVL(Tab.OK1_DRP_TCT, 0))), 0) As Smp_B, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP, 0))), 0) As OK1_DRP, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP_TCT, 0))), 0) As OK1_DRP_TCT, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0))), 0) As OKT, NVL(TO_CHAR(Sum(NVL(Tab.OK_ITCP, 0))), 0) As OK_ITCP From VIEW_MSC_CN_ATIVO_SMP7 b, dados_traducao_sem_vinculo Tab Where Tab.MSC = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(to_date(Tab.data, &apos;dd/MM/yyyy&apos;), &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By Tab.data, Tab.pmm, Tab.ID_MUNICIPIO, Tab.UF, Tab.CN, Tab.MSC)&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;268&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Tab.data As Data, Tab.pmm As Pmm, Tab.ID_MUNICIPIO, Tab.UF, Tab.CN, Tab.MSC, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP, 0))), 0) As Smp_A, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0)) - Sum(NVL(Tab.OK1_DRP_TCT, 0))), 0) As Smp_B, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP, 0))), 0) As OK1_DRP, NVL(TO_CHAR(Sum(NVL(Tab.OK1_DRP_TCT, 0))), 0) As OK1_DRP_TCT, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0))), 0) As OKT, NVL(TO_CHAR(Sum(NVL(Tab.OK_ITCP, 0))), 0) As OK_ITCP From VIEW_MSC_CN_ATIVO_SMP7 b, dados_traducao_sem_vinculo Tab Where Tab.MSC = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(to_date(Tab.data, &apos;dd/MM/yyyy&apos;), &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By Tab.data, Tab.pmm, Tab.ID_MUNICIPIO, Tab.UF, Tab.CN, Tab.MSC&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;VIEW_MSC_CN_ATIVO_SMP7 b&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;63&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;dados_traducao_sem_vinculo Tab&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;232&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select * From (Select Distinct dados_smp_MUNICIPIO.Data From dados_smp_MUNICIPIO) datas, (Select Distinct dados_smp_MUNICIPIO.Pmm From dados_smp_MUNICIPIO) pmms, (Select Distinct MUNICIPIOs.ID_MUNICIPIO id_MUNICIPIO From MUNICIPIOs) MUNICIPIO, (Select Distinct dados_smp_MUNICIPIO.MSC, dados_smp_MUNICIPIO.CN, dados_smp_MUNICIPIO.UF From dados_smp_MUNICIPIO) msc_cn&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select Distinct dados_smp_MUNICIPIO.Data From dados_smp_MUNICIPIO) datas&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;(Select Distinct dados_smp_MUNICIPIO.Pmm From dados_smp_MUNICIPIO) pmms&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;(Select Distinct MUNICIPIOs.ID_MUNICIPIO id_MUNICIPIO From MUNICIPIOs) MUNICIPIO&quot; X=&quot;50&quot; Y=&quot;85&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;(Select Distinct dados_smp_MUNICIPIO.MSC, dados_smp_MUNICIPIO.CN, dados_smp_MUNICIPIO.UF From dados_smp_MUNICIPIO) msc_cn&quot; X=&quot;50&quot; Y=&quot;92&quot; Height=&quot;106&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct dados_smp_MUNICIPIO.Data From dados_smp_MUNICIPIO&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_smp_MUNICIPIO&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;99&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct dados_smp_MUNICIPIO.Pmm From dados_smp_MUNICIPIO&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_smp_MUNICIPIO&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;304&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct MUNICIPIOs.ID_MUNICIPIO id_MUNICIPIO From MUNICIPIOs&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;MUNICIPIOs&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct dados_smp_MUNICIPIO.MSC, dados_smp_MUNICIPIO.CN, dados_smp_MUNICIPIO.UF From dados_smp_MUNICIPIO&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_smp_MUNICIPIO&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;304&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select agrupadores.Data, agrupadores.Pmm, agrupadores.UF, agrupadores.CN, agrupadores.MSC, (Select municipio From vm_municipio a Where a.id_municipio = agrupadores.id_MUNICIPIO) As municipio, NVL(dados.Smp_A, 0) smp_a, NVL(dados.Smp_B, 0) smp_b, NVL(dados.SMP, 0) Smp, NVL(dados.OKT, 0) As okt, NVL(dados.OK1_DRP, 0) As ok1_drp, NVL(dados.OK1_DRP_TCT, 0) As ok1_drp_tct, NVL(dados.OK_ITCP, 0) As ok_itcp From dados_smp_MUNICIPIO dados, agrupadores_smp_MUNICIPIO agrupadores Where agrupadores.Data = dados.Data(+) And agrupadores.Pmm = dados.Pmm(+) And agrupadores.id_MUNICIPIO = dados.ID_MUNICIPIO(+) And agrupadores.MSC = dados.MSC(+) And agrupadores.CN = dados.CN(+) And agrupadores.UF = dados.UF(+)&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_smp_MUNICIPIO dados&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;304&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;agrupadores_smp_MUNICIPIO agrupadores&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;160&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select municipio From vm_municipio a Where a.id_municipio = agrupadores.id_MUNICIPIO&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;vm_municipio a&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DATA" id="EFBCBB64-239F-E374-0585-6926DA9EFF4E">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DATA</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>DATA</headerAlias>
+<expression>a.Data</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="MUNICIPIO" id="641CAA64-4D33-3319-802D-EF050FD37675">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (50)</dataType>
+<headerAlias>MUNICIPIO</headerAlias>
+<expression>a.municipio</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PMM" id="E5B4DBD7-C528-F79F-5479-04E0461FE585">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (5)</dataType>
+<headerAlias>PMM</headerAlias>
+<expression>a.Pmm</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="UF" id="F6F00B6D-188D-1C2D-2B39-E9786D94FDC1">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (2)</dataType>
+<headerAlias>UF</headerAlias>
+<expression>a.UF</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="cn" id="A7486719-26D9-1AD4-13F3-D3F639544507">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>cn</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CN</headerAlias>
+<expression>TO_CHAR(a.CN)</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="MSC" id="43F695A2-2927-17E7-E111-4B5273BBC51F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (45)</dataType>
+<headerAlias>MSC</headerAlias>
+<expression>a.MSC</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP" id="8C01DA21-01E9-2722-8316-CD4CC388A358">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>SMP</headerAlias>
+<expression>Case When a.Smp != &apos;-&apos; And TO_NUMBER(a.Smp) &gt; 100 Then &apos;100,00&apos; Else REPLACE(a.Smp, &apos;.&apos;, &apos;,&apos;) End</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DT_FORMATADA" id="6A51ED4F-902F-8D99-BBBA-6DF3176FD48C">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DT_FORMATADA</alias>
+<dataType>VARCHAR2 (6)</dataType>
+<headerAlias>DT_FORMATADA</headerAlias>
+<expression>TO_CHAR(to_date(a.Data, &apos;dd/MM/yyyy&apos;), &apos;MON-YY&apos;)</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP_A" id="2C56FC6C-0883-9FFE-847A-3EF5A0DF2945">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP_A</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SMP_A</headerAlias>
+<expression>a.smp_a</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP_B" id="08D7BED9-6DFD-4B0D-963F-DB614CA9028F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP_B</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SMP_B</headerAlias>
+<expression>a.smp_b</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OKT" id="EB14F2FB-410E-FCD6-8414-99793DF313DD">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OKT</headerAlias>
+<expression>a.okt</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK1_DRP" id="0C18E5E5-2648-62AE-BEC8-8A2D61E524CC">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OK1_DRP</headerAlias>
+<expression>a.ok1_drp</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK1_DRP_TCT" id="9E87E01B-E7D1-D6EB-8CFA-744158B92ED7">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OK1_DRP_TCT</headerAlias>
+<expression>a.ok1_drp_tct</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK_ITCP" id="1988E425-F277-06C5-C930-6C5D751386DF">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 17:56:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OK_ITCP</headerAlias>
+<expression>a.ok_itcp</expression>
+<reference>false</reference>
+<viewID>BC15AA44-E8A1-4338-44CB-76704ECBD007</viewID>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F91D0BFC-BA05-E020-1FB9-42871F454D5F">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP7</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="405BDBCF-12A5-7C7A-02B3-2A56805A9D11">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP7_MUNICIPIO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E215F0CD-00C0-C4AE-6DEB-1A66CA80A0A7">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP7</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E9C2BA76-3FDD-B5D7-3289-DCEDD4E33CB8">
+<columnName>DATA</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP7</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6CA28746-4B45-9B99-C3B9-D120C929ED2E">
+<columnName>HORA</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP7</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="1B5A4AA4-DAAC-490A-5177-FE345354161B">
+<columnName>PMM</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP7</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="64150E16-000C-F850-C2B7-EFD2208961B5">
+<columnName>CN</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP7</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="00D8F395-9785-1095-9853-35051C35FD48">
+<columnName>MSC</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP7</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B06F2FBA-66A3-39CC-89B8-273722CC33F6">
+<columnName>CODIGO</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP7</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="EC67E45F-C0BD-CADF-10F3-442ACBF6DAF4">
+<columnName>MSC</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP7</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="5AA686EF-B4AA-62C1-3698-C5158DB71A08">
+<columnName>CN</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP7</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D8C59216-A6F5-A837-5CB6-4168533E0E75">
+<columnName>PERIODO</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP7</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="988440F8-546E-4887-D5F5-EC9A0BF86752">
+<columnName>STATUS</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP7</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

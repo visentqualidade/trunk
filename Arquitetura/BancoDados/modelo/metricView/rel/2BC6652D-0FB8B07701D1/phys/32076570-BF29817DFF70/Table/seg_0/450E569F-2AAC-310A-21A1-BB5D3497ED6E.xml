@@ -1,0 +1,235 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="CDRVIEW_DADOS_SP" directorySegmentName="seg_0" id="450E569F-2AAC-310A-21A1-BB5D3497ED6E">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>A36D226E-BC2B-F21D-6766-62C3EFF7964B</schemaObject>
+<logging>YES</logging>
+<partitionList class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionListOraclev11g" name="PL1" id="8D8604FA-C9B8-16A7-B8DC-EF75BCB638CE">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<columnIDs>707A8F6C-B999-4F85-F299-5A9FF829AB76</columnIDs>
+<subPartitionsColumnIDs>E0E9B860-1FB3-F275-1C8A-9B0F5DEF6135</subPartitionsColumnIDs>
+<subpartitionType>LIST</subpartitionType>
+<useSubpartStorageTemplate>YES</useSubpartStorageTemplate>
+<intervalExpression>NUMTODSINTERVAL(1,&apos;DAY&apos;)</intervalExpression>
+</partitionList>
+<partitioned>YES</partitioned>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>430F13F9-F21A-6547-544B-BA32AED0E2A5</segment>
+<tableSpace>74699F13-63A8-EE33-8F42-63056AFFB203</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<user>B6665735-CC76-0BEF-732A-CB14F6C7239B</user>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="IDX_DADOS_SP_TAC" id="DCE8C6D7-7430-83EF-FB2B-944515B03DD8">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<segment>5C6897CA-8664-23CE-4A94-50006A9F46C2</segment>
+<tableSpace>74699F13-63A8-EE33-8F42-63056AFFB203</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="IDX_DADOS_SP_SETOR" id="F5BAC897-A705-AF5A-7013-5BB4B8A96148">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:28:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<tableSpace>74699F13-63A8-EE33-8F42-63056AFFB203</tableSpace>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="SETOR" id="1328F0FD-A8FC-5AEF-9CAA-519C2EA1C33D">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TAC" id="1CD43838-579C-7A3F-DD2F-5DF363EF63F1">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CHAM" id="5806837C-336D-7E58-53C8-BCAF575EE26B">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA" id="707A8F6C-B999-4F85-F299-5A9FF829AB76">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AREA" id="E0E9B860-1FB3-F275-1C8A-9B0F5DEF6135">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<subpartitionTemplates>
+<SubpartitionTemplate class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="SUPART_11" id="05BD633B-B2E1-B8BE-9B26-5BE3525F1150">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<valueList>&apos;11&apos;</valueList>
+</SubpartitionTemplate>
+<SubpartitionTemplate class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="SUPART_12" id="B5D6F311-9292-5A5A-7AFC-9EBA331D0659">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<valueList>&apos;12&apos;</valueList>
+</SubpartitionTemplate>
+<SubpartitionTemplate class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="SUPART_13" id="47DC4270-9CFB-7383-AA7E-AA0E0F441290">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<valueList>&apos;13&apos;</valueList>
+</SubpartitionTemplate>
+<SubpartitionTemplate class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="SUPART_14" id="326A0856-1AF4-BBDD-808B-1DEDEACDCBEE">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<valueList>&apos;14&apos;</valueList>
+</SubpartitionTemplate>
+<SubpartitionTemplate class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="SUPART_15" id="B1938C35-5936-6838-6B99-2217E9B93979">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<valueList>&apos;15&apos;</valueList>
+</SubpartitionTemplate>
+<SubpartitionTemplate class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="SUPART_16" id="2FBC2335-D1D9-B20F-E705-9201154482B0">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<valueList>&apos;16&apos;</valueList>
+</SubpartitionTemplate>
+<SubpartitionTemplate class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="SUPART_17" id="E777EEEF-3BC8-CAF8-FE6F-91E9AD8A01CE">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<valueList>&apos;17&apos;</valueList>
+</SubpartitionTemplate>
+<SubpartitionTemplate class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="SUPART_18" id="3FF30515-2BDB-4F3E-0216-CE97CFBD0091">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<valueList>&apos;18&apos;</valueList>
+</SubpartitionTemplate>
+<SubpartitionTemplate class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="SUPART_19" id="E0FA7486-3214-DB19-93E7-118A426EC2C4">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<valueList>&apos;19&apos;</valueList>
+</SubpartitionTemplate>
+</subpartitionTemplates>
+<partitions>
+<Partition class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionOraclev11g" name="PARTITION_FIRST" id="4785B8FD-E5C4-2865-F4C9-A90D8B8720F6">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<position>1</position>
+<segment>430F13F9-F21A-6547-544B-BA32AED0E2A5</segment>
+<tableSpace>74699F13-63A8-EE33-8F42-63056AFFB203</tableSpace>
+<valueList>TO_DATE(&apos; 2000-01-01 00:00:00&apos;, &apos;SYYYY-MM-DD HH24:MI:SS&apos;, &apos;NLS_CALENDAR=GREGORIAN&apos;)</valueList>
+<listSubpartitions>
+<ListPartition class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="PARTITION_FIRST_SUPART_11" id="D43C33CA-5001-3575-4681-EACA86B9F154">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<dataSegmentCompression>NO</dataSegmentCompression>
+<tablespace>74699F13-63A8-EE33-8F42-63056AFFB203</tablespace>
+<valueList>&apos;11&apos;</valueList>
+</ListPartition>
+<ListPartition class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="PARTITION_FIRST_SUPART_12" id="3F82ABAC-6F0C-2743-EAF5-645475670D21">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<dataSegmentCompression>NO</dataSegmentCompression>
+<tablespace>74699F13-63A8-EE33-8F42-63056AFFB203</tablespace>
+<valueList>&apos;12&apos;</valueList>
+</ListPartition>
+<ListPartition class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="PARTITION_FIRST_SUPART_13" id="B571E7AE-0F49-F631-05D2-9C9A7F78448E">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<dataSegmentCompression>NO</dataSegmentCompression>
+<tablespace>74699F13-63A8-EE33-8F42-63056AFFB203</tablespace>
+<valueList>&apos;13&apos;</valueList>
+</ListPartition>
+<ListPartition class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="PARTITION_FIRST_SUPART_14" id="F56B2C9C-1959-8C42-DE5E-4DF132AF5D45">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<dataSegmentCompression>NO</dataSegmentCompression>
+<tablespace>74699F13-63A8-EE33-8F42-63056AFFB203</tablespace>
+<valueList>&apos;14&apos;</valueList>
+</ListPartition>
+<ListPartition class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="PARTITION_FIRST_SUPART_15" id="82B2A88D-43D8-DA04-E8AC-07AE56C8215F">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<dataSegmentCompression>NO</dataSegmentCompression>
+<tablespace>74699F13-63A8-EE33-8F42-63056AFFB203</tablespace>
+<valueList>&apos;15&apos;</valueList>
+</ListPartition>
+<ListPartition class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="PARTITION_FIRST_SUPART_16" id="DE3FE45F-DB73-B952-40CE-9E0F74527C99">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<dataSegmentCompression>NO</dataSegmentCompression>
+<tablespace>74699F13-63A8-EE33-8F42-63056AFFB203</tablespace>
+<valueList>&apos;16&apos;</valueList>
+</ListPartition>
+<ListPartition class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="PARTITION_FIRST_SUPART_17" id="0F7EAEE4-A016-4377-AD89-17BE2B508755">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<dataSegmentCompression>NO</dataSegmentCompression>
+<tablespace>74699F13-63A8-EE33-8F42-63056AFFB203</tablespace>
+<valueList>&apos;17&apos;</valueList>
+</ListPartition>
+<ListPartition class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="PARTITION_FIRST_SUPART_18" id="013E664A-9892-8FBF-0ADC-8458B2530386">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<dataSegmentCompression>NO</dataSegmentCompression>
+<tablespace>74699F13-63A8-EE33-8F42-63056AFFB203</tablespace>
+<valueList>&apos;18&apos;</valueList>
+</ListPartition>
+<ListPartition class="oracle.dbtools.crest.model.design.storage.oracle.v10g.ListStorageTemplatePartitionOraclev10g" name="PARTITION_FIRST_SUPART_19" id="7996167C-9F68-3CB3-56B3-C4E5D4DF66C4">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<dataSegmentCompression>NO</dataSegmentCompression>
+<tablespace>74699F13-63A8-EE33-8F42-63056AFFB203</tablespace>
+<valueList>&apos;19&apos;</valueList>
+</ListPartition>
+</listSubpartitions>
+</Partition>
+</partitions>
+</TableProxyOraclev11g>

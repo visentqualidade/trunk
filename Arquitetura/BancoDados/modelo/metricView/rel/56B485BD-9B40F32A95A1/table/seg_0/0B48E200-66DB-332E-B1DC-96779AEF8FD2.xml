@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0B48E200-66DB-332E-B1DC-96779AEF8FD2" name="FILTRO_WIDGET">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>FILTRO_WIDGET</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:48:31 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>CREATE SEQUENCE  &quot;DASHBOARD&quot;.&quot;SEQ_ID_FILTRO_WIDGET&quot;  MINVALUE 1 MAXVALUE 99999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 ORDER  CYCLE ;</afterCreate>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_FILTRO_WIDGET" id="3F6113E0-9C78-3AF4-0906-736BFBA9A23E">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:56:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_FILTRO" id="0801B323-203F-E547-BCEF-627362875B56">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:56:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<delegate>1CA8740F-2900-9487-2DFE-FE2C90D85AF0</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3FCE4C0D-E7B0-BBE3-B5B0-521836E74FBA" referredColumn="1CA8740F-2900-9487-2DFE-FE2C90D85AF0"/>
+</associations>
+</Column>
+<Column name="ID_WIDGET" id="5114B862-6834-6512-DC59-E061D248F93E">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:56:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>18F063DE-B92A-157C-202A-2980021FC351</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F153B90-91FC-4634-9B6F-A43BD27CB1E4" referredColumn="18F063DE-B92A-157C-202A-2980021FC351"/>
+</associations>
+</Column>
+<Column name="VALOR" id="C8EF440E-60B1-F99A-86F8-EEF4A2C338A4">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-13 14:53:38 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8FC2960B-70EB-7750-F99E-4A0C12C10C4B" name="FILTRO_WIDGET_PK">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:56:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F6113E0-9C78-3AF4-0906-736BFBA9A23E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="85E849C3-F7EB-8F17-B458-358BD192EC05" name="FILTRO_WIDGET_PK">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>FILTRO_WIDGET_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>96349747-78EF-AD92-D1CD-58F1106EE73E</importedID>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F6113E0-9C78-3AF4-0906-736BFBA9A23E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="49B5AE1A-4662-14FF-F8E2-AF92B851C350" name="FILTRO_WIDGET_FK_WIDGET">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:56:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5114B862-6834-6512-DC59-E061D248F93E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="770CCF62-D083-3ACC-9266-B7E76C272F56" name="FILTRO_WIDGET_FILTRO_FK">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-13 14:53:01 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0801B323-203F-E547-BCEF-627362875B56"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

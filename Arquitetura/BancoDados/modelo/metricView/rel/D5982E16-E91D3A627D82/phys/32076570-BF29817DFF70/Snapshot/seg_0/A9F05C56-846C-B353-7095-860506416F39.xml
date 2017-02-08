@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SnapshotOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.SnapshotOraclev11g" name="VM_FILTRO_CLASSE_CHAMADA" directorySegmentName="seg_0" id="A9F05C56-846C-B353-7095-860506416F39">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-05 21:29:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<defaultSegment>NO</defaultSegment>
+<logging>NO</logging>
+<nextDate>sysdate + 4/24</nextDate>
+<refresh>YES</refresh>
+<refreshType>COMPLETE</refreshType>
+<subquery>select distinct classe_chamada from cdrview_encaminhamento</subquery>
+<user>A03C50F9-D66E-3013-5D76-32EDFED9BD32</user>
+<with></with>
+</SnapshotOraclev11g>

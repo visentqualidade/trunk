@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="411946AA-9FD8-D169-5833-9155985B5DDB" name="BILHETADOR_GPRS">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 20:34:35 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>C9E0C446-B6EC-192D-5EC4-F05032DB1305</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_BILHETADOR" id="8D58BFDD-4335-AB2C-4451-382281762FEE">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 20:35:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>35AF4F42-4EED-FD32-35C9-9AF99831C48F</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3786C923-40C9-8CF2-EA53-DBC186EF8499" referredColumn="35AF4F42-4EED-FD32-35C9-9AF99831C48F"/>
+</associations>
+</Column>
+<Column name="TIPO" id="0B6F5356-11AE-6010-03F4-BECD28C9EE1C">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 20:39:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SERVICOS" id="DF6B0D10-3CB9-FE4F-F7F4-9B5FDA7F42C3">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 20:39:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="07BDED92-8372-9FA8-7C01-F647D931BB10" name="BILHETADOR_GPRS_BILHETADOR_FK">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 20:36:21 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D58BFDD-4335-AB2C-4451-382281762FEE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="metricview" directorySegmentName="seg_0" id="D9D8A6BB-1384-C0BF-9EA4-6EE3860BD224">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:17:21 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteDesignID>261BA68B-BEC1-951E-9842-18728CBC93F8</remoteDesignID>
+<remoteModelID>56B485BD-642F-0CD7-B4BF-9B40F32A95A1</remoteModelID>
+<remoteObjectID>8A0524AA-B137-B713-9D19-B9361DED2DC1</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\56B485BD-9B40F32A95A1\schema/seg_0/8A0524AA-B137-B713-9D19-B9361DED2DC1.xml</remoteObjectRelativeStorageName>
+</SchemaObject>

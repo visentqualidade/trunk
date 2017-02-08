@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="MAPVIEW" directorySegmentName="seg_0" id="A11FC85F-9EC6-C877-D962-145566A44AC9">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-12 12:27:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</SchemaObject>

@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="CDRVIEW_SMP3" directorySegmentName="seg_0" id="B3C0612A-1E2D-B680-9C8A-E7C4E15145B2">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-15 18:40:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<logging>NO</logging>
+<partitionList class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionListOraclev11g" name="PL1" id="73944905-18A0-21C9-DC0E-20A4C291B52A">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 19:22:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<columnIDs>48ED18C0-3B44-9761-7EBE-EF0F4DF584BF</columnIDs>
+<intervalExpression>NUMTODSINTERVAL(1,&apos;HOUR&apos;)</intervalExpression>
+</partitionList>
+<partitioned>YES</partitioned>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>06B1F105-0188-BE7D-15FE-992B38EE72A6</segment>
+<tableSpace>4158720B-E1F6-1A6D-B37F-A5B3AD67B772</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="SMP3_IDX_DATA" id="5D7905A2-CBCB-1011-F6A2-96CE61C7FCDE">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 11:33:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="SMP3_IDX_HORA" id="E2E179F3-FF48-B6F1-10DE-62E760B21E02">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 11:33:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="HORA" id="32453D3F-4AFF-34C2-6AFD-DEEB67705526">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 11:33:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA" id="48ED18C0-3B44-9761-7EBE-EF0F4DF584BF">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-15 18:40:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OKT" id="4FC7B622-FBED-852F-91D3-90FEB18B3CF4">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-15 18:40:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SCV" id="56E54F99-AA6A-63CB-D5C5-9F25A0A3E54A">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-15 18:40:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CN" id="5AF5F53F-0B3B-82E4-F996-59D776989F2D">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-15 18:40:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PMM" id="82112069-7378-F988-B22B-E50881716C2E">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-15 18:40:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CHAM" id="C53FCE6A-115B-3552-301F-7E40C8471100">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-15 18:40:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MSC" id="F0095715-EB8D-D78E-5EBF-1F873660EB24">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-15 18:40:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<partitions>
+<Partition class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionOraclev11g" name="PART_FIRST" id="1BDD9B6D-B2CD-5856-6C38-2E55A32F735D">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 19:23:10 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<position>1</position>
+<valueList>TO_DATE(&apos; 2000-01-01 00:00:00&apos;, &apos;SYYYY-MM-DD HH24:MI:SS&apos;, &apos;NLS_CALENDAR=GREGORIAN&apos;)</valueList>
+</Partition>
+</partitions>
+</TableProxyOraclev11g>

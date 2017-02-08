@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F758D7E0-C8F5-662C-DB71-A0D635D49275" name="WIDGET_FK_PAINEL">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>WIDGET_FK_PAINEL</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<containerWithKeyObject>6A3C659D-C84C-13F0-A702-063A3444318A</containerWithKeyObject>
+<deleteRule>CASCADE</deleteRule>
+<localFKIndex>D6EF9A70-A9A8-3B39-05C9-70503DBA0348</localFKIndex>
+<keyObject>1C1973CA-2FB6-0092-3DAF-35B8FA4FBA08</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

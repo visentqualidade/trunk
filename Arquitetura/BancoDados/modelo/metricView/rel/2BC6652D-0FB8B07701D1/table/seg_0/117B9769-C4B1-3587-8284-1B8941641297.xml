@@ -1,0 +1,291 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="117B9769-C4B1-3587-8284-1B8941641297" name="CDRVIEW_DADOS_GPRS_SETOR">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>1A9E099C-A489-C682-284C-794E4F08ECC2</importedID>
+<schemaObject>A36D226E-BC2B-F21D-6766-62C3EFF7964B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATA" id="40AF1846-AF56-5FCC-4A82-58AF4A3054E2">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>C1502393-74F7-2F38-1862-4D7A98A9F416</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>46347315-CCAD-FB0C-8CAE-E80C03CE76A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CELULA" id="5A07589B-DB71-37EC-13F3-3F435DE1EC09">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>EBA3A99F-2D6A-CD55-E118-678B9555CA3B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2402066B-CCAB-C63E-72B9-833688F4A396</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SETOR" id="5F89A1D3-23A1-5397-F85B-9DE91CCFFD6A">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>7F0DFC5B-C09D-EFAD-7EC1-0F4E1519A050</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2402066B-CCAB-C63E-72B9-833688F4A396</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TAC" id="EC92788A-9D49-95E0-8A9E-505FD8B60D49">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>B2BE6040-2A4C-07E8-5F01-5F5EC8F2B442</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B204DB96-0E76-1760-DC0F-869C3B17316B</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MODELO" id="738C7218-B2DF-8647-1E6E-D100222AB97E">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>39A07217-69F1-C3E2-6030-B84B66733EC0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2402066B-CCAB-C63E-72B9-833688F4A396</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SERVICO" id="4D02AE2F-D9DD-594B-BD05-613432EE7AF8">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>B126B3B2-B138-59E8-F40F-E8B0939DA0B6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>16642D84-D35C-5B63-7176-1AA7F590E177</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF" id="B0AAD2AF-6B4F-7493-9D1F-E8122449720C">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>D846E7B7-7FAD-A7E8-809F-53D241841C62</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>71553301-988C-16E3-80BB-FB44FDB109A7</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AREA" id="D9A16D43-7A11-BC69-D209-0AE37E5D9208">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>8C2C0CF1-7A62-3A85-A3DC-53B932640027</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>71553301-988C-16E3-80BB-FB44FDB109A7</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_MUNICIPIO" id="7C1057CB-B0D1-3781-6839-DF794B63FF18">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>C11A37AB-FBD8-32A7-00CB-786D3C26C7D2</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MUNICIPIO" id="C084A248-257B-DE90-33C6-EA0946ED4EA4">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>B4188F2A-60B7-ADAE-5C22-FF4C17E0DDDA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2402066B-CCAB-C63E-72B9-833688F4A396</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONEXOES" id="DBE0E437-B36E-7202-511C-326A76C8AA0C">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>15B6E88F-967D-7F65-21A2-B28C8AFCC6F8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LATITUDE" id="3CFEB9AA-14C4-DA77-238E-2ED991AEA064">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>233695F2-DC06-257F-2D69-92CA4FAF5477</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LONGITUDE" id="C4089349-11EF-097D-4068-2EFA66FD2D47">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>6DD6E565-EA87-41FF-1E10-D72DBB585B31</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VOLUME_UPLINK" id="9FD01021-5B9D-4CC9-9A31-81B3717DF6B6">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>C6621ED5-7676-D849-CEDA-8CFF9A9764A2</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VOLUME_DOWNLINK" id="F71FFCC1-7C0E-0454-3AD4-79873905593A">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>6B640086-561C-102E-B778-36D97D111BBC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VOLUME_TOTAL" id="12831173-B82E-21D9-3B55-84871D4B3855">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>9367E431-74C5-9723-BAB3-E86381AC9845</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_APARELHO" id="3B0ED1FB-8C27-B72E-E64A-54A2576FB59D">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>CDB8BCF4-33B5-22EE-8EF2-9D9C1BF045F9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6ABA8D69-40FB-5DBD-01BB-9F066CF0EC8B</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SETOR_TECNOLOGIA" id="91A094F1-1BA1-40C5-2A1F-728C91A98F8F">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>22EBBE50-37C6-C150-CE2C-3D77562B72AD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61EE3B15-9924-45D9-E25E-1338A4EF5610</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BANDAS" id="D3DBB371-B413-4E19-34BC-6BAED697500A">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>67F7D685-55D7-7A0E-3657-DBF5C53824BC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1E58A3F8-EFE1-053B-7BA5-304B4255930C</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CELULA_TECNOLOGIAS" id="16B03F1D-DE04-F0DB-C04F-B0920B093DAA">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>B8389F2A-1B07-4A0E-F24B-8F4C87B39E33</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>16642D84-D35C-5B63-7176-1AA7F590E177</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TERMINAIS" id="45AE1553-DAF4-9713-73FF-AC687F3EB0D1">
+<sourceDDLFile>claro.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:17:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>F795EF99-9256-DB80-5BE1-8287F09BC4DA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BC53CE87-054B-DD1A-735C-0A16C29997BC" name="CDR_DADOS_GPRS_ST_CEL_IDX">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 19:18:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5A07589B-DB71-37EC-13F3-3F435DE1EC09"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="PMM" directorySegmentName="seg_0" id="E920BE29-8975-85FA-3999-237725231F51">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-31 13:14:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FIM" id="9B1676B0-59BB-F67A-E29A-F11DCE6F04A7">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-31 13:14:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOME" id="C431842C-10A1-EB09-7CD4-5CFF0B224DDE">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-31 13:14:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_PMM" id="D1D1AD42-A579-0D83-B835-1ACF3BB29628">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-31 13:14:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="INICIO" id="D7EEE418-8A81-1933-8236-EE81C0E74104">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-31 13:14:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PMM_PK" id="52503724-0FDB-9A19-EECF-7FE387BB5473">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-31 13:14:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

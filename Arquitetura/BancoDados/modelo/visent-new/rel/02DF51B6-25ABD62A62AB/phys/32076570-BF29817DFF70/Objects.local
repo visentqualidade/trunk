@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v11g.StorageDesignOraclev11g>
+   <object objectType="TSpace" objectID="71C6CEFF-EC5C-69BD-C886-6CED1D0B09FF" name="METRICVIEW" seqName="seg_0"/>
+   <object objectType="TSpace" objectID="4422118B-1026-9BE5-6AF7-8985F38583A5" name="USERS" seqName="seg_0"/>
+   <object objectType="TSpace" objectID="E48C5F52-0BA4-21E2-4E00-67C8F7598500" name="VISENT" seqName="seg_0"/>
+   <object objectType="User" objectID="MDSYS" name="MDSYS" seqName="seg_0"/>
+   <object objectType="User" objectID="F3E2E3E9-1C00-9255-60A4-6304035DFB2E" name="METRICVIEW" seqName="seg_0"/>
+   <object objectType="User" objectID="PUBLIC" name="PUBLIC" seqName="seg_0"/>
+   <object objectType="User" objectID="F8C7B92F-8DB4-E33A-42A4-1BD47CBE3C91" name="VISENT" seqName="seg_0"/>
+   <object objectType="SType" objectID="47E390DE-0671-C4B1-8428-0F45CBEE18F8" name="SDO_GEOMETRY" seqName="seg_0"/>
+   <object objectType="SType" objectID="F72C39E0-D1CA-8821-2AD7-A1E95A37D3D1" name="XMLTYPE" seqName="seg_0"/>
+   <object objectType="Table" objectID="2556C82B-932F-846B-5978-C0E66FA165C5" name="REL_REGIONAL_CN" seqName="seg_0"/>
+   <object objectType="Table" objectID="38094C7B-8E0F-77F6-0342-624A37A74036" name="TECNOLOGIA_CENTRAL" seqName="seg_0"/>
+   <object objectType="Table" objectID="65CB9262-FF3C-B4C9-0B0D-A293E053A123" name="CN" seqName="seg_0"/>
+   <object objectType="Table" objectID="710FBD14-8374-E0BE-BA21-E41EE76BE129" name="REL_CN_UF" seqName="seg_0"/>
+   <object objectType="Table" objectID="747D4664-D6F3-A021-988E-DBB8CB0E2419" name="CENTRAL" seqName="seg_0"/>
+   <object objectType="Table" objectID="773459E9-5A0F-531D-2262-8DDAF06F19C6" name="UF" seqName="seg_0"/>
+   <object objectType="Table" objectID="882499AB-BCD5-A4C0-0C4B-5C5D8167B5B1" name="REL_BILHETADOR_CN" seqName="seg_0"/>
+   <object objectType="Table" objectID="8CAD85FD-DC51-A85C-F03D-D69B6F34A544" name="GEOGRAFIA" seqName="seg_0"/>
+   <object objectType="Table" objectID="8D37930F-B71D-F129-0829-20A68A0B9EA9" name="REGIONAL" seqName="seg_0"/>
+   <object objectType="Table" objectID="B5B19B01-8582-FA2C-5589-88FFD4C2F28C" name="REGIAO" seqName="seg_0"/>
+   <object objectType="Segment" objectID="B13E7DAD-FB1F-28DF-6F07-62DAC61E6AA4" name="Storage1" seqName="seg_0"/>
+   <object objectType="Segment" objectID="FAF852CE-E50B-530F-8CE4-88E96D78BB58" name="Storage16" seqName="seg_0"/>
+   <object objectType="Segment" objectID="8A2B1F11-58B3-28FB-4FAB-A6FC16FCC28F" name="Storage20" seqName="seg_0"/>
+   <object objectType="Segment" objectID="27B17C94-969D-CCDC-69AD-2E203B542C54" name="Storage5" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v11g.StorageDesignOraclev11g>

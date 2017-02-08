@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E920BE29-8975-85FA-3999-237725231F51" name="PMM">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 21:19:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteDesignID>261BA68B-BEC1-951E-9842-18728CBC93F8</remoteDesignID>
+<remoteModelID>56B485BD-642F-0CD7-B4BF-9B40F32A95A1</remoteModelID>
+<remoteObjectID>F3A1FFF9-2A51-A008-5ECE-BA219E25FBDC</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\56B485BD-9B40F32A95A1\table/seg_0/F3A1FFF9-2A51-A008-5ECE-BA219E25FBDC.xml</remoteObjectRelativeStorageName>
+<afterCreate>Insert into PMM (ID_PMM,NOME,INICIO,FIM) values (&apos;1&apos;,&apos;PMM1&apos;,to_date(&apos;01/04/13 10:00:00&apos;,&apos;DD/MM/YYYY HH24:MI:SS&apos;),to_date(&apos;01/04/13 10:59:59&apos;,&apos;DD/MM/YYYY HH24:MI:SS&apos;));&lt;br/&gt;Insert into PMM (ID_PMM,NOME,INICIO,FIM) values (&apos;2&apos;,&apos;PMM2&apos;,to_date(&apos;01/04/13 11:00:00&apos;,&apos;DD/MM/YYYY HH24:MI:SS&apos;),to_date(&apos;01/04/13 12:00:00&apos;,&apos;DD/MM/YYYY HH24:MI:SS&apos;));&lt;br/&gt;</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PMM" id="D1D1AD42-A579-0D83-B835-1ACF3BB29628">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 21:19:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>FEC0A64F-B898-6DD3-7E4D-5546A2421F8D</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="C431842C-10A1-EB09-7CD4-5CFF0B224DDE">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 21:19:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>EA6A7A01-9991-38D3-F6E4-918C60B79407</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INICIO" id="D7EEE418-8A81-1933-8236-EE81C0E74104">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 21:19:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>082B085F-26F5-388C-7040-4A5092DE270C</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIM" id="9B1676B0-59BB-F67A-E29A-F11DCE6F04A7">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 21:19:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>8EB7CD09-85BD-3227-7356-821BCFC04AE1</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="52503724-0FDB-9A19-EECF-7FE387BB5473" name="PMM_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 21:19:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>4A286954-83DA-0D0D-58CE-60C5BCDF6180</remoteObjectID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="D1D1AD42-A579-0D83-B835-1ACF3BB29628"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

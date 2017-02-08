@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="exportar_Domains">
+   <domains>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_255 CHAR" id="2402066B-CCAB-C63E-72B9-833688F4A396">
+         <createdBy>OSX</createdBy>
+         <createdTime>2014-10-09 20:33:35 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>255 CHAR</dataTypeSize>
+         <fileName>exportar_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_30 CHAR" id="3678638F-885A-6DD3-4982-34182C7E365F">
+         <createdBy>OSX</createdBy>
+         <createdTime>2014-10-09 20:33:35 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>30 CHAR</dataTypeSize>
+         <fileName>exportar_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="46347315-CCAD-FB0C-8CAE-E80C03CE76A0">
+         <createdBy>OSX</createdBy>
+         <createdTime>2014-10-09 20:33:35 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>exportar_Domains</fileName>
+         <logicalDatatype>LOGDT007</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_50 CHAR" id="6A80BC46-2A7C-0998-5766-AAE0548D4835">
+         <createdBy>OSX</createdBy>
+         <createdTime>2014-10-09 20:33:35 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>50 CHAR</dataTypeSize>
+         <fileName>exportar_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_2 CHAR" id="71553301-988C-16E3-80BB-FB44FDB109A7">
+         <createdBy>OSX</createdBy>
+         <createdTime>2014-10-09 20:33:35 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>2 CHAR</dataTypeSize>
+         <fileName>exportar_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_10 BYTE" id="A2C448C5-EC9B-22AE-F240-403F682EFDC8">
+         <createdBy>OSX</createdBy>
+         <createdTime>2014-10-09 20:33:35 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>10 BYTE</dataTypeSize>
+         <fileName>exportar_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_0_0_0" id="BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0">
+         <createdBy>OSX</createdBy>
+         <createdTime>2014-10-09 20:33:35 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>exportar_Domains</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+   </domains>
+</DomainFile>

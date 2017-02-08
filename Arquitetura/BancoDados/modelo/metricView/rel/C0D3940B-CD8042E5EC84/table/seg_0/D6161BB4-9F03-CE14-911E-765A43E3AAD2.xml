@@ -1,0 +1,189 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D6161BB4-9F03-CE14-911E-765A43E3AAD2" name="CDRVIEW_SMS">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>CDRVIEW_SMS</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATA" id="74CBD64C-8D4A-4BD9-DD20-BA65637423F8">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMS</sourceObjSchema>
+<sourceObjName>DATA</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HORA" id="0B007C1A-F213-BEEF-C2FB-DF5DDD407802">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMS</sourceObjSchema>
+<sourceObjName>HORA</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BILHETADOR" id="C2DE1293-F9D4-3C57-7D82-BEADF51F7791">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMS</sourceObjSchema>
+<sourceObjName>BILHETADOR</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CENARIO" id="B0B2F9DD-E8C2-F6CD-1656-581F81E9D3A5">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMS</sourceObjSchema>
+<sourceObjName>CENARIO</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CN_A" id="024B7D73-56B0-7389-D651-A48ACF8A26A9">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMS</sourceObjSchema>
+<sourceObjName>CN_A</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK" id="52654DF7-1393-1C67-E757-35680C53F6A3">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMS</sourceObjSchema>
+<sourceObjName>OK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOK" id="431EFC34-B3F7-583C-1DFD-0B1FF4F03399">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMS</sourceObjSchema>
+<sourceObjName>NOK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM_TOT" id="0EC009E0-5032-DCD1-1CC7-97D3EFC236FD">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMS</sourceObjSchema>
+<sourceObjName>CHAM_TOT</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM_ENT60" id="C1B8C438-2427-F99C-099A-E611EB2ACEE1">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMS</sourceObjSchema>
+<sourceObjName>CHAM_ENT60</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TTE" id="2078B572-283F-047D-5768-A7858FB362C6">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMS</sourceObjSchema>
+<sourceObjName>TTE</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="72E2BA11-AD15-ADBA-4EB5-E9E9CC5635F2" name="CDRVIEW_SMS_INDEX_DATA">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>CDRVIEW_SMS_INDEX_DATA</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74CBD64C-8D4A-4BD9-DD20-BA65637423F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3E6F33BE-8AE8-ECA2-5EC4-89FD23723C2A" name="CDRVIEW_SMS_INDEX_HORA">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>CDRVIEW_SMS_INDEX_HORA</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B007C1A-F213-BEEF-C2FB-DF5DDD407802"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

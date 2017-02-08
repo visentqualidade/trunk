@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.visent.metricview</groupId>
+		<artifactId>visent-metricview</artifactId>
+		<version>2.1.0</version>
+	</parent>
+
+	<artifactId>visent-metricview-core</artifactId>
+
+	<dependencies>
+		<!-- e-mail -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.visent</groupId>
+			<artifactId>visent-componente</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.visent.metricview</groupId>
+			<artifactId>visent-metricview-constantes</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.visent</groupId>
+			<artifactId>visent-util</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.visent</groupId>
+			<artifactId>visent-dwr</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DB5C0F93-8350-3A6E-057E-E2E0CC72895E" name="TIPO_SERVICO">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>TIPO_SERVICO</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_SERVICO" id="25019C93-1728-3537-5250-7941B3DAF9ED">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>TIPO_SERVICO</sourceObjSchema>
+<sourceObjName>ID_TIPO_SERVICO</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="6B96D676-C154-A37F-3494-9A77EF323223">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>TIPO_SERVICO</sourceObjSchema>
+<sourceObjName>NOME</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

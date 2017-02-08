@@ -1,0 +1,158 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BF92B12D-582A-40AA-E3FA-F8A630442BC6" name="LOG">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>LOG</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:29:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Create Sequence Metricview.Seq_Log Minvalue 0 Maxvalue 9999999999999 Increment By 1 Start With 0 Cache 20 Noorder  Nocycle ;</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_LOG" id="258FF998-BE3D-BA6C-A2B8-CBEB646C4702">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>LOG</sourceObjSchema>
+<sourceObjName>ID_LOG</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:29:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_HORA" id="D6158596-D7E4-BF9B-DC71-2AC7A6773136">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>LOG</sourceObjSchema>
+<sourceObjName>DATA_HORA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:29:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MENSAGEM" id="99EA6076-FB09-334D-F244-41C74E34A93A">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>LOG</sourceObjSchema>
+<sourceObjName>MENSAGEM</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:29:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO" id="8F54B340-F666-289A-AC7D-E8186DB13581">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>LOG</sourceObjSchema>
+<sourceObjName>USUARIO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:29:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO" id="17C161CB-535A-A651-D871-F631F16CFE7A">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>LOG</sourceObjSchema>
+<sourceObjName>TIPO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:29:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<constraintName>LOG_CK_TIPO</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;ERROR&apos;" description=""/>
+<valueDef value="&apos;INFO&apos;" description=""/>
+</listOfValues>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PROJETO_SOLUCAO" id="2DAA81AF-1325-202C-2C11-A05BA4004432">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>LOG</sourceObjSchema>
+<sourceObjName>PROJETO_SOLUCAO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:29:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GRUPO" id="D604630D-B0FC-724E-4BBA-27FD764795D5">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>LOG</sourceObjSchema>
+<sourceObjName>GRUPO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:29:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4A93A8F1-D4E1-377D-7C38-2C33071E1284" name="LOG_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>LOG_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:29:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="258FF998-BE3D-BA6C-A2B8-CBEB646C4702"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F0D119ED-C39B-C13C-DC99-4AF57329511B" name="LOG_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>LOG_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:29:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="258FF998-BE3D-BA6C-A2B8-CBEB646C4702"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

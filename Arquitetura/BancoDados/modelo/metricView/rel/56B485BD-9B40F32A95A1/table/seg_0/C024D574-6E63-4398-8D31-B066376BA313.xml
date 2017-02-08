@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C024D574-6E63-4398-8D31-B066376BA313" name="REL_REGIONAL_COD_NACIONAL">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>REL_REGIONAL_COD_NACIONAL</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:18:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_REGIONAL" id="798385AB-3FA8-3B7A-A568-B2A87929FF76">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>REL_REGIONAL_COD_NACIONAL</sourceObjSchema>
+<sourceObjName>ID_REGIONAL</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:18:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>B952121F-456C-57EE-A477-7D84E2E34E59</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B3E6CC00-5CE7-ABD6-3DC8-FE7DF8C1E68C" referredColumn="B952121F-456C-57EE-A477-7D84E2E34E59"/>
+</associations>
+</Column>
+<Column name="ID_CN" id="20CA8477-9CA7-2987-CE05-4A74D1715805">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>REL_REGIONAL_COD_NACIONAL</sourceObjSchema>
+<sourceObjName>ID_CN</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:18:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>86128B28-5D73-8B14-E615-B8F2CCDD9BDE</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="52AF7EC1-0DB0-F010-6A88-4C24BBC18829" referredColumn="86128B28-5D73-8B14-E615-B8F2CCDD9BDE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="717586CB-D8A6-E55B-4828-6FD7108CE8D9" name="REL_REG_COD_NAC_FK_CN">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:23:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20CA8477-9CA7-2987-CE05-4A74D1715805"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3F906194-0FF4-0E8D-3553-2AA4A12E1153" name="REL_REG_COD_NAC_FK_REG">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:24:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="798385AB-3FA8-3B7A-A568-B2A87929FF76"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

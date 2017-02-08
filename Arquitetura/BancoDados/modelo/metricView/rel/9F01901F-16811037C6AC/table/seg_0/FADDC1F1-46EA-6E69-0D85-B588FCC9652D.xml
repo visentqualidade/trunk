@@ -1,0 +1,158 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FADDC1F1-46EA-6E69-0D85-B588FCC9652D" name="CDRVIEW_SMP7">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>CDRVIEW_SMP7</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-09 18:53:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATA" id="C872D340-3CD0-F84D-2245-987686566225">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP7</sourceObjSchema>
+<sourceObjName>DATA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-09 18:53:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HORA" id="DF19259D-35E8-F8C0-0B66-14C6DDE1313F">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-04 18:14:47 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PMM" id="32B5DFCB-6F65-A594-081E-245DCB562A5B">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP7</sourceObjSchema>
+<sourceObjName>PMM</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-09 18:53:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CN" id="6B5372F9-F2D2-495D-95A6-854F16FDBA94">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP7</sourceObjSchema>
+<sourceObjName>CN</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-09 18:53:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeSize>22</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MSC" id="5A3D378B-EFD5-1DF6-27C1-DD527906F84A">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP7</sourceObjSchema>
+<sourceObjName>MSC</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-09 18:53:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_DRP" id="817422AC-A1C4-4394-DDC5-C1A51DEBC859">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP7</sourceObjSchema>
+<sourceObjName>DROP_INT_MTC</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-09 18:53:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_DRP_TCT" id="853BCA3B-0AD8-F81A-6568-695C448AA113">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP7</sourceObjSchema>
+<sourceObjName>DROP_NET_MOC</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-09 18:53:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OKT" id="96B63C6C-DAC0-15D9-6F1B-D69D36372F96">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP7</sourceObjSchema>
+<sourceObjName>DROP_NET_MTC</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-09 18:53:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK_ITCP" id="25525EFD-AC45-C182-54F9-7EC8500A3939">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP7</sourceObjSchema>
+<sourceObjName>DROP_RADIO_MOC</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-09 18:53:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B5282296-89D7-2250-29A5-13E996D6730D" name="SMP7_IDX_DATA">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-04 18:15:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C872D340-3CD0-F84D-2245-987686566225"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="59991166-E601-1174-8CC1-3C1B39B09901" name="SMP7_IDX_HORA">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-04 18:15:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF19259D-35E8-F8C0-0B66-14C6DDE1313F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,620 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="778238E5-F505-4836-1CEB-79D21777747A" name="CDRVIEW_SMP3_MUNICIPIO">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>CDRVIEW_SMP3_MUNICIPIO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>529ABC79-9ADA-DE1B-E418-AB85795A956F</importedID>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATA" id="19DAFEED-18EE-A6F8-BF9A-D19497B93E90">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>DATA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>30258446-0C50-5476-5991-D94188A3F7BF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HORA" id="E6CDDFCD-A29B-6273-631A-EB6C8CDFAE14">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>HORA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>7B0EC0B6-1E48-3DFD-15C5-C62F0494EF26</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PMM" id="E827C13E-D8E7-2A6B-E2B7-41487C825BC0">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>PMM</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>464BEC68-A868-BBD7-CA35-56934598BAA5</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CN" id="31415F80-51C1-9479-8161-841133440527">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>CN</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>DF604CB4-8ADB-642D-A816-726044198B5E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF" id="E44037EB-6D21-8FCA-E6B8-C32FDDBA7DFB">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>UF</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>4161829D-0147-926C-682F-69B8E972651F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MSC" id="1C78CF3E-2F86-7D33-D43B-7361B7DE87A3">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>MSC</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>5775A701-EC40-3BA7-AE60-900AE7E57A6C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SETOR" id="AEE0AAE5-EC33-0036-D329-A69A1C73588B">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>SETOR</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>4BE38667-F36E-263E-F82A-1FC5BB68BBCB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CELULA" id="4FD9C384-08D7-AD75-8BFD-C91D77162237">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>CELULA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>6A41AB84-0988-EA7B-03A4-E0096C0FFC47</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_MUNICIPIO" id="C73ED39D-987C-4357-82A0-B105D4F75023">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>ID_MUNICIPIO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>26B16662-4195-9D5C-D9DB-1D9910CE5402</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MUNICIPIO" id="0387F9A9-6FCB-EE9F-0B04-4A8B4A2FDC21">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>MUNICIPIO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>8DB7DF89-B937-873D-DB97-8C97A8C9093C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LATITUDE" id="E0120F05-2620-650D-1EBD-EE1434F47BEA">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>LATITUDE</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>EFBF82D6-B493-9599-61F3-64DCD4309177</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LONGITUDE" id="AF36926C-BF2D-E178-B05D-3E7CC3BF2FF2">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>LONGITUDE</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>0F651872-1FD2-60EF-FB64-731EBC36FFD7</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OKT" id="93B04D5C-EF3B-C7C9-B398-72143DA03CC3">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>OKT</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>E49877F7-4396-EC6C-D3B3-44DC84199330</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM" id="11493A0F-137A-0451-B2B4-EABE2BB6A095">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>CHAM</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>B26F1798-4DBF-8F47-B617-E5185148E5E6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCV" id="3D9D0B37-BAC4-D5A7-EF60-DA61D7B89660">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>SCV</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>106DFB92-B257-C060-4FCB-F4E171E40914</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INV" id="F2BE9C71-2735-20EB-0BEB-09AB76518519">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP3_MUNICIPIO</sourceObjSchema>
+<sourceObjName>INV</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>49EDE4B5-4745-7791-62E9-D7E5D8B606C7</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1" id="91E8BD3E-508F-46B0-0014-77A16DD647D3">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OKVM" id="8D428B3C-DEB9-3124-DF42-7CC879B7AB18">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_TCT" id="0D88E63B-4004-A231-6139-B8FB378952C1">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_TCT_1" id="DF89A853-20A5-6D30-2B02-B3778864DF8C">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_DRP" id="E2C186DE-2AEF-FA2B-CEC8-742382314C82">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_DRP_TCT" id="BCE91AB7-01D7-8D23-5250-E7E159FCBAE8">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BACB" id="CEA0D6CE-91A9-B93D-2652-B3FC0092197F">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_VM" id="8751F284-23B0-8A86-6E92-D01152B76DE2">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INEX" id="B3829221-778D-26E6-34AA-FEEB3E387BA1">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESL" id="6E7A22E8-488E-040A-81D9-9B9A2CDE0916">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BLOQ" id="87712B15-20A8-8B74-A28C-714E9667725C">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC" id="3E598F48-BE2F-F0D5-2FEA-4159B7BF19DE">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK5" id="50B7B767-4FDE-0D99-458A-FF9AF0207720">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK5TCT" id="655262E9-4E9B-00DF-9E66-37B5E1FE9B81">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK5DRP" id="9C39596B-55C0-BFE8-8CF1-87B4645D850F">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK5DRPTCT" id="5EF1F3E4-76D3-77C6-257F-F148787481A1">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LO" id="9E085759-82D0-8763-41B3-4526114AFD6A">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CO1" id="76890DAC-8500-F832-85B7-648B84BB4DE1">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CO2" id="FD7599C3-86C5-C2A6-F731-52B5D8D7CBB1">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CO3" id="A87843AD-83F9-BC57-7DC3-250F309F4EE8">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR" id="65FB771A-96D5-4A28-E591-34C8EBA421FB">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOS" id="F9BE3487-F53C-FA54-59A5-551036587784">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSA" id="E37415A9-9634-A6B0-4238-E36C243F742B">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DROP_" id="7701B722-BD50-080F-9139-EB44B5D8E26B">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SRP" id="1374F775-821A-BC83-2818-47150B41A3D4">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OU" id="EDE666D0-1651-5A77-FF9C-79C2B7711C30">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FA1" id="25A55E86-1BC6-3EF1-D110-F3D1A0DF530F">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FA2" id="9DD68507-A576-55F2-8F20-A115306AA212">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FA3" id="BEB4EC7B-3E05-B25F-CD52-6268D6B3DA8C">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSS" id="354BA97C-4DB7-A742-5E11-6F4D4C20DC86">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-11 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2CD69D3F-7F98-D2B0-C92A-531FE0E6FB9E" name="CDRV_SMP3_M_DATA__IDX">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>CDRV_SMP3_M_DATA__IDX</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>E86328CD-AAA9-57E7-87F8-16B190BB8A04</importedID>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19DAFEED-18EE-A6F8-BF9A-D19497B93E90"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0217F51A-CA46-918A-EC49-3B9C0C2682D0" name="CDRV_SMP3_M_HORA__IDX">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>CDRV_SMP3_M_HORA__IDX</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-12-11 19:30:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>EA9C8F82-F293-B042-8702-2DD90AF341BA</importedID>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E6CDDFCD-A29B-6273-631A-EB6C8CDFAE14"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

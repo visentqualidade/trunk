@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="44642D4D-1695-D026-402B-55BA28EF0BB5" name="PERMISSAO_PAINEL">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>PERMISSAO_PAINEL</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-02-25 12:20:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="0845DCCE-C7CB-D454-D3D4-9B8EF058E594">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-25 12:23:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PAINEL" id="CB630BA3-F34A-F00C-3103-8792F80CA453">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-25 12:23:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>02C2CCDA-DA52-F3D2-18F5-0B63E92C52FE</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="274EA5C9-9F52-4A95-F340-A6D916CE85E1" referredColumn="02C2CCDA-DA52-F3D2-18F5-0B63E92C52FE"/>
+</associations>
+</Column>
+<Column name="ID_USUARIO" id="190299A0-3DF4-44A1-4806-E428DAEF90C7">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-25 12:23:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<delegate>7B84F428-B065-3291-B8D5-24D22E9432CB</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="87FDA687-1B7F-8CCE-2D6B-F087B5205AEA" referredColumn="7B84F428-B065-3291-B8D5-24D22E9432CB"/>
+</associations>
+</Column>
+<Column name="ID_GRUPO" id="FC6F3879-0264-5846-F0D5-A36314FFE415">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>GRUPO</sourceObjSchema>
+<sourceObjName>ID_GRUPO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-02-25 12:23:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<delegate>C88BABFA-1D04-1390-4A8F-ACFCE01275E6</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9B050B49-7F10-AA99-670F-560E71499A76" referredColumn="C88BABFA-1D04-1390-4A8F-ACFCE01275E6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="342B1E93-88EB-A424-8A66-1D143DD40FDC" name="PERMISSAO_PAINEL_PK">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-25 12:23:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0845DCCE-C7CB-D454-D3D4-9B8EF058E594"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8162F8F3-9829-8AE2-99FC-1846970811F9" name="PERMISSAO_PAINEL_PK">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>PERMISSAO_PAINEL_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>14F3295F-90EF-6BAF-647F-C62041C59516</importedID>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0845DCCE-C7CB-D454-D3D4-9B8EF058E594"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5DE83B34-0AE6-D284-5338-956CA5B01FCE" name="PERMISSAO_PAINEL_FK_USUARIO">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-25 12:23:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="190299A0-3DF4-44A1-4806-E428DAEF90C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6FCCA8D9-8C3E-7D97-BE35-8A25EDD0F71C" name="PERMISSAO_PAINEL_FK_GRUPO">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-25 12:23:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC6F3879-0264-5846-F0D5-A36314FFE415"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ECBEF60B-1170-0424-8AC2-C14C47BDEC12" name="PERMISSAO_PAINEL_FK_PAINEL">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-25 12:23:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB630BA3-F34A-F00C-3103-8792F80CA453"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

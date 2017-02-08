@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2B7DED5D-CA80-41D4-A899-938400EF0134" name="BILHETADOR_FK_REGIONAL">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>VISENT</sourceObjSchema>
+<sourceObjName>CENTRAL_FK_REGIONAL</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<containerWithKeyObject>747D4664-D6F3-A021-988E-DBB8CB0E2419</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>78E0DF1B-9236-0E3A-96B6-A17571DABBB9</localFKIndex>
+<keyObject>6F879924-2C7B-8AAE-48EB-80C722AFA987</keyObject>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

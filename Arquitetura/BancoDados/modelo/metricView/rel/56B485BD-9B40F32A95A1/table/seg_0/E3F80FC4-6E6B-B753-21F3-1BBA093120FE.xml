@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E3F80FC4-6E6B-B753-21F3-1BBA093120FE" name="SERV_UTIL_PUB">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 18:02:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;1&apos;,&apos;102&apos;,&apos;102&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;2&apos;,&apos;115&apos;,&apos;115&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;3&apos;,&apos;116&apos;,&apos;116&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;4&apos;,&apos;117&apos;,&apos;117&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;5&apos;,&apos;118&apos;,&apos;118&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;6&apos;,&apos;125&apos;,&apos;125&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;7&apos;,&apos;127&apos;,&apos;127&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;8&apos;,&apos;129&apos;,&apos;129&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;9&apos;,&apos;130&apos;,&apos;130&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;10&apos;,&apos;132&apos;,&apos;132&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;11&apos;,&apos;133-1 e 133-2&apos;,&apos;133-1 e 133-2&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;12&apos;,&apos;134&apos;,&apos;134&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;13&apos;,&apos;135&apos;,&apos;135&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;14&apos;,&apos;136&apos;,&apos;136&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;15&apos;,&apos;138&apos;,&apos;138&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;16&apos;,&apos;141&apos;,&apos;141&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;17&apos;,&apos;146&apos;,&apos;146&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;18&apos;,&apos;148&apos;,&apos;148&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;19&apos;,&apos;150&apos;,&apos;150&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;20&apos;,&apos;151&apos;,&apos;151&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;21&apos;,&apos;152&apos;,&apos;152&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;22&apos;,&apos;153&apos;,&apos;153&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;23&apos;,&apos;154&apos;,&apos;154&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;24&apos;,&apos;155&apos;,&apos;155&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;25&apos;,&apos;156&apos;,&apos;156&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;26&apos;,&apos;157&apos;,&apos;157&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;27&apos;,&apos;158&apos;,&apos;158&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;28&apos;,&apos;159&apos;,&apos;159&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;29&apos;,&apos;160&apos;,&apos;160&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;30&apos;,&apos;161&apos;,&apos;161&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;31&apos;,&apos;165&apos;,&apos;165&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;32&apos;,&apos;167&apos;,&apos;167&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;33&apos;,&apos;168&apos;,&apos;168&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_UTIL_PUB (ID,NOME_FILTRO,NOME_TELA) values (&apos;34&apos;,&apos;174+6&apos;,&apos;174+6&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="3E0F927F-1428-5F13-7066-2B6111DFA624">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 18:02:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_FILTRO" id="204D820B-B44D-63D0-BDDE-82CA85B30493">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 18:02:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_TELA" id="DF0811B2-B1AE-72B9-BBB7-D24E66821011">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 17:36:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1AAF046C-CB7F-AA6B-563D-CB13BE219A5B" name="SERV_UTIL_PUB_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 18:02:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3E0F927F-1428-5F13-7066-2B6111DFA624"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

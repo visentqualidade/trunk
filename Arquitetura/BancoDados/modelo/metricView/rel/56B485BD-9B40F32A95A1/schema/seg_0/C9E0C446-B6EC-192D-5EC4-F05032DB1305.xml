@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="vips" directorySegmentName="seg_0" id="C9E0C446-B6EC-192D-5EC4-F05032DB1305">
+<createdBy>OSX</createdBy>
+<createdTime>2014-11-11 17:38:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</SchemaObject>

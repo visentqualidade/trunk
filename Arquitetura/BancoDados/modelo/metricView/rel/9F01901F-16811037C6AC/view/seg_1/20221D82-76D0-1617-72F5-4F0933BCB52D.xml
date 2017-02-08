@@ -1,0 +1,573 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_1" id="20221D82-76D0-1617-72F5-4F0933BCB52D" name="VIEW_SMP8_EXPORTACAO_ANATEL">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>VIEW_SMP8_EXPORTACAO_ANATEL</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>8CAC0018-C61D-66CC-68ED-ED9846382E03</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL>WITH dados_x_codigos AS&lt;br/&gt;  (SELECT c.DATA,&lt;br/&gt;    c.BILHETADOR_ORIGINAL,&lt;br/&gt;    c.CENTRAL AS msc,&lt;br/&gt;    c.CN,&lt;br/&gt;    c.PMM,&lt;br/&gt;    c.REGIONAL,&lt;br/&gt;    c.UF,&lt;br/&gt;    c.SMP8_A,&lt;br/&gt;    c.SMP8_B,&lt;br/&gt;    c.CODIGO&lt;br/&gt;  FROM VIEW_MSC_VINCULO_SMP8 c,&lt;br/&gt;    VIEW_MSC_CN_ATIVO_SMP8 v&lt;br/&gt;  WHERE v.CN                                         = c.CN&lt;br/&gt;  AND v.MSC                                          = c.CENTRAL&lt;br/&gt;  AND to_date(TO_CHAR(c.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = v.PERIODO&lt;br/&gt;  AND v.STATUS                                       = &apos;T&apos;&lt;br/&gt;  ),&lt;br/&gt;  codigos_sem_dados AS&lt;br/&gt;  (SELECT DISTINCT codigo.MSC,&lt;br/&gt;    codigo.CN&lt;br/&gt;  FROM MSC_CN_CODIGO codigo,&lt;br/&gt;    (SELECT DISTINCT BILHETADOR.nome&lt;br/&gt;    FROM indicador,&lt;br/&gt;      TIPO_TECNOLOGIA,&lt;br/&gt;      TECNOLOGIA,&lt;br/&gt;      BILHETADOR&lt;br/&gt;    WHERE TECNOLOGIA.ID_TIPO_TECNOLOGIA    = indicador.ID_TIPO_TECNOLOGIA&lt;br/&gt;    AND TIPO_TECNOLOGIA.ID_TIPO_TECNOLOGIA = TECNOLOGIA.ID_TIPO_TECNOLOGIA&lt;br/&gt;    AND TECNOLOGIA.ID                      = BILHETADOR.ID_TECNOLOGIA&lt;br/&gt;    AND indicador.nome                    IN (&apos;SMP8&apos;, &apos;SMP9&apos;)&lt;br/&gt;    ) bilhetador&lt;br/&gt;  WHERE codigo.MSC = bilhetador.nome&lt;br/&gt;  MINUS&lt;br/&gt;  SELECT DISTINCT dados_x_codigos.msc,&lt;br/&gt;    TO_CHAR(dados_x_codigos.CN)&lt;br/&gt;  FROM dados_x_codigos&lt;br/&gt;  ),&lt;br/&gt;  distinct_msc_cn_x_pmm AS&lt;br/&gt;  (SELECT *&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT DISTINCT TRUNC(dados_x_codigos.DATA) AS data FROM dados_x_codigos&lt;br/&gt;    ) datas,&lt;br/&gt;    (SELECT DISTINCT dados_x_codigos.msc,&lt;br/&gt;      TO_CHAR(dados_x_codigos.CN) cn&lt;br/&gt;    FROM dados_x_codigos&lt;br/&gt;    ) msc&lt;br/&gt;  UNION ALL&lt;br/&gt;  SELECT *&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT DISTINCT data,&lt;br/&gt;      MSC,&lt;br/&gt;      TO_CHAR(CN) cn&lt;br/&gt;    FROM&lt;br/&gt;      (SELECT DISTINCT data,&lt;br/&gt;        codigos_sem_dados.MSC,&lt;br/&gt;        codigos_sem_dados.CN&lt;br/&gt;      FROM codigos_sem_dados,&lt;br/&gt;        (SELECT DISTINCT TRUNC(dados_x_codigos.DATA) AS data FROM dados_x_codigos&lt;br/&gt;        )&lt;br/&gt;      )&lt;br/&gt;    ) msc&lt;br/&gt;  ),&lt;br/&gt;  dados_trabalhados AS&lt;br/&gt;  (SELECT d.data,&lt;br/&gt;    d.cn,&lt;br/&gt;    d.msc,&lt;br/&gt;    NVL(p.SMP8_A, 0) smp8_a,&lt;br/&gt;    NVL(p.SMP8_B, 0) smp8_b,&lt;br/&gt;    NVL(&lt;br/&gt;    (SELECT b.CODIGO&lt;br/&gt;    FROM&lt;br/&gt;      (SELECT *&lt;br/&gt;      FROM MSC_CN_CODIGO b&lt;br/&gt;      ORDER BY cnAtivo.MSC,&lt;br/&gt;        cnAtivo.CN,&lt;br/&gt;        ultima_atualizacao&lt;br/&gt;      ) b&lt;br/&gt;    WHERE d.msc              = b.MSC&lt;br/&gt;    AND d.cn                 = b.CN&lt;br/&gt;    AND TRUNC(d.data, &apos;MM&apos;) &gt;= TRUNC(b.ultima_atualizacao, &apos;MM&apos;)&lt;br/&gt;    AND ROWNUM               = 1&lt;br/&gt;    ), &apos;NID&apos;) AS codigo&lt;br/&gt;  FROM distinct_msc_cn_x_pmm d,&lt;br/&gt;    dados_x_codigos p,&lt;br/&gt;    VIEW_MSC_CN_ATIVO_SMP8 cnAtivo&lt;br/&gt;  WHERE d.msc                                                 = p.msc(+)&lt;br/&gt;  AND d.cn                                                    = p.CN(+)&lt;br/&gt;  AND TRUNC(d.data)                                           = TRUNC(p.DATA(+))&lt;br/&gt;  AND cnAtivo.MSC                                             = d.msc&lt;br/&gt;  AND cnAtivo.CN                                              = d.cn&lt;br/&gt;  AND to_date(TO_CHAR(cnAtivo.PERIODO, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = to_date(TO_CHAR(d.data, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;)&lt;br/&gt;  AND cnAtivo.STATUS                                          = &apos;T&apos;&lt;br/&gt;  ),&lt;br/&gt;  dados_smp8 AS&lt;br/&gt;  (SELECT *&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT &apos;SMP8&apos;                             AS SMP,&lt;br/&gt;      TO_CHAR(c.data, &apos;MM/yyyy&apos;)               AS DDX,&lt;br/&gt;      NULL                                     AS CONSOLIDACAO,&lt;br/&gt;      DECODE(c.codigo, NULL, &apos;NID&apos;, c.codigo)  AS PRIMARIA,&lt;br/&gt;      &apos;35&apos;                                     AS PONDERACAO,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(c.smp8_b, 0))), &apos;-&apos;) AS val_ponderacao,&lt;br/&gt;      &apos;03&apos;                                     AS COLETA,&lt;br/&gt;      &apos;&apos;                                       AS indice_14,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_14,&lt;br/&gt;      &apos;&apos;                                       AS indice_15,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_15,&lt;br/&gt;      &apos;&apos;                                       AS indice_17,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_17,&lt;br/&gt;      &apos;&apos;                                       AS indice_18,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_18,&lt;br/&gt;      &apos;&apos;                                       AS indice_19,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_19,&lt;br/&gt;      &apos;&apos;                                       AS indice_20,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_20,&lt;br/&gt;      &apos;&apos;                                       AS indice_22,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_22,&lt;br/&gt;      &apos;&apos;                                       AS indice_23,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_23,&lt;br/&gt;      &apos;&apos;                                       AS indice_24,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_24,&lt;br/&gt;      &apos;&apos;                                       AS indice_25,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_25,&lt;br/&gt;      &apos;&apos;                                       AS indice_27,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_27,&lt;br/&gt;      &apos;&apos;                                       AS indice_28,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_28,&lt;br/&gt;      &apos;&apos;                                       AS indice_30,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_30,&lt;br/&gt;      &apos;&apos;                                       AS indice_31,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_31,&lt;br/&gt;      &apos;33&apos;                                     AS indice_33,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(c.smp8_a, 0))), &apos;-&apos;) AS val_indice_33,&lt;br/&gt;      &apos;34&apos;                                     AS indice_34,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(c.smp8_b, 0))), &apos;-&apos;) AS val_indice_34,&lt;br/&gt;      &apos;&apos;                                       AS indice_36,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_36,&lt;br/&gt;      &apos;&apos;                                       AS indice_37,&lt;br/&gt;      &apos;&apos;                                       AS val_indice_37&lt;br/&gt;    FROM dados_trabalhados c&lt;br/&gt;    GROUP BY &apos;SMP8&apos;,&lt;br/&gt;      TO_CHAR(c.data, &apos;MM/yyyy&apos;),&lt;br/&gt;      NULL,&lt;br/&gt;      c.codigo&lt;br/&gt;    ORDER BY PRIMARIA&lt;br/&gt;    )&lt;br/&gt;  WHERE PRIMARIA != &apos;NID&apos;&lt;br/&gt;  )&lt;br/&gt;SELECT dados_smp8.SMP,&lt;br/&gt;  dados_smp8.DDX,&lt;br/&gt;  dados_smp8.CONSOLIDACAO,&lt;br/&gt;  dados_smp8.PRIMARIA,&lt;br/&gt;  dados_smp8.PONDERACAO,&lt;br/&gt;  dados_smp8.val_ponderacao,&lt;br/&gt;  dados_smp8.COLETA,&lt;br/&gt;  dados_smp8.indice_14,&lt;br/&gt;  dados_smp8.val_indice_14,&lt;br/&gt;  dados_smp8.indice_15,&lt;br/&gt;  dados_smp8.val_indice_15,&lt;br/&gt;  dados_smp8.indice_17,&lt;br/&gt;  dados_smp8.val_indice_17,&lt;br/&gt;  dados_smp8.indice_18,&lt;br/&gt;  dados_smp8.val_indice_18,&lt;br/&gt;  dados_smp8.indice_19,&lt;br/&gt;  dados_smp8.val_indice_19,&lt;br/&gt;  dados_smp8.indice_20,&lt;br/&gt;  dados_smp8.val_indice_20,&lt;br/&gt;  dados_smp8.indice_22,&lt;br/&gt;  dados_smp8.val_indice_22,&lt;br/&gt;  dados_smp8.indice_23,&lt;br/&gt;  dados_smp8.val_indice_23,&lt;br/&gt;  dados_smp8.indice_24,&lt;br/&gt;  dados_smp8.val_indice_24,&lt;br/&gt;  dados_smp8.indice_25,&lt;br/&gt;  dados_smp8.val_indice_25,&lt;br/&gt;  dados_smp8.indice_27,&lt;br/&gt;  dados_smp8.val_indice_27,&lt;br/&gt;  dados_smp8.indice_28,&lt;br/&gt;  dados_smp8.val_indice_28,&lt;br/&gt;  dados_smp8.indice_30,&lt;br/&gt;  dados_smp8.val_indice_30,&lt;br/&gt;  dados_smp8.indice_31,&lt;br/&gt;  dados_smp8.val_indice_31,&lt;br/&gt;  dados_smp8.indice_33,&lt;br/&gt;  dados_smp8.val_indice_33,&lt;br/&gt;  dados_smp8.indice_34,&lt;br/&gt;  dados_smp8.val_indice_34,&lt;br/&gt;  dados_smp8.indice_36,&lt;br/&gt;  dados_smp8.val_indice_36,&lt;br/&gt;  dados_smp8.indice_37,&lt;br/&gt;  dados_smp8.val_indice_37&lt;br/&gt;FROM dados_smp8</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;With dados_x_codigos As (Select c.DATA, c.BILHETADOR_ORIGINAL, c.CENTRAL As msc, c.CN, c.PMM, c.REGIONAL, c.UF, c.SMP8_A, c.SMP8_B, c.CODIGO From VIEW_MSC_VINCULO_SMP8 c, VIEW_MSC_CN_ATIVO_SMP8 v Where v.CN = c.CN And v.MSC = c.CENTRAL And to_date(TO_CHAR(c.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = v.PERIODO And v.STATUS = &apos;T&apos;), codigos_sem_dados As (Select Distinct codigo.MSC, codigo.CN From MSC_CN_CODIGO codigo, (Select Distinct BILHETADOR.nome From indicador, TIPO_TECNOLOGIA, TECNOLOGIA, BILHETADOR Where TECNOLOGIA.ID_TIPO_TECNOLOGIA = indicador.ID_TIPO_TECNOLOGIA And TIPO_TECNOLOGIA.ID_TIPO_TECNOLOGIA = TECNOLOGIA.ID_TIPO_TECNOLOGIA And TECNOLOGIA.ID = BILHETADOR.ID_TECNOLOGIA And indicador.nome In (&apos;SMP8&apos;, &apos;SMP9&apos;)) bilhetador Where codigo.MSC = bilhetador.nome Minus Select Distinct dados_x_codigos.msc, TO_CHAR(dados_x_codigos.CN) From dados_x_codigos), distinct_msc_cn_x_pmm As (Select * From (Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos) datas, (Select Distinct dados_x_codigos.msc, TO_CHAR(dados_x_codigos.CN) cn From dados_x_codigos) msc Union All Select * From (Select Distinct data, MSC, TO_CHAR(CN) cn From (Select Distinct data, codigos_sem_dados.MSC, codigos_sem_dados.CN From codigos_sem_dados, (Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos))) msc), dados_trabalhados As (Select d.data, d.cn, d.msc, NVL(p.SMP8_A, 0) smp8_a, NVL(p.SMP8_B, 0) smp8_b, NVL((Select b.CODIGO From (Select * From MSC_CN_CODIGO b Order By cnAtivo.MSC, cnAtivo.CN, ultima_atualizacao) b Where d.msc = b.MSC And d.cn = b.CN And TRUNC(d.data, &apos;MM&apos;) &gt;= TRUNC(b.ultima_atualizacao, &apos;MM&apos;) And RowNum = 1), &apos;NID&apos;) As codigo From distinct_msc_cn_x_pmm d, dados_x_codigos p, VIEW_MSC_CN_ATIVO_SMP8 cnAtivo Where d.msc = p.msc(+) And d.cn = p.CN(+) And TRUNC(d.data) = TRUNC(p.DATA(+)) And cnAtivo.MSC = d.msc And cnAtivo.CN = d.cn And to_date(TO_CHAR(cnAtivo.PERIODO, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = to_date(TO_CHAR(d.data, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) And cnAtivo.STATUS = &apos;T&apos;), dados_smp8 As (Select * From (Select &apos;SMP8&apos; As SMP, TO_CHAR(c.data, &apos;MM/yyyy&apos;) As DDX, Null As CONSOLIDACAO, DECODE(c.codigo, Null, &apos;NID&apos;, c.codigo) As PRIMARIA, &apos;35&apos; As PONDERACAO, NVL(TO_CHAR(Sum(NVL(c.smp8_b, 0))), &apos;-&apos;) As val_ponderacao, &apos;03&apos; As COLETA, &apos;&apos; As indice_14, &apos;&apos; As val_indice_14, &apos;&apos; As indice_15, &apos;&apos; As val_indice_15, &apos;&apos; As indice_17, &apos;&apos; As val_indice_17, &apos;&apos; As indice_18, &apos;&apos; As val_indice_18, &apos;&apos; As indice_19, &apos;&apos; As val_indice_19, &apos;&apos; As indice_20, &apos;&apos; As val_indice_20, &apos;&apos; As indice_22, &apos;&apos; As val_indice_22, &apos;&apos; As indice_23, &apos;&apos; As val_indice_23, &apos;&apos; As indice_24, &apos;&apos; As val_indice_24, &apos;&apos; As indice_25, &apos;&apos; As val_indice_25, &apos;&apos; As indice_27, &apos;&apos; As val_indice_27, &apos;&apos; As indice_28, &apos;&apos; As val_indice_28, &apos;&apos; As indice_30, &apos;&apos; As val_indice_30, &apos;&apos; As indice_31, &apos;&apos; As val_indice_31, &apos;33&apos; As indice_33, NVL(TO_CHAR(Sum(NVL(c.smp8_a, 0))), &apos;-&apos;) As val_indice_33, &apos;34&apos; As indice_34, NVL(TO_CHAR(Sum(NVL(c.smp8_b, 0))), &apos;-&apos;) As val_indice_34, &apos;&apos; As indice_36, &apos;&apos; As val_indice_36, &apos;&apos; As indice_37, &apos;&apos; As val_indice_37 From dados_trabalhados c Group By &apos;SMP8&apos;, TO_CHAR(c.data, &apos;MM/yyyy&apos;), Null, c.codigo Order By PRIMARIA) Where PRIMARIA != &apos;NID&apos;) Select dados_smp8.SMP, dados_smp8.DDX, dados_smp8.CONSOLIDACAO, dados_smp8.PRIMARIA, dados_smp8.PONDERACAO, dados_smp8.val_ponderacao, dados_smp8.COLETA, dados_smp8.indice_14, dados_smp8.val_indice_14, dados_smp8.indice_15, dados_smp8.val_indice_15, dados_smp8.indice_17, dados_smp8.val_indice_17, dados_smp8.indice_18, dados_smp8.val_indice_18, dados_smp8.indice_19, dados_smp8.val_indice_19, dados_smp8.indice_20, dados_smp8.val_indice_20, dados_smp8.indice_22, dados_smp8.val_indice_22, dados_smp8.indice_23, dados_smp8.val_indice_23, dados_smp8.indice_24, dados_smp8.val_indice_24, dados_smp8.indice_25, dados_smp8.val_indice_25, dados_smp8.indice_27, dados_smp8.val_indice_27, dados_smp8.indice_28, dados_smp8.val_indice_28, dados_smp8.indice_30, dados_smp8.val_indice_30, dados_smp8.indice_31, dados_smp8.val_indice_31, dados_smp8.indice_33, dados_smp8.val_indice_33, dados_smp8.indice_34, dados_smp8.val_indice_34, dados_smp8.indice_36, dados_smp8.val_indice_36, dados_smp8.indice_37, dados_smp8.val_indice_37 From dados_smp8&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;With dados_x_codigos As (Select c.DATA, c.BILHETADOR_ORIGINAL, c.CENTRAL As msc, c.CN, c.PMM, c.REGIONAL, c.UF, c.SMP8_A, c.SMP8_B, c.CODIGO From VIEW_MSC_VINCULO_SMP8 c, VIEW_MSC_CN_ATIVO_SMP8 v Where v.CN = c.CN And v.MSC = c.CENTRAL And to_date(TO_CHAR(c.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = v.PERIODO And v.STATUS = &apos;T&apos;), codigos_sem_dados As (Select Distinct codigo.MSC, codigo.CN From MSC_CN_CODIGO codigo, (Select Distinct BILHETADOR.nome From indicador, TIPO_TECNOLOGIA, TECNOLOGIA, BILHETADOR Where TECNOLOGIA.ID_TIPO_TECNOLOGIA = indicador.ID_TIPO_TECNOLOGIA And TIPO_TECNOLOGIA.ID_TIPO_TECNOLOGIA = TECNOLOGIA.ID_TIPO_TECNOLOGIA And TECNOLOGIA.ID = BILHETADOR.ID_TECNOLOGIA And indicador.nome In (&apos;SMP8&apos;, &apos;SMP9&apos;)) bilhetador Where codigo.MSC = bilhetador.nome Minus Select Distinct dados_x_codigos.msc, TO_CHAR(dados_x_codigos.CN) From dados_x_codigos), distinct_msc_cn_x_pmm As (Select * From (Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos) datas, (Select Distinct dados_x_codigos.msc, TO_CHAR(dados_x_codigos.CN) cn From dados_x_codigos) msc Union All Select * From (Select Distinct data, MSC, TO_CHAR(CN) cn From (Select Distinct data, codigos_sem_dados.MSC, codigos_sem_dados.CN From codigos_sem_dados, (Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos))) msc), dados_trabalhados As (Select d.data, d.cn, d.msc, NVL(p.SMP8_A, 0) smp8_a, NVL(p.SMP8_B, 0) smp8_b, NVL((Select b.CODIGO From (Select * From MSC_CN_CODIGO b Order By cnAtivo.MSC, cnAtivo.CN, ultima_atualizacao) b Where d.msc = b.MSC And d.cn = b.CN And TRUNC(d.data, &apos;MM&apos;) &gt;= TRUNC(b.ultima_atualizacao, &apos;MM&apos;) And RowNum = 1), &apos;NID&apos;) As codigo From distinct_msc_cn_x_pmm d, dados_x_codigos p, VIEW_MSC_CN_ATIVO_SMP8 cnAtivo Where d.msc = p.msc(+) And d.cn = p.CN(+) And TRUNC(d.data) = TRUNC(p.DATA(+)) And cnAtivo.MSC = d.msc And cnAtivo.CN = d.cn And to_date(TO_CHAR(cnAtivo.PERIODO, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = to_date(TO_CHAR(d.data, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) And cnAtivo.STATUS = &apos;T&apos;), dados_smp8 As (Select * From (Select &apos;SMP8&apos; As SMP, TO_CHAR(c.data, &apos;MM/yyyy&apos;) As DDX, Null As CONSOLIDACAO, DECODE(c.codigo, Null, &apos;NID&apos;, c.codigo) As PRIMARIA, &apos;35&apos; As PONDERACAO, NVL(TO_CHAR(Sum(NVL(c.smp8_b, 0))), &apos;-&apos;) As val_ponderacao, &apos;03&apos; As COLETA, &apos;&apos; As indice_14, &apos;&apos; As val_indice_14, &apos;&apos; As indice_15, &apos;&apos; As val_indice_15, &apos;&apos; As indice_17, &apos;&apos; As val_indice_17, &apos;&apos; As indice_18, &apos;&apos; As val_indice_18, &apos;&apos; As indice_19, &apos;&apos; As val_indice_19, &apos;&apos; As indice_20, &apos;&apos; As val_indice_20, &apos;&apos; As indice_22, &apos;&apos; As val_indice_22, &apos;&apos; As indice_23, &apos;&apos; As val_indice_23, &apos;&apos; As indice_24, &apos;&apos; As val_indice_24, &apos;&apos; As indice_25, &apos;&apos; As val_indice_25, &apos;&apos; As indice_27, &apos;&apos; As val_indice_27, &apos;&apos; As indice_28, &apos;&apos; As val_indice_28, &apos;&apos; As indice_30, &apos;&apos; As val_indice_30, &apos;&apos; As indice_31, &apos;&apos; As val_indice_31, &apos;33&apos; As indice_33, NVL(TO_CHAR(Sum(NVL(c.smp8_a, 0))), &apos;-&apos;) As val_indice_33, &apos;34&apos; As indice_34, NVL(TO_CHAR(Sum(NVL(c.smp8_b, 0))), &apos;-&apos;) As val_indice_34, &apos;&apos; As indice_36, &apos;&apos; As val_indice_36, &apos;&apos; As indice_37, &apos;&apos; As val_indice_37 From dados_trabalhados c Group By &apos;SMP8&apos;, TO_CHAR(c.data, &apos;MM/yyyy&apos;), Null, c.codigo Order By PRIMARIA) Where PRIMARIA != &apos;NID&apos;) Select dados_smp8.SMP, dados_smp8.DDX, dados_smp8.CONSOLIDACAO, dados_smp8.PRIMARIA, dados_smp8.PONDERACAO, dados_smp8.val_ponderacao, dados_smp8.COLETA, dados_smp8.indice_14, dados_smp8.val_indice_14, dados_smp8.indice_15, dados_smp8.val_indice_15, dados_smp8.indice_17, dados_smp8.val_indice_17, dados_smp8.indice_18, dados_smp8.val_indice_18, dados_smp8.indice_19, dados_smp8.val_indice_19, dados_smp8.indice_20, dados_smp8.val_indice_20, dados_smp8.indice_22, dados_smp8.val_indice_22, dados_smp8.indice_23, dados_smp8.val_indice_23, dados_smp8.indice_24, dados_smp8.val_indice_24, dados_smp8.indice_25, dados_smp8.val_indice_25, dados_smp8.indice_27, dados_smp8.val_indice_27, dados_smp8.indice_28, dados_smp8.val_indice_28, dados_smp8.indice_30, dados_smp8.val_indice_30, dados_smp8.indice_31, dados_smp8.val_indice_31, dados_smp8.indice_33, dados_smp8.val_indice_33, dados_smp8.indice_34, dados_smp8.val_indice_34, dados_smp8.indice_36, dados_smp8.val_indice_36, dados_smp8.indice_37, dados_smp8.val_indice_37 From dados_smp8&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_smp8&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;155&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select c.DATA, c.BILHETADOR_ORIGINAL, c.CENTRAL As msc, c.CN, c.PMM, c.REGIONAL, c.UF, c.SMP8_A, c.SMP8_B, c.CODIGO From VIEW_MSC_VINCULO_SMP8 c, VIEW_MSC_CN_ATIVO_SMP8 v Where v.CN = c.CN And v.MSC = c.CENTRAL And to_date(TO_CHAR(c.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = v.PERIODO And v.STATUS = &apos;T&apos;&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;VIEW_MSC_VINCULO_SMP8 c&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;119&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;VIEW_MSC_CN_ATIVO_SMP8 v&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct codigo.MSC, codigo.CN From MSC_CN_CODIGO codigo, (Select Distinct BILHETADOR.nome From indicador, TIPO_TECNOLOGIA, TECNOLOGIA, BILHETADOR Where TECNOLOGIA.ID_TIPO_TECNOLOGIA = indicador.ID_TIPO_TECNOLOGIA And TIPO_TECNOLOGIA.ID_TIPO_TECNOLOGIA = TECNOLOGIA.ID_TIPO_TECNOLOGIA And TECNOLOGIA.ID = BILHETADOR.ID_TECNOLOGIA And indicador.nome In (&apos;SMP8&apos;, &apos;SMP9&apos;)) bilhetador Where codigo.MSC = bilhetador.nome Minus Select Distinct dados_x_codigos.msc, TO_CHAR(dados_x_codigos.CN) From dados_x_codigos&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;MSC_CN_CODIGO codigo&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;(Select Distinct BILHETADOR.nome From indicador, TIPO_TECNOLOGIA, TECNOLOGIA, BILHETADOR Where TECNOLOGIA.ID_TIPO_TECNOLOGIA = indicador.ID_TIPO_TECNOLOGIA And TIPO_TECNOLOGIA.ID_TIPO_TECNOLOGIA = TECNOLOGIA.ID_TIPO_TECNOLOGIA And TECNOLOGIA.ID = BILHETADOR.ID_TECNOLOGIA And indicador.nome In (&apos;SMP8&apos;, &apos;SMP9&apos;)) bilhetador&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_x_codigos&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;232&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct BILHETADOR.nome From indicador, TIPO_TECNOLOGIA, TECNOLOGIA, BILHETADOR Where TECNOLOGIA.ID_TIPO_TECNOLOGIA = indicador.ID_TIPO_TECNOLOGIA And TIPO_TECNOLOGIA.ID_TIPO_TECNOLOGIA = TECNOLOGIA.ID_TIPO_TECNOLOGIA And TECNOLOGIA.ID = BILHETADOR.ID_TECNOLOGIA And indicador.nome In (&apos;SMP8&apos;, &apos;SMP9&apos;)&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;indicador&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;137&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;TIPO_TECNOLOGIA&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;196&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;TECNOLOGIA&quot; X=&quot;50&quot; Y=&quot;164&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;BILHETADOR&quot; X=&quot;50&quot; Y=&quot;92&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select * From (Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos) datas, (Select Distinct dados_x_codigos.msc, TO_CHAR(dados_x_codigos.CN) cn From dados_x_codigos) msc Union All Select * From (Select Distinct data, MSC, TO_CHAR(CN) cn From (Select Distinct data, codigos_sem_dados.MSC, codigos_sem_dados.CN From codigos_sem_dados, (Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos))) msc&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos) datas&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;(Select Distinct dados_x_codigos.msc, TO_CHAR(dados_x_codigos.CN) cn From dados_x_codigos) msc&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;88&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select Distinct data, MSC, TO_CHAR(CN) cn From (Select Distinct data, codigos_sem_dados.MSC, codigos_sem_dados.CN From codigos_sem_dados, (Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos))) msc&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;106&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_x_codigos&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;142&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct dados_x_codigos.msc, TO_CHAR(dados_x_codigos.CN) cn From dados_x_codigos&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_x_codigos&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct data, MSC, TO_CHAR(CN) cn From (Select Distinct data, codigos_sem_dados.MSC, codigos_sem_dados.CN From codigos_sem_dados, (Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos))&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select Distinct data, codigos_sem_dados.MSC, codigos_sem_dados.CN From codigos_sem_dados, (Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos))&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;106&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct data, codigos_sem_dados.MSC, codigos_sem_dados.CN From codigos_sem_dados, (Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos)&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;codigos_sem_dados&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;88&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;(Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos)&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct TRUNC(dados_x_codigos.DATA) As data From dados_x_codigos&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_x_codigos&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;232&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select d.data, d.cn, d.msc, NVL(p.SMP8_A, 0) smp8_a, NVL(p.SMP8_B, 0) smp8_b, NVL((Select b.CODIGO From (Select * From MSC_CN_CODIGO b Order By cnAtivo.MSC, cnAtivo.CN, ultima_atualizacao) b Where d.msc = b.MSC And d.cn = b.CN And TRUNC(d.data, &apos;MM&apos;) &gt;= TRUNC(b.ultima_atualizacao, &apos;MM&apos;) And RowNum = 1), &apos;NID&apos;) As codigo From distinct_msc_cn_x_pmm d, dados_x_codigos p, VIEW_MSC_CN_ATIVO_SMP8 cnAtivo Where d.msc = p.msc(+) And d.cn = p.CN(+) And TRUNC(d.data) = TRUNC(p.DATA(+)) And cnAtivo.MSC = d.msc And cnAtivo.CN = d.cn And to_date(TO_CHAR(cnAtivo.PERIODO, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = to_date(TO_CHAR(d.data, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) And cnAtivo.STATUS = &apos;T&apos;&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;distinct_msc_cn_x_pmm d&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;106&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;dados_x_codigos p&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;232&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;VIEW_MSC_CN_ATIVO_SMP8 cnAtivo&quot; X=&quot;430&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select b.CODIGO From (Select * From MSC_CN_CODIGO b Order By cnAtivo.MSC, cnAtivo.CN, ultima_atualizacao) b Where d.msc = b.MSC And d.cn = b.CN And TRUNC(d.data, &apos;MM&apos;) &gt;= TRUNC(b.ultima_atualizacao, &apos;MM&apos;) And RowNum = 1&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select * From MSC_CN_CODIGO b Order By cnAtivo.MSC, cnAtivo.CN, ultima_atualizacao) b&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;106&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select * From MSC_CN_CODIGO b Order By cnAtivo.MSC, cnAtivo.CN, ultima_atualizacao&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;MSC_CN_CODIGO b&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;106&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select * From (Select &apos;SMP8&apos; As SMP, TO_CHAR(c.data, &apos;MM/yyyy&apos;) As DDX, Null As CONSOLIDACAO, DECODE(c.codigo, Null, &apos;NID&apos;, c.codigo) As PRIMARIA, &apos;35&apos; As PONDERACAO, NVL(TO_CHAR(Sum(NVL(c.smp8_b, 0))), &apos;-&apos;) As val_ponderacao, &apos;03&apos; As COLETA, &apos;&apos; As indice_14, &apos;&apos; As val_indice_14, &apos;&apos; As indice_15, &apos;&apos; As val_indice_15, &apos;&apos; As indice_17, &apos;&apos; As val_indice_17, &apos;&apos; As indice_18, &apos;&apos; As val_indice_18, &apos;&apos; As indice_19, &apos;&apos; As val_indice_19, &apos;&apos; As indice_20, &apos;&apos; As val_indice_20, &apos;&apos; As indice_22, &apos;&apos; As val_indice_22, &apos;&apos; As indice_23, &apos;&apos; As val_indice_23, &apos;&apos; As indice_24, &apos;&apos; As val_indice_24, &apos;&apos; As indice_25, &apos;&apos; As val_indice_25, &apos;&apos; As indice_27, &apos;&apos; As val_indice_27, &apos;&apos; As indice_28, &apos;&apos; As val_indice_28, &apos;&apos; As indice_30, &apos;&apos; As val_indice_30, &apos;&apos; As indice_31, &apos;&apos; As val_indice_31, &apos;33&apos; As indice_33, NVL(TO_CHAR(Sum(NVL(c.smp8_a, 0))), &apos;-&apos;) As val_indice_33, &apos;34&apos; As indice_34, NVL(TO_CHAR(Sum(NVL(c.smp8_b, 0))), &apos;-&apos;) As val_indice_34, &apos;&apos; As indice_36, &apos;&apos; As val_indice_36, &apos;&apos; As indice_37, &apos;&apos; As val_indice_37 From dados_trabalhados c Group By &apos;SMP8&apos;, TO_CHAR(c.data, &apos;MM/yyyy&apos;), Null, c.codigo Order By PRIMARIA) Where PRIMARIA != &apos;NID&apos;&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select &apos;SMP8&apos; As SMP, TO_CHAR(c.data, &apos;MM/yyyy&apos;) As DDX, Null As CONSOLIDACAO, DECODE(c.codigo, Null, &apos;NID&apos;, c.codigo) As PRIMARIA, &apos;35&apos; As PONDERACAO, NVL(TO_CHAR(Sum(NVL(c.smp8_b, 0))), &apos;-&apos;) As val_ponderacao, &apos;03&apos; As COLETA, &apos;&apos; As indice_14, &apos;&apos; As val_indice_14, &apos;&apos; As indice_15, &apos;&apos; As val_indice_15, &apos;&apos; As indice_17, &apos;&apos; As val_indice_17, &apos;&apos; As indice_18, &apos;&apos; As val_indice_18, &apos;&apos; As indice_19, &apos;&apos; As val_indice_19, &apos;&apos; As indice_20, &apos;&apos; As val_indice_20, &apos;&apos; As indice_22, &apos;&apos; As val_indice_22, &apos;&apos; As indice_23, &apos;&apos; As val_indice_23, &apos;&apos; As indice_24, &apos;&apos; As val_indice_24, &apos;&apos; As indice_25, &apos;&apos; As val_indice_25, &apos;&apos; As indice_27, &apos;&apos; As val_indice_27, &apos;&apos; As indice_28, &apos;&apos; As val_indice_28, &apos;&apos; As indice_30, &apos;&apos; As val_indice_30, &apos;&apos; As indice_31, &apos;&apos; As val_indice_31, &apos;33&apos; As indice_33, NVL(TO_CHAR(Sum(NVL(c.smp8_a, 0))), &apos;-&apos;) As val_indice_33, &apos;34&apos; As indice_34, NVL(TO_CHAR(Sum(NVL(c.smp8_b, 0))), &apos;-&apos;) As val_indice_34, &apos;&apos; As indice_36, &apos;&apos; As val_indice_36, &apos;&apos; As indice_37, &apos;&apos; As val_indice_37 From dados_trabalhados c Group By &apos;SMP8&apos;, TO_CHAR(c.data, &apos;MM/yyyy&apos;), Null, c.codigo Order By PRIMARIA)&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;826&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select &apos;SMP8&apos; As SMP, TO_CHAR(c.data, &apos;MM/yyyy&apos;) As DDX, Null As CONSOLIDACAO, DECODE(c.codigo, Null, &apos;NID&apos;, c.codigo) As PRIMARIA, &apos;35&apos; As PONDERACAO, NVL(TO_CHAR(Sum(NVL(c.smp8_b, 0))), &apos;-&apos;) As val_ponderacao, &apos;03&apos; As COLETA, &apos;&apos; As indice_14, &apos;&apos; As val_indice_14, &apos;&apos; As indice_15, &apos;&apos; As val_indice_15, &apos;&apos; As indice_17, &apos;&apos; As val_indice_17, &apos;&apos; As indice_18, &apos;&apos; As val_indice_18, &apos;&apos; As indice_19, &apos;&apos; As val_indice_19, &apos;&apos; As indice_20, &apos;&apos; As val_indice_20, &apos;&apos; As indice_22, &apos;&apos; As val_indice_22, &apos;&apos; As indice_23, &apos;&apos; As val_indice_23, &apos;&apos; As indice_24, &apos;&apos; As val_indice_24, &apos;&apos; As indice_25, &apos;&apos; As val_indice_25, &apos;&apos; As indice_27, &apos;&apos; As val_indice_27, &apos;&apos; As indice_28, &apos;&apos; As val_indice_28, &apos;&apos; As indice_30, &apos;&apos; As val_indice_30, &apos;&apos; As indice_31, &apos;&apos; As val_indice_31, &apos;33&apos; As indice_33, NVL(TO_CHAR(Sum(NVL(c.smp8_a, 0))), &apos;-&apos;) As val_indice_33, &apos;34&apos; As indice_34, NVL(TO_CHAR(Sum(NVL(c.smp8_b, 0))), &apos;-&apos;) As val_indice_34, &apos;&apos; As indice_36, &apos;&apos; As val_indice_36, &apos;&apos; As indice_37, &apos;&apos; As val_indice_37 From dados_trabalhados c Group By &apos;SMP8&apos;, TO_CHAR(c.data, &apos;MM/yyyy&apos;), Null, c.codigo Order By PRIMARIA&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_trabalhados c&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;160&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP" id="48FBD97D-563E-6CCE-453B-EB4736F7EF4D">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR (4)</dataType>
+<headerAlias>SMP</headerAlias>
+<expression>dados_smp8.SMP</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DDX" id="CA3507F0-4576-DC5B-C0EA-08AC6EAC0588">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (7)</dataType>
+<headerAlias>DDX</headerAlias>
+<expression>dados_smp8.DDX</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CONSOLIDACAO" id="0B6AB75A-48F9-A6E7-CCE3-0A950C6BD09F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2</dataType>
+<headerAlias>CONSOLIDACAO</headerAlias>
+<expression>dados_smp8.CONSOLIDACAO</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PRIMARIA" id="ECEDE1D8-2133-D3FC-B703-2D9017934366">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>PRIMARIA</headerAlias>
+<expression>dados_smp8.PRIMARIA</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PONDERACAO" id="80756B61-8803-B5D3-55F4-1B531333C52E">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR (2)</dataType>
+<headerAlias>PONDERACAO</headerAlias>
+<expression>dados_smp8.PONDERACAO</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_PONDERACAO" id="933EEB17-C038-1261-615E-B3412F0C4689">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>VAL_PONDERACAO</headerAlias>
+<expression>dados_smp8.val_ponderacao</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="COLETA" id="2ADE4873-4FFA-271B-40D2-D016FFCEFBA9">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR (2)</dataType>
+<headerAlias>COLETA</headerAlias>
+<expression>dados_smp8.COLETA</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_14" id="B37F9AFE-6E44-67FF-F776-75E640714AE5">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_14</headerAlias>
+<expression>dados_smp8.indice_14</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_14" id="133F2847-518F-BDAC-CD27-FC2BCCA117D9">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_14</headerAlias>
+<expression>dados_smp8.val_indice_14</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_15" id="1DC1BDBE-B43B-A5AB-56AF-1C8E875D9847">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_15</headerAlias>
+<expression>dados_smp8.indice_15</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_15" id="19FA36E1-9BF3-677A-875E-941B4EEBD64F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_15</headerAlias>
+<expression>dados_smp8.val_indice_15</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_17" id="7385BFAA-35D7-C163-97C1-4213D7A99105">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_17</headerAlias>
+<expression>dados_smp8.indice_17</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_17" id="F68DC829-448D-551D-7D49-273BDD479CEF">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_17</headerAlias>
+<expression>dados_smp8.val_indice_17</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_18" id="306B3D2C-A542-F28D-7815-F3A7A4C66B1D">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_18</headerAlias>
+<expression>dados_smp8.indice_18</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_18" id="C5EFCD98-8950-5695-A943-8BE98471084B">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_18</headerAlias>
+<expression>dados_smp8.val_indice_18</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_19" id="C6AEF83C-5E2E-3E62-646A-B90A8494094E">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_19</headerAlias>
+<expression>dados_smp8.indice_19</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_19" id="A0B226EA-90BF-3069-B89B-359239AC406B">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_19</headerAlias>
+<expression>dados_smp8.val_indice_19</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_20" id="EC07A5FB-85EB-8DBD-396C-B3B3D6B3D770">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_20</headerAlias>
+<expression>dados_smp8.indice_20</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_20" id="B84B23B7-AF5C-8E7B-ACCA-9F1473964A10">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_20</headerAlias>
+<expression>dados_smp8.val_indice_20</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_22" id="95539A1A-5ED0-7E5B-3658-45358FD9F43E">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_22</headerAlias>
+<expression>dados_smp8.indice_22</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_22" id="C5CA7031-45B9-A151-4A06-573ADDE8D4DA">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_22</headerAlias>
+<expression>dados_smp8.val_indice_22</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_23" id="8CE89C71-9B71-E943-71E4-752DD15A43F9">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_23</headerAlias>
+<expression>dados_smp8.indice_23</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_23" id="89D0DDAB-7F1D-096E-2367-767B5D388377">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_23</headerAlias>
+<expression>dados_smp8.val_indice_23</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_24" id="E1A6F3DB-AAD0-12DE-C5E7-8456EDBAF696">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_24</headerAlias>
+<expression>dados_smp8.indice_24</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_24" id="DF480EF9-480A-AC28-BAFD-96EA38D9EB13">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_24</headerAlias>
+<expression>dados_smp8.val_indice_24</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_25" id="631A4535-8653-B329-4009-B6ACC2D3AEC9">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_25</headerAlias>
+<expression>dados_smp8.indice_25</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_25" id="131E28AC-37BA-701A-F04C-4F77299D372F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_25</headerAlias>
+<expression>dados_smp8.val_indice_25</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_27" id="7AA196BF-3293-42D5-3A05-7BBC8B814F75">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_27</headerAlias>
+<expression>dados_smp8.indice_27</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_27" id="FC1DFA05-C88B-A4A6-01E1-3F2C4856755C">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_27</headerAlias>
+<expression>dados_smp8.val_indice_27</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_28" id="B1CB5C8F-A799-5451-C99C-D4BD65E77606">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_28</headerAlias>
+<expression>dados_smp8.indice_28</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_28" id="6031311D-66C2-619D-CC57-933D0C23AA0E">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_28</headerAlias>
+<expression>dados_smp8.val_indice_28</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_30" id="3DE0A960-DA55-D180-EE01-727F5A44A263">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_30</headerAlias>
+<expression>dados_smp8.indice_30</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_30" id="13C2DE13-A53D-A5CC-251F-250FDACDB167">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_30</headerAlias>
+<expression>dados_smp8.val_indice_30</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_31" id="69879FB7-42C5-6839-BCC1-8A3C951E1869">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_31</headerAlias>
+<expression>dados_smp8.indice_31</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_31" id="E49545F7-D5E6-866E-3EBE-3FDF3D1AC9D8">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_31</headerAlias>
+<expression>dados_smp8.val_indice_31</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_33" id="2E64ECBB-DC78-8B48-59FC-D4046A2E8CCF">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR (2)</dataType>
+<headerAlias>INDICE_33</headerAlias>
+<expression>dados_smp8.indice_33</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_33" id="D8998C21-2A9C-EE0F-1EA5-896D8D057642">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>VAL_INDICE_33</headerAlias>
+<expression>dados_smp8.val_indice_33</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_34" id="A0C2966F-E17E-FD88-8BDD-AB2116776262">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR (2)</dataType>
+<headerAlias>INDICE_34</headerAlias>
+<expression>dados_smp8.indice_34</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_34" id="5FE433D3-1075-24E9-21E2-46F008964406">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>VAL_INDICE_34</headerAlias>
+<expression>dados_smp8.val_indice_34</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_36" id="8E38D0F0-0D0A-6BE4-A448-9630E73F74DB">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_36</headerAlias>
+<expression>dados_smp8.indice_36</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_36" id="60329EB1-2D78-DB16-AE6E-04A4D5DFE6A1">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_36</headerAlias>
+<expression>dados_smp8.val_indice_36</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INDICE_37" id="69B37789-E69E-91CE-DD1D-68C3CCEA517A">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>INDICE_37</headerAlias>
+<expression>dados_smp8.indice_37</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VAL_INDICE_37" id="52C87789-0A0D-A457-B757-7F7B576ECC86">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:41:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>CHAR</dataType>
+<headerAlias>VAL_INDICE_37</headerAlias>
+<expression>dados_smp8.val_indice_37</expression>
+<reference>false</reference>
+<viewID>20221D82-76D0-1617-72F5-4F0933BCB52D</viewID>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="32D98184-2F96-C2C1-9D7C-C3DB2F78DC35">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP8</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="AC45ECD0-2D22-06CE-A590-8C9ABBC5F9B7">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP8</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FAA31BF9-FA97-D79D-A02D-2E5EB4ECED5E">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>MSC_CN_CODIGO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="821240DC-E7EC-5FD6-6CB6-114DC40058E8">
+<columnName>CN</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP8</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="C7F09D28-AB45-CD1F-FA0D-346ACD6D4F1E">
+<columnName>MSC</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP8</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="34B81DDE-644C-354D-0EB7-AE25A5A0FE3B">
+<columnName>PERIODO</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP8</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7CCA5519-EEA0-2647-39DD-D4FFA490A79B">
+<columnName>STATUS</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP8</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

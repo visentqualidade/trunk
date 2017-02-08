@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+		<param-value>/i18n/messages</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.locale</param-name>
+		<param-value>pt_BR</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>br.com.visent.metricview.util.IniciarAplicacaoUtil</listener-class>
+	</listener>
+	
+	<listener>
+		<description>Classe para controlar os usuarios em sessao</description>
+		<listener-class>br.com.visent.metricview.util.SessionManagerUtil</listener-class>
+	</listener>
+
+	<!-- filtros da aplicacao -->
+	
+	<!-- jpa filter -->
+	<filter>
+		<filter-name>jpaFilter</filter-name>
+		<filter-class>br.com.visent.corporativo.filter.JPAFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>jpaFilter</filter-name>
+		<url-pattern>/dwr/call/*</url-pattern>
+	</filter-mapping>
+
+	<!-- filtro de login -->
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>br.com.visent.metricview.filter.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>/app/*</url-pattern>
+	</filter-mapping>
+
+	<!-- filtro da urlrewriter -->
+	<filter>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+	<!-- final filtros da aplicacao -->
+
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>org.directwebremoting.servlet.DwrServlet
+		</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>activeReverseAjaxEnabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- configuracao do tempo de sessao -->
+	<session-config>
+		<session-timeout>-1</session-timeout>
+	</session-config>
+
+</web-app>

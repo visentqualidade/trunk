@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="CENARIO" directorySegmentName="seg_0" id="34CAD6CE-838A-2C6C-F202-2D0747BDC155">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DA3890FB-F1F2-2E8A-3C7E-06108E2ADE3B</segment>
+<tableSpace>90F0D9ED-D833-85D4-9FE0-9BABD7A578A4</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NOME" id="36245E29-4FCD-9602-E244-CBCF62C50A85">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_CENARIO" id="F23976E0-FF52-EC85-6A3A-D10C4C856278">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>

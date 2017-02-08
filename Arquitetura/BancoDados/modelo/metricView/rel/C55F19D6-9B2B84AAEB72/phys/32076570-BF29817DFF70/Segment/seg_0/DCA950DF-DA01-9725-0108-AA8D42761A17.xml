@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SegmentOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SegmentOraclev10g" name="Storage2" directorySegmentName="seg_0" id="DCA950DF-DA01-9725-0108-AA8D42761A17">
+<sourceDDLFile>exportar.sql</sourceDDLFile>
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-09 20:29:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<maxTrans>255</maxTrans>
+</SegmentOraclev10g>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableViewProxyOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableViewProxyOraclev10g" name="VIEW_SMP5_EXPORTACAO_ANATEL" directorySegmentName="seg_1" id="B03D7B5A-A93F-7D0B-D5C5-0583CD7082FC">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 13:05:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+</TableViewProxyOraclev10g>

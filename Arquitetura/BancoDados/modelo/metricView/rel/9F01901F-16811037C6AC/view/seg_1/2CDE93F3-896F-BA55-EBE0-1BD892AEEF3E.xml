@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_1" id="2CDE93F3-896F-BA55-EBE0-1BD892AEEF3E" name="VIEW_SMP4_TX_ENTREGA_UF">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>VIEW_SMP4_TX_ENTREGA_UF</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>CC7AB7D0-8969-D764-D569-DDAD6F7AAE95</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW VIEW_SMP4_TX_ENTREGA_UF&lt;br/&gt;AS &lt;br/&gt;WITH ufs AS&lt;br/&gt;  (SELECT nome sigla FROM uf&lt;br/&gt;  ),&lt;br/&gt;  dados_traducao_sem_vinculo as&lt;br/&gt;  (select * from view_smp4_tx_entrega_dados where codigo != &apos;NID&apos;&lt;br/&gt;  ),&lt;br/&gt;  dados_smp_uf AS&lt;br/&gt;  (SELECT Data,&lt;br/&gt;    Pmm,&lt;br/&gt;    UF,&lt;br/&gt;    CASE&lt;br/&gt;      WHEN SMP_B = &apos;0&apos;&lt;br/&gt;      AND SMP_A != &apos;-&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      WHEN SMP_B = &apos;-&apos;&lt;br/&gt;      AND SMP_A  = &apos;-&apos;&lt;br/&gt;      THEN &apos;-&apos;&lt;br/&gt;      WHEN SMP_B != &apos;-&apos;&lt;br/&gt;      AND SMP_A   = &apos;-&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      ELSE NVL(trim(TO_CHAR(ROUND((Smp_A * 100 / SMP_B), 2),&apos;999990D99&apos;)), &apos;-&apos;)&lt;br/&gt;    END                     AS SMP,&lt;br/&gt;    TO_CHAR(Data, &apos;MON-YY&apos;) AS DT_FORMATADA,&lt;br/&gt;    SMP_A                  AS &quot;SMP_a&quot;,&lt;br/&gt;    SMP_B                  AS &quot;SMP_b&quot;&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT TRUNC(Tab.DATA)                                                                                                                                     AS Data,&lt;br/&gt;      tab.pmm                                                                                                                                                  AS Pmm,&lt;br/&gt;      uf.nome                                                                                                                                                   AS UF,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.n_chamadas_entregues, 0))),0) AS Smp_A,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.n_tentativas, 0))),0) AS Smp_B&lt;br/&gt;    FROM &lt;br/&gt;    view_msc_cn_ativo_smp4 b,&lt;br/&gt;    dados_traducao_sem_vinculo Tab&lt;br/&gt;    INNER JOIN CN cn&lt;br/&gt;    ON cn.nome = Tab.CN&lt;br/&gt;    INNER JOIN UF uf&lt;br/&gt;    ON uf.id_uf = cn.id_uf&lt;br/&gt;    where tab.msc = b.msc&lt;br/&gt;      and tab.cn = b.cn&lt;br/&gt;      and to_date(to_char(tab.data,&apos;MM/yyyy&apos;),&apos;MM/yyyy&apos;) = b.periodo&lt;br/&gt;      and b.status = &apos;T&apos;&lt;br/&gt;    GROUP BY TRUNC(Tab.DATA),&lt;br/&gt;      tab.pmm,&lt;br/&gt;      uf.nome&lt;br/&gt;    )&lt;br/&gt;  ),&lt;br/&gt;  agrupadores_smp_uf AS&lt;br/&gt;  (SELECT *&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT DISTINCT dados_smp_uf.Data FROM dados_smp_uf&lt;br/&gt;    ) datas,&lt;br/&gt;    (SELECT DISTINCT dados_smp_uf.Pmm FROM dados_smp_uf&lt;br/&gt;    ) pmms,&lt;br/&gt;    (SELECT DISTINCT ufs.sigla uf FROM ufs&lt;br/&gt;    ) uf&lt;br/&gt;  ),&lt;br/&gt;  agrupadores_por_dados AS&lt;br/&gt;  (SELECT agrupadores.Data,&lt;br/&gt;    agrupadores.Pmm,&lt;br/&gt;    agrupadores.uf,&lt;br/&gt;    DECODE(dados.SMP, NULL, &apos;-&apos;, dados.SMP) SMP,&lt;br/&gt;    DECODE(dados.&quot;SMP_a&quot;, NULL, &apos;-&apos;, dados.&quot;SMP_a&quot;) SMP_a,&lt;br/&gt;    DECODE(dados.&quot;SMP_b&quot;, NULL, &apos;-&apos;, dados.&quot;SMP_b&quot;) SMP_b&lt;br/&gt;  FROM dados_smp_uf dados,&lt;br/&gt;    agrupadores_smp_uf agrupadores&lt;br/&gt;  WHERE agrupadores.Data = dados.Data(+)&lt;br/&gt;  AND agrupadores.Pmm    = dados.Pmm(+)&lt;br/&gt;  AND agrupadores.uf     = dados.UF(+)&lt;br/&gt;  )&lt;br/&gt;SELECT TO_CHAR(a.Data, &apos;dd/MM/yyyy&apos;) DATA,&lt;br/&gt;  a.uf,&lt;br/&gt;  a.Pmm,&lt;br/&gt;  CASE&lt;br/&gt;    WHEN a.SMP          != &apos;-&apos;&lt;br/&gt;    AND TO_NUMBER(a.SMP) &gt; 100&lt;br/&gt;    THEN &apos;100,00&apos;&lt;br/&gt;    ELSE replace(a.SMP,&apos;.&apos;,&apos;,&apos;)&lt;br/&gt;  END                       AS SMP,&lt;br/&gt;  TO_CHAR(a.Data, &apos;MON-YY&apos;) AS DT_FORMATADA,&lt;br/&gt;  a.SMP_a                  AS SMP_A,&lt;br/&gt;  a.SMP_b                  AS SMP_B&lt;br/&gt;FROM agrupadores_por_dados a&lt;br/&gt;ORDER BY 1,&lt;br/&gt;  2,&lt;br/&gt;  3</userDefinedSQL>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DATA" id="8C7C7157-542E-62A5-02C0-CAF9E05E2EED">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DATA</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>DATA</headerAlias>
+<reference>false</reference>
+<viewID>2CDE93F3-896F-BA55-EBE0-1BD892AEEF3E</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="UF" id="C83876EA-E401-268F-3862-3B967C6F8CFC">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>UF</alias>
+<dataType>VARCHAR2 (2)</dataType>
+<headerAlias>UF</headerAlias>
+<reference>false</reference>
+<viewID>2CDE93F3-896F-BA55-EBE0-1BD892AEEF3E</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PMM" id="AC335AC5-CF65-19D3-BD73-E3FDC9D43D02">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>PMM</alias>
+<dataType>VARCHAR2 (20)</dataType>
+<headerAlias>PMM</headerAlias>
+<reference>false</reference>
+<viewID>2CDE93F3-896F-BA55-EBE0-1BD892AEEF3E</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP" id="1393F6EC-A4DB-6528-F9EC-19C901DCB8A0">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>SMP</headerAlias>
+<reference>false</reference>
+<viewID>2CDE93F3-896F-BA55-EBE0-1BD892AEEF3E</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DT_FORMATADA" id="B83B144D-92DE-57A5-9BA7-5CBABE3F3FA5">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DT_FORMATADA</alias>
+<dataType>VARCHAR2 (6)</dataType>
+<headerAlias>DT_FORMATADA</headerAlias>
+<reference>false</reference>
+<viewID>2CDE93F3-896F-BA55-EBE0-1BD892AEEF3E</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP_A" id="1791CFBE-FB20-2069-92E1-52830019B378">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP_A</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SMP_A</headerAlias>
+<reference>false</reference>
+<viewID>2CDE93F3-896F-BA55-EBE0-1BD892AEEF3E</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP_B" id="B92CEA72-E76D-D34E-93AE-E028843A9486">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP_B</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SMP_B</headerAlias>
+<reference>false</reference>
+<viewID>2CDE93F3-896F-BA55-EBE0-1BD892AEEF3E</viewID>
+</viewElement>
+</viewElements>
+</TableView>

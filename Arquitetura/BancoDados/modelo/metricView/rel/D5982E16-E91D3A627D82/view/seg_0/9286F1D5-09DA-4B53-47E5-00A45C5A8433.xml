@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="9286F1D5-09DA-4B53-47E5-00A45C5A8433" name="VW_FILTRO_GRUPO_CNG">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-14 18:23:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT UNIQUE destino FROM cdrview_cham_orig_hora</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select Unique destino From cdrview_cham_orig_hora&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select Unique destino From cdrview_cham_orig_hora&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;cdrview_cham_orig_hora&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="destino" id="0843A04A-AD65-8D02-ED07-D44F9C3C4800">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-14 18:24:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>destino</expression>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+</TableView>

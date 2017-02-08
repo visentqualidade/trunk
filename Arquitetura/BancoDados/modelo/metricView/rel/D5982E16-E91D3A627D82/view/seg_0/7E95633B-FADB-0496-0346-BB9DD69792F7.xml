@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="7E95633B-FADB-0496-0346-BB9DD69792F7" name="VW_RN2">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-08 12:42:34 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT tab.CN AS CN_B,&lt;br/&gt;  tab.RN1,&lt;br/&gt;  tab.ARL,&lt;br/&gt;  tab.TIPO_TRAFEGO,&lt;br/&gt;  tab.ROUTE_GROUP AS GRUPO_ROTA&lt;br/&gt;FROM vw_itxview_rn2 tab</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select tab.CN As CN_B, tab.RN1, tab.ARL, tab.TIPO_TRAFEGO, tab.ROUTE_GROUP As GRUPO_ROTA From vw_itxview_rn2 tab&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select tab.CN As CN_B, tab.RN1, tab.ARL, tab.TIPO_TRAFEGO, tab.ROUTE_GROUP As GRUPO_ROTA From vw_itxview_rn2 tab&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;vw_itxview_rn2 tab&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CN" id="02D8FB45-77B2-48BD-C5F4-F890A49631FA">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-26 17:41:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CN_B</alias>
+<expression>tab.CN</expression>
+<reference>false</reference>
+<tableAlias>tab</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="RN1" id="24BF7B95-F00F-0B5A-B863-AEF2741356F3">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-08 12:42:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>tab.RN1</expression>
+<reference>false</reference>
+<tableAlias>tab</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ARL" id="A82FC23E-0D6F-2B57-43AF-BC2A4E561015">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-08 12:42:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>tab.ARL</expression>
+<reference>false</reference>
+<tableAlias>tab</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="TIPO_TRAFEGO" id="A09FCF72-D8FF-F295-286C-E199ADD86AAB">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-08 12:42:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>tab.TIPO_TRAFEGO</expression>
+<reference>false</reference>
+<tableAlias>tab</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ROUTE_GROUP" id="4E52421F-225E-5193-6DD3-D224DA8775A9">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-26 17:41:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>GRUPO_ROTA</alias>
+<expression>tab.ROUTE_GROUP</expression>
+<reference>false</reference>
+<tableAlias>tab</tableAlias>
+</viewElement>
+</viewElements>
+</TableView>

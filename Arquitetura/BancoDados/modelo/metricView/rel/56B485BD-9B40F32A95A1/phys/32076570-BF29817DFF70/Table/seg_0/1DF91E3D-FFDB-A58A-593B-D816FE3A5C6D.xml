@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="GRUPO" directorySegmentName="seg_0" id="1DF91E3D-FFDB-A58A-593B-D816FE3A5C6D">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="DESCRICAO" id="710B1F30-1010-8ADD-D086-C7150A42541F">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="NOME" id="8015BE9A-2CC0-A895-81E2-9BF27EBFA781">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="ID_GRUPO" id="C88BABFA-1D04-1390-4A8F-ACFCE01275E6">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="GRUPO_PK" id="B561241F-A027-CDC9-64FA-31A644DA54D6">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="GRUPO_PK" id="509E2165-63DC-F8AF-7D7D-370628CAD850">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

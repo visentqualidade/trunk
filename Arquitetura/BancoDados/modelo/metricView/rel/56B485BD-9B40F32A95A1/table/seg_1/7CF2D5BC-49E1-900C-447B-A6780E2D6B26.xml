@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="7CF2D5BC-49E1-900C-447B-A6780E2D6B26" name="ROTAS">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>ROTAS</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>B8D0BCE0-F207-342A-91CF-714DC714CD8E</importedID>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="723F147B-C153-ABA0-1D26-B1E803F562F1">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>ROTAS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>4F2EE3E6-A0E6-9596-2940-054B632082F7</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="B66480DB-8990-A984-ACE9-431B35C839C6">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>ROTAS</sourceObjSchema>
+<sourceObjName>NOME</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>3EB8452A-F51C-9A0B-05E6-8A5715C67A78</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_GRUPO_ROTA" id="CB04E6FA-0666-A813-A5D4-C17E8C86B457">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>ROTAS</sourceObjSchema>
+<sourceObjName>ID_GRUPO_ROTA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>E3CD3E56-29ED-1470-57FF-C90D97A46DED</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>314DD53A-8364-18BE-5A95-5443B05049C0</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="73BF1C4D-D505-DC0A-F09A-D27D2BF9EF77" referredColumn="314DD53A-8364-18BE-5A95-5443B05049C0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0695B99A-61D5-FE81-9386-DA89A7D6B6A6" name="ROTAS_FK1">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB04E6FA-0666-A813-A5D4-C17E8C86B457"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

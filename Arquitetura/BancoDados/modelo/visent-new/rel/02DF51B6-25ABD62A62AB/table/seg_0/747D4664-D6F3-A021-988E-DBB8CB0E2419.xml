@@ -1,0 +1,218 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="747D4664-D6F3-A021-988E-DBB8CB0E2419" name="BILHETADOR">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>VISENT</sourceObjSchema>
+<sourceObjName>CENTRAL</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_BILHETADOR" id="EE8FADD1-FD61-6D06-D3F2-91A82AA2C074">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>CENTRAL</sourceObjSchema>
+<sourceObjName>ID_BILHETADOR</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="CC7F35AB-C5AC-17F8-33E6-7EA71681E16B">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>CENTRAL</sourceObjSchema>
+<sourceObjName>NOME</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TECNOLOGIA_BILHETADOR" id="A30C1865-4B3C-A36F-AD37-D52D1BCA7393">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>CENTRAL</sourceObjSchema>
+<sourceObjName>ID_FABRICANTE</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>41555B9A-6865-F2C9-1A69-1C6A9A64572E</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2879615A-DE6F-A085-A0B9-442897A0D302" referredColumn="41555B9A-6865-F2C9-1A69-1C6A9A64572E"/>
+</associations>
+</Column>
+<Column name="APELIDO" id="E4234091-CDC6-E4F2-8B48-59A4C354652F">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>CENTRAL</sourceObjSchema>
+<sourceObjName>APELIDO</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_PREVISAO_ATIVACAO" id="2678BB04-2308-BC62-0316-8DEB009CA0AB">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>CENTRAL</sourceObjSchema>
+<sourceObjName>PREVISAO_ATIVACAO</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_INICIO_ESTADO" id="E0CEACC0-E480-6A04-C645-5EA16976CD5D">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>CENTRAL</sourceObjSchema>
+<sourceObjName>DATA_INICIO_STATUS</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SERVIDOR_CADASTRADO" id="76FE52D0-7479-84A6-1236-15F5B618F712">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>CENTRAL</sourceObjSchema>
+<sourceObjName>SERVIDOR</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_REGIONAL" id="A448E6A5-A5DA-F50D-8241-F7DCEC4714C4">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>CENTRAL</sourceObjSchema>
+<sourceObjName>ID_REGIONAL</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>E0677346-6301-0F3D-F17C-9A08069329B4</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B7DED5D-CA80-41D4-A899-938400EF0134" referredColumn="E0677346-6301-0F3D-F17C-9A08069329B4"/>
+</associations>
+</Column>
+<Column name="ESTADO_BILHETADOR" id="57D00D6C-8704-15DF-E631-7C8976CC2525">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>CENTRAL</sourceObjSchema>
+<sourceObjName>ID_STATUS</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<comment>1-Produção, 2-Teste</comment>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_GPRS" id="93D5D3B2-1D24-1328-6386-12A0A14A1114">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 20:39:36 UTC</createdTime>
+<comment>1-GG, 2-SG</comment>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9FB52E81-749E-7B60-D927-1B9201CDF7BD" name="BILHETADOR_PK">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>VISENT</sourceObjSchema>
+<sourceObjName>BILHETADOR_PK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE8FADD1-FD61-6D06-D3F2-91A82AA2C074"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B7FAEB02-0392-D12D-419A-91DDE25F9C4F" name="BILHETADOR_PK">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>VISENT</sourceObjSchema>
+<sourceObjName>BILHETADOR_PK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE8FADD1-FD61-6D06-D3F2-91A82AA2C074"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4037E22-8BBC-517F-B363-1D1DA00592BC" name="BILHETADOR_FK_TECNOLOGIA_BILHETADOR">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A30C1865-4B3C-A36F-AD37-D52D1BCA7393"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="78E0DF1B-9236-0E3A-96B6-A17571DABBB9" name="BILHETADOR_FK_REGIONAL">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A448E6A5-A5DA-F50D-8241-F7DCEC4714C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

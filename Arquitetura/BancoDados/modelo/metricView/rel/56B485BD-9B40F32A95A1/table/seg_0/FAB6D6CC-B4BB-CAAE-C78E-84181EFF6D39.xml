@@ -1,0 +1,184 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FAB6D6CC-B4BB-CAAE-C78E-84181EFF6D39" name="USUARIO">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>METRICVIEW</sourceObjSchema>
+<sourceObjName>USUARIO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-06-27 20:01:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Create Sequence Metricview.Seq_Usuario Minvalue 0 Maxvalue 9999999999999 Increment By 1 Start With 0 Cache 20 Noorder  Nocycle ;&lt;br/&gt;Insert into METRICVIEW.USUARIO (ID_USUARIO,ADMIN,AREA,EMAIL,LOGIN,NOME,REGIONAL,RESPONSAVEL,SENHA,TELEFONE,PRIMEIRO_ACESSO) values (&apos;0&apos;,&apos;T&apos;,&apos;Area 1&apos;,&apos;admin@visent.com.br&apos;,&apos;admin&apos;,&apos;Administrador&apos;,&apos;Claro PE&apos;,&apos;Visent&apos;,&apos;I8mxvZ20LS9xmg47ilYqAg==&apos;,&apos;442342342&apos;,&apos;F&apos;);&lt;br/&gt;Insert into METRICVIEW.USUARIO (ID_USUARIO,ADMIN,AREA,EMAIL,LOGIN,NOME,REGIONAL,RESPONSAVEL,SENHA,TELEFONE,PRIMEIRO_ACESSO) values (&apos;1&apos;,&apos;T&apos;,&apos;Area 1&apos;,&apos;henrique@visent.com.br&apos;,&apos;henrique&apos;,&apos;Henrique Garcia&apos;,&apos;Claro DF&apos;,&apos;Visent&apos;,&apos;PJyi4kPfMQrRkcphY8HyKg==&apos;,&apos;233324234&apos;,&apos;F&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_USUARIO" id="7B84F428-B065-3291-B8D5-24D22E9432CB">
+<createdBy>osx</createdBy>
+<createdTime>2013-06-27 20:02:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADMIN" id="17FE8B47-C160-CDAF-FF90-F987DB144523">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>USUARIO</sourceObjSchema>
+<sourceObjName>ADMIN</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:27:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AREA" id="7FFD6B4F-74C9-7E77-3118-C203F6372D4C">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:27:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="C9263095-9D02-7792-80F5-C066619C17CE">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:27:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOGIN" id="2090F6DE-4687-DE39-372F-4CEA11FDF578">
+<createdBy>osx</createdBy>
+<createdTime>2013-06-27 20:02:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="4F1F7D00-86A3-386A-5C43-CF7EBB27366B">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:27:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGIONAL" id="7CAF47D0-129A-7E76-2148-96AABA28D2E7">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:27:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RESPONSAVEL" id="87600B0B-F048-EB94-AC9B-10FCCFBF4B91">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:27:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SENHA" id="EB2257BB-E248-DDF9-FC4F-0A1B95F9A2FD">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:27:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TELEFONE" id="1E8D0607-C2B2-5261-81FE-B8D0CF2BA58C">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:27:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRIMEIRO_ACESSO" id="4C9441E3-6FE7-4D8D-1354-77421D916F95">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>USUARIO</sourceObjSchema>
+<sourceObjName>PRIMEIRO_ACESSO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:27:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="91430F08-8E9A-4708-072B-C8B0BE19A516" name="USUARIO_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:44:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B84F428-B065-3291-B8D5-24D22E9432CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BA24EF4E-C50A-5A5D-B410-B0CEB2DA1B30" name="USUARIO_PK">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>METRICVIEW</sourceObjSchema>
+<sourceObjName>USUARIO_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>5FB460EE-94CB-629A-F4B7-88E235D8493A</importedID>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B84F428-B065-3291-B8D5-24D22E9432CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

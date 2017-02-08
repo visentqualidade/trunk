@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="WIDGET" directorySegmentName="seg_0" id="6A3C659D-C84C-13F0-A702-063A3444318A">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="WIDGET_PK" id="F25F9807-1B23-21A4-7ADA-C36F5DBDE569">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="LARGURA" id="0D5F1433-111B-2A15-E5FB-A542E8FF2A41">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_PAINEL" id="3DB1352A-0D9C-AEA0-47E7-A90D3C6E2830">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_USUARIO" id="496CFD8C-20AB-C6AC-07A8-EA2EC6921F5F">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_TEMPLATE_WIDGET" id="5D1F5D57-700E-06DC-C167-DA133475C4DB">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ALTURA" id="5DBE706E-F0BF-BFE7-37F4-4B3925260AC8">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ULTIMA_ATUALIZACAO" id="ACC2DD12-F13E-3D1A-CB36-4F03C435BFE1">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_WIDGET" id="B19C268D-3C75-4C85-A041-FE803B21EA30">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="POSICAO" id="B38D3379-9990-B220-AF12-BE5A508EA081">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_WIDGET_PAI" id="ED094322-8293-D8BA-16DE-079E911F77A9">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="WIDGET_FK_TEMPLATE" id="227DF290-EFF5-3727-5B79-08859D0C0E33">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="WIDGET_FK_PAINEL" id="D6EF9A70-A9A8-3B39-05C9-70503DBA0348">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="WIDGET_FK_WIDGET_PAI" id="D9ADCCBB-2CC5-83DD-D572-13229426F2B1">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="WIDGET_PK" id="7C9DC6B4-1E87-8B13-94A5-331D2CF022BF">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

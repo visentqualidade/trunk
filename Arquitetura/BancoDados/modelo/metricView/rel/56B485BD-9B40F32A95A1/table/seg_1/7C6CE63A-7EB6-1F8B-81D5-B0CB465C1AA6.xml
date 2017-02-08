@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="7C6CE63A-7EB6-1F8B-81D5-B0CB465C1AA6" name="TIPO_TARIFA">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>TIPO_TARIFA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>8567A762-C81B-0894-F906-FB4224428314</importedID>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_TARIFA" id="34764C7B-6EA2-71D3-FF27-5B10691C1BC4">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>TIPO_TARIFA</sourceObjSchema>
+<sourceObjName>ID_TIPO_TARIFA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>1D37B993-DCBE-2A88-3D86-34BDA4A14044</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="8302EE87-7440-49C1-3048-E5188A28B443">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>TIPO_TARIFA</sourceObjSchema>
+<sourceObjName>NOME</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>EF275EB1-C937-8D2D-AC8E-0BE03CF8E08E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO_WIDGET" id="676D3CD0-4196-7A5C-C9F4-D68110FD67CE">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>TIPO_TARIFA</sourceObjSchema>
+<sourceObjName>ID_TIPO_WIDGET</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>64B3E3C5-F224-8DC8-11B0-37581E0BA14B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<delegate>21E5F9AE-F315-CE04-7A69-7AA61F48315F</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3B5C078C-DCFF-1584-9E65-143EDC83799B" referredColumn="21E5F9AE-F315-CE04-7A69-7AA61F48315F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DCFF88D8-664B-40BB-2B72-4CC45129EA15" name="TIPO_TARIFA_PK">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>TIPO_TARIFA_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>B816A7E5-4638-D790-9A91-10C914E3AC46</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="34764C7B-6EA2-71D3-FF27-5B10691C1BC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D676FD9D-E556-4A12-912D-0798FDA442AA" name="TIPO_TARIFA_PK">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>TIPO_TARIFA_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>D8038165-DC8D-79EF-EB4B-4966E11F5C37</importedID>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="34764C7B-6EA2-71D3-FF27-5B10691C1BC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="17BF4C14-2D61-AD50-1912-2D385B2F48CD" name="TIPO_TARIFA_TIPO_WIDGE_FK1">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="676D3CD0-4196-7A5C-C9F4-D68110FD67CE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

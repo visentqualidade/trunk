@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A53FE976-D8D8-0A69-4D80-D5DE0B0C4573" name="PAINEL">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>PAINEL</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:29:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<abbreviation>PAINEL</abbreviation>
+<afterCreate>CREATE SEQUENCE  &quot;DASHBOARD&quot;.&quot;SEQ_ID_PAINEL&quot;  MINVALUE 1 MAXVALUE 99999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 ORDER  CYCLE ;&lt;br/&gt;</afterCreate>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PAINEL" id="02C2CCDA-DA52-F3D2-18F5-0B63E92C52FE">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:40:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="5D9C464A-F847-BFBA-FD7E-367E01BC7734">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:40:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_OWNER" id="1CF4EF4E-8E39-5E55-4E21-C72D3FE0F488">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-26 18:32:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="publicar" id="00EA8403-557F-FCBB-0943-0AFDAD435205">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-11 14:53:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="624CA645-8A5A-94AD-80CD-9DBA0568822D" name="PAINEL_PK">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:40:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02C2CCDA-DA52-F3D2-18F5-0B63E92C52FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="21F7768B-8F9A-0912-BA43-F0DB9992F5F2" name="PAINEL_PK">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>PAINEL_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>599D1443-19ED-1D07-0213-89EAFBA4D10A</importedID>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02C2CCDA-DA52-F3D2-18F5-0B63E92C52FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

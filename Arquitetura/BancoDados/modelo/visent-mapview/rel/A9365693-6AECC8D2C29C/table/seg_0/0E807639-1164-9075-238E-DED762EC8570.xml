@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0E807639-1164-9075-238E-DED762EC8570" name="VM_DISTRITO">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:30:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_DISTRITO" id="882C3757-7E9D-496E-9D1A-79F5B113864E">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:31:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_MUNICIPIO" id="3A14AA15-211B-9869-99E2-F6E3A151073C">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 20:46:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<delegate>6D7006A8-DD27-020E-677B-0269FF87BA3B</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A2D01A54-6BF8-2D12-2C1B-40FCC7A6AA3E" referredColumn="6D7006A8-DD27-020E-677B-0269FF87BA3B"/>
+</associations>
+</Column>
+<Column name="NOME" id="B86F75E4-D78C-1FF2-F171-50D11F27292E">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 20:46:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F110D205-FDDA-2F47-7805-592AB0748FC7" name="VM_DISTRITO_PKv2">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 20:07:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="882C3757-7E9D-496E-9D1A-79F5B113864E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB58B617-08BA-0128-288D-DB8C0395D66B" name="VM_DISTRITO_VM_SETOR_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:42:39 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="22D9CD42-9E2E-799E-D118-5E1ED86A657D" name="VM_DISTRITO_VM_MUNICIPIO_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 20:47:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A14AA15-211B-9869-99E2-F6E3A151073C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

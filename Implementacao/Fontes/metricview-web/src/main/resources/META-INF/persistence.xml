@@ -1,0 +1,58 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0">
+
+    <persistence-unit name="metricview" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        
+        
+		<!-- Entidades -->
+        <class>br.com.visent.metricview.entidade.CodigoNacional</class>
+        <class>br.com.visent.metricview.entidade.Usuario</class>
+        <class>br.com.visent.metricview.entidade.UsuarioExcluido</class>
+        <class>br.com.visent.metricview.entidade.Bilhetador</class>
+        <class>br.com.visent.metricview.entidade.Tecnologia</class>
+        <class>br.com.visent.metricview.entidade.Grupo</class>
+        <class>br.com.visent.metricview.entidade.Regional</class>
+        <class>br.com.visent.metricview.entidade.RegionalUsuario</class>
+        <class>br.com.visent.metricview.entidade.AreaUsuario</class>
+        <class>br.com.visent.metricview.entidade.Ferramenta</class>
+        <class>br.com.visent.metricview.entidade.Permissao</class>
+        <class>br.com.visent.metricview.entidade.LogEntidade</class>
+        <class>br.com.visent.metricview.entidade.BilhetadorCN</class>
+        <class>br.com.visent.metricview.entidade.UnidadeFederativa</class>
+        <class>br.com.visent.metricview.entidade.TipoTecnologia</class>
+        <class>br.com.visent.metricview.entidade.TipoAcesso</class>
+        <class>br.com.visent.metricview.entidade.Funcionalidade</class>
+        <class>br.com.visent.metricview.entidade.Regiao</class>
+        <class>br.com.visent.metricview.entidade.Geografia</class>
+        <class>br.com.visent.metricview.entidade.Aparelho</class>
+        <class>br.com.visent.metricview.entidade.Banda</class>
+        
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <properties>
+            <property name="hibernate.hbm2ddl.auto" 					value="none"/> 
+            <property name="hibernate.show_sql" 						value="true"/>
+            <property name="hibernate.format_sql" 						value="true"/>
+            <property name="hibernate.dialect"							value="org.hibernate.dialect.Oracle10gDialect"/>
+            
+            <property name="javax.persistence.jdbc.driver" 				value="oracle.jdbc.driver.OracleDriver"/>
+            <property name="javax.persistence.jdbc.url" 				value="jdbc:oracle:thin:@192.168.200.73:1521/metricview"/>
+            <property name="javax.persistence.jdbc.user" 				value="metricview"/>
+            <property name="javax.persistence.jdbc.password" 			value="metricview"/>
+
+			<!-- configuracao do pool de conexoes com C3P0 provider-->
+			<property name="hibernate.connection.provider_class" 		value="org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider" />
+            <property name="hibernate.c3p0.max_size" 					value="100" />
+	        <property name="hibernate.c3p0.min_size" 					value="1" />
+	        <property name="hibernate.c3p0.acquire_increment" 			value="1" />
+	        <property name="hibernate.c3p0.timeout" 					value="5" />
+			<property name="hibernate.c3p0.idle_test_period" 			value="100"/>
+	        
+        </properties>
+        
+    </persistence-unit>
+
+</persistence>

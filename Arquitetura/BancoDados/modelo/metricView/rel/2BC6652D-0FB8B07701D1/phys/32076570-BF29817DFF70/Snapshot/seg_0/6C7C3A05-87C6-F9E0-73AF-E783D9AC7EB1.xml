@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SnapshotOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.SnapshotOraclev11g" name="VM_CDRVIEW_VOZ_MUNICIPIO" directorySegmentName="seg_0" id="6C7C3A05-87C6-F9E0-73AF-E783D9AC7EB1">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-18 12:44:51 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<columns>DATA</columns>
+<defaultSegment>NO</defaultSegment>
+<partitionList class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionListOraclev11g" name="PL60" id="FCB58A58-43B1-7B89-CB3F-B42771B47E56">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-18 12:50:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<intervalExpression>NUMTODSINTERVAL(1,&apos;DAY&apos;)</intervalExpression>
+</partitionList>
+<partitioned>YES</partitioned>
+<refreshType>FORCE</refreshType>
+<subquery>SELECT dados.data,&lt;br/&gt;       dados.area         as AREA,&lt;br/&gt;       dados.UF         as UF,&lt;br/&gt;       dados.ID_MUNICIPIO AS ID_MUNICIPIO,&lt;br/&gt;       dados.MUNICIPIO    AS MUNICIPIO,       &lt;br/&gt;       SUM(dados.cham)    as CHAM,&lt;br/&gt;       count(distinct((dados.IMEI))) as TERMINAIS,&lt;br/&gt;       dados.servico      as SERVICO       &lt;br/&gt;    FROM cdrview_voz dados&lt;br/&gt;    WHERE dados.data &lt;=&lt;br/&gt;      (SELECT MAX(data)-1 FROM cdrview_voz&lt;br/&gt;      )&lt;br/&gt;     GROUP BY dados.data,&lt;br/&gt;      dados.area,&lt;br/&gt;      dados.uf,&lt;br/&gt;      dados.ID_MUNICIPIO,&lt;br/&gt;      dados.MUNICIPIO,&lt;br/&gt;      dados.servico&lt;br/&gt;&lt;br/&gt;UNION ALL     &lt;br/&gt;      &lt;br/&gt;  SELECT dados.data,&lt;br/&gt;       dados.area         as AREA,&lt;br/&gt;       dados.UF         as UF,&lt;br/&gt;       dados.ID_MUNICIPIO AS ID_MUNICIPIO,&lt;br/&gt;       dados.MUNICIPIO    AS MUNICIPIO,       &lt;br/&gt;       SUM(dados.cham)    as CHAM,&lt;br/&gt;       count(dados.terminais),&lt;br/&gt;       dados.servico      as SERVICO       &lt;br/&gt;    FROM cdrview_dados dados&lt;br/&gt;    WHERE dados.data &lt;=&lt;br/&gt;      (SELECT MAX(data)-1 FROM cdrview_dados&lt;br/&gt;      )&lt;br/&gt;     GROUP BY dados.data,&lt;br/&gt;      dados.area,&lt;br/&gt;      dados.uf,&lt;br/&gt;      dados.ID_MUNICIPIO,&lt;br/&gt;      dados.MUNICIPIO,&lt;br/&gt;      dados.servico</subquery>
+<user>B6665735-CC76-0BEF-732A-CB14F6C7239B</user>
+<with></with>
+<partitions>
+<Partition class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionOraclev11g" name="PARTITION_FIRST" id="681A2781-81FB-6F9A-93AE-36AE6D88A753">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-18 20:02:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<valueList>TO_DATE(&apos; 2000-01-01 00:00:00&apos;, &apos;SYYYY-MM-DD HH24:MI:SS&apos;, &apos;NLS_CALENDAR=GREGORIAN&apos;)</valueList>
+</Partition>
+</partitions>
+</SnapshotOraclev11g>

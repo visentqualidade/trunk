@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="interconexao" directorySegmentName="seg_0" id="F427D9E8-B01B-15B5-88EE-B65BB9E9E34B">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-29 23:06:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</SchemaObject>

@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SnapshotOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.SnapshotOraclev11g" name="VM_CDRVIEW_VOZ_CELULA_RR" directorySegmentName="seg_1" id="884AB140-0E51-ACCE-C2FC-76EB001430BF">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-18 18:57:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<columns>DATA</columns>
+<defaultSegment>NO</defaultSegment>
+<partitionList class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionListOraclev11g" name="PL82" id="684F5D52-1211-BB72-E45D-ADB80E65F78C">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-18 19:24:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<subPartitionsQuantity>5</subPartitionsQuantity>
+<subpartitionType>HASH</subpartitionType>
+<intervalExpression>NUMTODSINTERVAL(1,&apos;DAY&apos;)</intervalExpression>
+</partitionList>
+<partitioned>YES</partitioned>
+<refreshType>FORCE</refreshType>
+<subPartColumns>CELULA</subPartColumns>
+<subquery>SELECT dados.data,&lt;br/&gt;       dados.area         as AREA,&lt;br/&gt;       dados.ID_MUNICIPIO AS ID_MUNICIPIO,&lt;br/&gt;       dados.MUNICIPIO    AS MUNICIPIO,&lt;br/&gt;       dados.celula       AS CELULA,&lt;br/&gt;       SUM(dados.cham)    as CHAM,&lt;br/&gt;       SUM(dados.ttc)     as TTC,&lt;br/&gt;       count(distinct((dados.IMEI))) as TERMINAIS,&lt;br/&gt;       dados.servico      as SERVICO,&lt;br/&gt;       dados.bandas       as BANDAS,&lt;br/&gt;       dados.latitude     as LATITUDE,&lt;br/&gt;       dados.longitude    as LONGITUDE,        &lt;br/&gt;       dados.celula_tecnologias as CELULA_TECNOLOGIAS&lt;br/&gt;    FROM cdrview_voz dados&lt;br/&gt;    WHERE dados.uf  = &apos;RR&apos;&lt;br/&gt;    AND dados.data &lt;=&lt;br/&gt;      (SELECT MAX(data)-1 FROM cdrview_voz&lt;br/&gt;      )&lt;br/&gt;     GROUP BY dados.data,&lt;br/&gt;      dados.area,&lt;br/&gt;      dados.ID_MUNICIPIO,&lt;br/&gt;      dados.MUNICIPIO,&lt;br/&gt;      dados.celula,&lt;br/&gt;      dados.servico,      &lt;br/&gt;      dados.bandas,&lt;br/&gt;      dados.latitude,&lt;br/&gt;      dados.longitude,&lt;br/&gt;      dados.celula_tecnologias&lt;br/&gt;      &lt;br/&gt;UNION ALL&lt;br/&gt;&lt;br/&gt;SELECT dados.data,&lt;br/&gt;      dados.area,&lt;br/&gt;      dados.ID_MUNICIPIO AS id_municipio,&lt;br/&gt;      dados.MUNICIPIO    AS municipio,&lt;br/&gt;      dados.celula       AS celula,&lt;br/&gt;      SUM(dados.cham) cham,&lt;br/&gt;      SUM(dados.ttc) ttc,&lt;br/&gt;      SUM(dados.terminais) terminais,&lt;br/&gt;      dados.servico,&lt;br/&gt;      dados.bandas,&lt;br/&gt;      dados.latitude,&lt;br/&gt;      dados.longitude,&lt;br/&gt;      dados.celula_tecnologias&lt;br/&gt;    FROM cdrview_dados dados&lt;br/&gt;    WHERE dados.uf  = &apos;RR&apos;&lt;br/&gt;    AND dados.data &lt;=&lt;br/&gt;      (SELECT MAX(data)-1 FROM cdrview_dados&lt;br/&gt;      )&lt;br/&gt;    GROUP BY dados.data,&lt;br/&gt;      dados.area,&lt;br/&gt;      dados.ID_MUNICIPIO,&lt;br/&gt;      dados.MUNICIPIO,&lt;br/&gt;      dados.celula,&lt;br/&gt;      dados.servico,&lt;br/&gt;      dados.latitude,&lt;br/&gt;      dados.longitude,&lt;br/&gt;      dados.bandas,&lt;br/&gt;      dados.celula_tecnologias</subquery>
+<user>B6665735-CC76-0BEF-732A-CB14F6C7239B</user>
+<with></with>
+<partitions>
+<Partition class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionOraclev11g" name="PARTITION_FIRST" id="835E57F8-E6A2-23FF-6BA7-5639703FAEBD">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-18 20:01:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<valueList>TO_DATE(&apos; 2000-01-01 00:00:00&apos;, &apos;SYYYY-MM-DD HH24:MI:SS&apos;, &apos;NLS_CALENDAR=GREGORIAN&apos;)</valueList>
+</Partition>
+</partitions>
+</SnapshotOraclev11g>

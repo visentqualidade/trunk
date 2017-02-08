@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A458C03D-93C3-2A9B-842E-D3A7AEF669C4" name="SERV_APOIO_TVMMDS">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 17:55:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into INTERCONEXAO.SERV_APOIO_TVMMDS (ID,NOME_FILTRO,NOME_TELA) values (&apos;1&apos;,&apos;10621&apos;,&apos;10621&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="B4036358-E894-3CF1-A3B1-B2BDE224FB5F">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 17:59:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_FILTRO" id="EE11AC43-DCD4-F817-4FD9-D943523975A4">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 17:59:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_TELA" id="DD908690-7DAD-0CDD-A349-3C7F10E2DE6E">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 17:35:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3E04E923-74F3-2131-9329-7ED4BD184894" name="SERV_APOIO_TVMMDS_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 17:59:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4036358-E894-3CF1-A3B1-B2BDE224FB5F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

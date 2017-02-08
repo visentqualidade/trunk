@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="FD2CE0FF-00CB-B2C8-F58C-489F2C669AB1" name="VW_GRUPO_ROTA">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-08 12:41:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT tab.ID AS GRUPO_ROTA,&lt;br/&gt;  tab.ROTA_ID AS ROTA,&lt;br/&gt;  tab.central AS bilhetador&lt;br/&gt;FROM vw_itxview_route_group tab&lt;br/&gt;WHERE tab.STATUS = &apos;Ativo&apos;</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select tab.ID As GRUPO_ROTA, tab.ROTA_ID As ROTA, tab.central As bilhetador From vw_itxview_route_group tab Where tab.STATUS = &apos;Ativo&apos;&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select tab.ID As GRUPO_ROTA, tab.ROTA_ID As ROTA, tab.central As bilhetador From vw_itxview_route_group tab Where tab.STATUS = &apos;Ativo&apos;&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;vw_itxview_route_group tab&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="GRUPO_ROTA" id="C7167B50-E399-565A-FC13-B196AFCE487F">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-08 12:41:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>GRUPO_ROTA</alias>
+<expression>tab.ID</expression>
+<reference>false</reference>
+<tableAlias>tab</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ROTA" id="98ABCB58-077E-5CD5-105F-599542338819">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-08 12:41:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>ROTA</alias>
+<expression>tab.ROTA_ID</expression>
+<reference>false</reference>
+<tableAlias>tab</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="bilhetador" id="6C32E046-0485-0652-DD84-C3185A973900">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-08 12:41:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>bilhetador</alias>
+<expression>tab.central</expression>
+<reference>false</reference>
+<tableAlias>tab</tableAlias>
+</viewElement>
+</viewElements>
+</TableView>

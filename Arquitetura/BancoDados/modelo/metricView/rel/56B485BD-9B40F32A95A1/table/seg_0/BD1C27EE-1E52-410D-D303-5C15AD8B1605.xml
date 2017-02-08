@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BD1C27EE-1E52-410D-D303-5C15AD8B1605" name="META_ACORDO">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:18:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>create sequence seq_meta_acordo increment by 1 start with 0 maxvalue 999 minvalue -1 nocycle;</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_META_ACORDO" id="8F12245B-AEC3-5F85-A800-A16E1B3D5756">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:19:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_INICIO" id="0762ABDA-9BD4-B968-1154-FCD3BDC2C377">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 19:06:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_FIM" id="44D47300-9CF7-137D-4365-FECC83EF700F">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 19:06:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_INDICADOR" id="2F424E9A-C3FE-CF75-7FFD-8652195D8EBC">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 20:07:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>462E3300-3166-BCE0-8651-4DDEE9E1EA1B</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DFBB50D1-BBBD-C213-EAD9-A3E1FBE5087B" referredColumn="462E3300-3166-BCE0-8651-4DDEE9E1EA1B"/>
+</associations>
+</Column>
+<Column name="ID_TIPO_ACORDO" id="55D87AFC-5C2F-BFC3-83C0-D0AD026EFC8E">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-05 13:14:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>CE32FE99-EB8A-3018-026F-5377B58C2D0C</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="04A8A011-BD8C-D6C0-FF36-83723E744274" referredColumn="CE32FE99-EB8A-3018-026F-5377B58C2D0C"/>
+</associations>
+</Column>
+<Column name="VALOR_ACORDO" id="AB6E2355-F918-4941-0F3A-4AF0737121A2">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-24 17:47:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BE5DD1FF-8EB8-A1A6-69D4-895486B20C18" name="META_ACORDO_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:20:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="8F12245B-AEC3-5F85-A800-A16E1B3D5756"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C0D139F6-DECD-6AF8-8F8E-952D8D02E4FC" name="META_ACORDO_INDICADOR_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 20:08:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<indexColumnUsage>
+<colUsage columnID="2F424E9A-C3FE-CF75-7FFD-8652195D8EBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AE54B63C-4058-A450-AD74-FBA4AC013E3E" name="META_ACORDO_TIPO_ACORDO_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-05 13:14:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<indexColumnUsage>
+<colUsage columnID="55D87AFC-5C2F-BFC3-83C0-D0AD026EFC8E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

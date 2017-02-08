@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1AF181CF-7B07-3EF6-5488-73449A6D7D72" name="GRUPO_CNG">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into INTERCONEXAO.GRUPO_CNG (ID_GRUPO_CNG,NOME_FILTRO,NOME_TELA) values (&apos;1064&apos;,&apos;800*&apos;,&apos;080x&apos;);&lt;br/&gt;Insert into INTERCONEXAO.GRUPO_CNG (ID_GRUPO_CNG,NOME_FILTRO,NOME_TELA) values (&apos;1063&apos;,&apos;500*&apos;,&apos;050x&apos;);&lt;br/&gt;Insert into INTERCONEXAO.GRUPO_CNG (ID_GRUPO_CNG,NOME_FILTRO,NOME_TELA) values (&apos;1062&apos;,&apos;300*&apos;,&apos;030x&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_GRUPO_CNG" id="8A529F0D-56DF-ED60-BA8F-087331280242">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_FILTRO" id="1163880C-BDF3-21D3-3A41-11D225898257">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_TELA" id="4E520FAE-125D-6C9A-3F6B-6BD8E83245CC">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 17:05:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A3F2FAD0-EDDD-4518-1FE0-3426133A8BD6" name="GRUPO_CNG_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A529F0D-56DF-ED60-BA8F-087331280242"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

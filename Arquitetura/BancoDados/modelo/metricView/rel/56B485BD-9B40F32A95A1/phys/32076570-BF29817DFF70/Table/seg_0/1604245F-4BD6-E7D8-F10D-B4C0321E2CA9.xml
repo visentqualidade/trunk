@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="REGIONAL_USUARIO" directorySegmentName="seg_0" id="1604245F-4BD6-E7D8-F10D-B4C0321E2CA9">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DA3890FB-F1F2-2E8A-3C7E-06108E2ADE3B</segment>
+<tableSpace>F59711F1-7BAC-60D4-092B-0E1A4CEC4D45</tableSpace>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="DESCRICAO" id="015088D4-6E3C-954D-DBC6-25376B3151E9">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="ID_REGIONAL_USUARIO" id="8DCC7B91-718B-6E6E-E055-85D3C2016340">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="REGIONAL_USUARIO_PK" id="9C062159-2098-8E4B-13B4-28A606992979">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<segment>853FC331-4678-DCBD-2BE7-166BDC136BAC</segment>
+<tableSpace>F59711F1-7BAC-60D4-092B-0E1A4CEC4D45</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="REGIONAL_USUARIO_PK" id="BBA41327-71C3-8653-D073-82C70A99D6A7">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<segment>853FC331-4678-DCBD-2BE7-166BDC136BAC</segment>
+<tableSpace>F59711F1-7BAC-60D4-092B-0E1A4CEC4D45</tableSpace>
+<existingIndex>9C062159-2098-8E4B-13B4-28A606992979</existingIndex>
+<indexSegment>853FC331-4678-DCBD-2BE7-166BDC136BAC</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

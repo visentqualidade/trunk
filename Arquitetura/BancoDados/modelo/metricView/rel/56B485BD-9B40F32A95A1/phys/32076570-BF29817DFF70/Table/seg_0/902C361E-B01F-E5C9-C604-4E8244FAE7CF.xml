@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="PERMISSAO" directorySegmentName="seg_0" id="902C361E-B01F-E5C9-C604-4E8244FAE7CF">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="CODIGO" id="34C264AA-7198-1EE3-BBBB-19F281B7BBBD">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="ID_USUARIO" id="CBFA0453-3611-0F65-005E-E06A1129CE98">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="ID_FERRAMENTA" id="ED188AA0-96B6-05E4-B1C4-3FA930D1445B">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="ID_GRUPO" id="EF7F1ED3-6123-CD1E-A091-059F6896B661">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="ID_PERMISSAO" id="F9E0B564-F3AA-CB13-46B4-4121A6669559">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PERMISSAO_PK" id="29EA35E5-1C4C-0200-9B4C-077CF0271B26">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PERMISSAO_FK_FERRAMENTA" id="295D83E2-9662-A282-FB29-FF365629EF68">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PERMISSAO_FK_USUARIO" id="2C83C876-214C-8D94-752C-FD919C525C9C">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PERMISSAO_FK_GRUPO" id="6EB933C1-4EE5-149B-B50A-E6B878B1891B">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PERMISSAO_TIPO_FK_ACESSO" id="71F55451-A98B-4B7C-EA18-58753E09EA74">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PERMISSAO_PK" id="7B030841-C4EE-931B-3D3D-40189B81F978">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

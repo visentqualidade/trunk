@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="CN" directorySegmentName="seg_0" id="E1533E3F-851D-F504-AD1B-A0D23AF8E04E">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DA3890FB-F1F2-2E8A-3C7E-06108E2ADE3B</segment>
+<tableSpace>F59711F1-7BAC-60D4-092B-0E1A4CEC4D45</tableSpace>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="ID_UF" id="7B31A6FD-A0AD-7F72-FBC3-8318ED7E8BD1">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="ID_CN" id="86128B28-5D73-8B14-E615-B8F2CCDD9BDE">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="NOME" id="B659FCA3-4DBE-1804-1A5F-5E645AEA71B9">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="CN_PK" id="CF9633B1-2A44-620C-31FD-E216F99523C4">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<segment>853FC331-4678-DCBD-2BE7-166BDC136BAC</segment>
+<tableSpace>F59711F1-7BAC-60D4-092B-0E1A4CEC4D45</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CN_UF_FK" id="405E5B3B-4EFD-3DEC-A168-8F9C1EEFCE11">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CN_PK" id="9B77A076-F567-4A23-D773-966C7F161E48">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:58:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<segment>853FC331-4678-DCBD-2BE7-166BDC136BAC</segment>
+<tableSpace>F59711F1-7BAC-60D4-092B-0E1A4CEC4D45</tableSpace>
+<existingIndex>CF9633B1-2A44-620C-31FD-E216F99523C4</existingIndex>
+<indexSegment>853FC331-4678-DCBD-2BE7-166BDC136BAC</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

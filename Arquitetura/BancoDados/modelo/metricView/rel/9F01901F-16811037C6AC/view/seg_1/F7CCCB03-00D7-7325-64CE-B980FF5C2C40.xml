@@ -1,0 +1,688 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_1" id="F7CCCB03-00D7-7325-64CE-B980FF5C2C40" name="VIEW_SMP4_TX_ENTREGA_MSC">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>VIEW_SMP4_TX_ENTREGA_MSC</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>E040A7A7-41A3-F6F3-97B3-80134F1B2AA5</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW VIEW_SMP4_TX_ENTREGA_MSC&lt;br/&gt;AS &lt;br/&gt;WITH dados_traducao_sem_vinculo as&lt;br/&gt;  (&lt;br/&gt;    select * from view_smp4_tx_entrega_dados&lt;br/&gt;  ),&lt;br/&gt;  dados_smp_msc AS&lt;br/&gt;  (SELECT Data,&lt;br/&gt;    Msc,&lt;br/&gt;    CN,&lt;br/&gt;    Pmm,&lt;br/&gt;    Smp_A,&lt;br/&gt;    Smp_B,&lt;br/&gt;    CASE&lt;br/&gt;      WHEN Smp_B = &apos;0&apos;&lt;br/&gt;      AND Smp_A != &apos;-&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      WHEN Smp_B = &apos;-&apos;&lt;br/&gt;      AND Smp_A  = &apos;-&apos;&lt;br/&gt;      THEN &apos;-&apos;&lt;br/&gt;      WHEN Smp_B != &apos;-&apos;&lt;br/&gt;      AND Smp_A   = &apos;-&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      ELSE NVL(trim(TO_CHAR(ROUND((Smp_A * 100 / SMP_B), 2),&apos;999990D99&apos;)), &apos;-&apos;)&lt;br/&gt;    END AS smp,&lt;br/&gt;    N_ATENDIDAS,&lt;br/&gt;    TERM_N_ENC_DESL,&lt;br/&gt;    CORREIO_ELETRONICO,&lt;br/&gt;    N_RESPONDIDAS,&lt;br/&gt;    LINHA_OCUPADA,&lt;br/&gt;    ORIGEM,&lt;br/&gt;    DESTINO,&lt;br/&gt;    N_TENTATIVAS,&lt;br/&gt;    N_CHAMADAS_ENTREGUES,&lt;br/&gt;    PERDAS_NA_ORIGEM,&lt;br/&gt;    COT_TOTAL,&lt;br/&gt;    CONGESTIONAMENTO_ORIGEM,&lt;br/&gt;    CONGESTIONAMENTO_DESTINO,&lt;br/&gt;    CONGESTIONAMENTO_TRANSPORTE,&lt;br/&gt;    OK1        ,&lt;br/&gt;    OKVM       ,&lt;br/&gt;    OK1_TCT    ,&lt;br/&gt;    OK1_DRP    ,&lt;br/&gt;    OK1_DRP_TCT,&lt;br/&gt;    CHAM       ,&lt;br/&gt;    BACB       ,&lt;br/&gt;    NR_VM      ,&lt;br/&gt;    SCV        ,&lt;br/&gt;    INEX       ,&lt;br/&gt;    DESL       ,&lt;br/&gt;    BLOQ       ,&lt;br/&gt;    SC         ,&lt;br/&gt;    OK5        ,&lt;br/&gt;    OK5_TCT    ,&lt;br/&gt;    OK5_DRP    ,&lt;br/&gt;    OK5_DRP_TCT,&lt;br/&gt;    LO         ,&lt;br/&gt;    CO1        ,&lt;br/&gt;    CO2        ,&lt;br/&gt;    CO3        ,&lt;br/&gt;    NR         ,&lt;br/&gt;    DSA        ,&lt;br/&gt;    LOS        ,&lt;br/&gt;    DROP_      ,&lt;br/&gt;    SRP        ,&lt;br/&gt;    OU         ,&lt;br/&gt;    FA1        ,&lt;br/&gt;    FA2        ,&lt;br/&gt;    FA3        ,&lt;br/&gt;    DSS        ,&lt;br/&gt;    INV        &lt;br/&gt;  FROM&lt;br/&gt;    (SELECT TRUNC(Tab.DATA)                                                                                                                                     AS Data,&lt;br/&gt;      pmm.NOME                                                                                                                                                  AS Pmm,&lt;br/&gt;      Tab.MSC                                                                                                                                                   AS Msc,&lt;br/&gt;      Tab.CN                                                                                                                                                    AS CN,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.n_chamadas_entregues, 0))),0) AS Smp_A,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.n_tentativas, 0))),0) AS Smp_B,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(N_ATENDIDAS, 0))), 0) as N_ATENDIDAS,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(TERM_N_ENC_DESL, 0))), 0) as TERM_N_ENC_DESL,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(CORREIO_ELETRONICO, 0))), 0) as CORREIO_ELETRONICO,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(N_RESPONDIDAS, 0))), 0) as N_RESPONDIDAS,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(LINHA_OCUPADA, 0))), 0) as LINHA_OCUPADA,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(ORIGEM, 0))), 0) as ORIGEM,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(DESTINO, 0))), 0) as DESTINO,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(N_TENTATIVAS, 0))), 0) as N_TENTATIVAS,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(N_CHAMADAS_ENTREGUES, 0))), 0) as N_CHAMADAS_ENTREGUES,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(PERDAS_NA_ORIGEM, 0))), 0) as PERDAS_NA_ORIGEM,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(COT_TOTAL, 0))), 0) as COT_TOTAL,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(CONGESTIONAMENTO_ORIGEM, 0))), 0) as CONGESTIONAMENTO_ORIGEM,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(CONGESTIONAMENTO_DESTINO, 0))), 0) as CONGESTIONAMENTO_DESTINO,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(CONGESTIONAMENTO_TRANSPORTE, 0))), 0) as CONGESTIONAMENTO_TRANSPORTE,&lt;br/&gt;      Tab.OK1,        &lt;br/&gt;      Tab.OKVM,        &lt;br/&gt;      Tab.OK1_TCT,     &lt;br/&gt;      Tab.OK1_DRP,     &lt;br/&gt;      Tab.OK1_DRP_TCT, &lt;br/&gt;      Tab.CHAM,        &lt;br/&gt;      Tab.BACB,        &lt;br/&gt;      Tab.NR_VM,       &lt;br/&gt;      Tab.SCV,         &lt;br/&gt;      Tab.INEX,        &lt;br/&gt;      Tab.DESL ,       &lt;br/&gt;      Tab.BLOQ  ,      &lt;br/&gt;      Tab.SC     ,     &lt;br/&gt;      Tab.OK5     ,    &lt;br/&gt;      Tab.OK5_TCT  ,   &lt;br/&gt;      Tab.OK5_DRP   , &lt;br/&gt;      Tab.OK5_DRP_TCT ,&lt;br/&gt;      Tab.LO         , &lt;br/&gt;      Tab.CO1         ,&lt;br/&gt;      Tab.CO2         ,&lt;br/&gt;      Tab.CO3         ,&lt;br/&gt;      Tab.NR          ,&lt;br/&gt;      Tab.DSA         ,&lt;br/&gt;      Tab.LOS         ,&lt;br/&gt;      Tab.DROP_       ,&lt;br/&gt;      Tab.SRP         ,&lt;br/&gt;      Tab.OU          ,&lt;br/&gt;      Tab.FA1         ,&lt;br/&gt;      Tab.FA2         ,&lt;br/&gt;      Tab.FA3         ,&lt;br/&gt;      Tab.DSS         ,&lt;br/&gt;      Tab.INV         &lt;br/&gt;    FROM &lt;br/&gt;    view_msc_cn_ativo_smp4 b,&lt;br/&gt;    dados_traducao_sem_vinculo Tab&lt;br/&gt;    INNER JOIN PMM pmm&lt;br/&gt;    ON Tab.HORA BETWEEN pmm.INICIO AND pmm.FIM&lt;br/&gt;    where tab.msc = b.msc&lt;br/&gt;      and tab.cn = b.cn&lt;br/&gt;      and to_date(to_char(tab.data,&apos;MM/yyyy&apos;),&apos;MM/yyyy&apos;) = b.periodo&lt;br/&gt;      and b.status = &apos;T&apos;&lt;br/&gt;    GROUP BY TRUNC(Tab.DATA),&lt;br/&gt;      pmm.NOME,&lt;br/&gt;      Tab.MSC,&lt;br/&gt;      Tab.CN,&lt;br/&gt;      Tab.OK1         ,&lt;br/&gt;      Tab.OKVM        ,&lt;br/&gt;      Tab.OK1_TCT     ,&lt;br/&gt;      Tab.OK1_DRP     ,&lt;br/&gt;      Tab.OK1_DRP_TCT ,&lt;br/&gt;      Tab.CHAM        ,&lt;br/&gt;      Tab.BACB        ,&lt;br/&gt;      Tab.NR_VM       ,&lt;br/&gt;      Tab.SCV         ,&lt;br/&gt;      Tab.INEX        ,&lt;br/&gt;      Tab.DESL        ,&lt;br/&gt;      Tab.BLOQ        ,&lt;br/&gt;      Tab.SC          ,&lt;br/&gt;      Tab.OK5         ,&lt;br/&gt;      Tab.OK5_TCT     ,&lt;br/&gt;      Tab.OK5_DRP     ,&lt;br/&gt;      Tab.OK5_DRP_TCT ,&lt;br/&gt;      Tab.LO          ,&lt;br/&gt;      Tab.CO1         ,&lt;br/&gt;      Tab.CO2         ,&lt;br/&gt;      Tab.CO3         ,&lt;br/&gt;      Tab.NR          ,&lt;br/&gt;      Tab.DSA         ,&lt;br/&gt;      Tab.LOS         ,&lt;br/&gt;      Tab.DROP_       ,&lt;br/&gt;      Tab.SRP         ,&lt;br/&gt;      Tab.OU          ,&lt;br/&gt;      Tab.FA1         ,&lt;br/&gt;      Tab.FA2         ,&lt;br/&gt;      Tab.FA3         ,&lt;br/&gt;      Tab.DSS         ,&lt;br/&gt;      Tab.INV         &lt;br/&gt;&lt;br/&gt;    )&lt;br/&gt;  ),&lt;br/&gt;  agrupadores_smp_mscs AS&lt;br/&gt;  (SELECT *&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT DISTINCT dados_smp_msc.Data FROM dados_smp_msc&lt;br/&gt;    ) datas,&lt;br/&gt;    (SELECT DISTINCT dados_smp_msc.Pmm FROM dados_smp_msc&lt;br/&gt;    ) pmms,&lt;br/&gt;    (SELECT DISTINCT dados_smp_msc.Msc, dados_smp_msc.CN FROM dados_smp_msc&lt;br/&gt;    ) mscs&lt;br/&gt;  ),&lt;br/&gt;  agrupadores_por_dados AS&lt;br/&gt;  (SELECT agrupadores.Data,&lt;br/&gt;    agrupadores.Msc,&lt;br/&gt;    agrupadores.CN,&lt;br/&gt;    agrupadores.Pmm,&lt;br/&gt;    NVL(dados.Smp_A, 0) smp_a,&lt;br/&gt;    NVL(dados.Smp_B, 0) smp_b,&lt;br/&gt;    NVL(dados.smp, 0) Smp,&lt;br/&gt;    NVL(N_ATENDIDAS, 0) as N_ATENDIDAS,&lt;br/&gt;    NVL(TERM_N_ENC_DESL, 0) as TERM_N_ENC_DESL,&lt;br/&gt;    NVL(CORREIO_ELETRONICO, 0) as CORREIO_ELETRONICO,&lt;br/&gt;    NVL(N_RESPONDIDAS, 0) as N_RESPONDIDAS,&lt;br/&gt;    NVL(LINHA_OCUPADA, 0) as LINHA_OCUPADA,&lt;br/&gt;    NVL(ORIGEM, 0) as ORIGEM,&lt;br/&gt;    NVL(DESTINO, 0) as DESTINO,&lt;br/&gt;    NVL(N_TENTATIVAS, 0) as N_TENTATIVAS,&lt;br/&gt;    NVL(N_CHAMADAS_ENTREGUES, 0) as N_CHAMADAS_ENTREGUES,&lt;br/&gt;    NVL(PERDAS_NA_ORIGEM, 0) as PERDAS_NA_ORIGEM,&lt;br/&gt;    NVL(COT_TOTAL, 0) as COT_TOTAL,&lt;br/&gt;    NVL(CONGESTIONAMENTO_ORIGEM, 0) as CONGESTIONAMENTO_ORIGEM,&lt;br/&gt;    NVL(CONGESTIONAMENTO_DESTINO, 0) as CONGESTIONAMENTO_DESTINO,&lt;br/&gt;    NVL(CONGESTIONAMENTO_TRANSPORTE, 0) as CONGESTIONAMENTO_TRANSPORTE,&lt;br/&gt;    OK1         ,&lt;br/&gt;    OKVM        ,&lt;br/&gt;    OK1_TCT     ,&lt;br/&gt;    OK1_DRP     ,&lt;br/&gt;    OK1_DRP_TCT ,&lt;br/&gt;    CHAM        ,&lt;br/&gt;    BACB        ,&lt;br/&gt;    NR_VM       ,&lt;br/&gt;    SCV         ,&lt;br/&gt;    INEX        ,&lt;br/&gt;    DESL        ,&lt;br/&gt;    BLOQ        ,&lt;br/&gt;    SC          ,&lt;br/&gt;    OK5         ,&lt;br/&gt;    OK5_TCT     ,&lt;br/&gt;    OK5_DRP     ,&lt;br/&gt;    OK5_DRP_TCT ,&lt;br/&gt;    LO          ,&lt;br/&gt;    CO1         ,&lt;br/&gt;    CO2         ,&lt;br/&gt;    CO3         ,&lt;br/&gt;    NR          ,&lt;br/&gt;    DSA         ,&lt;br/&gt;    LOS         ,&lt;br/&gt;    DROP_       ,&lt;br/&gt;    SRP         ,&lt;br/&gt;    OU          ,&lt;br/&gt;    FA1         ,&lt;br/&gt;    FA2         ,&lt;br/&gt;    FA3         ,&lt;br/&gt;    DSS         ,&lt;br/&gt;    INV          &lt;br/&gt;  FROM dados_smp_msc dados,&lt;br/&gt;    agrupadores_smp_mscs agrupadores&lt;br/&gt;  WHERE agrupadores.Data = dados.Data(+)&lt;br/&gt;  AND agrupadores.Pmm    = dados.Pmm(+)&lt;br/&gt;  AND agrupadores.Msc    = dados.Msc(+)&lt;br/&gt;  AND agrupadores.CN     = dados.CN(+)&lt;br/&gt;  )&lt;br/&gt;SELECT TO_CHAR(Agrupadores_Por_Dados.Data, &apos;dd/MM/yyyy&apos;) DATA,&lt;br/&gt;  Agrupadores_Por_Dados.Msc,&lt;br/&gt;  Agrupadores_Por_Dados.CN,&lt;br/&gt;  Agrupadores_Por_Dados.Pmm,&lt;br/&gt;  TO_CHAR(Agrupadores_Por_Dados.smp_a) AS SMP_A,&lt;br/&gt;  TO_CHAR(Agrupadores_Por_Dados.smp_b) AS SMP_B,&lt;br/&gt;  CASE&lt;br/&gt;    WHEN Agrupadores_Por_Dados.Smp          != &apos;-&apos;&lt;br/&gt;    AND TO_NUMBER(Agrupadores_Por_Dados.Smp) &gt; 100&lt;br/&gt;    THEN &apos;100,00&apos;&lt;br/&gt;    ELSE replace(Agrupadores_Por_Dados.Smp,&apos;.&apos;,&apos;,&apos;)&lt;br/&gt;  END                                           AS SMP,&lt;br/&gt;  TO_CHAR(Agrupadores_Por_Dados.Data, &apos;MON-YY&apos;) AS DT_FORMATADA,&lt;br/&gt;  Agrupadores_Por_Dados.N_ATENDIDAS,&lt;br/&gt;  Agrupadores_Por_Dados.TERM_N_ENC_DESL,&lt;br/&gt;  Agrupadores_Por_Dados.CORREIO_ELETRONICO,&lt;br/&gt;  Agrupadores_Por_Dados.N_RESPONDIDAS,&lt;br/&gt;  Agrupadores_Por_Dados.LINHA_OCUPADA,&lt;br/&gt;  Agrupadores_Por_Dados.ORIGEM,&lt;br/&gt;  Agrupadores_Por_Dados.DESTINO,&lt;br/&gt;  Agrupadores_Por_Dados.N_TENTATIVAS,&lt;br/&gt;  Agrupadores_Por_Dados.N_CHAMADAS_ENTREGUES,&lt;br/&gt;  Agrupadores_Por_Dados.PERDAS_NA_ORIGEM,&lt;br/&gt;  Agrupadores_Por_Dados.COT_TOTAL,&lt;br/&gt;  Agrupadores_Por_Dados.CONGESTIONAMENTO_ORIGEM,&lt;br/&gt;  Agrupadores_Por_Dados.CONGESTIONAMENTO_DESTINO,&lt;br/&gt;  Agrupadores_Por_Dados.CONGESTIONAMENTO_TRANSPORTE,&lt;br/&gt;  nvl((select codigo from msc_cn_codigo a where a.msc = Agrupadores_Por_Dados.msc and a.cn = Agrupadores_Por_Dados.cn and trunc(a.ultima_atualizacao,&apos;MM&apos;) &lt;= trunc(Agrupadores_Por_Dados.Data,&apos;MM&apos;) and rownum = 1 group by codigo),&apos;NID&apos;) AS unidade_primaria,&lt;br/&gt;  nvl((select 1 from msc_cn_vinculado a where a.msc_destino = Agrupadores_Por_Dados.Msc and a.cn_destino = Agrupadores_Por_Dados.CN and trunc(a.data,&apos;MM&apos;) = trunc(Agrupadores_Por_Dados.Data,&apos;MM&apos;) AND ROWNUM = 1),0) as vinculado,&lt;br/&gt;  Agrupadores_Por_Dados.OK1        ,&lt;br/&gt;  Agrupadores_Por_Dados.OKVM       ,&lt;br/&gt;  Agrupadores_Por_Dados.OK1_TCT    ,&lt;br/&gt;  Agrupadores_Por_Dados.OK1_DRP    ,&lt;br/&gt;  Agrupadores_Por_Dados.OK1_DRP_TCT,&lt;br/&gt;  Agrupadores_Por_Dados.CHAM       ,&lt;br/&gt;  Agrupadores_Por_Dados.BACB       ,&lt;br/&gt;  Agrupadores_Por_Dados.NR_VM      ,&lt;br/&gt;  Agrupadores_Por_Dados.SCV        ,&lt;br/&gt;  Agrupadores_Por_Dados.INEX       ,&lt;br/&gt;  Agrupadores_Por_Dados.DESL       ,&lt;br/&gt;  Agrupadores_Por_Dados.BLOQ       ,&lt;br/&gt;  Agrupadores_Por_Dados.SC         ,&lt;br/&gt;  Agrupadores_Por_Dados.OK5        ,&lt;br/&gt;  Agrupadores_Por_Dados.OK5_TCT    ,&lt;br/&gt;  Agrupadores_Por_Dados.OK5_DRP    ,&lt;br/&gt;  Agrupadores_Por_Dados.OK5_DRP_TCT,&lt;br/&gt;  Agrupadores_Por_Dados.LO         ,&lt;br/&gt;  Agrupadores_Por_Dados.CO1        ,&lt;br/&gt;  Agrupadores_Por_Dados.CO2        ,&lt;br/&gt;  Agrupadores_Por_Dados.CO3        ,&lt;br/&gt;  Agrupadores_Por_Dados.NR         ,&lt;br/&gt;  Agrupadores_Por_Dados.DSA        ,&lt;br/&gt;  Agrupadores_Por_Dados.LOS        ,&lt;br/&gt;  Agrupadores_Por_Dados.DROP_      ,&lt;br/&gt;  Agrupadores_Por_Dados.SRP        ,&lt;br/&gt;  Agrupadores_Por_Dados.OU         ,&lt;br/&gt;  Agrupadores_Por_Dados.FA1        ,&lt;br/&gt;  Agrupadores_Por_Dados.FA2        ,&lt;br/&gt;  Agrupadores_Por_Dados.FA3        ,&lt;br/&gt;  Agrupadores_Por_Dados.DSS        ,&lt;br/&gt;  Agrupadores_Por_Dados.INV        &lt;br/&gt;&lt;br/&gt;FROM Agrupadores_Por_Dados&lt;br/&gt;ORDER BY 2,3,1,4</userDefinedSQL>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DATA" id="7B9D5181-CA8B-5781-F93D-06AA3E10DEB8">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DATA</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>DATA</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="MSC" id="4413507F-EF64-5683-2269-2113A4F6DCE1">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>MSC</alias>
+<dataType>VARCHAR2 (45)</dataType>
+<headerAlias>MSC</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CN" id="61D4E9DF-AF97-0EB3-0033-D15AE38D5E2F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CN</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>CN</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PMM" id="7F476325-EE11-2E77-52B8-54ECF5A2CA02">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>PMM</alias>
+<dataType>VARCHAR2 (20)</dataType>
+<headerAlias>PMM</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP_A" id="C007ACB4-5ACB-5C1C-448D-7B349D261365">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP_A</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SMP_A</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP_B" id="65DF3BF8-7A7A-3444-4814-1AA90BAC508D">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP_B</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SMP_B</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP" id="338165F6-F656-377F-276D-D06E79E510C1">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>SMP</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DT_FORMATADA" id="9FE34FAB-A4B9-8F9B-8C54-4C94C5C58D33">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DT_FORMATADA</alias>
+<dataType>VARCHAR2 (6)</dataType>
+<headerAlias>DT_FORMATADA</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="N_ATENDIDAS" id="C339D4D3-59A6-75E1-66C0-62659E039D43">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>N_ATENDIDAS</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>N_ATENDIDAS</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="TERM_N_ENC_DESL" id="2F3CC0E2-1000-E31B-1925-CD4A9C6B4950">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>TERM_N_ENC_DESL</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>TERM_N_ENC_DESL</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CORREIO_ELETRONICO" id="E2A4EB1A-5A6E-6890-7F9F-149B18D4CD20">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CORREIO_ELETRONICO</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CORREIO_ELETRONICO</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="N_RESPONDIDAS" id="2FDF9596-9C3F-6133-45C5-0D36038ABDC7">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>N_RESPONDIDAS</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>N_RESPONDIDAS</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="LINHA_OCUPADA" id="A2DD1DFA-20BC-CAC4-4C62-7620A2EACC97">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>LINHA_OCUPADA</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>LINHA_OCUPADA</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ORIGEM" id="1639B860-C220-BB12-1419-BB18BE0940A8">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>ORIGEM</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>ORIGEM</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DESTINO" id="D5C91639-506E-B411-25B4-43B0732CE890">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DESTINO</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>DESTINO</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="N_TENTATIVAS" id="A84D3BEE-A2BA-1803-402C-14BC2D8FF429">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>N_TENTATIVAS</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>N_TENTATIVAS</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="N_CHAMADAS_ENTREGUES" id="A724999F-2058-630D-A92D-49AE74F26FFE">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>N_CHAMADAS_ENTREGUES</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>N_CHAMADAS_ENTREGUES</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PERDAS_NA_ORIGEM" id="637A4429-ACE3-7F0B-5CCF-0D9CAC1E9DC3">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>PERDAS_NA_ORIGEM</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>PERDAS_NA_ORIGEM</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="COT_TOTAL" id="027088FA-F1D1-2EFD-1EFE-B2F74EB08742">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>COT_TOTAL</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>COT_TOTAL</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CONGESTIONAMENTO_ORIGEM" id="C013EF03-5F9E-FCF5-C8EA-CCAC999CE4F3">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CONGESTIONAMENTO_ORIGEM</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CONGESTIONAMENTO_ORIGEM</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CONGESTIONAMENTO_DESTINO" id="1125CBBC-1369-9C45-388F-6A8D964CDB3F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CONGESTIONAMENTO_DESTINO</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CONGESTIONAMENTO_DESTINO</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CONGESTIONAMENTO_TRANSPORTE" id="15F96EFF-E80A-6C71-286B-7EADB2EFDBB2">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CONGESTIONAMENTO_TRANSPORTE</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CONGESTIONAMENTO_TRANSPORTE</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="UNIDADE_PRIMARIA" id="A6C1883E-9795-8DC4-BEFF-7E3A40FE2861">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>UNIDADE_PRIMARIA</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>UNIDADE_PRIMARIA</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VINCULADO" id="F5BDD065-532A-CF8F-4927-1AA34B00E4EC">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>VINCULADO</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>VINCULADO</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK1" id="89D6D518-660F-6719-6E74-5C6BC55742FC">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK1</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OK1</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OKVM" id="15C15CDE-7E9A-D45F-4E11-17384EEA6A77">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OKVM</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OKVM</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK1_TCT" id="9850B6CA-0A32-453D-1B81-12D208E0E1E8">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK1_TCT</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OK1_TCT</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK1_DRP" id="279DC188-E1C0-FA16-B706-63D748A1706F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK1_DRP</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OK1_DRP</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK1_DRP_TCT" id="3FBB53D1-666B-12CC-A164-84384E739F57">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK1_DRP_TCT</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OK1_DRP_TCT</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CHAM" id="8C2E487B-EB6E-E2A1-F2AD-854BC8180973">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CHAM</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CHAM</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="BACB" id="768C5967-D261-1787-0F80-4BE3FCFAB9D7">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>BACB</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>BACB</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="NR_VM" id="20A5483C-8327-92FF-56A1-FA6BA79EF377">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>NR_VM</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>NR_VM</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SCV" id="87E3E512-34F2-84A6-6976-E7C761519BE7">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SCV</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SCV</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INEX" id="B5535EB8-3265-A7A7-18BB-D8727E24EF09">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>INEX</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>INEX</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DESL" id="B1130185-9BDF-FA9F-7F4B-48D0B26FEF6D">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DESL</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>DESL</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="BLOQ" id="32EF6321-505D-A42E-2142-4F038971F2EA">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>BLOQ</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>BLOQ</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SC" id="59642786-1402-D56B-E0E0-D1572CAA65C5">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SC</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SC</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK5" id="CC11EA8D-DB7D-1DD3-2193-3E186B6DCDFA">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK5</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OK5</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK5_TCT" id="A87A1466-D7BB-B4EE-FC7F-201874396A36">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK5_TCT</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OK5_TCT</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK5_DRP" id="D8F0ED12-BCF6-788D-80A2-59A9F8889BE1">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK5_DRP</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OK5_DRP</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK5_DRP_TCT" id="0EBA3976-1666-F05C-814B-7E81B4394F60">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK5_DRP_TCT</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OK5_DRP_TCT</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="LO" id="B0E876DB-B519-4EB0-0D5B-06E59650C3F6">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>LO</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>LO</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CO1" id="9261A84D-F6E8-7E36-77CD-4BB9208C1F7C">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CO1</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CO1</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CO2" id="8CC8DBB3-F8B7-DB20-BB48-B98447F82671">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CO2</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CO2</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CO3" id="87C186A7-AE34-DAC5-B2FA-0519917B636D">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CO3</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CO3</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="NR" id="84CE7E35-156D-6718-882E-E49622CAA316">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>NR</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>NR</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DSA" id="627B2EBA-8009-3713-283A-716A7D8BF717">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DSA</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>DSA</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="LOS" id="9A5A5C68-5A20-F353-616F-15AC9AD6694D">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>LOS</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>LOS</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DROP_" id="82CF34E8-CEC9-8846-4494-AD5CE725B395">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DROP_</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>DROP_</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SRP" id="29A08821-4AA4-22D2-7A24-367FFDC47EBC">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SRP</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SRP</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OU" id="AEC17E93-8603-D9B8-781C-90E147851DC8">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OU</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>OU</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="FA1" id="1718B7BC-2D86-3346-3880-06A9804B7D19">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>FA1</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>FA1</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="FA2" id="1F1B27F1-4DDA-B3B5-DD0E-1BE68429137B">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>FA2</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>FA2</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="FA3" id="B0FF859F-8D94-07D5-64C5-342B1E9002FF">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>FA3</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>FA3</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DSS" id="C485722B-A7CD-4F20-5C38-7A0BF4AF140E">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DSS</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>DSS</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INV" id="7DE7831A-A8F9-2784-79C2-217E1BE2A645">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>INV</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>INV</headerAlias>
+<reference>false</reference>
+<viewID>F7CCCB03-00D7-7325-64CE-B980FF5C2C40</viewID>
+</viewElement>
+</viewElements>
+</TableView>

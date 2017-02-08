@@ -1,0 +1,473 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1A24E340-DDA7-EFB1-C067-A6AD38A72D53" name="CDRVIEW_CHAM_ORIG_SEM">
+<sourceConnName>s_metricview-u_interconexao_73</sourceConnName>
+<sourceObjSchema>INTERCONEXAO</sourceObjSchema>
+<sourceObjName>CDRVIEW_CHAM_ORIG_SEM</sourceObjName>
+<sourceDDLFile>views_e_tabelas.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATA" id="EEAC0463-AFCD-DE6B-C0A4-07FFAD7469E9">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+<generateConstraintInDDL>NO</generateConstraintInDDL>
+</Column>
+<Column name="SEMANA" id="68E2014F-E4FC-EC7C-6044-42438D98668F">
+<sourceConnName>s_metricview-u_interconexao_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_CHAM_ORIG_SEM</sourceObjSchema>
+<sourceObjName>SEMANA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BILHETADOR" id="5061B6E1-E434-FC39-283E-F295A31EF94E">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COD_AREA_A" id="D911D6D2-D01C-3E47-C1BA-B8772F868F4D">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COD_AREA_B" id="55C81C46-056E-B134-272A-E231DF4D7CBD">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_TARIFA" id="71C60C21-7738-5A18-0691-7D5082CABA7B">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_ASSINANTE" id="C9547B38-F42F-CAE6-700D-8225882EDF92">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PARTE_TARIFADA" id="C9C0B44C-5526-EACF-4F6A-708FE2CC801A">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RN1" id="B08C48C2-FE6F-1B3B-E127-FB3A44CF26B4">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CSP" id="11EE24BE-2CF3-7A11-2BEE-53989F00657A">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAIS_DESTINO" id="A0337FE0-AA76-CFE5-2132-49C94661B9AF">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REDE" id="6A8B9FCF-2EBE-AB9D-1697-4FDEADC5F44D">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLASSE_CHAMADA" id="686683A5-9779-58B4-1FC4-CDD9EF6BA18F">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ARL" id="B1978F5A-F41A-AAA5-2E07-AEAED01CDA80">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESTINO" id="C30327DA-8B23-BA1E-B14D-D4254DC042CF">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM" id="ED247EF4-E66D-6BEB-FD50-E2E1A992700A">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TTT" id="0AC93FE1-CA06-E9DC-59DA-34C4A0AB7867">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TTO" id="5ACA30F8-862B-4905-21C3-247F0578DAAA">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TTC" id="451094D6-269B-F071-245D-05DC93C4D82C">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1" id="D4D02002-D1D0-4739-3D69-D00FD9DE4C83">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_TCT" id="3A8098F4-018E-8CB5-90D3-D92383D3A5A6">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_DRP" id="383F7575-ADAB-5237-3005-3D3FFCCA2E16">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_DRP_TCT" id="EE3FCFCC-99F1-33B1-5E7B-78680CC8C904">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK5" id="E7237C65-C29E-6A3D-294C-AED95EA949DB">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK5_TCT" id="32C26F31-B45B-FB61-3E14-297AE51A9494">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK5_DRP" id="7CDE052E-DDE5-0F17-9ABB-29ABA5B3C605">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK5_DRP_TCT" id="018CEF64-54CF-46E7-6F5C-AEDF2DA06E07">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OKVM" id="8A915319-BA05-48BE-A15C-069099E24A65">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CO1" id="70F52299-57EA-440A-4D69-2EBA7B54AD83">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CO2" id="054169E2-9C69-6170-58CE-76EF93E9D98F">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CO3" id="66F9138A-7D02-4C45-6E9E-356E62375CE4">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR" id="740EF523-BD39-A3D2-8391-A291E99D5193">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_VM" id="B36EAA53-9E17-E0ED-F726-7F6B36F3C3B0">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC" id="A07A15BB-19A5-AE09-F66F-8B1831D9EE33">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BLOQ" id="D3A5FD71-C451-500B-652C-680B21A4BACD">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERIODO" id="95581B74-059E-5D8D-8BBB-FE83C2BEF69D">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCV" id="FB86E725-DACD-FA48-5E61-DEEC31C39D84">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OU" id="13BD412D-5387-EDF0-9DC7-E1349C36B26F">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_C" id="460D1622-9B3A-2C31-CED8-D9D8566B42C4">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM_VC1_ITX" id="6E4A5937-B1FC-6A5D-39E7-6ADB6F79078B">
+<sourceDDLFile>views_e_tabelas.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM_VC2_ITX" id="3DB076CA-47AA-A363-7661-E821002CBEA8">
+<sourceDDLFile>views_e_tabelas.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM_VC3_ITX" id="9B020665-4B61-B3C0-E1C0-95A42722EDA8">
+<sourceDDLFile>views_e_tabelas.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-20 21:29:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2F41F272-99A6-FD01-0873-C28D57D35AEA" name="CDRVIEW_CHAM_ORIG_SEM__IDX">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-21 10:44:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="68E2014F-E4FC-EC7C-6044-42438D98668F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="metricview" directorySegmentName="seg_0" id="E92B9B7D-8717-B97C-C16B-EF3166B8FB69">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-27 17:57:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</SchemaObject>

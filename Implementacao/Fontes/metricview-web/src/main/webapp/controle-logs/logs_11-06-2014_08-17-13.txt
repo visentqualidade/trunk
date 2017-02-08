@@ -1,0 +1,7 @@
+mensagem;tipo(INFO, ERROR);usuario(nome);data_hora;projeto/solucao
+!mensagem_log_nao_encontrou_registro_login!;ERROR;Sistema;2014-06-11 08:17:13:756;ControleUsuarios
+1 08:17:13:758;ControleUsuarios
+!mensagem_log_nao_encontrou_registro_login!;ERROR;Sistema;2014-06-11 08:17:13:770;ControleUsuarios
+!mensagem_log_nao_encontrou_registro_login!;ERROR;Sistema;2014-06-11 08:17:13:850;ControleUsuarios
+!mensagem_log_nao_encontrou_registro_login!;ERROR;Sistema;2014-06-11 08:17:13:852;ControleUsuarios
+!mensagem_log_nao_encontrou_registro_login!;ERROR;Sistema;2014-06-11 08:17:13:854;ControleUsuarios

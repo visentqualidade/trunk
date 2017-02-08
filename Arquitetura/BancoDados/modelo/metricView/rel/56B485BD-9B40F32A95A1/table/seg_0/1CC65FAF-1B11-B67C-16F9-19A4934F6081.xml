@@ -1,0 +1,165 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1CC65FAF-1B11-B67C-16F9-19A4934F6081" name="FUNCIONALIDADE">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>FUNCIONALIDADE</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>create sequence Metricview.SEQ_FUNCIONALIDADE Minvalue 0 Maxvalue 9999999999999 Increment By 1 Start With 0 Cache 20 Noorder  Nocycle ;&lt;br/&gt;Insert into METRICVIEW.FUNCIONALIDADE (ID_FUNCIONALIDADE,DESCRICAO,EXIBIR,ID_TIPO_ACESSO,TIPO_MENU,ID_FERRAMENTA) values (&apos;1&apos;,&apos;ddx&apos;,&apos;T&apos;,&apos;1&apos;,&apos;1&apos;,&apos;2&apos;);&lt;br/&gt;Insert into METRICVIEW.FUNCIONALIDADE (ID_FUNCIONALIDADE,DESCRICAO,EXIBIR,ID_TIPO_ACESSO,TIPO_MENU,ID_FERRAMENTA) values (&apos;2&apos;,&apos;unidadePrimaria&apos;,&apos;T&apos;,&apos;1&apos;,&apos;1&apos;,&apos;2&apos;);&lt;br/&gt;Insert into METRICVIEW.FUNCIONALIDADE (ID_FUNCIONALIDADE,DESCRICAO,EXIBIR,ID_TIPO_ACESSO,TIPO_MENU,ID_FERRAMENTA) values (&apos;3&apos;,&apos;unidadeSecundaria&apos;,&apos;T&apos;,&apos;1&apos;,&apos;1&apos;,&apos;2&apos;);&lt;br/&gt;Insert into METRICVIEW.FUNCIONALIDADE (ID_FUNCIONALIDADE,DESCRICAO,EXIBIR,ID_TIPO_ACESSO,TIPO_MENU,ID_FERRAMENTA) values (&apos;4&apos;,&apos;metas&apos;,&apos;T&apos;,&apos;1&apos;,&apos;2&apos;,&apos;2&apos;);&lt;br/&gt;Insert into METRICVIEW.FUNCIONALIDADE (ID_FUNCIONALIDADE,DESCRICAO,EXIBIR,ID_TIPO_ACESSO,TIPO_MENU,ID_FERRAMENTA) values (&apos;5&apos;,&apos;exportacaoAnatel&apos;,&apos;T&apos;,&apos;1&apos;,&apos;1&apos;,&apos;2&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_FUNCIONALIDADE" id="CDF694AD-E138-5BD0-EB37-8DFEA23A1BA6">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>FUNCIONALIDADE</sourceObjSchema>
+<sourceObjName>ID_FUNCIONALIDADE</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRICAO" id="A0AFA760-789A-C812-7099-4ABD37715843">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>FUNCIONALIDADE</sourceObjSchema>
+<sourceObjName>DESCRICAO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXIBIR" id="4EF89FFA-C7AB-962A-978F-81164D3E02B9">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>FUNCIONALIDADE</sourceObjSchema>
+<sourceObjName>EXIBIR</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO_ACESSO" id="D027AF20-2666-02E3-2638-065979E9A8F5">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>FUNCIONALIDADE</sourceObjSchema>
+<sourceObjName>ID_TIPO_ACESSO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeSize>22</dataTypeSize>
+<delegate>35D51DE2-88FD-2B38-4D1D-2459FCD2A0EA</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D517C3B4-9466-1D69-657F-A1D0A475E1B8" referredColumn="35D51DE2-88FD-2B38-4D1D-2459FCD2A0EA"/>
+</associations>
+</Column>
+<Column name="TIPO_MENU" id="BEFCB90B-07CC-48FD-67FC-707B34768D3C">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>FUNCIONALIDADE</sourceObjSchema>
+<sourceObjName>TIPO_MENU</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeSize>22</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_FERRAMENTA" id="BC649AEA-61B6-9C75-2C33-D41CE0F2B1CA">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>FUNCIONALIDADE</sourceObjSchema>
+<sourceObjName>ID_FERRAMENTA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<delegate>A7497E71-41A7-2575-9005-55F38A9990D7</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CFCD60FC-1D4F-3C58-5A99-1D45CE452FDE" referredColumn="A7497E71-41A7-2575-9005-55F38A9990D7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4F6E1366-117D-6A06-582C-088E5E2D08AB" name="FUNCIONALIDADE_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>FUNCIONALIDADE_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDF694AD-E138-5BD0-EB37-8DFEA23A1BA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CF97A419-7F24-C9DE-0C50-195930973749" name="FUNCIONALIDADE_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>FUNCIONALIDADE_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDF694AD-E138-5BD0-EB37-8DFEA23A1BA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="85A70EC5-4DBB-8416-B689-0A574F0208F8" name="FUNCIONALIDADE_FERRAMENTA_FK1">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC649AEA-61B6-9C75-2C33-D41CE0F2B1CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A965089F-D83A-D78A-C1C8-3DB719A00A12" name="FUNCIONALIDADE_TIPO_ACESSO_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D027AF20-2666-02E3-2638-065979E9A8F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

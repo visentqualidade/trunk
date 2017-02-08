@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_1" id="34F6204E-0A24-9216-68B8-9150E1E037D5" name="VIEW_SMP9_PMM_DDX">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-25 17:49:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>WITH regionais AS&lt;br/&gt;  (SELECT REGIONAL.NOME AS regional,&lt;br/&gt;    REGIONAL.*&lt;br/&gt;  FROM REGIONAL&lt;br/&gt;  WHERE indicador_smp = &apos;T&apos;&lt;br/&gt;  ),&lt;br/&gt;  dias AS&lt;br/&gt;  (SELECT data&lt;br/&gt;  FROM ddx&lt;br/&gt;  WHERE TO_CHAR(ddx.data, &apos;MM/yyyy&apos;) = TO_CHAR(SYSDATE, &apos;MM/yyyy&apos;)&lt;br/&gt;  ),&lt;br/&gt;  pmms AS&lt;br/&gt;  (SELECT PMM.NOME AS pmm, PMM.INICIO, PMM.FIM FROM PMM&lt;br/&gt;  ),&lt;br/&gt;  regionais_x_dias_x_pmms AS&lt;br/&gt;  (SELECT * FROM regionais r, pmms p&lt;br/&gt;  ),&lt;br/&gt;  dados_traducao_sem_vinculo AS&lt;br/&gt;  (SELECT VIEW_MSC_VINCULO_SMP9.DATA,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.CENTRAL,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.CN,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.PMM,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.REGIONAL,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.UF,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.SMP9_A,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.SMP9_B&lt;br/&gt;  FROM VIEW_MSC_VINCULO_SMP9&lt;br/&gt;  WHERE VIEW_MSC_VINCULO_SMP9.CODIGO != &apos;NID&apos;&lt;br/&gt;  ),&lt;br/&gt;  dados_x_pmm AS&lt;br/&gt;  (SELECT Reg.NOME                         AS regional,&lt;br/&gt;    &apos;PMM1&apos;                                 AS pmm,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(SMP9_A, 0))), &apos;0&apos;) AS SMP9_A,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(SMP9_B, 0))), &apos;0&apos;) AS SMP9_B&lt;br/&gt;  FROM VIEW_MSC_CN_ATIVO_SMP9 b,&lt;br/&gt;    dados_traducao_sem_vinculo Tab&lt;br/&gt;  INNER JOIN Cn Cn&lt;br/&gt;  ON Cn.Nome = Tab.CN&lt;br/&gt;  INNER JOIN Metricview.Rel_Regional_Cod_Nacional Reg_Cod&lt;br/&gt;  ON Reg_Cod.Id_Cn = Cn.Id_Cn&lt;br/&gt;  INNER JOIN REGIONAL Reg&lt;br/&gt;  ON Reg_Cod.Id_Regional = Reg.ID_REGIONAL&lt;br/&gt;  AND Reg.indicador_smp  = &apos;T&apos;,&lt;br/&gt;    dias dias&lt;br/&gt;  WHERE TRUNC(dias.data, &apos;MM&apos;)                         = TRUNC(Tab.DATA, &apos;MM&apos;)&lt;br/&gt;  AND Tab.CENTRAL                                      = b.MSC&lt;br/&gt;  AND Tab.CN                                           = b.CN&lt;br/&gt;  AND to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO&lt;br/&gt;  AND b.STATUS                                         = &apos;T&apos;&lt;br/&gt;  GROUP BY Reg.NOME,&lt;br/&gt;    Tab.PMM&lt;br/&gt;  ),&lt;br/&gt;  dados_finais AS&lt;br/&gt;  (SELECT reg.regional,&lt;br/&gt;    reg.pmm,&lt;br/&gt;    CASE&lt;br/&gt;      WHEN dados.SMP9_B            = &apos;0&apos;&lt;br/&gt;      AND dados.SMP9_A            != &apos;0&apos;&lt;br/&gt;      AND to_number(dados.SMP9_A) &gt;= 0&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      WHEN dados.SMP9_B = &apos;0&apos;&lt;br/&gt;      AND dados.SMP9_A != &apos;0&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      WHEN dados.SMP9_A = &apos;0&apos;&lt;br/&gt;      AND dados.SMP9_B != &apos;0&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      ELSE NVL(trim(TO_CHAR(ROUND(((dados.SMP9_A / dados.SMP9_B) * 100), 2), &apos;999990D99&apos;)), &apos;0,00&apos;)&lt;br/&gt;    END AS SMP9,&lt;br/&gt;    dados.SMP9_A,&lt;br/&gt;    dados.SMP9_B&lt;br/&gt;  FROM dados_x_pmm dados,&lt;br/&gt;    regionais_x_dias_x_pmms reg&lt;br/&gt;  WHERE reg.regional = dados.regional(+)&lt;br/&gt;  AND reg.pmm        = dados.pmm(+)&lt;br/&gt;  )&lt;br/&gt;SELECT dados_finais.regional,&lt;br/&gt;  dados_finais.pmm,&lt;br/&gt;  CASE&lt;br/&gt;    WHEN dados_finais.SMP9          != &apos;0,00&apos;&lt;br/&gt;    AND to_number(dados_finais.SMP9) &gt; 100&lt;br/&gt;    THEN &apos;100,00&apos;&lt;br/&gt;    ELSE REPLACE(dados_finais.SMP9, &apos;.&apos;, &apos;,&apos;)&lt;br/&gt;  END AS SMP9,&lt;br/&gt;  dados_finais.SMP9_A smp_a,&lt;br/&gt;  dados_finais.SMP9_B smp_b&lt;br/&gt;FROM dados_finais&lt;br/&gt;ORDER BY 1,&lt;br/&gt;  2,&lt;br/&gt;  3</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;With regionais As (Select REGIONAL.NOME As regional, REGIONAL.* From REGIONAL Where indicador_smp = &apos;T&apos;), dias As (Select data From ddx Where TO_CHAR(ddx.data, &apos;MM/yyyy&apos;) = TO_CHAR(SysDate, &apos;MM/yyyy&apos;)), pmms As (Select PMM.NOME As pmm, PMM.INICIO, PMM.FIM From PMM), regionais_x_dias_x_pmms As (Select * From regionais r, pmms p), dados_traducao_sem_vinculo As (Select VIEW_MSC_VINCULO_SMP9.DATA, VIEW_MSC_VINCULO_SMP9.CENTRAL, VIEW_MSC_VINCULO_SMP9.CN, VIEW_MSC_VINCULO_SMP9.PMM, VIEW_MSC_VINCULO_SMP9.REGIONAL, VIEW_MSC_VINCULO_SMP9.UF, VIEW_MSC_VINCULO_SMP9.SMP9_A, VIEW_MSC_VINCULO_SMP9.SMP9_B From VIEW_MSC_VINCULO_SMP9 Where VIEW_MSC_VINCULO_SMP9.CODIGO != &apos;NID&apos;), dados_x_pmm As (Select Reg.NOME As regional, &apos;PMM1&apos; As pmm, NVL(TO_CHAR(Sum(NVL(SMP9_A, 0))), &apos;0&apos;) As SMP9_A, NVL(TO_CHAR(Sum(NVL(SMP9_B, 0))), &apos;0&apos;) As SMP9_B From VIEW_MSC_CN_ATIVO_SMP9 b, dados_traducao_sem_vinculo Tab Inner Join Cn Cn On Cn.Nome = Tab.CN Inner Join Metricview.Rel_Regional_Cod_Nacional Reg_Cod On Reg_Cod.Id_Cn = Cn.Id_Cn Inner Join REGIONAL Reg On Reg_Cod.Id_Regional = Reg.ID_REGIONAL And Reg.indicador_smp = &apos;T&apos;, dias dias Where TRUNC(dias.data, &apos;MM&apos;) = TRUNC(Tab.DATA, &apos;MM&apos;) And Tab.CENTRAL = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By Reg.NOME, Tab.PMM), dados_finais As (Select reg.regional, reg.pmm, Case When dados.SMP9_B = &apos;0&apos; And dados.SMP9_A != &apos;0&apos; And to_number(dados.SMP9_A) &gt;= 0 Then &apos;0,00&apos; When dados.SMP9_B = &apos;0&apos; And dados.SMP9_A != &apos;0&apos; Then &apos;0,00&apos; When dados.SMP9_A = &apos;0&apos; And dados.SMP9_B != &apos;0&apos; Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND(((dados.SMP9_A / dados.SMP9_B) * 100), 2), &apos;999990D99&apos;)), &apos;0,00&apos;) End As SMP9, dados.SMP9_A, dados.SMP9_B From dados_x_pmm dados, regionais_x_dias_x_pmms reg Where reg.regional = dados.regional(+) And reg.pmm = dados.pmm(+)) Select dados_finais.regional, dados_finais.pmm, Case When dados_finais.SMP9 != &apos;0,00&apos; And to_number(dados_finais.SMP9) &gt; 100 Then &apos;100,00&apos; Else REPLACE(dados_finais.SMP9, &apos;.&apos;, &apos;,&apos;) End As SMP9, dados_finais.SMP9_A smp_a, dados_finais.SMP9_B smp_b From dados_finais Order By 1, 2, 3&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;With regionais As (Select REGIONAL.NOME As regional, REGIONAL.* From REGIONAL Where indicador_smp = &apos;T&apos;), dias As (Select data From ddx Where TO_CHAR(ddx.data, &apos;MM/yyyy&apos;) = TO_CHAR(SysDate, &apos;MM/yyyy&apos;)), pmms As (Select PMM.NOME As pmm, PMM.INICIO, PMM.FIM From PMM), regionais_x_dias_x_pmms As (Select * From regionais r, pmms p), dados_traducao_sem_vinculo As (Select VIEW_MSC_VINCULO_SMP9.DATA, VIEW_MSC_VINCULO_SMP9.CENTRAL, VIEW_MSC_VINCULO_SMP9.CN, VIEW_MSC_VINCULO_SMP9.PMM, VIEW_MSC_VINCULO_SMP9.REGIONAL, VIEW_MSC_VINCULO_SMP9.UF, VIEW_MSC_VINCULO_SMP9.SMP9_A, VIEW_MSC_VINCULO_SMP9.SMP9_B From VIEW_MSC_VINCULO_SMP9 Where VIEW_MSC_VINCULO_SMP9.CODIGO != &apos;NID&apos;), dados_x_pmm As (Select Reg.NOME As regional, &apos;PMM1&apos; As pmm, NVL(TO_CHAR(Sum(NVL(SMP9_A, 0))), &apos;0&apos;) As SMP9_A, NVL(TO_CHAR(Sum(NVL(SMP9_B, 0))), &apos;0&apos;) As SMP9_B From VIEW_MSC_CN_ATIVO_SMP9 b, dados_traducao_sem_vinculo Tab Inner Join Cn Cn On Cn.Nome = Tab.CN Inner Join Metricview.Rel_Regional_Cod_Nacional Reg_Cod On Reg_Cod.Id_Cn = Cn.Id_Cn Inner Join REGIONAL Reg On Reg_Cod.Id_Regional = Reg.ID_REGIONAL And Reg.indicador_smp = &apos;T&apos;, dias dias Where TRUNC(dias.data, &apos;MM&apos;) = TRUNC(Tab.DATA, &apos;MM&apos;) And Tab.CENTRAL = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By Reg.NOME, Tab.PMM), dados_finais As (Select reg.regional, reg.pmm, Case When dados.SMP9_B = &apos;0&apos; And dados.SMP9_A != &apos;0&apos; And to_number(dados.SMP9_A) &gt;= 0 Then &apos;0,00&apos; When dados.SMP9_B = &apos;0&apos; And dados.SMP9_A != &apos;0&apos; Then &apos;0,00&apos; When dados.SMP9_A = &apos;0&apos; And dados.SMP9_B != &apos;0&apos; Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND(((dados.SMP9_A / dados.SMP9_B) * 100), 2), &apos;999990D99&apos;)), &apos;0,00&apos;) End As SMP9, dados.SMP9_A, dados.SMP9_B From dados_x_pmm dados, regionais_x_dias_x_pmms reg Where reg.regional = dados.regional(+) And reg.pmm = dados.pmm(+)) Select dados_finais.regional, dados_finais.pmm, Case When dados_finais.SMP9 != &apos;0,00&apos; And to_number(dados_finais.SMP9) &gt; 100 Then &apos;100,00&apos; Else REPLACE(dados_finais.SMP9, &apos;.&apos;, &apos;,&apos;) End As SMP9, dados_finais.SMP9_A smp_a, dados_finais.SMP9_B smp_b From dados_finais Order By 1, 2, 3&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_finais&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;101&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select REGIONAL.NOME As regional, REGIONAL.* From REGIONAL Where indicador_smp = &apos;T&apos;&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;REGIONAL&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select data From ddx Where TO_CHAR(ddx.data, &apos;MM/yyyy&apos;) = TO_CHAR(SysDate, &apos;MM/yyyy&apos;)&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;ddx&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;47&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select PMM.NOME As pmm, PMM.INICIO, PMM.FIM From PMM&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;PMM&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select * From regionais r, pmms p&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;regionais r&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;65&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;pmms p&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;101&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select VIEW_MSC_VINCULO_SMP9.DATA, VIEW_MSC_VINCULO_SMP9.CENTRAL, VIEW_MSC_VINCULO_SMP9.CN, VIEW_MSC_VINCULO_SMP9.PMM, VIEW_MSC_VINCULO_SMP9.REGIONAL, VIEW_MSC_VINCULO_SMP9.UF, VIEW_MSC_VINCULO_SMP9.SMP9_A, VIEW_MSC_VINCULO_SMP9.SMP9_B From VIEW_MSC_VINCULO_SMP9 Where VIEW_MSC_VINCULO_SMP9.CODIGO != &apos;NID&apos;&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;VIEW_MSC_VINCULO_SMP9&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;47&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Reg.NOME As regional, &apos;PMM1&apos; As pmm, NVL(TO_CHAR(Sum(NVL(SMP9_A, 0))), &apos;0&apos;) As SMP9_A, NVL(TO_CHAR(Sum(NVL(SMP9_B, 0))), &apos;0&apos;) As SMP9_B From VIEW_MSC_CN_ATIVO_SMP9 b, dados_traducao_sem_vinculo Tab Inner Join Cn Cn On Cn.Nome = Tab.CN Inner Join Metricview.Rel_Regional_Cod_Nacional Reg_Cod On Reg_Cod.Id_Cn = Cn.Id_Cn Inner Join REGIONAL Reg On Reg_Cod.Id_Regional = Reg.ID_REGIONAL And Reg.indicador_smp = &apos;T&apos;, dias dias Where TRUNC(dias.data, &apos;MM&apos;) = TRUNC(Tab.DATA, &apos;MM&apos;) And Tab.CENTRAL = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By Reg.NOME, Tab.PMM&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;VIEW_MSC_CN_ATIVO_SMP9 b&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;119&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;dados_traducao_sem_vinculo Tab&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;196&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;Cn Cn&quot; X=&quot;50&quot; Y=&quot;164&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;Metricview.Rel_Regional_Cod_Nacional Reg_Cod&quot; X=&quot;50&quot; Y=&quot;236&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;REGIONAL Reg&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;119&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;dias dias&quot; X=&quot;50&quot; Y=&quot;308&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select reg.regional, reg.pmm, Case When dados.SMP9_B = &apos;0&apos; And dados.SMP9_A != &apos;0&apos; And to_number(dados.SMP9_A) &gt;= 0 Then &apos;0,00&apos; When dados.SMP9_B = &apos;0&apos; And dados.SMP9_A != &apos;0&apos; Then &apos;0,00&apos; When dados.SMP9_A = &apos;0&apos; And dados.SMP9_B != &apos;0&apos; Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND(((dados.SMP9_A / dados.SMP9_B) * 100), 2), &apos;999990D99&apos;)), &apos;0,00&apos;) End As SMP9, dados.SMP9_A, dados.SMP9_B From dados_x_pmm dados, regionais_x_dias_x_pmms reg Where reg.regional = dados.regional(+) And reg.pmm = dados.pmm(+)&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_x_pmm dados&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;regionais_x_dias_x_pmms reg&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="regional" id="2547D23B-AF5E-FEA5-78CA-67A7A3D7B575">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-25 17:49:48 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>dados_finais.regional</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="pmm" id="92591216-0142-7A27-A53C-22D984DB500B">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-16 19:29:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>dados_finais.pmm</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP9" id="F40C6457-9D8E-B13C-3E2B-09345B3640F9">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-16 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP9</alias>
+<expression>Case When dados_finais.SMP9 != &apos;0,00&apos; And to_number(dados_finais.SMP9) &gt; 100 Then &apos;100,00&apos; Else REPLACE(dados_finais.SMP9, &apos;.&apos;, &apos;,&apos;) End</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="smp_a" id="7B5FD627-C662-0D73-B2FC-9443AF4580C8">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-20 13:24:45 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>smp_a</alias>
+<expression>dados_finais.SMP9_A</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="smp_b" id="B60E2FC3-5196-BEAB-A18F-2963F87852EB">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-20 13:24:45 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>smp_b</alias>
+<expression>dados_finais.SMP9_B</expression>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FE2490EA-1621-FD48-AE63-2FCE99EFB830">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>PMM</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="42DA65EC-43CB-DF0E-6E35-1314F2AF0F00">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP9</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D7F223D2-3895-1292-497C-9E9B09B138F5">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP9</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="9DF822CA-A5FD-F0F0-AF36-AEC14F5C10AD">
+<columnName>CODIGO</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP9</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="8B7F21E3-E82A-E8DB-DAF3-A9E09F885E0D">
+<columnName>MSC</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP9</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3C59E10D-68BE-1E5E-FC22-58914FFD9A91">
+<columnName>CN</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP9</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F10FAE3A-DA2E-CFC0-FEF2-78817322DF83">
+<columnName>PERIODO</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP9</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6B6D1996-47BF-060F-D2B9-34931E454B76">
+<columnName>STATUS</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP9</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

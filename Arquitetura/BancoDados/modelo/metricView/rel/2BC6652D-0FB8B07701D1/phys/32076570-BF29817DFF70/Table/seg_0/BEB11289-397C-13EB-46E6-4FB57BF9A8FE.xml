@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="APARELHO" directorySegmentName="seg_0" id="BEB11289-397C-13EB-46E6-4FB57BF9A8FE">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 11:33:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>A36D226E-BC2B-F21D-6766-62C3EFF7964B</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<user>B6665735-CC76-0BEF-732A-CB14F6C7239B</user>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="IDX_APARELHO_TAC" id="BAD3B062-1F3E-6799-2DCA-9E79F234D96A">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 11:37:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TECNOLOGIA" id="64AEE53F-6CA1-6AE1-DCE7-59F373861F01">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 11:34:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TAC" id="B2980BB7-DE15-E46F-6B97-4D08AE10887F">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 11:34:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MODELO" id="ED3050D0-82B4-F9B0-613B-96E60BBDB455">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 11:34:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FABRICANTE" id="FD0835A8-6E07-B5B6-810B-A47E699D45C3">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 11:34:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="APARELHO_PK" id="A94ECB7D-2EAF-0F5F-8B83-1320C12D95B1">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 11:34:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

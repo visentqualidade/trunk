@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="73610622-5C73-7006-3CFC-6167619A285C" name="VM_CELULA">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 20:33:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CELULA" id="79129BED-D584-8409-F3C2-60F20D186244">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 20:33:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ESTACAO" id="88A9992E-1FAA-4771-6D6C-59FBD2A95AEB">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 20:34:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<delegate>D02C93B2-0839-243E-78D9-1036A6CC8220</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0AB076EE-8A47-DECF-2040-7A85E9CE2EEB" referredColumn="D02C93B2-0839-243E-78D9-1036A6CC8220"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4C66D108-C9D2-56B9-223C-9E0260BCEC01" name="VM_CELULA_PK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 20:40:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79129BED-D584-8409-F3C2-60F20D186244"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="700C123A-AC4D-EF5F-9647-6A595C4B190A" name="VM_CELULA_VM_ESTACAO_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 20:37:52 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88A9992E-1FAA-4771-6D6C-59FBD2A95AEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AF1FFC3B-BEAD-665D-7760-DC32A58796E2" name="VM_CELULA_VM_SETOR_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 20:37:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

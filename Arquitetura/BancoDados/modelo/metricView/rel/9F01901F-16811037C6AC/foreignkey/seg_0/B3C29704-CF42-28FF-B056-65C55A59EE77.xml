@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B3C29704-CF42-28FF-B056-65C55A59EE77" name="REL_REG_COD_NAC_FK_CN">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:19:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteDesignID>261BA68B-BEC1-951E-9842-18728CBC93F8</remoteDesignID>
+<remoteModelID>56B485BD-642F-0CD7-B4BF-9B40F32A95A1</remoteModelID>
+<remoteObjectID>52AF7EC1-0DB0-F010-6A88-4C24BBC18829</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\56B485BD-9B40F32A95A1\foreignkey/seg_0/52AF7EC1-0DB0-F010-6A88-4C24BBC18829.xml</remoteObjectRelativeStorageName>
+<containerWithKeyObject>4F7CFFCA-63C1-2E46-BC5A-D173C9B7A759</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>5BFC8374-38B7-0C9E-DF47-BB1A81F01EF5</localFKIndex>
+<keyObject>FC3AC278-0E30-E3E0-6FD8-3C22063D0E53</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

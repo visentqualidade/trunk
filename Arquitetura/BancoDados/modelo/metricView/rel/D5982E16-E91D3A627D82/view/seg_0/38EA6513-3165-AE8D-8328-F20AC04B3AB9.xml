@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="38EA6513-3165-AE8D-8328-F20AC04B3AB9" name="VW_FILTRO_ROTA">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-14 12:50:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT DISTINCT rota AS ROTA FROM cdrview_itx_hora</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select Distinct rota As ROTA From cdrview_itx_hora&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select Distinct rota As ROTA From cdrview_itx_hora&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;cdrview_itx_hora&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ROTA" id="00C502AA-1A21-8028-C9B8-89E0A375619A">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-14 12:50:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>ROTA</alias>
+<expression>rota</expression>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+</TableView>

@@ -1,0 +1,311 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C94A917D-572C-4C6B-DC32-9EDCEEB96EE7" name="CDRVIEW_GPRS">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>CDRVIEW_GPRS</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATA" id="BBEB202B-A179-FE68-4524-44BE4ABA79BD">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>DATA</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HORA" id="DADD3F5D-B263-C788-B86E-6983D642CDBC">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>HORA</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BILHETADOR" id="22F91D19-1B41-BA0D-DAE5-83621A084852">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>BILHETADOR</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TECNOLOGIA" id="ADF99164-F9A6-90F5-DA33-C4DA04917568">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>TECNOLOGIA</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CN_A" id="365BBA8C-0CCF-4C77-0155-6CBABCE1A5A4">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>CN_A</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_SERVICO" id="0BE24AD4-A450-F379-DE0D-04EF9C5ED430">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>TIPO_SERVICO</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_ASSINANTE" id="F4E5F574-CCAF-F2A1-1540-ACF0B5278B5E">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>TIPO_ASSINANTE</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSC_NORMAL_REL" id="E5261D87-BDD8-57C7-3CD2-8E1833B9B6AB">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>DSC_NORMAL_REL</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM" id="2EAA5E5D-5386-68AA-D93F-FDBDC800C291">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>CHAM</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSC_CAMEL" id="694C3B7C-85E2-86EF-CA00-F51550F66A8F">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>DSC_CAMEL</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSC_VOL_LIMIT" id="04CC3A0C-FA73-4AD8-2938-9C1D7F8169CE">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>DSC_VOL_LIMIT</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSC_TMP_LIMIT" id="5765509B-38FC-096C-0B17-9F39E8F6E32C">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>DSC_TMP_LIMIT</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSC_MAXCHANGE" id="E6A8E8B6-AC77-BF8F-EB7B-8B8D9ABB1695">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>DSC_MAXCHANGE</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSC_MNG_INT" id="767F9260-200D-5BCB-DB1A-AB8433BAA20D">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>DSC_MNG_INT</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSC_SGSN_CHANGE" id="B1C6204C-78C1-C6A5-7C1F-834A610854BB">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>DSC_SGSN_CHANGE</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSC_ABN_REL" id="92B6914A-B52B-FB4D-9E1F-8E8F368C3AFF">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>DSC_ABN_REL</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DSC_OU" id="D6C121E1-AA41-7A97-E641-076084603FC2">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>CDRVIEW_GPRS</sourceObjSchema>
+<sourceObjName>DSC_OU</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UPLINK" id="78CBE3F0-997D-CDA2-A00C-8E3595ADEB60">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-06 13:53:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DOWNLINK" id="0FA505A0-072F-FF86-0F07-E28A5FBEA282">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-05-06 13:53:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AF089C0A-8C84-4864-4767-68CF03661A6D" name="GPRS_CDRS_INDEX_HORA">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>GPRS_CDRS_INDEX_HORA</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DADD3F5D-B263-C788-B86E-6983D642CDBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2E54AFD0-68BE-0C8D-7E85-57335E0A5AD5" name="GPRS_CDRS_INDEX_DATA">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>GPRS_CDRS_INDEX_DATA</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BBEB202B-A179-FE68-4524-44BE4ABA79BD" sortOrder="DESC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

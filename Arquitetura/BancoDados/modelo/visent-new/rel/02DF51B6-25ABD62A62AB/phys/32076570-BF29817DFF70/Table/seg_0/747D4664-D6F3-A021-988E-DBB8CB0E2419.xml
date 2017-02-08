@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="CENTRAL" directorySegmentName="seg_0" id="747D4664-D6F3-A021-988E-DBB8CB0E2419">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B13E7DAD-FB1F-28DF-6F07-62DAC61E6AA4</segment>
+<tableSpace>71C6CEFF-EC5C-69BD-C886-6CED1D0B09FF</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="BILHETADOR_PK" id="B7FAEB02-0392-D12D-419A-91DDE25F9C4F">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<segment>FAF852CE-E50B-530F-8CE4-88E96D78BB58</segment>
+<tableSpace>71C6CEFF-EC5C-69BD-C886-6CED1D0B09FF</tableSpace>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DATA_PREVISAO_ATIVACAO" id="2678BB04-2308-BC62-0316-8DEB009CA0AB">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ESTADO_CENTRAL" id="57D00D6C-8704-15DF-E631-7C8976CC2525">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SERVIDOR_CADASTRADO" id="76FE52D0-7479-84A6-1236-15F5B618F712">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TIPO_GPRS" id="93D5D3B2-1D24-1328-6386-12A0A14A1114">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 20:39:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_TECNOLOGIA_CENTRAL" id="A30C1865-4B3C-A36F-AD37-D52D1BCA7393">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_REGIONAL" id="A448E6A5-A5DA-F50D-8241-F7DCEC4714C4">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOME" id="CC7F35AB-C5AC-17F8-33E6-7EA71681E16B">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA_INICIO_ESTADO" id="E0CEACC0-E480-6A04-C645-5EA16976CD5D">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="APELIDO" id="E4234091-CDC6-E4F2-8B48-59A4C354652F">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_CENTRAL" id="EE8FADD1-FD61-6D06-D3F2-91A82AA2C074">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CENTRAL_FK_REGIONAL" id="78E0DF1B-9236-0E3A-96B6-A17571DABBB9">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CENTRAL_FK_FABRICANTE" id="F4037E22-8BBC-517F-B363-1D1DA00592BC">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="BILHETADOR_PK" id="9FB52E81-749E-7B60-D927-1B9201CDF7BD">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<segment>FAF852CE-E50B-530F-8CE4-88E96D78BB58</segment>
+<tableSpace>71C6CEFF-EC5C-69BD-C886-6CED1D0B09FF</tableSpace>
+<existingIndex>B7FAEB02-0392-D12D-419A-91DDE25F9C4F</existingIndex>
+<indexSegment>FAF852CE-E50B-530F-8CE4-88E96D78BB58</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

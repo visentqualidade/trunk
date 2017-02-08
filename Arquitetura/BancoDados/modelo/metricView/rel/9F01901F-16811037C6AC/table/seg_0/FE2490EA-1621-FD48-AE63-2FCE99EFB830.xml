@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FE2490EA-1621-FD48-AE63-2FCE99EFB830" name="PMM">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:15:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteDesignID>261BA68B-BEC1-951E-9842-18728CBC93F8</remoteDesignID>
+<remoteModelID>56B485BD-642F-0CD7-B4BF-9B40F32A95A1</remoteModelID>
+<remoteObjectID>F3A1FFF9-2A51-A008-5ECE-BA219E25FBDC</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\56B485BD-9B40F32A95A1\table/seg_0/F3A1FFF9-2A51-A008-5ECE-BA219E25FBDC.xml</remoteObjectRelativeStorageName>
+<afterCreate>Insert into EASYVIEW.PMM (ID_PMM,NOME,INICIO,FIM) values (&apos;1&apos;,&apos;PMM1&apos;,to_date(&apos;01/04/13 10:00:00.36000&apos;,&apos;DD/MM/RR HH24:MI:SS.SSSSS&apos;),to_date(&apos;01/10/13 13:00:00.46800&apos;,&apos;DD/MM/RR HH24:MI:SS.SSSSS&apos;));&lt;br/&gt;Insert into EASYVIEW.PMM (ID_PMM,NOME,INICIO,FIM) values (&apos;2&apos;,&apos;PMM2&apos;,to_date(&apos;01/10/13 18:00:00.64800&apos;,&apos;DD/MM/RR HH24:MI:SS.SSSSS&apos;),to_date(&apos;01/10/13 21:00:00.75600&apos;,&apos;DD/MM/RR HH24:MI:SS.SSSSS&apos;));</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PMM" id="EB206B62-3C5A-0425-F858-C1E038EB6A00">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:15:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>FEC0A64F-B898-6DD3-7E4D-5546A2421F8D</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="9F3E6BC3-14BD-DA07-B894-D379B2ACE372">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:15:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>EA6A7A01-9991-38D3-F6E4-918C60B79407</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INICIO" id="0921695F-DC0B-FE9D-A0CA-43C13320924B">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:15:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>082B085F-26F5-388C-7040-4A5092DE270C</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIM" id="B5B26751-51B6-BA9B-1F4A-7FBFC28B4C6E">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:15:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>8EB7CD09-85BD-3227-7356-821BCFC04AE1</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A07C75B5-D878-9F25-3DDB-9E8A6C176F2F" name="PMM_PK">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:15:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>4A286954-83DA-0D0D-58CE-60C5BCDF6180</remoteObjectID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="EB206B62-3C5A-0425-F858-C1E038EB6A00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

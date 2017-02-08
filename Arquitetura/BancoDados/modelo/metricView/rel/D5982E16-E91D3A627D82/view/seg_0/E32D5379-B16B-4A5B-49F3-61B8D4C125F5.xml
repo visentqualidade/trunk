@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="E32D5379-B16B-4A5B-49F3-61B8D4C125F5" name="VW_CSP">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-08 12:51:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT cn AS area, csp, route_group AS grupo_rota FROM VW_ITXVIEW_CSP</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select cn As area, csp, route_group As grupo_rota From VW_ITXVIEW_CSP&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select cn As area, csp, route_group As grupo_rota From VW_ITXVIEW_CSP&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;VW_ITXVIEW_CSP&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="cn" id="0949FDBE-F30A-03D6-0F3B-A0DAFDBE3153">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-26 17:19:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>area</alias>
+<expression>cn</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CSP" id="EB4754D0-E4E5-72B6-1054-B7C281F2C5C8">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-08 12:51:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>csp</expression>
+<reference>false</reference>
+<tableAlias>tab</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="route_group" id="9E2D0F4D-267F-F51A-A049-90A115A32495">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-26 17:19:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>grupo_rota</alias>
+<expression>route_group</expression>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+</TableView>

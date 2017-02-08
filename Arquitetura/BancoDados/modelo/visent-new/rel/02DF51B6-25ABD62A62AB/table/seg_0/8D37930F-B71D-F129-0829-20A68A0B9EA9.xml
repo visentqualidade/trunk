@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8D37930F-B71D-F129-0829-20A68A0B9EA9" name="REGIONAL">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>VISENT</sourceObjSchema>
+<sourceObjName>REGIONAL</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_REGIONAL" id="E0677346-6301-0F3D-F17C-9A08069329B4">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>REGIONAL</sourceObjSchema>
+<sourceObjName>ID_REGIONAL</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>1</defaultValue>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="E8CED440-4AF6-4B57-A7EF-42912B7754A9">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>REGIONAL</sourceObjSchema>
+<sourceObjName>NOME</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6F879924-2C7B-8AAE-48EB-80C722AFA987" name="REGIONAL_PK">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>VISENT</sourceObjSchema>
+<sourceObjName>REGIONAL_PK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E0677346-6301-0F3D-F17C-9A08069329B4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="33EE8F3E-57FD-9A95-B176-08C327606ED8" name="REGIONAL_PK">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>VISENT</sourceObjSchema>
+<sourceObjName>REGIONAL_PK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E0677346-6301-0F3D-F17C-9A08069329B4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SnapshotOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.SnapshotOraclev11g" name="VM_CELULA" directorySegmentName="seg_0" id="ADFD880A-F53B-4D55-77A0-103B2DF437B2">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 12:48:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<defaultSegment>NO</defaultSegment>
+<nextDate>to_date(concat(to_char(sysdate,&apos;dd/mm/yyyy&apos;),&apos; 10:00&apos;),&apos;dd/mm/yyyy hh24:mi&apos;) + 1</nextDate>
+<queryRewrite>ENABLE</queryRewrite>
+<refresh>YES</refresh>
+<refreshType>COMPLETE</refreshType>
+<subquery>SELECT nome_celula,&lt;br/&gt;    id_municipio,&lt;br/&gt;    longitude,&lt;br/&gt;    latitude,&lt;br/&gt;    listagg(servico,&apos;;&apos;) within GROUP (&lt;br/&gt;  ORDER BY nome_celula) tecnologias&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT UNIQUE celula.estacao_id AS nome_celula,&lt;br/&gt;      mun.ibge                    AS id_municipio,&lt;br/&gt;      celula.longitude,&lt;br/&gt;      celula.latitude,&lt;br/&gt;      setor.tecnologia AS servico&lt;br/&gt;    FROM VW_MAPVIEW_ESTACAO_LOCATION celula&lt;br/&gt;    INNER JOIN VW_MAPVIEW_MUNICIPIO mun ON celula.ibge = mun.ibge&lt;br/&gt;    INNER JOIN VW_MAPVIEW_ESTACAO_SITE site on site.estacao = celula.estacao_id&lt;br/&gt;    INNER JOIN VW_MAPVIEW_CELL setor ON setor.SITEID = site.site_id&lt;br/&gt;    )&lt;br/&gt;  GROUP BY nome_celula,&lt;br/&gt;    id_municipio,&lt;br/&gt;    longitude,&lt;br/&gt;    latitude</subquery>
+<useIndex>YES</useIndex>
+<user>37880A62-C5AF-B901-9ADB-83F361F9100B</user>
+<with></with>
+</SnapshotOraclev11g>

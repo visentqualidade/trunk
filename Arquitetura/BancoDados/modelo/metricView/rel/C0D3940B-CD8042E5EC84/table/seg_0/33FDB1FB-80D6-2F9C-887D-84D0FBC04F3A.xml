@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="33FDB1FB-80D6-2F9C-887D-84D0FBC04F3A" name="TEMPLATE_WIDGET">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>TEMPLATE_WIDGET</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TEMPLATE" id="4980C584-F754-2BA9-2BC1-D15989F0A777">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>TEMPLATE_WIDGET</sourceObjSchema>
+<sourceObjName>ID_TEMPLATE</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO_WIDGET" id="DBF36480-FA40-F41A-264D-86F6A2C0571A">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>TEMPLATE_WIDGET</sourceObjSchema>
+<sourceObjName>ID_TIPO_WIDGET</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<delegate>67BFD503-C98E-9045-66A3-6BB7543B7022</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FF75F48D-1A69-7BE1-FE1F-540EE8AB33B0" referredColumn="67BFD503-C98E-9045-66A3-6BB7543B7022"/>
+</associations>
+</Column>
+<Column name="NOME_CONTROLE" id="937F35A8-423D-DE7A-A101-D68FA889FB5D">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>TEMPLATE_WIDGET</sourceObjSchema>
+<sourceObjName>NOME_CONTROLE</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXPANDIR" id="189E7B67-CC52-78FB-3C46-719FCB4FD6DA">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>TEMPLATE_WIDGET</sourceObjSchema>
+<sourceObjName>EXPANDIR</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="72AA9E55-9CCE-DD77-7C3C-63C6A5CB837E" name="TEMPLATE_WIDGET_PK">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>TEMPLATE_WIDGET_PK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4980C584-F754-2BA9-2BC1-D15989F0A777"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4A6F7DF8-FEAA-C746-EEA9-DB9FB5B6DE4D" name="TEMPLATE_WIDGET_PK">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>TEMPLATE_WIDGET_PK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4980C584-F754-2BA9-2BC1-D15989F0A777"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF08B1BA-3484-7A66-9974-2B36179769C4" name="TEMPLATE_WIDGET_TIPO_WIDGET_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DBF36480-FA40-F41A-264D-86F6A2C0571A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

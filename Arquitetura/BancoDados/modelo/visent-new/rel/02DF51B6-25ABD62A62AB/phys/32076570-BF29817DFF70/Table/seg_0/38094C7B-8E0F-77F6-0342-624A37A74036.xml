@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="TECNOLOGIA_CENTRAL" directorySegmentName="seg_0" id="38094C7B-8E0F-77F6-0342-624A37A74036">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B13E7DAD-FB1F-28DF-6F07-62DAC61E6AA4</segment>
+<tableSpace>E48C5F52-0BA4-21E2-4E00-67C8F7598500</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TECNOLOGIA_CENTRAL_PK" id="56127593-0248-E910-8F03-E20E70987C6D">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<segment>FAF852CE-E50B-530F-8CE4-88E96D78BB58</segment>
+<tableSpace>E48C5F52-0BA4-21E2-4E00-67C8F7598500</tableSpace>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NOME" id="2EE7D2F0-5CCD-0DB4-97AC-429453A26E1B">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_TECNOLOGIA_CENTRAL" id="41555B9A-6865-F2C9-1A69-1C6A9A64572E">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TIPO_TECNOLOGIA_CENTRAL" id="BD17A64F-3789-8BA0-FED9-27BC497C2872">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 20:36:38 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TECNOLOGIA_CENTRAL_PK" id="5AE5BBA1-5CE9-C9EE-12AE-C2001117CD4F">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<segment>FAF852CE-E50B-530F-8CE4-88E96D78BB58</segment>
+<tableSpace>E48C5F52-0BA4-21E2-4E00-67C8F7598500</tableSpace>
+<existingIndex>56127593-0248-E910-8F03-E20E70987C6D</existingIndex>
+<indexSegment>FAF852CE-E50B-530F-8CE4-88E96D78BB58</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

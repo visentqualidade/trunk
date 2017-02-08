@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SynonymOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="LOG" directorySegmentName="seg_0" id="23F2FE5E-0F4D-7582-281D-51F9CDB7AB95">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>LOG</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<object>LOG</object>
+<objectUser>7C23A862-90D1-7B42-9BFB-4851DE206DB0</objectUser>
+<user>971C1BA1-E620-96DD-7CE5-F4C30AC50A59</user>
+</SynonymOraclev10g>

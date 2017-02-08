@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="71940DE7-D99C-6135-AB59-D9E9EAEB3824" name="MSC_CN_VINCULADO">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>MSC_CN_VINCULADO</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteDesignID>261BA68B-BEC1-951E-9842-18728CBC93F8</remoteDesignID>
+<remoteModelID>56B485BD-642F-0CD7-B4BF-9B40F32A95A1</remoteModelID>
+<remoteObjectID>3A48E424-E3FE-3279-00FD-0E08BDD2E4E0</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\56B485BD-9B40F32A95A1\table/seg_1/3A48E424-E3FE-3279-00FD-0E08BDD2E4E0.xml</remoteObjectRelativeStorageName>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MSC_ORIGEM" id="59D33BC7-2B8A-1E77-52F4-F5C79F482740">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>MSC_CN_VINCULADO</sourceObjSchema>
+<sourceObjName>MSC_ORIGEM</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>9CA74FE7-C7D9-E80A-018C-DBD1CA92361E</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CN_ORIGEM" id="0A655CC4-1A03-AC16-0698-420D781AE568">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>MSC_CN_VINCULADO</sourceObjSchema>
+<sourceObjName>CN_ORIGEM</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>30768DF6-9AF2-C052-5E3E-260BB4835951</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MSC_DESTINO" id="3A76A31B-043A-0279-8493-1383990466FB">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>MSC_CN_VINCULADO</sourceObjSchema>
+<sourceObjName>MSC_DESTINO</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>EA343B6E-0A03-8787-0276-29E3F193A57F</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CN_DESTINO" id="CA3C55AE-F4D1-C7F8-CD17-CD9C0E8998E5">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>MSC_CN_VINCULADO</sourceObjSchema>
+<sourceObjName>CN_DESTINO</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>76F58A1E-BFDE-8100-8E3B-A5BA12AE541D</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA" id="5B97951F-F968-6AB2-0C17-1AFE92EB713B">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>MSC_CN_VINCULADO</sourceObjSchema>
+<sourceObjName>DATA</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>BD797DD3-9E9F-CE5F-FCC3-F77E11093FFF</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID" id="335B5CD8-04D7-969B-3B4A-C3AEF8C0A413">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>MSC_CN_VINCULADO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>D26D9B00-6EB6-9B4E-5C0C-3BFEECBAED54</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

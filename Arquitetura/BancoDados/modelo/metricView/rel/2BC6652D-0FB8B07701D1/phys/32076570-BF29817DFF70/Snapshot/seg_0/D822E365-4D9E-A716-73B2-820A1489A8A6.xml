@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SnapshotOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.SnapshotOraclev11g" name="VM_CDRVIEW_DADOS_GPRS_SE" directorySegmentName="seg_0" id="D822E365-4D9E-A716-73B2-820A1489A8A6">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-06 13:05:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<columns>Data</columns>
+<defaultSegment>NO</defaultSegment>
+<nextDate>to_date(concat(to_char(sysdate,&apos;dd/mm/yyyy&apos;),&apos; 10:00&apos;),&apos;dd/mm/yyyy hh24:mi&apos;) + 1</nextDate>
+<partitionList class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionListOraclev11g" name="PL55" id="A2EEE3EA-2C51-9856-1655-4C8BBED4D719">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-06 13:06:00 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<subpartitionType>HASH</subpartitionType>
+<intervalExpression>NUMTODSINTERVAL(1,&apos;DAY&apos;)</intervalExpression>
+</partitionList>
+<partitioned>YES</partitioned>
+<refresh>YES</refresh>
+<refreshType>COMPLETE</refreshType>
+<subPartColumns>Area</subPartColumns>
+<subquery>SELECT dados_gprs.data,&lt;br/&gt;      dados_gprs.area,&lt;br/&gt;      dados_gprs.ID_MUNICIPIO  as id_municipio,&lt;br/&gt;      dados_gprs.MUNICIPIO as municipio,&lt;br/&gt;      dados_gprs.celula AS celula,&lt;br/&gt;      SUM(dados_gprs.conexoes) conexoes,&lt;br/&gt;      SUM(dados_gprs.volume_uplink) volume_uplink,&lt;br/&gt;      SUM(dados_gprs.volume_downlink) volume_downlink,&lt;br/&gt;      SUM(dados_gprs.volume_total) volume_total,&lt;br/&gt;      count(DISTINCT(dados_gprs.imei)) terminais,&lt;br/&gt;      dados_gprs.servico,&lt;br/&gt;      dados_gprs.bandas,&lt;br/&gt;      dados_gprs.latitude     as LATITUDE,&lt;br/&gt;      dados_gprs.longitude    as LONGITUDE,        &lt;br/&gt;      dados_gprs.celula_tecnologias as CELULA_TECNOLOGIAS&lt;br/&gt;    FROM cdrview_dados_gprs dados_gprs&lt;br/&gt;    WHERE dados_gprs.uf = &apos;SE&apos;&lt;br/&gt;    and dados_gprs.data &lt;= (select max(data)-1 from cdrview_dados_gprs)&lt;br/&gt;    GROUP BY dados_gprs.data,&lt;br/&gt;      dados_gprs.area,&lt;br/&gt;      dados_gprs.ID_MUNICIPIO,&lt;br/&gt;      dados_gprs.MUNICIPIO,&lt;br/&gt;      dados_gprs.celula,&lt;br/&gt;      dados_gprs.servico,&lt;br/&gt;      dados_gprs.bandas,&lt;br/&gt;      dados_gprs.latitude,&lt;br/&gt;      dados_gprs.longitude,        &lt;br/&gt;      dados_gprs.celula_tecnologias</subquery>
+<user>B6665735-CC76-0BEF-732A-CB14F6C7239B</user>
+<with></with>
+<partitions>
+<Partition class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionOraclev11g" name="FIRST_PART" id="7E5E6DB1-4A86-6545-D715-B75BEFA14DD1">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-06 13:29:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<logging>YES</logging>
+<valueList>TO_DATE(&apos; 2000-01-01 00:00:00&apos;, &apos;SYYYY-MM-DD HH24:MI:SS&apos;)</valueList>
+</Partition>
+</partitions>
+</SnapshotOraclev11g>

@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="FILTRO_WIDGET" directorySegmentName="seg_0" id="0B48E200-66DB-332E-B1DC-96779AEF8FD2">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DA3890FB-F1F2-2E8A-3C7E-06108E2ADE3B</segment>
+<tableSpace>90F0D9ED-D833-85D4-9FE0-9BABD7A578A4</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="FILTRO_WIDGET_PK" id="85E849C3-F7EB-8F17-B458-358BD192EC05">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<segment>853FC331-4678-DCBD-2BE7-166BDC136BAC</segment>
+<tableSpace>90F0D9ED-D833-85D4-9FE0-9BABD7A578A4</tableSpace>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_FILTRO_WIDGET" id="9610DEA3-1832-7B0D-D6BF-3F4D9645FEAD">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_WIDGET" id="BB779309-C8C1-2172-AE59-E940EF31403D">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VALOR" id="C8EF440E-60B1-F99A-86F8-EEF4A2C338A4">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_FILTRO" id="D9762D94-7559-B178-11C4-34D25F434982">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FILTRO_WIDGET_FK_WIDGET" id="004581D4-155D-2036-43E1-69720204FC37">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FILTRO_WIDGET_FILTRO_FK" id="770CCF62-D083-3ACC-9266-B7E76C272F56">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FILTRO_WIDGET_FILTRO_FK1" id="D8515B47-5F71-9631-6EB1-8487FA9145E7">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="FILTRO_WIDGET_PK" id="767DBD23-B6E0-6FF6-2D22-3F10535B3CEB">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

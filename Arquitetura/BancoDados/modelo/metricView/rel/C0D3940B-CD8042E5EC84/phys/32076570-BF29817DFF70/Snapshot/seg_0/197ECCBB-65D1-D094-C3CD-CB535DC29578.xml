@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SnapshotOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.SnapshotOraclev11g" name="VM_PER_DISP_CONCATENACAO" directorySegmentName="seg_0" id="197ECCBB-65D1-D094-C3CD-CB535DC29578">
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 13:12:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<defaultSegment>NO</defaultSegment>
+<refreshType>FORCE</refreshType>
+<subquery>select DISTINCT data from CDRVIEW_CONCATENACAO</subquery>
+<user>D56F81BF-E7F4-13DC-B020-1660656B5F2D</user>
+<with></with>
+</SnapshotOraclev11g>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A3251F78-6A9B-1D29-8BA0-DC4E6017ADED" name="REL_REG_COD_NAC_FK_REG">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>VISENT</sourceObjSchema>
+<sourceObjName>REL_REG_COD_NAC_FK_REG</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<containerWithKeyObject>2556C82B-932F-846B-5978-C0E66FA165C5</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>69018FF2-8261-6369-5B1C-4064C03A5BE6</localFKIndex>
+<keyObject>6F879924-2C7B-8AAE-48EB-80C722AFA987</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

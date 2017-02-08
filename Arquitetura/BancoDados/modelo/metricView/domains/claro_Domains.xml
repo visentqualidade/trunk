@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="claro_Domains">
+   <domains>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_500 BYTE" id="1E58A3F8-EFE1-053B-7BA5-304B4255930C">
+         <createdBy>osx</createdBy>
+         <createdTime>2015-01-08 19:17:02 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>500 BYTE</dataTypeSize>
+         <fileName>claro_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_60 BYTE" id="6ABA8D69-40FB-5DBD-01BB-9F066CF0EC8B">
+         <createdBy>osx</createdBy>
+         <createdTime>2015-01-08 19:17:02 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>60 BYTE</dataTypeSize>
+         <fileName>claro_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_45 BYTE" id="B204DB96-0E76-1760-DC0F-869C3B17316B">
+         <createdBy>osx</createdBy>
+         <createdTime>2015-01-08 19:17:02 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>45 BYTE</dataTypeSize>
+         <fileName>claro_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+   </domains>
+</DomainFile>

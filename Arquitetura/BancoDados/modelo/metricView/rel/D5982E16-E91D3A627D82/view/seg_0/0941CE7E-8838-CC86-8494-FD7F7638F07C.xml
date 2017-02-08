@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="0941CE7E-8838-CC86-8494-FD7F7638F07C" name="VIEW_CRIADORA">
+<sourceDDLFile>views_e_tabelas.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-03 19:29:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>drop view_criadora;</afterCreate>
+<beforeCreate>CREATE OR REPLACE FORCE VIEW &quot;INTERCONEXAO&quot;.&quot;VW_CGI&quot; (&quot;LAC&quot;, &quot;LAC_HEX&quot;, &quot;CELLID&quot;, &quot;CELLID_HEX&quot;, &quot;CELL&quot;) AS &lt;br/&gt;  select to_number(LAC_HEX,&apos;XXXXX&apos;) as LAC, LAC_HEX, to_number(CELLID_HEX,&apos;XXXXX&apos;) as CELLID, CELLID_HEX, CELL from VW_VISENT_CGI_ERICSSON;&lt;br/&gt;&lt;br/&gt;CREATE OR REPLACE FORCE VIEW &quot;INTERCONEXAO&quot;.&quot;VW_CGI_ERICSON&quot; (&quot;LAC&quot;, &quot;CELL&quot;, &quot;CELL_ID&quot;) AS &lt;br/&gt;  select LAC_HEX as LAC, &lt;br/&gt;  CELL as CELL, &lt;br/&gt;  CELLID_HEX as CELL_ID &lt;br/&gt;  from VW_VISENT_CGI_ERICSSON;&lt;br/&gt;&lt;br/&gt;CREATE OR REPLACE FORCE VIEW &quot;INTERCONEXAO&quot;.&quot;VW_CGI_NOKIA&quot; (&quot;LAC&quot;, &quot;CELL&quot;, &quot;CELL_ID&quot;) AS &lt;br/&gt;  select LAC as LAC, &lt;br/&gt;  CELL as CELL, &lt;br/&gt;  CI as CELL_ID &lt;br/&gt;  from VW_VISENT_CGI_NOKIA;&lt;br/&gt;&lt;br/&gt;CREATE OR REPLACE FORCE VIEW &quot;INTERCONEXAO&quot;.&quot;VW_ROTA&quot; (&quot;BILHETADOR&quot;, &quot;ROTA&quot;, &quot;EOT_ROTA&quot;, &quot;PITX_OPERADORA&quot;, &quot;PITX_CLARO&quot;, &quot;ADNUM&quot;, &quot;TIPO&quot;) AS &lt;br/&gt;  SELECT CENTRAL         AS BILHETADOR,&lt;br/&gt;  ROTA_ID              AS ROTA,&lt;br/&gt;  CODIGO_EOT           AS EOT_ROTA,&lt;br/&gt;  SIGLA_PITX_OPERADORA AS PITX_OPERADORA,&lt;br/&gt;  SIGLA_PITX_CLARO     AS PITX_CLARO,&lt;br/&gt;  ADNUM                AS ADNUM,&lt;br/&gt;  &apos;interconexao&apos;       AS tipo&lt;br/&gt;FROM VW_ITXVIEW_ROUTES;&lt;br/&gt;</beforeCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT &quot;VIEWS DO SMART&quot; FROM uf</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select &quot;VIEWS DO SMART&quot; From uf&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select &amp;amp;quot;VIEWS DO SMART&amp;amp;quot; From uf&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;uf&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VIEWS DO SMART" id="CE5507E6-2316-79BD-83FC-41D8EE84ADDF">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-14 14:06:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>&quot;VIEWS DO SMART&quot;</expression>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+</TableView>

@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="CONTROLE_ETL" directorySegmentName="seg_0" id="166DF5A5-5705-9AB7-984C-FD588354FFB4">
+<createdBy>OSX</createdBy>
+<createdTime>2014-11-11 17:38:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>5F09FBDB-D526-8FDC-01ED-30398D36D36E</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<user>F6B21F4C-8864-F8B4-9BE1-6A880AE3CBA1</user>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="GRANULARIDADE" id="51C31768-E14D-2174-98C4-54DB34977379">
+<createdBy>OSX</createdBy>
+<createdTime>2014-11-11 17:38:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA_ATUALIZACAO" id="8F74DC7D-C53E-F394-12C9-ABFC6444508E">
+<createdBy>OSX</createdBy>
+<createdTime>2014-11-11 17:38:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ATUALIZADO" id="DDB58066-E2D1-09B9-EFAA-F70FF1717731">
+<createdBy>OSX</createdBy>
+<createdTime>2014-11-11 17:38:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TABELA" id="E39075E9-B3D1-288D-0045-6C45BED210A7">
+<createdBy>OSX</createdBy>
+<createdTime>2014-11-11 17:38:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="SEQ_ID_WIDGET" directorySegmentName="seg_0" id="A20EBD43-CAF8-0EE2-8C59-1D259B71EC74">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>SEQ_ID_WIDGET</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<cache>20</cache>
+<cycle>YES</cycle>
+<incrementBy>1</incrementBy>
+<maxValue>99999999999999999999</maxValue>
+<minValue>1</minValue>
+<order>YES</order>
+<user>6414AE3A-CF19-19CC-4584-40935F6279FB</user>
+</SequenceOraclev10g>

@@ -1,0 +1,384 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E7A4ACBB-56C4-4302-EDDB-E3A1D92EF371" name="CDRVIEW_SERVICO_SEM">
+<sourceConnName>s_metricview-u_interconexao_73</sourceConnName>
+<sourceObjSchema>INTERCONEXAO</sourceObjSchema>
+<sourceObjName>CDRVIEW_SERVICO_SEM</sourceObjName>
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATA" id="6E97504C-906B-EFCD-4A35-D03E64FFEF9B">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>46347315-CCAD-FB0C-8CAE-E80C03CE76A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SEMANA" id="E05FC61A-6F18-F57C-B7D1-EF86C598E02C">
+<sourceConnName>s_metricview-u_interconexao_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SERVICO_SEM</sourceObjSchema>
+<sourceObjName>SEMANA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 21:03:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BILHETADOR" id="0FA5F233-23B9-0906-CEF4-7094F494CA41">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>DE07794D-9321-78A2-94B0-5C06C7103606</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COD_AREA" id="2FBC752D-FE64-DF57-0450-94BB0C408EEE">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>71553301-988C-16E3-80BB-FB44FDB109A7</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SERVICO" id="02E9C131-BD94-83D8-9242-923D0DC0830D">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6A80BC46-2A7C-0998-5766-AAE0548D4835</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_SERVICO" id="77E92454-B353-1A13-BED5-1D992C72C2F8">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6A80BC46-2A7C-0998-5766-AAE0548D4835</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_ASSINANTE" id="5445CF44-11C6-3A20-54CA-046E25C3C9D8">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6A80BC46-2A7C-0998-5766-AAE0548D4835</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REDE" id="8586889A-97A8-5561-6867-035E64D5FA70">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6A80BC46-2A7C-0998-5766-AAE0548D4835</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM" id="C4E773B7-D299-5A35-4237-38C3278D665B">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TTT" id="C258918B-8EBF-4FC6-91DC-20C65337E101">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TTO" id="7FCEC0DD-13AD-FED3-F22D-01BF5D34B800">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TTC" id="4F013B13-7695-C2A2-F4BB-0C3BE6D37973">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1" id="C9A24ACA-20C3-34A8-5CF8-E2EDBBAB81F6">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_TCT" id="CC9AF088-CC04-C440-9B97-72FAA2B5E67F">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_DRP" id="200AA5B1-D60A-FD53-C0BC-AF732CDAC48E">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_DRP_TCT" id="5CABB5A8-53E6-C81A-C775-4FBFA0DB9731">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK5" id="5A2528D3-E946-23EC-061D-488ABF1B71C3">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK5_TCT" id="F3233763-1514-54A8-7522-378EFD4C5B5A">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK5_DRP" id="64EC31EA-BE89-1782-D018-862B37CA6FA9">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK5_DRP_TCT" id="3E13553C-F491-9EE1-37FD-FE64CD3DD74E">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CO1" id="ED443790-81F5-A05B-3F45-2268A10DBE89">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CO2" id="EFB09E9B-57D6-C56E-93B9-E283C3C12908">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CO3" id="A8D94AB6-4D67-047E-E896-CC142CD30ADA">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR" id="3D51BFDD-759E-CBCD-09F0-E38436658FBD">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_VM" id="6C0EFF6F-D157-C7C1-A48D-AFCC68E3E2BC">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SC" id="F9D665F7-6962-2776-7770-AB7B7464C0AC">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BLOQ" id="36C76905-07AD-409E-5D0A-9B7206544347">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERIODO" id="78D84287-3611-C0B3-F8F7-BA7A6101F308">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCV" id="A38F4D43-AE94-F6F5-D5B1-99328C7C13AA">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OU" id="8DBDC8E0-4206-9268-F14F-432F582B1BC9">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OKVM" id="0FF310E7-0852-CBDA-C728-97B2D33B270A">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1_C" id="CBC91103-1B27-00F6-DAC5-290249810236">
+<sourceDDLFile>ddl_servico.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 20:52:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7372CB25-F550-A563-4A4C-82AAF77A7236" name="CDRVIEW_SERVICO_SEM_IDX">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-22 21:13:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E05FC61A-6F18-F57C-B7D1-EF86C598E02C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

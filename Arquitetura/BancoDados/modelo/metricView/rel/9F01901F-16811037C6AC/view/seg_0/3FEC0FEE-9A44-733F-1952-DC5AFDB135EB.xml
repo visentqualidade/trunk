@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="3FEC0FEE-9A44-733F-1952-DC5AFDB135EB" name="VIEW_SMP9_GERAL">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-02 13:17:48 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>WITH dados_traducao_sem_vinculo AS&lt;br/&gt;  (SELECT VIEW_MSC_VINCULO_SMP9.DATA,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.CENTRAL,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.CN,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.PMM,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.REGIONAL,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.UF,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.SMP9_A,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP9.SMP9_B&lt;br/&gt;  FROM VIEW_MSC_VINCULO_SMP9&lt;br/&gt;  WHERE VIEW_MSC_VINCULO_SMP9.CODIGO != &apos;NID&apos;&lt;br/&gt;  ),&lt;br/&gt;  dados_smp_geral AS&lt;br/&gt;  (SELECT Data,&lt;br/&gt;    SMP9_A,&lt;br/&gt;    SMP9_B,&lt;br/&gt;    CASE&lt;br/&gt;      WHEN (SMP9_B = &apos;-&apos;&lt;br/&gt;      AND SMP9_A   = &apos;-&apos;)&lt;br/&gt;      THEN &apos;-&apos;&lt;br/&gt;      WHEN ((SMP9_B = &apos;-&apos;&lt;br/&gt;      OR SMP9_B     = &apos;0&apos;)&lt;br/&gt;      AND SMP9_A   != &apos;-&apos;)&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      WHEN (SMP9_B          != &apos;-&apos;&lt;br/&gt;      AND TO_NUMBER(SMP9_B) &gt;= 0&lt;br/&gt;      AND SMP9_A             = &apos;-&apos;)&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      ELSE NVL(trim(TO_CHAR(ROUND(((SMP9_A / SMP9_B) * 100), 2), &apos;999990D99&apos;)), &apos;-&apos;)&lt;br/&gt;    END AS SMP9&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT TRUNC(Tab.DATA)                      AS Data,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.SMP9_A, 0))), &apos;-&apos;) AS SMP9_A,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.SMP9_B, 0))), &apos;-&apos;) AS SMP9_B&lt;br/&gt;    FROM VIEW_MSC_CN_ATIVO_SMP9 b,&lt;br/&gt;      dados_traducao_sem_vinculo Tab&lt;br/&gt;    WHERE Tab.CENTRAL                                    = b.MSC&lt;br/&gt;    AND Tab.CN                                           = b.CN&lt;br/&gt;    AND to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO&lt;br/&gt;    AND b.STATUS                                         = &apos;T&apos;&lt;br/&gt;    GROUP BY TRUNC(Tab.DATA)&lt;br/&gt;    )&lt;br/&gt;  ),&lt;br/&gt;  agrupadores_smp_geral AS&lt;br/&gt;  (SELECT *&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT DISTINCT dados_smp_geral.Data FROM dados_smp_geral&lt;br/&gt;    ) datas&lt;br/&gt;  ),&lt;br/&gt;  agrupadores_por_dados AS&lt;br/&gt;  (SELECT agrupadores.Data,&lt;br/&gt;    DECODE(dados.SMP9_A, NULL, &apos;-&apos;, dados.SMP9_A) SMP9_a,&lt;br/&gt;    DECODE(dados.SMP9_B, NULL, &apos;-&apos;, dados.SMP9_B) SMP9_b,&lt;br/&gt;    DECODE(dados.SMP9, NULL, &apos;-&apos;, dados.SMP9) SMP9&lt;br/&gt;  FROM dados_smp_geral dados,&lt;br/&gt;    agrupadores_smp_geral agrupadores&lt;br/&gt;  WHERE agrupadores.Data = dados.Data(+)&lt;br/&gt;  )&lt;br/&gt;SELECT TO_CHAR(agrupadores_por_dados.Data, &apos;dd/MM/yyyy&apos;) DATA,&lt;br/&gt;  &apos;PMM&apos;                        AS PMM,&lt;br/&gt;  agrupadores_por_dados.SMP9_a AS SMP_A,&lt;br/&gt;  agrupadores_por_dados.SMP9_b AS SMP_B,&lt;br/&gt;  CASE&lt;br/&gt;    WHEN agrupadores_por_dados.SMP9          != &apos;-&apos;&lt;br/&gt;    AND TO_NUMBER(agrupadores_por_dados.SMP9) &gt; 100&lt;br/&gt;    THEN &apos;100,00&apos;&lt;br/&gt;    ELSE REPLACE(agrupadores_por_dados.SMP9, &apos;.&apos;, &apos;,&apos;)&lt;br/&gt;  END                                           AS SMP,&lt;br/&gt;  TO_CHAR(agrupadores_por_dados.Data, &apos;MON-YY&apos;) AS DT_FORMATADA&lt;br/&gt;FROM agrupadores_por_dados&lt;br/&gt;ORDER BY 1,&lt;br/&gt;  2</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;With dados_traducao_sem_vinculo As (Select VIEW_MSC_VINCULO_SMP9.DATA, VIEW_MSC_VINCULO_SMP9.CENTRAL, VIEW_MSC_VINCULO_SMP9.CN, VIEW_MSC_VINCULO_SMP9.PMM, VIEW_MSC_VINCULO_SMP9.REGIONAL, VIEW_MSC_VINCULO_SMP9.UF, VIEW_MSC_VINCULO_SMP9.SMP9_A, VIEW_MSC_VINCULO_SMP9.SMP9_B From VIEW_MSC_VINCULO_SMP9 Where VIEW_MSC_VINCULO_SMP9.CODIGO != &apos;NID&apos;), dados_smp_geral As (Select Data, SMP9_A, SMP9_B, Case When (SMP9_B = &apos;-&apos; And SMP9_A = &apos;-&apos;) Then &apos;-&apos; When ((SMP9_B = &apos;-&apos; Or SMP9_B = &apos;0&apos;) And SMP9_A != &apos;-&apos;) Then &apos;0,00&apos; When (SMP9_B != &apos;-&apos; And TO_NUMBER(SMP9_B) &gt;= 0 And SMP9_A = &apos;-&apos;) Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND(((SMP9_A / SMP9_B) * 100), 2), &apos;999990D99&apos;)), &apos;-&apos;) End As SMP9 From (Select TRUNC(Tab.DATA) As Data, NVL(TO_CHAR(Sum(NVL(Tab.SMP9_A, 0))), &apos;-&apos;) As SMP9_A, NVL(TO_CHAR(Sum(NVL(Tab.SMP9_B, 0))), &apos;-&apos;) As SMP9_B From VIEW_MSC_CN_ATIVO_SMP9 b, dados_traducao_sem_vinculo Tab Where Tab.CENTRAL = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By TRUNC(Tab.DATA))), agrupadores_smp_geral As (Select * From (Select Distinct dados_smp_geral.Data From dados_smp_geral) datas), agrupadores_por_dados As (Select agrupadores.Data, DECODE(dados.SMP9_A, Null, &apos;-&apos;, dados.SMP9_A) SMP9_a, DECODE(dados.SMP9_B, Null, &apos;-&apos;, dados.SMP9_B) SMP9_b, DECODE(dados.SMP9, Null, &apos;-&apos;, dados.SMP9) SMP9 From dados_smp_geral dados, agrupadores_smp_geral agrupadores Where agrupadores.Data = dados.Data(+)) Select TO_CHAR(agrupadores_por_dados.Data, &apos;dd/MM/yyyy&apos;) DATA, &apos;PMM&apos; As PMM, agrupadores_por_dados.SMP9_a As SMP_A, agrupadores_por_dados.SMP9_b As SMP_B, Case When agrupadores_por_dados.SMP9 != &apos;-&apos; And TO_NUMBER(agrupadores_por_dados.SMP9) &gt; 100 Then &apos;100,00&apos; Else REPLACE(agrupadores_por_dados.SMP9, &apos;.&apos;, &apos;,&apos;) End As SMP, TO_CHAR(agrupadores_por_dados.Data, &apos;MON-YY&apos;) As DT_FORMATADA From agrupadores_por_dados Order By 1, 2&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;With dados_traducao_sem_vinculo As (Select VIEW_MSC_VINCULO_SMP9.DATA, VIEW_MSC_VINCULO_SMP9.CENTRAL, VIEW_MSC_VINCULO_SMP9.CN, VIEW_MSC_VINCULO_SMP9.PMM, VIEW_MSC_VINCULO_SMP9.REGIONAL, VIEW_MSC_VINCULO_SMP9.UF, VIEW_MSC_VINCULO_SMP9.SMP9_A, VIEW_MSC_VINCULO_SMP9.SMP9_B From VIEW_MSC_VINCULO_SMP9 Where VIEW_MSC_VINCULO_SMP9.CODIGO != &apos;NID&apos;), dados_smp_geral As (Select Data, SMP9_A, SMP9_B, Case When (SMP9_B = &apos;-&apos; And SMP9_A = &apos;-&apos;) Then &apos;-&apos; When ((SMP9_B = &apos;-&apos; Or SMP9_B = &apos;0&apos;) And SMP9_A != &apos;-&apos;) Then &apos;0,00&apos; When (SMP9_B != &apos;-&apos; And TO_NUMBER(SMP9_B) &gt;= 0 And SMP9_A = &apos;-&apos;) Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND(((SMP9_A / SMP9_B) * 100), 2), &apos;999990D99&apos;)), &apos;-&apos;) End As SMP9 From (Select TRUNC(Tab.DATA) As Data, NVL(TO_CHAR(Sum(NVL(Tab.SMP9_A, 0))), &apos;-&apos;) As SMP9_A, NVL(TO_CHAR(Sum(NVL(Tab.SMP9_B, 0))), &apos;-&apos;) As SMP9_B From VIEW_MSC_CN_ATIVO_SMP9 b, dados_traducao_sem_vinculo Tab Where Tab.CENTRAL = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By TRUNC(Tab.DATA))), agrupadores_smp_geral As (Select * From (Select Distinct dados_smp_geral.Data From dados_smp_geral) datas), agrupadores_por_dados As (Select agrupadores.Data, DECODE(dados.SMP9_A, Null, &apos;-&apos;, dados.SMP9_A) SMP9_a, DECODE(dados.SMP9_B, Null, &apos;-&apos;, dados.SMP9_B) SMP9_b, DECODE(dados.SMP9, Null, &apos;-&apos;, dados.SMP9) SMP9 From dados_smp_geral dados, agrupadores_smp_geral agrupadores Where agrupadores.Data = dados.Data(+)) Select TO_CHAR(agrupadores_por_dados.Data, &apos;dd/MM/yyyy&apos;) DATA, &apos;PMM&apos; As PMM, agrupadores_por_dados.SMP9_a As SMP_A, agrupadores_por_dados.SMP9_b As SMP_B, Case When agrupadores_por_dados.SMP9 != &apos;-&apos; And TO_NUMBER(agrupadores_por_dados.SMP9) &gt; 100 Then &apos;100,00&apos; Else REPLACE(agrupadores_por_dados.SMP9, &apos;.&apos;, &apos;,&apos;) End As SMP, TO_CHAR(agrupadores_por_dados.Data, &apos;MON-YY&apos;) As DT_FORMATADA From agrupadores_por_dados Order By 1, 2&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;agrupadores_por_dados&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;119&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select VIEW_MSC_VINCULO_SMP9.DATA, VIEW_MSC_VINCULO_SMP9.CENTRAL, VIEW_MSC_VINCULO_SMP9.CN, VIEW_MSC_VINCULO_SMP9.PMM, VIEW_MSC_VINCULO_SMP9.REGIONAL, VIEW_MSC_VINCULO_SMP9.UF, VIEW_MSC_VINCULO_SMP9.SMP9_A, VIEW_MSC_VINCULO_SMP9.SMP9_B From VIEW_MSC_VINCULO_SMP9 Where VIEW_MSC_VINCULO_SMP9.CODIGO != &apos;NID&apos;&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;VIEW_MSC_VINCULO_SMP9&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;101&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Data, SMP9_A, SMP9_B, Case When (SMP9_B = &apos;-&apos; And SMP9_A = &apos;-&apos;) Then &apos;-&apos; When ((SMP9_B = &apos;-&apos; Or SMP9_B = &apos;0&apos;) And SMP9_A != &apos;-&apos;) Then &apos;0,00&apos; When (SMP9_B != &apos;-&apos; And TO_NUMBER(SMP9_B) &gt;= 0 And SMP9_A = &apos;-&apos;) Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND(((SMP9_A / SMP9_B) * 100), 2), &apos;999990D99&apos;)), &apos;-&apos;) End As SMP9 From (Select TRUNC(Tab.DATA) As Data, NVL(TO_CHAR(Sum(NVL(Tab.SMP9_A, 0))), &apos;-&apos;) As SMP9_A, NVL(TO_CHAR(Sum(NVL(Tab.SMP9_B, 0))), &apos;-&apos;) As SMP9_B From VIEW_MSC_CN_ATIVO_SMP9 b, dados_traducao_sem_vinculo Tab Where Tab.CENTRAL = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By TRUNC(Tab.DATA))&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select TRUNC(Tab.DATA) As Data, NVL(TO_CHAR(Sum(NVL(Tab.SMP9_A, 0))), &apos;-&apos;) As SMP9_A, NVL(TO_CHAR(Sum(NVL(Tab.SMP9_B, 0))), &apos;-&apos;) As SMP9_B From VIEW_MSC_CN_ATIVO_SMP9 b, dados_traducao_sem_vinculo Tab Where Tab.CENTRAL = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By TRUNC(Tab.DATA))&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;106&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select TRUNC(Tab.DATA) As Data, NVL(TO_CHAR(Sum(NVL(Tab.SMP9_A, 0))), &apos;-&apos;) As SMP9_A, NVL(TO_CHAR(Sum(NVL(Tab.SMP9_B, 0))), &apos;-&apos;) As SMP9_B From VIEW_MSC_CN_ATIVO_SMP9 b, dados_traducao_sem_vinculo Tab Where Tab.CENTRAL = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And b.STATUS = &apos;T&apos; Group By TRUNC(Tab.DATA)&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;VIEW_MSC_CN_ATIVO_SMP9 b&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;119&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;dados_traducao_sem_vinculo Tab&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;196&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select * From (Select Distinct dados_smp_geral.Data From dados_smp_geral) datas&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select Distinct dados_smp_geral.Data From dados_smp_geral) datas&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct dados_smp_geral.Data From dados_smp_geral&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_smp_geral&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select agrupadores.Data, DECODE(dados.SMP9_A, Null, &apos;-&apos;, dados.SMP9_A) SMP9_a, DECODE(dados.SMP9_B, Null, &apos;-&apos;, dados.SMP9_B) SMP9_b, DECODE(dados.SMP9, Null, &apos;-&apos;, dados.SMP9) SMP9 From dados_smp_geral dados, agrupadores_smp_geral agrupadores Where agrupadores.Data = dados.Data(+)&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_smp_geral dados&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;agrupadores_smp_geral agrupadores&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DATA" id="2A5952F6-4333-0908-6C83-AACBA19B5C1A">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-02 13:18:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DATA</alias>
+<expression>TO_CHAR(agrupadores_por_dados.Data, &apos;dd/MM/yyyy&apos;)</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PMM" id="9DEF6131-E7ED-9E3C-9F64-37B48D5C1A34">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-02 13:18:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>PMM</alias>
+<expression>&apos;PMM&apos;</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP_A" id="DCC5F7AF-90AB-325B-B747-93219CC57C17">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-02 13:18:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP_A</alias>
+<expression>agrupadores_por_dados.SMP9_a</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP_B" id="5AC16566-A11E-15F3-208F-7EF0B7C2F599">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-02 13:18:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP_B</alias>
+<expression>agrupadores_por_dados.SMP9_b</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP" id="FCA4E2D0-ACA6-B3CE-E4BD-AF3D2F9901BE">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-02 13:18:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP</alias>
+<expression>Case When agrupadores_por_dados.SMP9 != &apos;-&apos; And TO_NUMBER(agrupadores_por_dados.SMP9) &gt; 100 Then &apos;100,00&apos; Else REPLACE(agrupadores_por_dados.SMP9, &apos;.&apos;, &apos;,&apos;) End</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DT_FORMATADA" id="5DC75054-4B31-6329-C2AD-4C49ABA244DC">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-02 13:18:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DT_FORMATADA</alias>
+<expression>TO_CHAR(agrupadores_por_dados.Data, &apos;MON-YY&apos;)</expression>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D7F223D2-3895-1292-497C-9E9B09B138F5">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP9</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="42DA65EC-43CB-DF0E-6E35-1314F2AF0F00">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP9</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="9DF822CA-A5FD-F0F0-AF36-AEC14F5C10AD">
+<columnName>CODIGO</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP9</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="8B7F21E3-E82A-E8DB-DAF3-A9E09F885E0D">
+<columnName>MSC</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP9</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3C59E10D-68BE-1E5E-FC22-58914FFD9A91">
+<columnName>CN</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP9</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F10FAE3A-DA2E-CFC0-FEF2-78817322DF83">
+<columnName>PERIODO</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP9</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6B6D1996-47BF-060F-D2B9-34931E454B76">
+<columnName>STATUS</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP9</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

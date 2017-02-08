@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SnapshotOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.SnapshotOraclev11g" name="VM_CDRVIEW_DADOS_AM" directorySegmentName="seg_0" id="45CB1BAC-B0FE-1DE8-3660-80FDCA1B084E">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-21 14:09:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<columns>Data</columns>
+<defaultSegment>NO</defaultSegment>
+<nextDate>to_date(concat(to_char(sysdate,&apos;dd/mm/yyyy&apos;),&apos; 10:00&apos;),&apos;dd/mm/yyyy hh24:mi&apos;) + 1</nextDate>
+<partitionList class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionListOraclev11g" name="PL27" id="E603B28C-D50F-9210-7C9A-FE01C6722727">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-21 14:25:51 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<subPartitionsQuantity>2</subPartitionsQuantity>
+<subpartitionType>HASH</subpartitionType>
+<intervalExpression>NUMTODSINTERVAL(1,&apos;DAY&apos;)</intervalExpression>
+</partitionList>
+<partitioned>YES</partitioned>
+<refresh>YES</refresh>
+<refreshType>COMPLETE</refreshType>
+<subPartColumns>Area</subPartColumns>
+<subquery>SELECT tab.*,&lt;br/&gt;    celula.latitude ,&lt;br/&gt;    celula.longitude,&lt;br/&gt;    celula.tecnologias as servicos_celula&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT dados.data,&lt;br/&gt;      dados.area,&lt;br/&gt;      dados.ID_MUNICIPIO  as id_municipio,&lt;br/&gt;      dados.MUNICIPIO as municipio,&lt;br/&gt;      dados.celula AS celula,&lt;br/&gt;      SUM(dados.cham) cham,&lt;br/&gt;      SUM(dados.ttc) ttc,&lt;br/&gt;      SUM(dados.terminais) terminais,&lt;br/&gt;      dados.servico,&lt;br/&gt;      dados.bandas&lt;br/&gt;    FROM cdrview_dados dados&lt;br/&gt;    WHERE dados.uf = &apos;AM&apos;&lt;br/&gt;    and dados.data &lt;= (select max(data)-1 from cdrview_dados)&lt;br/&gt;    GROUP BY dados.data,&lt;br/&gt;      dados.area,&lt;br/&gt;      dados.ID_MUNICIPIO,&lt;br/&gt;      dados.MUNICIPIO,&lt;br/&gt;      dados.celula,&lt;br/&gt;      dados.servico,&lt;br/&gt;      dados.bandas&lt;br/&gt;    ) tab&lt;br/&gt;  INNER JOIN VM_CELULA celula ON celula.nome_celula = tab.celula</subquery>
+<user>B6665735-CC76-0BEF-732A-CB14F6C7239B</user>
+<with></with>
+<partitions>
+<Partition class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionOraclev11g" name="FIRST_PART" id="2C5D3D62-2C03-83FD-10BD-D26B7F55037F">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-21 14:39:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<logging>YES</logging>
+<valueList>TO_DATE(&apos; 2000-01-01 00:00:00&apos;, &apos;SYYYY-MM-DD HH24:MI:SS&apos;)</valueList>
+</Partition>
+</partitions>
+</SnapshotOraclev11g>

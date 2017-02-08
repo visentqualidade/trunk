@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="TEMPLATE_WIDGET" directorySegmentName="seg_0" id="5BF89691-EA17-0C09-5F1B-FCC29507F959">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DA3890FB-F1F2-2E8A-3C7E-06108E2ADE3B</segment>
+<tableSpace>90F0D9ED-D833-85D4-9FE0-9BABD7A578A4</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TEMPLATE_WIDGET_PK" id="90B436D3-DA57-A2D0-4CD5-F1E7D7640A97">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<segment>853FC331-4678-DCBD-2BE7-166BDC136BAC</segment>
+<tableSpace>90F0D9ED-D833-85D4-9FE0-9BABD7A578A4</tableSpace>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NOME_CONTROLE" id="72164575-3D70-250E-3EB6-E56410CC2FA7">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EXPANDIR" id="943B9008-57AD-6986-0CCC-3EB5B31EC8D3">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_TEMPLATE" id="ACF82DC9-3FE6-6548-6221-81BFA8C8513A">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_TIPO_WIDGET" id="BF98999B-7EE0-6494-AC84-D3875F007437">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TEMPLATE_WIDGET_TIPO_WIDGET_FK" id="012BA152-832F-0232-C5F7-65902BB714B4">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TEMP_WIDGET_FK_TIPO_WIDGET" id="E97189EA-F78D-A7F5-627E-57D6D2091B2A">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TEMPLATE_WIDGET_PK" id="437AF8C8-0297-03BC-E33E-0B3D6FB5F95D">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 12:59:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

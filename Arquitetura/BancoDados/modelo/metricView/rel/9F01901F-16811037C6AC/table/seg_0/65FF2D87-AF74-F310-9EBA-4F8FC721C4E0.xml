@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="65FF2D87-AF74-F310-9EBA-4F8FC721C4E0" name="UF">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>METRICVIEW</sourceObjSchema>
+<sourceObjName>UF</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteDesignID>261BA68B-BEC1-951E-9842-18728CBC93F8</remoteDesignID>
+<remoteModelID>56B485BD-642F-0CD7-B4BF-9B40F32A95A1</remoteModelID>
+<remoteObjectID>79479092-A786-B5A8-6434-7D539156401D</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\56B485BD-9B40F32A95A1\table/seg_0/79479092-A786-B5A8-6434-7D539156401D.xml</remoteObjectRelativeStorageName>
+<afterCreate>Create Sequence Metricview.Seq_unid_federativa Minvalue 0 Maxvalue 9999999999999 Increment By 1 Start With 0 Cache 20 Noorder  Nocycle ;</afterCreate>
+<schemaObject>D9D8A6BB-1384-C0BF-9EA4-6EE3860BD224</schemaObject>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_UF" id="54911560-EA8E-531A-F970-F7A6191EC1B8">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>9F226087-FF2F-6762-D298-DEBDE6549D10</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="EDA17E9E-C192-94F7-8195-5A17CCEBA83A">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>BF34F673-FEFB-019D-1A86-B84B31429E53</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_EXTENSO" id="A3AB22B2-3E89-C67C-978D-9B12F770EAFF">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>C994269B-356D-98CF-910B-834517AEE4A1</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_GEOGRAFIA" id="74A6D47E-964A-DBD2-FFE3-D36552A70949">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>6CBD2456-ABBB-95B3-D705-686C481885E5</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_REGIAO" id="D30FB0AA-A159-1A5B-B75A-C049C0806794">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>44116333-17B5-41EC-FAEC-1F3BA415AF24</remoteObjectID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2CFE1C03-3C9D-97B2-79E3-EC08E4A3D635" name="UF_PK">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>F9393865-DA71-0325-00CC-64C816E25975</remoteObjectID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="54911560-EA8E-531A-F970-F7A6191EC1B8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="589279A3-9A51-A356-7423-629B13DCF37B" name="UF_PK">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>METRICVIEW</sourceObjSchema>
+<sourceObjName>UF_PK</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>9839AEB8-0630-D66E-1632-C3330A0005AF</remoteObjectID>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>D9D8A6BB-1384-C0BF-9EA4-6EE3860BD224</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54911560-EA8E-531A-F970-F7A6191EC1B8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

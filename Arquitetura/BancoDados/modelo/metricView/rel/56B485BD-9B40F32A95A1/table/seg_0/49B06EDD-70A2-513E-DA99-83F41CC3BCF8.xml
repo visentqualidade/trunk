@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="49B06EDD-70A2-513E-DA99-83F41CC3BCF8" name="MATRIZ">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into INTERCONEXAO.MATRIZ (ID_MATRIZ,NOME,AJAX,FILTROS,BD_VIEW,HTML_ID_LI) values (&apos;1&apos;,&apos;Matriz de Tráfego Originado&apos;,&apos;ChamadaOriginadaAjax&apos;,&apos;tiposAssinante;tiposChamada;tiposTarifa&apos;,&apos;VIEW_CHAMADAS_ORIGINADAS_CONS&apos;,&apos;matriz_trafego_originado&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ (ID_MATRIZ,NOME,AJAX,FILTROS,BD_VIEW,HTML_ID_LI) values (&apos;2&apos;,&apos;Matriz de Serviço&apos;,&apos;ChamadaServicoAjax&apos;,&apos;servicos;tiposAssinante&apos;,&apos;VIEW_SERVICOS_CONS&apos;,&apos;matriz_servico&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_MATRIZ" id="D1372E58-0C72-FF6A-A316-9B737979E713">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="3200EBD5-33C3-5BE2-9805-915FCD6F2AEE">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AJAX" id="317529D0-FF79-CA45-BE47-E1F5C2106A12">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FILTROS" id="DE84283E-1E05-828B-A8AE-52A8F8A65271">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BD_VIEW" id="A03C8536-DEC2-7D76-D2A8-0DE9FEA43585">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HTML_ID_LI" id="8AD9B867-0F5B-45F2-9C19-972ED2A395C2">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8008E9CD-5F54-0A25-C9F4-B8FE220DF053" name="MATRIZ_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1372E58-0C72-FF6A-A316-9B737979E713"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

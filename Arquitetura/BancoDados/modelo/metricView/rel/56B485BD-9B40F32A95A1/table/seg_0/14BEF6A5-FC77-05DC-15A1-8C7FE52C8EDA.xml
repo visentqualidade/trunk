@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="14BEF6A5-FC77-05DC-15A1-8C7FE52C8EDA" name="INDICADOR_QUALIDADE">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into INTERCONEXAO.INDICADOR_QUALIDADE (ID_INDICADOR,NOME_FILTRO,NOME_TELA,id_col_vol_qua) values (&apos;1&apos;,&apos;okt_p&apos;,&apos;OKT(%)&apos;,1);&lt;br/&gt;Insert into INTERCONEXAO.INDICADOR_QUALIDADE (ID_INDICADOR,NOME_FILTRO,NOME_TELA,id_col_vol_qua) values (&apos;2&apos;,&apos;ok1t_p&apos;,&apos;OK1T(%)&apos;,1);&lt;br/&gt;Insert into INTERCONEXAO.INDICADOR_QUALIDADE (ID_INDICADOR,NOME_FILTRO,NOME_TELA,id_col_vol_qua) values (&apos;3&apos;,&apos;ok5t_p&apos;,&apos;OK5(%)&apos;,1);&lt;br/&gt;Insert into INTERCONEXAO.INDICADOR_QUALIDADE (ID_INDICADOR,NOME_FILTRO,NOME_TELA,id_col_vol_qua) values (&apos;4&apos;,&apos;co1_p&apos;,&apos;CO1(%)&apos;,1);&lt;br/&gt;Insert into INTERCONEXAO.INDICADOR_QUALIDADE (ID_INDICADOR,NOME_FILTRO,NOME_TELA,id_col_vol_qua) values (&apos;5&apos;,&apos;co2_p&apos;,&apos;CO2(%)&apos;,1);&lt;br/&gt;Insert into INTERCONEXAO.INDICADOR_QUALIDADE (ID_INDICADOR,NOME_FILTRO,NOME_TELA,id_col_vol_qua) values (&apos;6&apos;,&apos;co3_p&apos;,&apos;CO3(%)&apos;,1);&lt;br/&gt;Insert into INTERCONEXAO.INDICADOR_QUALIDADE (ID_INDICADOR,NOME_FILTRO,NOME_TELA,id_col_vol_qua) values (&apos;7&apos;,&apos;nrt_p&apos;,&apos;NRT(%)&apos;,1);&lt;br/&gt;Insert into INTERCONEXAO.INDICADOR_QUALIDADE (ID_INDICADOR,NOME_FILTRO,NOME_TELA,id_col_vol_qua) values (&apos;8&apos;,&apos;nr_vm_p&apos;,&apos;NR_VM(%)&apos;,1);&lt;br/&gt;Insert into INTERCONEXAO.INDICADOR_QUALIDADE (ID_INDICADOR,NOME_FILTRO,NOME_TELA,id_col_vol_qua) values (&apos;9&apos;,&apos;sc_p&apos;,&apos;SC(%)&apos;,1);&lt;br/&gt;Insert into INTERCONEXAO.INDICADOR_QUALIDADE (ID_INDICADOR,NOME_FILTRO,NOME_TELA,id_col_vol_qua) values (&apos;10&apos;,&apos;bloq_p&apos;,&apos;BLOQ(%)&apos;,1);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_INDICADOR" id="DE2A12F4-5947-DD8F-A8EF-9E6DC7ACE085">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_FILTRO" id="DB8D426C-A9B6-D71F-CA2B-5C14E2090A2B">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_TELA" id="25B1D04C-3DCB-5646-087A-F5091B4863C9">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_COl_VOL_QUA" id="D0BBBF5E-4F77-C0B4-EE35-8F8961AF0035">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 17:32:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>B9278654-2C02-DB9D-7F88-6FE80585079C</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4197E70C-8B04-E2C6-085A-C77D502094AF" referredColumn="B9278654-2C02-DB9D-7F88-6FE80585079C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="277C303B-9612-5EA6-0013-62CD5BC0B34B" name="INDICADOR_QUALIDADE_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE2A12F4-5947-DD8F-A8EF-9E6DC7ACE085"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8AFF996C-5174-6D87-00C3-3594D6F99CF4" name="IND_QUA_COL_VOL_QUA_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 17:33:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D0BBBF5E-4F77-C0B4-EE35-8F8961AF0035"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

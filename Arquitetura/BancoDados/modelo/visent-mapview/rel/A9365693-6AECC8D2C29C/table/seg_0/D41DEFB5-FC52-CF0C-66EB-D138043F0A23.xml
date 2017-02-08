@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D41DEFB5-FC52-CF0C-66EB-D138043F0A23" name="VM_TIPO_CLASSIFICADOR_SETOR">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:38:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_CLASSIFICADOR_SETOR" id="F121C008-990C-3B54-4129-2B449B1AC0E7">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:39:34 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="3CE256CB-FDB7-5A7C-7163-954B41471B33">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:39:34 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="65C9780C-C7E8-47E7-294A-9077BC78F4C6" name="VM_TIPO_CLASSIFICADOR_SETOR_PK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:39:38 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F121C008-990C-3B54-4129-2B449B1AC0E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

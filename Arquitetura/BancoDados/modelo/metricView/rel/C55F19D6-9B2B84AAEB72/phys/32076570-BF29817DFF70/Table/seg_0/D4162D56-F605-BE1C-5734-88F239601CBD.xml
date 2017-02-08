@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="CONTROLE_IMSI" directorySegmentName="seg_0" id="D4162D56-F605-BE1C-5734-88F239601CBD">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:13:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>5F09FBDB-D526-8FDC-01ED-30398D36D36E</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<user>F6B21F4C-8864-F8B4-9BE1-6A880AE3CBA1</user>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="IMSI" id="2837ADAB-C303-3A00-C894-1B5F402223E3">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:14:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STATUS" id="3957F78F-0E73-E608-3BC1-B5541B513BAF">
+<createdBy>OSX</createdBy>
+<createdTime>2014-11-11 17:38:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ULTIMA_DATA" id="6AD191C1-B7F9-AE22-F986-C2AB485B1B4D">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:15:45 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REGISTRO" id="931A2E49-9C4A-1481-EDAA-6D969454FA0D">
+<createdBy>OSX</createdBy>
+<createdTime>2014-11-11 17:38:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MSISDN" id="F5FDFFC6-588D-AA1F-899E-C62B09C518FC">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:15:45 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>

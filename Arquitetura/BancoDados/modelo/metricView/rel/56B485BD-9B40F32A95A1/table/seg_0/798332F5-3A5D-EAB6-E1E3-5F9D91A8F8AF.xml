@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="798332F5-3A5D-EAB6-E1E3-5F9D91A8F8AF" name="TIPO_ACESSO">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>TIPO_ACESSO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Create Sequence Metricview.SEQ_TIPO_ACESSO Minvalue 0 Maxvalue 9999999999999 Increment By 1 Start With 0 Cache 20 Noorder  Nocycle ;&lt;br/&gt;Insert into METRICVIEW.TIPO_ACESSO (ID_TIPO_ACESSO,DESCRICAO) values (&apos;1&apos;,&apos;Administrador&apos;);&lt;br/&gt;Insert into METRICVIEW.TIPO_ACESSO (ID_TIPO_ACESSO,DESCRICAO) values (&apos;2&apos;,&apos;Usuário&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_ACESSO" id="35D51DE2-88FD-2B38-4D1D-2459FCD2A0EA">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>TIPO_ACESSO</sourceObjSchema>
+<sourceObjName>ID_TIPO_ACESSO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeSize>22</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRICAO" id="CA2B48F6-1E0F-1E6E-FA54-892412653C94">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>TIPO_ACESSO</sourceObjSchema>
+<sourceObjName>DESCRICAO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="521AA6E9-E093-1CBC-7809-1A4A60E08461" name="TIPO_ACESSO_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>TIPO_ACESSO_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35D51DE2-88FD-2B38-4D1D-2459FCD2A0EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F2020195-763F-8540-2C09-792244238A9C" name="TIPO_ACESSO_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>TIPO_ACESSO_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35D51DE2-88FD-2B38-4D1D-2459FCD2A0EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

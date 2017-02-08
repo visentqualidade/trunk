@@ -1,0 +1,156 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="EASYVIEW" directorySegmentName="seg_0" id="971C1BA1-E620-96DD-7CE5-F4C30AC50A59">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjName>EASYVIEW</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:47 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<permissions>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions1" id="171B62F6-6EF8-0FE1-1FCD-B28E2547E5C3">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>4ED304D0-13A2-1693-EBAF-F7DB356C3E8E</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions2" id="6D33DAFB-AC37-5C9D-867F-383B5031ED07">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>E1533E3F-851D-F504-AD1B-A0D23AF8E04E</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions3" id="0E5D5206-21D2-449D-03BC-9398B8D5FFFC">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>B8AD0F56-FD16-9E88-49C9-FBC8DC59907E</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions4" id="8151DA8A-FF5C-09B9-B70A-A1099B33B3CE">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>1CC65FAF-1B11-B67C-16F9-19A4934F6081</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions5" id="FD60A2CB-DAF4-9914-21C1-2853D9F29208">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>48C99A52-929B-7FCB-9066-D7E7203DE352</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions6" id="10C5891B-AA50-E0A6-1E57-BC4D7B781F32">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>1DF91E3D-FFDB-A58A-593B-D816FE3A5C6D</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions7" id="DE3C1DA4-0A2D-C207-C6E7-0A5BFA1C2286">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>BF92B12D-582A-40AA-E3FA-F8A630442BC6</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions8" id="ADE9879A-0114-030C-B865-36EBACBB514A">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>902C361E-B01F-E5C9-C604-4E8244FAE7CF</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions9" id="6AFE4701-53D6-D756-83BF-A0A82E77B1C7">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>EB8FF27D-67EC-86FA-081C-46B901784C25</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions10" id="C8FBF806-1992-4FF6-6CDC-BA601135DFBA">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>7CA59BC9-38E6-4B72-F1FE-F79DBCBBC93E</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions11" id="FA012A69-54B8-919B-AC0A-9D37A84BD108">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>C024D574-6E63-4398-8D31-B066376BA313</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions12" id="3F9663F1-7CAD-BD27-719B-E405D3A7BE6D">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>C4E052E9-D909-5DDD-A2F0-D09C0C61373C</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions13" id="E7C28A18-82DE-2346-B348-80B477AD8037">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>49417DBC-B0D4-2B20-F6D1-65A548374AE8</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions14" id="607FB9CF-FC9D-19E7-69B1-ABE5D6C6D9C0">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>798332F5-3A5D-EAB6-E1E3-5F9D91A8F8AF</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions15" id="CBF0E795-DC83-F408-CE10-0EC0F5C2FD1C">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>A7441B4B-9F50-EA6A-04D8-7A47DD1AFC79</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions16" id="6D38876C-FEF2-C206-5083-99BA3F810AFA">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>79479092-A786-B5A8-6434-7D539156401D</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions17" id="62B2E75F-6DF0-04C9-C0C6-931A00F174B6">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>FAB6D6CC-B4BB-CAAE-C78E-84181EFF6D39</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions18" id="48AA25B7-2AEB-651D-9A59-2E30182BE2E9">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>B881DA8E-5962-9EE0-1698-2D25819A4827</table>
+</Permission>
+</permissions>
+</UserOraclev10g>

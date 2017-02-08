@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableViewProxyOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableViewProxyOraclev10g" name="VW_GRUPO_ROTA" directorySegmentName="seg_0" id="FD2CE0FF-00CB-B2C8-F58C-489F2C669AB1">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-08 12:41:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+</TableViewProxyOraclev10g>

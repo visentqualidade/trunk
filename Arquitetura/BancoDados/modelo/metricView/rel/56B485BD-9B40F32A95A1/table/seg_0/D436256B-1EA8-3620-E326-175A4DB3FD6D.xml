@@ -1,0 +1,234 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D436256B-1EA8-3620-E326-175A4DB3FD6D" name="REL_FILTRO_GERAL">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 20:05:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<afterCreate>Create Sequence easyview.Seq_Rel_Filtro_Geral Minvalue 0 Maxvalue 9999999999999 Increment By 1 Start With 0 Cache 20 Noorder  Nocycle ;</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_REL_FILTRO_GERAL" id="8BFAD8FD-063D-342A-79C0-61BC811413B3">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 20:05:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_UF" id="20F42D37-63D7-47DA-08C6-17C9AF1ECFC5">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 20:05:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>9F226087-FF2F-6762-D298-DEBDE6549D10</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9A8E09D3-FF15-EEDE-EBEC-C8298B9BF252" referredColumn="9F226087-FF2F-6762-D298-DEBDE6549D10"/>
+</associations>
+</Column>
+<Column name="ID_CN" id="1C0D2355-D50B-BE9D-735D-70778ADD832F">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 20:05:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>86128B28-5D73-8B14-E615-B8F2CCDD9BDE</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA9EBDC9-0EF9-4825-F0BD-E1FF03AE3473" referredColumn="86128B28-5D73-8B14-E615-B8F2CCDD9BDE"/>
+</associations>
+</Column>
+<Column name="ID_GEOGRAFIA" id="22293026-34CF-72E0-506B-D2919A8838FA">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 20:05:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>65A46F4F-BE62-B9F2-CE17-F0DB2DE34C4D</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9DB6AD76-1404-BCBE-F062-4FE98665974C" referredColumn="65A46F4F-BE62-B9F2-CE17-F0DB2DE34C4D"/>
+</associations>
+</Column>
+<Column name="ID_REGIONAL" id="A5A8D7DC-3ECA-6F35-F420-16968434F432">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 20:05:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>B952121F-456C-57EE-A477-7D84E2E34E59</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AAE61B0D-700D-6E3C-ADFC-FE5F755029AA" referredColumn="B952121F-456C-57EE-A477-7D84E2E34E59"/>
+</associations>
+</Column>
+<Column name="ID_META_ACORDO" id="E0E823D1-08D2-F2AE-DA15-02F18ADE267B">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 20:13:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>8F12245B-AEC3-5F85-A800-A16E1B3D5756</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="01A86F30-86BA-8109-8E1E-6EF6B2DC6661" referredColumn="8F12245B-AEC3-5F85-A800-A16E1B3D5756"/>
+</associations>
+</Column>
+<Column name="ID_BILHETADOR" id="A7A58B29-D1E3-1E11-8D2A-0E8F20713780">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 21:45:51 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>35AF4F42-4EED-FD32-35C9-9AF99831C48F</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5A6CABF-5081-354D-D66D-C9FECB27D775" referredColumn="35AF4F42-4EED-FD32-35C9-9AF99831C48F"/>
+</associations>
+</Column>
+<Column name="ID_REGIAO" id="B982428F-3EE3-CA4A-DA04-FA0237100F25">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-16 12:45:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>43610630-6326-C090-F74E-B17326AF96D9</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="09AEC727-3BDD-67FA-084B-5BA0F1E1C3CB" name="ACORDO_GERAL_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 20:05:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="8BFAD8FD-063D-342A-79C0-61BC811413B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="917D6454-2A11-4020-7B98-FD0AB2D7082B" name="REL_FILTRO_GERAL_REGIONAL_FK">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-16 12:43:51 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A5A8D7DC-3ECA-6F35-F420-16968434F432"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D27556CE-B522-09B4-84FC-85F94AD2CC77" name="REL_FILTRO_GERAL_REGIAO_FK">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-16 12:45:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B982428F-3EE3-CA4A-DA04-FA0237100F25"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="92AD252B-6662-9332-4FD9-E17D2DFDE739" name="ACORDO_GERAL_REGIONAL_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 20:05:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+</ind_PK_UK>
+<ind_PK_UK id="CBC7CA45-3694-3F51-BB58-0F45151167F3" name="REL_FILTRO_GERAL_UF_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-13 18:15:09 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20F42D37-63D7-47DA-08C6-17C9AF1ECFC5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B4034D5E-B1A3-3573-EFCF-45BD195E0F2E" name="REL_FILTRO_GERAL_CN_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-13 18:15:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C0D2355-D50B-BE9D-735D-70778ADD832F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D10719E2-4538-5BDB-5841-2378CC722AD4" name="REL_FILTRO_GERAL_GEO_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-13 18:16:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22293026-34CF-72E0-506B-D2919A8838FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="926BB813-0085-9429-EA2B-DFFAA5DC178F" name="REL_FILTRO_GERAL_REG_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-13 18:17:52 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A5A8D7DC-3ECA-6F35-F420-16968434F432"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B7EFED9B-2795-6DD9-93AA-8F1745F6FC70" name="REL_FILTRO_GERAL_FK_MET_AC">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-13 18:18:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E0E823D1-08D2-F2AE-DA15-02F18ADE267B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="88C5B015-56F8-8E4B-1D74-18232FBEE8AB" name="REL_FILTRO_GERAL_BIL_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-13 18:18:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7A58B29-D1E3-1E11-8D2A-0E8F20713780"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

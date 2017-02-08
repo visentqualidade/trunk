@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="REL_REGIONAL_CN" directorySegmentName="seg_0" id="2556C82B-932F-846B-5978-C0E66FA165C5">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B13E7DAD-FB1F-28DF-6F07-62DAC61E6AA4</segment>
+<tableSpace>71C6CEFF-EC5C-69BD-C886-6CED1D0B09FF</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="REL_REG_COD_NAC_IDCN_IDX" id="5AA15444-A040-B714-37A6-3FF8BD127B1C">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<segment>FAF852CE-E50B-530F-8CE4-88E96D78BB58</segment>
+<tableSpace>71C6CEFF-EC5C-69BD-C886-6CED1D0B09FF</tableSpace>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_REGIONAL" id="66B91FC5-65A6-BBF7-5D29-01914C920872">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_CN" id="B7509F7B-ACA3-B2C2-0E0F-48516D520155">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="REL_REGIONAL_CN_CN_FK" id="06F82720-F383-CA3A-2EE1-27DC43965078">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 20:50:10 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="REL_REG_COD_NAC_FK_REG" id="69018FF2-8261-6369-5B1C-4064C03A5BE6">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+</TableProxyOraclev11g>

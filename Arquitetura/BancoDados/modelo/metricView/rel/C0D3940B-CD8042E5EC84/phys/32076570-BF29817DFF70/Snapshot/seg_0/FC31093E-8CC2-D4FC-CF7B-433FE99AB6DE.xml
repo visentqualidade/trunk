@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SnapshotOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.SnapshotOraclev11g" name="VM_PER_DISP_TOP_ASSIN_CONCAT" directorySegmentName="seg_0" id="FC31093E-8CC2-D4FC-CF7B-433FE99AB6DE">
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 13:12:51 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<defaultSegment>NO</defaultSegment>
+<refreshType>FORCE</refreshType>
+<subquery>select DISTINCT data from CDRVIEW_TOP_ASSINANTE_CONCAT</subquery>
+<user>D56F81BF-E7F4-13DC-B020-1660656B5F2D</user>
+<with></with>
+</SnapshotOraclev11g>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4F83B2EA-125D-C622-DB4D-8EA42AA3EDD5" name="ROTAS_FK1">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>ROTAS_FK1</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<containerWithKeyObject>DE6E5CF2-17EA-600E-DE3C-5CC05A08ABDE</containerWithKeyObject>
+<deleteRule>CASCADE</deleteRule>
+<localFKIndex>9C7D790E-143E-6656-95C3-B1A9C1540224</localFKIndex>
+<keyObject>DD45511B-0467-4841-3D09-4B9667968154</keyObject>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

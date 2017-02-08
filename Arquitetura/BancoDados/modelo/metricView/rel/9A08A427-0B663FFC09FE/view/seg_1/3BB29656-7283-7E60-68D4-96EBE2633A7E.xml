@@ -1,0 +1,307 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_1" id="3BB29656-7283-7E60-68D4-96EBE2633A7E" name="VIEW_SMP6_CN">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT Data   AS DATA,&lt;br/&gt;  REGIAO      AS REGIAO,&lt;br/&gt;  GEOGRAFIA   AS GEOGRAFIA,&lt;br/&gt;  UF          AS Uf,&lt;br/&gt;  TO_CHAR(CN) AS Cn,&lt;br/&gt;  Smp_A       AS Smp_A,&lt;br/&gt;  SMP_B       AS Smp_B,&lt;br/&gt;  CASE&lt;br/&gt;    WHEN SMP_B = &apos;-&apos;&lt;br/&gt;    AND Smp_A  = &apos;-&apos;&lt;br/&gt;    THEN &apos;-&apos;&lt;br/&gt;    WHEN SMP_B          != &apos;-&apos;&lt;br/&gt;    AND TO_NUMBER(SMP_B) = 0&lt;br/&gt;    THEN &apos;0&apos;&lt;br/&gt;    WHEN (SMP_B         != &apos;-&apos;&lt;br/&gt;    AND TO_NUMBER(SMP_B) &gt; 0)&lt;br/&gt;    AND Smp_A            = &apos;-&apos;&lt;br/&gt;    THEN &apos;0&apos;&lt;br/&gt;    ELSE TO_CHAR(ROUND((Smp_A * 100 / SMP_B), 2))&lt;br/&gt;  END AS SMP,&lt;br/&gt;  FDA,&lt;br/&gt;  REDIRECT,&lt;br/&gt;  SMS_OK_NOKIA,&lt;br/&gt;  SMS_NOKIA,&lt;br/&gt;  SMS_NETGEN,&lt;br/&gt;  &quot;sms_tte&lt;=10&quot;,&lt;br/&gt;  &quot;sms_tte&lt;=60&quot;,&lt;br/&gt;  &quot;sms_60&lt;tte&lt;=300&quot;,&lt;br/&gt;  &quot;sms_300&lt;tte&lt;=900&quot;,&lt;br/&gt;  &quot;sms_900&lt;tte&lt;=3600&quot;,&lt;br/&gt;  &quot;sms_3600&lt;tte&lt;=7200&quot;,&lt;br/&gt;  &quot;sms_7200&lt;tte&lt;=86400&quot;,&lt;br/&gt;  &quot;sms_86400&lt;tte&lt;=172800&quot;,&lt;br/&gt;  &quot;172800&lt;sms_tte&quot;&lt;br/&gt;FROM&lt;br/&gt;  (SELECT TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;) AS Data,&lt;br/&gt;    regiao.NOME                           AS REGIAO,&lt;br/&gt;    Tab.GEOGRAFIA,&lt;br/&gt;    Tab.UF,&lt;br/&gt;    Tab.CN,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.&quot;SMS_TTE&lt;=60&quot;, 0) + NVL(Tab.SMS_OK_NOKIA, 0))), &apos;-&apos;) AS Smp_A,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.SMS_NETGEN, 0)    + NVL(Tab.SMS_NOKIA, 0))), &apos;-&apos;)    AS SMP_B,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.FDA, 0))) FDA,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.REDIRECT, 0))) REDIRECT,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.SMS_OK_NOKIA, 0))) SMS_OK_NOKIA,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.SMS_NOKIA, 0))) SMS_NOKIA,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.SMS_NETGEN, 0))) SMS_NETGEN,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.&quot;SMS_TTE&lt;=10&quot;, 0))) &quot;sms_tte&lt;=10&quot;,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.&quot;SMS_TTE&lt;=60&quot;, 0))) &quot;sms_tte&lt;=60&quot;,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.&quot;SMS_60&lt;TTE&lt;=300&quot;, 0))) &quot;sms_60&lt;tte&lt;=300&quot;,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.&quot;SMS_300&lt;TTE&lt;=900&quot;, 0))) &quot;sms_300&lt;tte&lt;=900&quot;,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.&quot;SMS_900&lt;TTE&lt;=3600&quot;, 0))) &quot;sms_900&lt;tte&lt;=3600&quot;,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.&quot;SMS_3600&lt;TTE&lt;=7200&quot;, 0))) &quot;sms_3600&lt;tte&lt;=7200&quot;,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.&quot;SMS_7200&lt;TTE&lt;=86400&quot;, 0))) &quot;sms_7200&lt;tte&lt;=86400&quot;,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.&quot;SMS_86400&lt;TTE&lt;=172800&quot;, 0))) &quot;sms_86400&lt;tte&lt;=172800&quot;,&lt;br/&gt;    TO_CHAR(SUM(NVL(Tab.&quot;172800&lt;SMS_TTE&quot;, 0))) &quot;172800&lt;sms_tte&quot;&lt;br/&gt;  FROM CDRVIEW_SMP6 Tab&lt;br/&gt;  INNER JOIN metricview.regiao regiao&lt;br/&gt;  ON Tab.REGIAO = regiao.nome&lt;br/&gt;  GROUP BY TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;),&lt;br/&gt;    regiao.NOME,&lt;br/&gt;    Tab.GEOGRAFIA,&lt;br/&gt;    Tab.UF,&lt;br/&gt;    Tab.CN&lt;br/&gt;  )&lt;br/&gt;ORDER BY DATA,&lt;br/&gt;  REGIAO,&lt;br/&gt;  GEOGRAFIA,&lt;br/&gt;  Uf,&lt;br/&gt;  Cn</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select Data As DATA, REGIAO As REGIAO, GEOGRAFIA As GEOGRAFIA, UF As Uf, TO_CHAR(CN) As Cn, Smp_A As Smp_A, SMP_B As Smp_B, Case When SMP_B = &apos;-&apos; And Smp_A = &apos;-&apos; Then &apos;-&apos; When SMP_B != &apos;-&apos; And TO_NUMBER(SMP_B) = 0 Then &apos;0&apos; When (SMP_B != &apos;-&apos; And TO_NUMBER(SMP_B) &gt; 0) And Smp_A = &apos;-&apos; Then &apos;0&apos; Else TO_CHAR(ROUND((Smp_A * 100 / SMP_B), 2)) End As SMP, FDA, REDIRECT, SMS_OK_NOKIA, SMS_NOKIA, SMS_NETGEN, &quot;sms_tte&amp;amp;lt;=10&quot;, &quot;sms_tte&amp;amp;lt;=60&quot;, &quot;sms_60&amp;amp;lt;tte&amp;amp;lt;=300&quot;, &quot;sms_300&amp;amp;lt;tte&amp;amp;lt;=900&quot;, &quot;sms_900&amp;amp;lt;tte&amp;amp;lt;=3600&quot;, &quot;sms_3600&amp;amp;lt;tte&amp;amp;lt;=7200&quot;, &quot;sms_7200&amp;amp;lt;tte&amp;amp;lt;=86400&quot;, &quot;sms_86400&amp;amp;lt;tte&amp;amp;lt;=172800&quot;, &quot;172800&amp;amp;lt;sms_tte&quot; From (Select TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;) As Data, regiao.NOME As REGIAO, Tab.GEOGRAFIA, Tab.UF, Tab.CN, NVL(TO_CHAR(Sum(NVL(Tab.&quot;SMS_TTE&amp;amp;lt;=60&quot;, 0) + NVL(Tab.SMS_OK_NOKIA, 0))), &apos;-&apos;) As Smp_A, NVL(TO_CHAR(Sum(NVL(Tab.SMS_NETGEN, 0) + NVL(Tab.SMS_NOKIA, 0))), &apos;-&apos;) As SMP_B, TO_CHAR(Sum(NVL(Tab.FDA, 0))) FDA, TO_CHAR(Sum(NVL(Tab.REDIRECT, 0))) REDIRECT, TO_CHAR(Sum(NVL(Tab.SMS_OK_NOKIA, 0))) SMS_OK_NOKIA, TO_CHAR(Sum(NVL(Tab.SMS_NOKIA, 0))) SMS_NOKIA, TO_CHAR(Sum(NVL(Tab.SMS_NETGEN, 0))) SMS_NETGEN, TO_CHAR(Sum(NVL(Tab.&quot;SMS_TTE&amp;amp;lt;=10&quot;, 0))) &quot;sms_tte&amp;amp;lt;=10&quot;, TO_CHAR(Sum(NVL(Tab.&quot;SMS_TTE&amp;amp;lt;=60&quot;, 0))) &quot;sms_tte&amp;amp;lt;=60&quot;, TO_CHAR(Sum(NVL(Tab.&quot;SMS_60&amp;amp;lt;TTE&amp;amp;lt;=300&quot;, 0))) &quot;sms_60&amp;amp;lt;tte&amp;amp;lt;=300&quot;, TO_CHAR(Sum(NVL(Tab.&quot;SMS_300&amp;amp;lt;TTE&amp;amp;lt;=900&quot;, 0))) &quot;sms_300&amp;amp;lt;tte&amp;amp;lt;=900&quot;, TO_CHAR(Sum(NVL(Tab.&quot;SMS_900&amp;amp;lt;TTE&amp;amp;lt;=3600&quot;, 0))) &quot;sms_900&amp;amp;lt;tte&amp;amp;lt;=3600&quot;, TO_CHAR(Sum(NVL(Tab.&quot;SMS_3600&amp;amp;lt;TTE&amp;amp;lt;=7200&quot;, 0))) &quot;sms_3600&amp;amp;lt;tte&amp;amp;lt;=7200&quot;, TO_CHAR(Sum(NVL(Tab.&quot;SMS_7200&amp;amp;lt;TTE&amp;amp;lt;=86400&quot;, 0))) &quot;sms_7200&amp;amp;lt;tte&amp;amp;lt;=86400&quot;, TO_CHAR(Sum(NVL(Tab.&quot;SMS_86400&amp;amp;lt;TTE&amp;amp;lt;=172800&quot;, 0))) &quot;sms_86400&amp;amp;lt;tte&amp;amp;lt;=172800&quot;, TO_CHAR(Sum(NVL(Tab.&quot;172800&amp;amp;lt;SMS_TTE&quot;, 0))) &quot;172800&amp;amp;lt;sms_tte&quot; From CDRVIEW_SMP6 Tab Inner Join metricview.regiao regiao On Tab.REGIAO = regiao.nome Group By TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;), regiao.NOME, Tab.GEOGRAFIA, Tab.UF, Tab.CN) Order By DATA, REGIAO, GEOGRAFIA, Uf, Cn&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select Data As DATA, REGIAO As REGIAO, GEOGRAFIA As GEOGRAFIA, UF As Uf, TO_CHAR(CN) As Cn, Smp_A As Smp_A, SMP_B As Smp_B, Case When SMP_B = &apos;-&apos; And Smp_A = &apos;-&apos; Then &apos;-&apos; When SMP_B != &apos;-&apos; And TO_NUMBER(SMP_B) = 0 Then &apos;0&apos; When (SMP_B != &apos;-&apos; And TO_NUMBER(SMP_B) &gt; 0) And Smp_A = &apos;-&apos; Then &apos;0&apos; Else TO_CHAR(ROUND((Smp_A * 100 / SMP_B), 2)) End As SMP, FDA, REDIRECT, SMS_OK_NOKIA, SMS_NOKIA, SMS_NETGEN, &amp;amp;quot;sms_tte&amp;amp;lt;=10&amp;amp;quot;, &amp;amp;quot;sms_tte&amp;amp;lt;=60&amp;amp;quot;, &amp;amp;quot;sms_60&amp;amp;lt;tte&amp;amp;lt;=300&amp;amp;quot;, &amp;amp;quot;sms_300&amp;amp;lt;tte&amp;amp;lt;=900&amp;amp;quot;, &amp;amp;quot;sms_900&amp;amp;lt;tte&amp;amp;lt;=3600&amp;amp;quot;, &amp;amp;quot;sms_3600&amp;amp;lt;tte&amp;amp;lt;=7200&amp;amp;quot;, &amp;amp;quot;sms_7200&amp;amp;lt;tte&amp;amp;lt;=86400&amp;amp;quot;, &amp;amp;quot;sms_86400&amp;amp;lt;tte&amp;amp;lt;=172800&amp;amp;quot;, &amp;amp;quot;172800&amp;amp;lt;sms_tte&amp;amp;quot; From (Select TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;) As Data, regiao.NOME As REGIAO, Tab.GEOGRAFIA, Tab.UF, Tab.CN, NVL(TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_TTE&amp;amp;lt;=60&amp;amp;quot;, 0) + NVL(Tab.SMS_OK_NOKIA, 0))), &apos;-&apos;) As Smp_A, NVL(TO_CHAR(Sum(NVL(Tab.SMS_NETGEN, 0) + NVL(Tab.SMS_NOKIA, 0))), &apos;-&apos;) As SMP_B, TO_CHAR(Sum(NVL(Tab.FDA, 0))) FDA, TO_CHAR(Sum(NVL(Tab.REDIRECT, 0))) REDIRECT, TO_CHAR(Sum(NVL(Tab.SMS_OK_NOKIA, 0))) SMS_OK_NOKIA, TO_CHAR(Sum(NVL(Tab.SMS_NOKIA, 0))) SMS_NOKIA, TO_CHAR(Sum(NVL(Tab.SMS_NETGEN, 0))) SMS_NETGEN, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_TTE&amp;amp;lt;=10&amp;amp;quot;, 0))) &amp;amp;quot;sms_tte&amp;amp;lt;=10&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_TTE&amp;amp;lt;=60&amp;amp;quot;, 0))) &amp;amp;quot;sms_tte&amp;amp;lt;=60&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_60&amp;amp;lt;TTE&amp;amp;lt;=300&amp;amp;quot;, 0))) &amp;amp;quot;sms_60&amp;amp;lt;tte&amp;amp;lt;=300&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_300&amp;amp;lt;TTE&amp;amp;lt;=900&amp;amp;quot;, 0))) &amp;amp;quot;sms_300&amp;amp;lt;tte&amp;amp;lt;=900&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_900&amp;amp;lt;TTE&amp;amp;lt;=3600&amp;amp;quot;, 0))) &amp;amp;quot;sms_900&amp;amp;lt;tte&amp;amp;lt;=3600&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_3600&amp;amp;lt;TTE&amp;amp;lt;=7200&amp;amp;quot;, 0))) &amp;amp;quot;sms_3600&amp;amp;lt;tte&amp;amp;lt;=7200&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_7200&amp;amp;lt;TTE&amp;amp;lt;=86400&amp;amp;quot;, 0))) &amp;amp;quot;sms_7200&amp;amp;lt;tte&amp;amp;lt;=86400&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_86400&amp;amp;lt;TTE&amp;amp;lt;=172800&amp;amp;quot;, 0))) &amp;amp;quot;sms_86400&amp;amp;lt;tte&amp;amp;lt;=172800&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;172800&amp;amp;lt;SMS_TTE&amp;amp;quot;, 0))) &amp;amp;quot;172800&amp;amp;lt;sms_tte&amp;amp;quot; From CDRVIEW_SMP6 Tab Inner Join metricview.regiao regiao On Tab.REGIAO = regiao.nome Group By TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;), regiao.NOME, Tab.GEOGRAFIA, Tab.UF, Tab.CN) Order By DATA, REGIAO, GEOGRAFIA, Uf, Cn&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;) As Data, regiao.NOME As REGIAO, Tab.GEOGRAFIA, Tab.UF, Tab.CN, NVL(TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_TTE&amp;amp;lt;=60&amp;amp;quot;, 0) + NVL(Tab.SMS_OK_NOKIA, 0))), &apos;-&apos;) As Smp_A, NVL(TO_CHAR(Sum(NVL(Tab.SMS_NETGEN, 0) + NVL(Tab.SMS_NOKIA, 0))), &apos;-&apos;) As SMP_B, TO_CHAR(Sum(NVL(Tab.FDA, 0))) FDA, TO_CHAR(Sum(NVL(Tab.REDIRECT, 0))) REDIRECT, TO_CHAR(Sum(NVL(Tab.SMS_OK_NOKIA, 0))) SMS_OK_NOKIA, TO_CHAR(Sum(NVL(Tab.SMS_NOKIA, 0))) SMS_NOKIA, TO_CHAR(Sum(NVL(Tab.SMS_NETGEN, 0))) SMS_NETGEN, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_TTE&amp;amp;lt;=10&amp;amp;quot;, 0))) &amp;amp;quot;sms_tte&amp;amp;lt;=10&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_TTE&amp;amp;lt;=60&amp;amp;quot;, 0))) &amp;amp;quot;sms_tte&amp;amp;lt;=60&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_60&amp;amp;lt;TTE&amp;amp;lt;=300&amp;amp;quot;, 0))) &amp;amp;quot;sms_60&amp;amp;lt;tte&amp;amp;lt;=300&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_300&amp;amp;lt;TTE&amp;amp;lt;=900&amp;amp;quot;, 0))) &amp;amp;quot;sms_300&amp;amp;lt;tte&amp;amp;lt;=900&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_900&amp;amp;lt;TTE&amp;amp;lt;=3600&amp;amp;quot;, 0))) &amp;amp;quot;sms_900&amp;amp;lt;tte&amp;amp;lt;=3600&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_3600&amp;amp;lt;TTE&amp;amp;lt;=7200&amp;amp;quot;, 0))) &amp;amp;quot;sms_3600&amp;amp;lt;tte&amp;amp;lt;=7200&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_7200&amp;amp;lt;TTE&amp;amp;lt;=86400&amp;amp;quot;, 0))) &amp;amp;quot;sms_7200&amp;amp;lt;tte&amp;amp;lt;=86400&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_86400&amp;amp;lt;TTE&amp;amp;lt;=172800&amp;amp;quot;, 0))) &amp;amp;quot;sms_86400&amp;amp;lt;tte&amp;amp;lt;=172800&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;172800&amp;amp;lt;SMS_TTE&amp;amp;quot;, 0))) &amp;amp;quot;172800&amp;amp;lt;sms_tte&amp;amp;quot; From CDRVIEW_SMP6 Tab Inner Join metricview.regiao regiao On Tab.REGIAO = regiao.nome Group By TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;), regiao.NOME, Tab.GEOGRAFIA, Tab.UF, Tab.CN)&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;430&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;) As Data, regiao.NOME As REGIAO, Tab.GEOGRAFIA, Tab.UF, Tab.CN, NVL(TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_TTE&amp;amp;lt;=60&amp;amp;quot;, 0) + NVL(Tab.SMS_OK_NOKIA, 0))), &apos;-&apos;) As Smp_A, NVL(TO_CHAR(Sum(NVL(Tab.SMS_NETGEN, 0) + NVL(Tab.SMS_NOKIA, 0))), &apos;-&apos;) As SMP_B, TO_CHAR(Sum(NVL(Tab.FDA, 0))) FDA, TO_CHAR(Sum(NVL(Tab.REDIRECT, 0))) REDIRECT, TO_CHAR(Sum(NVL(Tab.SMS_OK_NOKIA, 0))) SMS_OK_NOKIA, TO_CHAR(Sum(NVL(Tab.SMS_NOKIA, 0))) SMS_NOKIA, TO_CHAR(Sum(NVL(Tab.SMS_NETGEN, 0))) SMS_NETGEN, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_TTE&amp;amp;lt;=10&amp;amp;quot;, 0))) &amp;amp;quot;sms_tte&amp;amp;lt;=10&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_TTE&amp;amp;lt;=60&amp;amp;quot;, 0))) &amp;amp;quot;sms_tte&amp;amp;lt;=60&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_60&amp;amp;lt;TTE&amp;amp;lt;=300&amp;amp;quot;, 0))) &amp;amp;quot;sms_60&amp;amp;lt;tte&amp;amp;lt;=300&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_300&amp;amp;lt;TTE&amp;amp;lt;=900&amp;amp;quot;, 0))) &amp;amp;quot;sms_300&amp;amp;lt;tte&amp;amp;lt;=900&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_900&amp;amp;lt;TTE&amp;amp;lt;=3600&amp;amp;quot;, 0))) &amp;amp;quot;sms_900&amp;amp;lt;tte&amp;amp;lt;=3600&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_3600&amp;amp;lt;TTE&amp;amp;lt;=7200&amp;amp;quot;, 0))) &amp;amp;quot;sms_3600&amp;amp;lt;tte&amp;amp;lt;=7200&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_7200&amp;amp;lt;TTE&amp;amp;lt;=86400&amp;amp;quot;, 0))) &amp;amp;quot;sms_7200&amp;amp;lt;tte&amp;amp;lt;=86400&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;SMS_86400&amp;amp;lt;TTE&amp;amp;lt;=172800&amp;amp;quot;, 0))) &amp;amp;quot;sms_86400&amp;amp;lt;tte&amp;amp;lt;=172800&amp;amp;quot;, TO_CHAR(Sum(NVL(Tab.&amp;amp;quot;172800&amp;amp;lt;SMS_TTE&amp;amp;quot;, 0))) &amp;amp;quot;172800&amp;amp;lt;sms_tte&amp;amp;quot; From CDRVIEW_SMP6 Tab Inner Join metricview.regiao regiao On Tab.REGIAO = regiao.nome Group By TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;), regiao.NOME, Tab.GEOGRAFIA, Tab.UF, Tab.CN&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;CDRVIEW_SMP6 Tab&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;351&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;metricview.regiao regiao&quot; X=&quot;240&quot; Y=&quot;157&quot; Height=&quot;99&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>024EBBB1-C0B9-AFD1-EB4E-F31F09D33F69</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DATA" id="B9844860-7E8F-44A4-CBBC-0AA41A4324E3">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DATA</alias>
+<expression>Data</expression>
+<reference>false</reference>
+<viewID>3BB29656-7283-7E60-68D4-96EBE2633A7E</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="REGIAO" id="812C34E4-BA14-1237-CF27-064FB523F2DA">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>REGIAO</alias>
+<expression>REGIAO</expression>
+<reference>false</reference>
+<viewID>3BB29656-7283-7E60-68D4-96EBE2633A7E</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="GEOGRAFIA" id="9FC0B3D2-AAEF-F407-8A2E-01A322547E80">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>GEOGRAFIA</alias>
+<expression>GEOGRAFIA</expression>
+<reference>false</reference>
+<viewID>3BB29656-7283-7E60-68D4-96EBE2633A7E</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Uf" id="092D5F4D-C0B8-E5C3-5D7D-EAEFAEC2E10F">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>Uf</alias>
+<expression>UF</expression>
+<reference>false</reference>
+<viewID>3BB29656-7283-7E60-68D4-96EBE2633A7E</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Cn" id="291D1329-05E0-59F6-8783-76B1D937A157">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>Cn</alias>
+<expression>TO_CHAR(CN)</expression>
+<reference>false</reference>
+<viewID>3BB29656-7283-7E60-68D4-96EBE2633A7E</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Smp_A" id="2C7137B1-481D-B0B7-CAB5-95196EF6B749">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-31 18:32:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>Smp_A</alias>
+<expression>Smp_A</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Smp_B" id="FFF5EE2B-E2BC-91C7-BC26-2F14885ACE12">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-31 18:32:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>Smp_B</alias>
+<expression>SMP_B</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP" id="77C54B8A-A310-A479-F96A-70015FB566A3">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-31 18:32:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP</alias>
+<expression>Case When SMP_B = &apos;-&apos; And Smp_A = &apos;-&apos; Then &apos;-&apos; When SMP_B != &apos;-&apos; And TO_NUMBER(SMP_B) = 0 Then &apos;0&apos; When (SMP_B != &apos;-&apos; And TO_NUMBER(SMP_B) &gt; 0) And Smp_A = &apos;-&apos; Then &apos;0&apos; Else TO_CHAR(ROUND((Smp_A * 100 / SMP_B), 2)) End</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="FDA" id="D84F186E-3F6C-560C-6993-143F6B50F839">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>FDA</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="REDIRECT" id="B1265274-A26B-C44E-7140-78EB5403C03D">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>REDIRECT</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMS_OK_NOKIA" id="9A18F7D8-1065-9B01-4319-3052904C2261">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>SMS_OK_NOKIA</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMS_NOKIA" id="E75676DB-F3FA-9FD6-9A00-166A8A70D3CF">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>SMS_NOKIA</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMS_NETGEN" id="EB4404C7-403C-9A7D-03F2-4FDF7B27A408">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>SMS_NETGEN</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="sms_tte&lt;=10" id="D2A2E36E-05B1-DB2B-1C30-38CEBD39A0EA">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>&quot;sms_tte&lt;=10&quot;</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="sms_tte&lt;=60" id="6C17669C-26B2-C29B-701E-429E1A060DF8">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>&quot;sms_tte&lt;=60&quot;</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="sms_60&lt;tte&lt;=300" id="B9EA54F6-8EAD-9138-E0AD-CC41176AB8DA">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>&quot;sms_60&lt;tte&lt;=300&quot;</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="sms_300&lt;tte&lt;=900" id="A566096C-6C95-47AF-267C-4F50DB7D2740">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>&quot;sms_300&lt;tte&lt;=900&quot;</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="sms_900&lt;tte&lt;=3600" id="570CD437-A06A-1A0F-1C73-247FCB91F517">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>&quot;sms_900&lt;tte&lt;=3600&quot;</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="sms_3600&lt;tte&lt;=7200" id="3A9BED5F-0617-7B70-25E5-CD444770A901">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>&quot;sms_3600&lt;tte&lt;=7200&quot;</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="sms_7200&lt;tte&lt;=86400" id="5D80F616-B656-2E4D-247D-90AF2CE64C3D">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>&quot;sms_7200&lt;tte&lt;=86400&quot;</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="sms_86400&lt;tte&lt;=172800" id="C8ED2758-C580-897D-A3BB-E3DCC1AFD79A">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>&quot;sms_86400&lt;tte&lt;=172800&quot;</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="172800&lt;sms_tte" id="711A630E-8364-511D-CF6B-96BE3B2BF189">
+<createdBy>osx</createdBy>
+<createdTime>2014-08-15 12:57:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>&quot;172800&lt;sms_tte&quot;</expression>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FBA86DAA-5171-9C88-999F-73BFFED1CC35">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="57EEA85E-6195-CE0E-6433-2EE5221A5527">
+<columnName>DATA</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F00B98C0-08B9-0881-6BF7-26F07F6C8316">
+<columnName>SMS_TTE&lt;=60</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="29469591-B92F-BF0A-7883-DD7B3F032E0A">
+<columnName>SMS_OK_NOKIA</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="70CB26D8-D302-E7FF-BA1A-EED77E9D80D0">
+<columnName>SMS_NETGEN</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="EE92703D-0BE3-515C-D9CD-E0668B6A7E13">
+<columnName>SMS_NOKIA</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="24D5BBB2-6D68-2AC1-1611-2A5DD5A45309">
+<columnName>FDA</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="26DBFB56-C138-EA1F-D2AC-D7485DB543A0">
+<columnName>REDIRECT</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B9CD136C-8A96-9A37-B428-F7CCB6DF75C6">
+<columnName>SMS_TTE&lt;=10</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="50D30534-B8A3-023C-CC9D-1434FDCB8170">
+<columnName>SMS_60&lt;TTE&lt;=300</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7BF12FB4-4479-B0D3-A384-CF4A3786E6BA">
+<columnName>SMS_300&lt;TTE&lt;=900</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2111024F-6DF2-7908-794D-ECE3671BB0B9">
+<columnName>SMS_900&lt;TTE&lt;=3600</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="060A1E56-771B-CF71-4DC9-3BC1B6BCE847">
+<columnName>SMS_3600&lt;TTE&lt;=7200</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="C70CEFF3-FA82-D7A2-7588-0351FA60377D">
+<columnName>SMS_7200&lt;TTE&lt;=86400</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="1CE8FBF3-1F58-B13E-B137-4AFDC3DF407B">
+<columnName>SMS_86400&lt;TTE&lt;=172800</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E191D87A-3887-0F7E-B841-B26DDBFD7387">
+<columnName>REGIAO</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP6</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

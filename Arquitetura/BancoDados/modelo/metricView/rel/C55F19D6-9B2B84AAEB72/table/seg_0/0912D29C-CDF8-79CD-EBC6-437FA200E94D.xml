@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0912D29C-CDF8-79CD-EBC6-437FA200E94D" name="CONTROLE_JOBS">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 19:07:01 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="JOB" id="50E23867-9E44-8EDD-9D4D-C1D46441BB21">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 19:07:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA" id="A63D82B7-A291-C129-F2A6-EFFF7A22355D">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 19:07:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="72D3397B-C37F-2CAD-7A29-538CB0DA9DC0" name="CONTROLE_JOBS_PK">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 19:09:01 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="50E23867-9E44-8EDD-9D4D-C1D46441BB21"/>
+<colUsage columnID="A63D82B7-A291-C129-F2A6-EFFF7A22355D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

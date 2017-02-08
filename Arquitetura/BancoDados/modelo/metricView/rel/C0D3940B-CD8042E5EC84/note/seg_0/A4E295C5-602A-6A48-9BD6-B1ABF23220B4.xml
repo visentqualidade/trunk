@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Note class="oracle.dbtools.crest.model.design.Note" name="Note_3" directorySegmentName="seg_0" id="A4E295C5-602A-6A48-9BD6-B1ABF23220B4">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 21:00:47 UTC</createdTime>
+<comment>Tabelas de Configuração de Rota e Grupo de Rota</comment>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</Note>

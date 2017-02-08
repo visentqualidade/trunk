@@ -1,0 +1,158 @@
+.dataTables_wrapper {
+/* 	border:1px solid #cecece; */
+/* 	padding-top:10px; */
+	background-color: #ffffff;
+}
+
+.containerTabela {
+	overflow: auto;
+	max-height: 380px;
+}
+
+.dataTable th {
+	font-size:11px;
+	font-weight: bold;
+	color:#3f3f3f;
+	background-color: #E0E0E0;
+/* 	border-right: 1px solid #B2B2B2; */
+	padding:2px;
+/* 	padding:2px 4px 2px 8px; */
+	cursor: default;
+}
+
+.dataTable tr {
+	border-bottom:1px solid #ececec;
+}
+
+.dataTable tr:hover {
+	background: #f7f7d8;
+	cursor: default;
+}
+
+.linhaMarcada {
+	background: #f7f7d8;
+}
+
+.dataTable td {
+/* 	border-right: 1px solid #c8c8c8; */
+/* 	padding:2px 4px 2px 8px; */
+	padding:2px 2px 2px 2px;
+	border-bottom: 1px solid #ececec;
+}
+
+.dataTables_filter {
+	margin:3px 0 0 10px;
+	font-weight: bold;
+	color:#565656;
+}
+
+.dataTables_filter [type=text]{
+	font-weight:normal;
+	border: solid 1px #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding:2px;
+	background:#f7f7f7;
+}
+
+.dataTables_paginate {
+	margin-top: 25px;
+	text-align:center;
+}
+
+.dataTables_info {
+	text-align:center;
+/* 	margin-top:-8px; */
+}
+
+.paging_full_numbers a.paginate_button, .paging_two_button a {
+	background-color: #DDD;
+}
+
+.paging_full_numbers a.paginate_button:hover, .paging_two_button a:hover {
+	background-color: #EEE;
+}
+
+.paging_full_numbers a.paginate_button, .paging_full_numbers a.paginate_active, .paging_two_button a {
+	border: 1px solid #AAA;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	color: #333 !important;
+}
+
+.sorting {
+	background: url('../images/order.png') no-repeat center right;
+	background-color: #E0E0E0;
+/* 	border-right: 1px solid #B2B2B2 */
+}
+
+.sorting_asc {
+	background: url('../images/order-up.png') no-repeat center right;
+	background-color: #E0E0E0;
+/* 	border-right: 1px solid #B2B2B2 */
+}
+
+.sorting_desc {
+	background: url('../images/order-down.png') no-repeat center right;
+	background-color: #E0E0E0;
+/* 	border-right: 1px solid #B2B2B2 */
+}
+
+.center {
+	text-align: center;
+}
+
+.dataTables_wrapper tfoot input[type='text'] {
+	width: 50px;
+}
+
+.dataTables_wrapper tfoot th {
+	font-weight: normal;
+	text-align: center;
+}
+.dataTable td.tarefa {
+	width: 10px;
+	padding: 0px;
+}
+.dataTable a:hover {
+	text-decoration: underline;
+}
+.tabela {
+	width: 100%;
+}
+.dataTables_length label {
+	color: #000;
+	font-weight: normal;
+}
+
+/* agrupamento */
+td.group {
+	font-weight: bold;
+	background-color: #D1CFD0;
+	border-bottom: 2px solid #A19B9E;
+	border-top: 2px solid #A19B9E;
+	text-align: left;
+	cursor: pointer;
+}
+td.subgroup {
+	padding-left: 100px;
+	background-color: #D1CFD0;
+	border-bottom: 2px solid #A19B9E;
+	text-align: left;
+}
+.collapsed-group {
+	background: url("../imagens/plus.jpg") no-repeat scroll left center transparent;
+	padding-left: 15px !important;
+}
+.expanded-group {
+	background: url("../imagens/minus.jpg") no-repeat scroll left center transparent;
+	padding-left: 15px !important;
+}
+.total {
+	font-weight: bold;
+	background-color: #FFFBD1;
+}

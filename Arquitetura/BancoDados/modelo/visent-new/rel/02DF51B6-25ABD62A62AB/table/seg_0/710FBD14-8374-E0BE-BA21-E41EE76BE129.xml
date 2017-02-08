@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="710FBD14-8374-E0BE-BA21-E41EE76BE129" name="REL_CN_UF">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 20:42:21 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CN" id="7510EE88-F059-F647-ED64-91AAA8A1BCC0">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 20:42:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>CE2E03D2-0E67-0A17-AD4B-4FA7EEC2E810</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F9349AA5-CACE-A4F3-8103-D402EFECFEA5" referredColumn="CE2E03D2-0E67-0A17-AD4B-4FA7EEC2E810"/>
+</associations>
+</Column>
+<Column name="ID_UF" id="F7EFDB25-5DEB-16A7-F80C-B9071E370A75">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 20:42:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>F2F37A04-EC87-562F-8388-A1951DE4ABAA</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B3AE3074-46E6-3643-1BEA-917CEDC67A1E" referredColumn="F2F37A04-EC87-562F-8388-A1951DE4ABAA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="573D6543-01B7-D8AA-C569-EFA3173883C2" name="REL_CN_UF_CN_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 20:52:01 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7510EE88-F059-F647-ED64-91AAA8A1BCC0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="25F1277A-7A9D-0E1C-00D4-0CBA62EB1517" name="REL_CN_UF_UF_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 20:52:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F7EFDB25-5DEB-16A7-F80C-B9071E370A75"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

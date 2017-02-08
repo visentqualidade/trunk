@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="658CC524-E7C0-20F8-257F-52117C20FF0F" name="PROCESSA_FORMATACAO_CAMPO">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-03 19:17:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<endOfScript>Insert into PROCESSA_FORMATACAO_CAMPO (FILTRO,CLASSIFICACAO,CLASSE_REGRA,MATRIZ,ID_FORMATACAO) values (&apos;tto&apos;,&apos;TRUNC(TTO/60)&apos;,&apos;ProcessaFormatacaoTTOMin&apos;,&apos;4&apos;,&apos;1&apos;);&lt;br/&gt;Insert into PROCESSA_FORMATACAO_CAMPO (FILTRO,CLASSIFICACAO,CLASSE_REGRA,MATRIZ,ID_FORMATACAO) values (&apos;ttt&apos;,&apos;TRUNC(TTT/60)&apos;,&apos;ProcessaFormatacaoTTTMin&apos;,&apos;4&apos;,&apos;2&apos;);</endOfScript>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_FORMATACAO" id="05A8B278-A398-644F-FC36-5249D3D6A061">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-03 19:19:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FILTRO" id="1870737D-2E5F-5247-5E5A-C6C09A6DA1A3">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-03 19:19:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLASSIFICACAO" id="0885324D-0CFA-58A8-38FB-BD37AAC0FA60">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-03 19:19:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLASSE_REGRA" id="3303CA90-1C23-37FD-DEA3-D38114CFCC26">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-03 19:19:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MATRIZ" id="7FAC9C7F-2EFB-1D30-0EA4-5A56B9EE558B">
+<createdBy>osx</createdBy>
+<createdTime>2014-12-03 19:19:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

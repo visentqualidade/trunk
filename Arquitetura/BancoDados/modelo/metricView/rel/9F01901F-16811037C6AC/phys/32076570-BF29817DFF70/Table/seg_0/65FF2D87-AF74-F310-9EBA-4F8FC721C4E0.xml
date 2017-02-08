@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="UF" directorySegmentName="seg_0" id="65FF2D87-AF74-F310-9EBA-4F8FC721C4E0">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>D9D8A6BB-1384-C0BF-9EA4-6EE3860BD224</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="UF_PK" id="589279A3-9A51-A356-7423-629B13DCF37B">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>D9D8A6BB-1384-C0BF-9EA4-6EE3860BD224</schemaObject>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_UF" id="54911560-EA8E-531A-F970-F7A6191EC1B8">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_GEOGRAFIA" id="74A6D47E-964A-DBD2-FFE3-D36552A70949">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOME_EXTENSO" id="A3AB22B2-3E89-C67C-978D-9B12F770EAFF">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_REGIAO" id="D30FB0AA-A159-1A5B-B75A-C049C0806794">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOME" id="EDA17E9E-C192-94F7-8195-5A17CCEBA83A">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="UF_PK" id="2CFE1C03-3C9D-97B2-79E3-EC08E4A3D635">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:16:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SnapshotOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.SnapshotOraclev11g" name="VM_FILTRO_GRUPO_CNG" directorySegmentName="seg_0" id="5FB7B441-2EE0-729A-BD84-257DD0903746">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-15 13:55:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<defaultSegment>NO</defaultSegment>
+<logging>NO</logging>
+<nextDate>sysdate + 4/24</nextDate>
+<refresh>YES</refresh>
+<refreshType>COMPLETE</refreshType>
+<startDate>trunc(sysdate)</startDate>
+<subquery>SELECT UNIQUE CDRVIEW_CHAM_ORIG_HORA.DESTINO FROM CDRVIEW_CHAM_ORIG_HORA order by 1</subquery>
+<user>A03C50F9-D66E-3013-5D76-32EDFED9BD32</user>
+<with></with>
+</SnapshotOraclev11g>

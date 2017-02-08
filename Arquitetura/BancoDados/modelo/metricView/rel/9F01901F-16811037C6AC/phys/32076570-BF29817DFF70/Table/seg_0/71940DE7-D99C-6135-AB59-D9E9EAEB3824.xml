@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="MSC_CN_VINCULADO" directorySegmentName="seg_0" id="71940DE7-D99C-6135-AB59-D9E9EAEB3824">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CN_ORIGEM" id="0A655CC4-1A03-AC16-0698-420D781AE568">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="335B5CD8-04D7-969B-3B4A-C3AEF8C0A413">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MSC_DESTINO" id="3A76A31B-043A-0279-8493-1383990466FB">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MSC_ORIGEM" id="59D33BC7-2B8A-1E77-52F4-F5C79F482740">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA" id="5B97951F-F968-6AB2-0C17-1AFE92EB713B">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CN_DESTINO" id="CA3C55AE-F4D1-C7F8-CD17-CD9C0E8998E5">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-11 17:40:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>

@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B58EB15D-FB76-6F1A-B8CB-B68CB13491A1" name="IND_REF_INDICADOR_QUALIDADE_FK">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-17 14:37:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<containerWithKeyObject>0D1F9992-2AF0-3343-3908-B88486D4BA1B</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>AE5B13D3-06F8-5F2B-71B6-401CC8CAB789</localFKIndex>
+<keyObject>277C303B-9612-5EA6-0013-62CD5BC0B34B</keyObject>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

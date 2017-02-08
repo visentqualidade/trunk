@@ -1,0 +1,162 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3D5FD430-84FC-BF9A-9EEC-2827A7FA4A6C" name="TB_META_ACORDO_AUDIT">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 13:57:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REV" id="B02A4E15-1636-2570-FC97-577095753BBF">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 13:57:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>B633DF23-6F8B-23C2-7EAF-6AD2A8A9CA7B</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="443A563B-0D92-03D2-E241-61E96DE7FF2E" referredColumn="B633DF23-6F8B-23C2-7EAF-6AD2A8A9CA7B"/>
+</associations>
+</Column>
+<Column name="REVTYPE" id="A3B8FFC6-1A6F-9042-AC48-DD64EC0B1307">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 13:57:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_FIM" id="0CDB81F4-B1CD-FAF6-69DF-5A34AADF5931">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 13:57:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_INICIO" id="6EC7D07A-D5F3-48D4-E382-3C4A5D8A666E">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 13:59:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_META" id="0C398536-6FE9-F1A2-1268-371687D3ABBA">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 13:57:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_ACORDO" id="E0B540F3-0204-8730-733D-4A3ED28063D9">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 13:59:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_INDICADOR" id="FDFBDA2C-0AD4-3102-C7A6-D97D3D443912">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 13:57:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>462E3300-3166-BCE0-8651-4DDEE9E1EA1B</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="024CC796-895F-4FE6-0BC5-BFFBF3FDF991" referredColumn="462E3300-3166-BCE0-8651-4DDEE9E1EA1B"/>
+</associations>
+</Column>
+<Column name="ID_TIPO_ACORDO" id="549EB3E4-3C4E-E210-0B5F-7A3D7CF4367D">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 14:01:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>CE32FE99-EB8A-3018-026F-5377B58C2D0C</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7ED5BDCF-0304-1B74-32CD-72EC88ABBF86" referredColumn="CE32FE99-EB8A-3018-026F-5377B58C2D0C"/>
+</associations>
+</Column>
+<Column name="ID_META_ACORDO" id="CF3FE441-89AD-868F-8DE5-6E6984307EAE">
+<createdBy>osx</createdBy>
+<createdTime>2013-06-28 14:14:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="20AB3E27-768F-E301-BCD0-F3D8EE5B6112" name="TB_META_ANATEL_AUDITv2_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 13:57:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="0CDB81F4-B1CD-FAF6-69DF-5A34AADF5931"/>
+<colUsage columnID="B02A4E15-1636-2570-FC97-577095753BBF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="17B6C617-18AA-B85C-C32D-4E8BFA379FB8" name="TB_MET_ACOR_AUDIT_TB_REV_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 13:57:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<indexColumnUsage>
+<colUsage columnID="B02A4E15-1636-2570-FC97-577095753BBF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="87D02540-C1E7-32CF-4225-7724268DCAC8" name="TB_META_ACOR_AUDIT_INDIC_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 14:05:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<indexColumnUsage>
+<colUsage columnID="FDFBDA2C-0AD4-3102-C7A6-D97D3D443912"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6C9836B8-9FEE-FE99-DB79-E5708AAB7A74" name="TB_ME_ACOR_AUDIT_TIP_ACOR_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-25 14:05:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<indexColumnUsage>
+<colUsage columnID="549EB3E4-3C4E-E210-0B5F-7A3D7CF4367D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

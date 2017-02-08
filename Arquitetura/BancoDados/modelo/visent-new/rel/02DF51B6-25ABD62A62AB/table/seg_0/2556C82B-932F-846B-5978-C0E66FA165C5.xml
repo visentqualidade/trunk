@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2556C82B-932F-846B-5978-C0E66FA165C5" name="REL_REGIONAL_CN">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>VISENT</sourceObjSchema>
+<sourceObjName>REL_REGIONAL_CN</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_REGIONAL" id="66B91FC5-65A6-BBF7-5D29-01914C920872">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>REL_REGIONAL_CN</sourceObjSchema>
+<sourceObjName>ID_REGIONAL</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>E0677346-6301-0F3D-F17C-9A08069329B4</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A3251F78-6A9B-1D29-8BA0-DC4E6017ADED" referredColumn="E0677346-6301-0F3D-F17C-9A08069329B4"/>
+</associations>
+</Column>
+<Column name="ID_CN" id="B7509F7B-ACA3-B2C2-0E0F-48516D520155">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>REL_REGIONAL_CN</sourceObjSchema>
+<sourceObjName>ID_CN</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>CE2E03D2-0E67-0A17-AD4B-4FA7EEC2E810</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D3E00278-0B52-9960-5804-4BA080814B3B" referredColumn="CE2E03D2-0E67-0A17-AD4B-4FA7EEC2E810"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5AA15444-A040-B714-37A6-3FF8BD127B1C" name="REL_REG_COD_NAC_IDCN_IDX">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>VISENT</sourceObjSchema>
+<sourceObjName>REL_REG_COD_NAC_IDCN_IDX</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7509F7B-ACA3-B2C2-0E0F-48516D520155"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="69018FF2-8261-6369-5B1C-4064C03A5BE6" name="REL_REG_COD_NAC_FK_REG">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66B91FC5-65A6-BBF7-5D29-01914C920872"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="06F82720-F383-CA3A-2EE1-27DC43965078" name="REL_REGIONAL_CN_CN_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 20:50:10 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7509F7B-ACA3-B2C2-0E0F-48516D520155"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

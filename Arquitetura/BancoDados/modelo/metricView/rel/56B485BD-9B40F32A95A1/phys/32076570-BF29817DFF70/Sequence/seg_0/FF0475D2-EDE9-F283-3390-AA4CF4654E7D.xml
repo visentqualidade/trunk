@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="SEQ_ID_GRUPO_ROTA" directorySegmentName="seg_0" id="FF0475D2-EDE9-F283-3390-AA4CF4654E7D">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>SEQ_ID_GRUPO_ROTA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<cache>20</cache>
+<cycle>YES</cycle>
+<incrementBy>1</incrementBy>
+<maxValue>999999999999999</maxValue>
+<minValue>1</minValue>
+<order>YES</order>
+<user>6414AE3A-CF19-19CC-4584-40935F6279FB</user>
+</SequenceOraclev10g>

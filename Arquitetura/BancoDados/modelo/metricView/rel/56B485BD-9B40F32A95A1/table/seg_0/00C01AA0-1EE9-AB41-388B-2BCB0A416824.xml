@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="00C01AA0-1EE9-AB41-388B-2BCB0A416824" name="MATRIZ_INDICADOR">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<endOfScript>Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;1&apos;,&apos;1&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;1&apos;,&apos;2&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;1&apos;,&apos;3&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;1&apos;,&apos;4&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;1&apos;,&apos;5&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;1&apos;,&apos;6&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;1&apos;,&apos;7&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;1&apos;,&apos;8&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;1&apos;,&apos;9&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;1&apos;,&apos;10&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;2&apos;,&apos;1&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;2&apos;,&apos;2&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;2&apos;,&apos;3&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;2&apos;,&apos;4&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;2&apos;,&apos;5&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;2&apos;,&apos;6&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;2&apos;,&apos;7&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;2&apos;,&apos;8&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;2&apos;,&apos;9&apos;);&lt;br/&gt;Insert into INTERCONEXAO.MATRIZ_INDICADOR (ID_MATRIZ,ID_INDICADOR) values (&apos;2&apos;,&apos;10&apos;);</endOfScript>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_MATRIZ" id="B58C50F5-0162-8058-B36F-B814681B7C87">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>D1372E58-0C72-FF6A-A316-9B737979E713</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F22E3713-D203-C6A9-C620-C6F9E945AB1A" referredColumn="D1372E58-0C72-FF6A-A316-9B737979E713"/>
+</associations>
+</Column>
+<Column name="ID_INDICADOR" id="7AF20AA3-1CEB-CA5A-BA37-2C1C7C25C72D">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>DE2A12F4-5947-DD8F-A8EF-9E6DC7ACE085</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DCBD9BD9-BD97-4E3D-04CD-D8708242CE85" referredColumn="DE2A12F4-5947-DD8F-A8EF-9E6DC7ACE085"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="69643A8F-9517-36FE-ACA1-D6E54D805A5F" name="MATRIZ_INDICADOR_FK_MATRIZ">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B58C50F5-0162-8058-B36F-B814681B7C87"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="55AE00C3-4AE0-E73A-8E93-84DC14BCCCA6" name="MATRIZ_INDICADOR_FK_INDICADOR">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7AF20AA3-1CEB-CA5A-BA37-2C1C7C25C72D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

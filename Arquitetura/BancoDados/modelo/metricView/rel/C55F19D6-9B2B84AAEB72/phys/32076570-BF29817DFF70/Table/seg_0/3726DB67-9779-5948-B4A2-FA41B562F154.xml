@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="HISTORICO_IMSI_STATUS" directorySegmentName="seg_0" id="3726DB67-9779-5948-B4A2-FA41B562F154">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:16:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>5F09FBDB-D526-8FDC-01ED-30398D36D36E</schemaObject>
+<logging>YES</logging>
+<partitionList class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionListOraclev11g" name="PL8" id="B7E54CFD-BCB5-4432-5E4D-3A076A2367DB">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:42:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<columnIDs>737CF5DD-42D1-1798-4C47-820B4426A601</columnIDs>
+<intervalExpression>NUMTODSINTERVAL(1,&apos;DAY&apos;)</intervalExpression>
+</partitionList>
+<partitioned>YES</partitioned>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DCA950DF-DA01-9725-0108-AA8D42761A17</segment>
+<temporaryChanged>false</temporaryChanged>
+<user>F6B21F4C-8864-F8B4-9BE1-6A880AE3CBA1</user>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="AREA" id="25BC137D-7485-6454-4AAF-8E0D34AB9FE6">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:34:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MSISDN" id="3787C891-D8D5-B164-B088-3C865569D882">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:34:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UF" id="574D0CD5-040B-0FF9-6186-0CB921E1AE8A">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:33:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA" id="737CF5DD-42D1-1798-4C47-820B4426A601">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:32:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ULTIMA_DATA" id="96C48B04-A1BE-C755-01B8-2D0B7CA79F52">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:35:06 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IMSI" id="B5B53C4E-2EC8-8186-BAA4-C6034155FDBD">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:34:31 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="APN" id="D9846607-6BB0-50A9-81CF-6292994980EB">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:34:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STATUS" id="FEEE0D4D-B031-8E9A-E8B1-E798B33A05D9">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:35:06 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<partitions>
+<Partition class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionOraclev11g" name="PARTITION_FIRST" id="CA9B6D4D-67DB-1543-24EB-234B6B400CBF">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 17:42:44 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<position>1</position>
+<segment>DCA950DF-DA01-9725-0108-AA8D42761A17</segment>
+<tableSpace>A96E578D-6C5D-5E57-4B79-BBB01F717E8F</tableSpace>
+<valueList>TO_DATE(&apos; 2000-01-01 00:00:00&apos;, &apos;SYYYY-MM-DD HH24:MI:SS&apos;, &apos;NLS_CALENDAR=GREGORIAN&apos;)</valueList>
+</Partition>
+</partitions>
+</TableProxyOraclev11g>

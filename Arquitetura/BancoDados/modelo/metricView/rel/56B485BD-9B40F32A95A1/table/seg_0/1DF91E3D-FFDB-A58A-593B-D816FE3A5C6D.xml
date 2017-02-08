@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1DF91E3D-FFDB-A58A-593B-D816FE3A5C6D" name="GRUPO">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>GRUPO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:34:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Create Sequence Metricview.Seq_Grupo Minvalue 0 Maxvalue 9999999999999 Increment By 1 Start With 0 Cache 20 Noorder  Nocycle ;&lt;br/&gt;Insert into METRICVIEW.GRUPO (ID_GRUPO,DESCRICAO,NOME) values (&apos;5000&apos;,&apos;asdqwe1212&apos;,&apos;GRUPO DEV&apos;);&lt;br/&gt;Insert into METRICVIEW.GRUPO (ID_GRUPO,DESCRICAO,NOME) values (&apos;7000&apos;,&apos;frffff1212123123&apos;,&apos;testeovos1212&apos;);&lt;br/&gt;</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_GRUPO" id="C88BABFA-1D04-1390-4A8F-ACFCE01275E6">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>GRUPO</sourceObjSchema>
+<sourceObjName>ID_GRUPO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:34:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRICAO" id="710B1F30-1010-8ADD-D086-C7150A42541F">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>GRUPO</sourceObjSchema>
+<sourceObjName>DESCRICAO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:34:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="8015BE9A-2CC0-A895-81E2-9BF27EBFA781">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>GRUPO</sourceObjSchema>
+<sourceObjName>NOME</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:34:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="509E2165-63DC-F8AF-7D7D-370628CAD850" name="GRUPO_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>GRUPO_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:34:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C88BABFA-1D04-1390-4A8F-ACFCE01275E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B561241F-A027-CDC9-64FA-31A644DA54D6" name="GRUPO_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>GRUPO_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:34:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C88BABFA-1D04-1390-4A8F-ACFCE01275E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

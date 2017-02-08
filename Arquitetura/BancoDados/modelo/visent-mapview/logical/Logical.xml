@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="BD589A6E-D97A-1659-86AF-7D7A2BCAD91B" mainViewID="66EC26A4-8C41-4470-58F1-2A2CB769B2DF">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:08:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="AED82376-4930-C148-C879-55E95ED75651" name="VIEW_SMP3_PMM_DDX">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>VIEW_SMP3_PMM_DDX</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-09 18:54:47 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>WITH regionais AS&lt;br/&gt;  (SELECT REGIONAL.NOME AS regional,&lt;br/&gt;    REGIONAL.*&lt;br/&gt;  FROM REGIONAL&lt;br/&gt;  WHERE indicador_smp = &apos;T&apos;&lt;br/&gt;  ),&lt;br/&gt;  dias AS&lt;br/&gt;  (SELECT data&lt;br/&gt;  FROM ddx&lt;br/&gt;  WHERE TO_CHAR(ddx.data, &apos;MM/yyyy&apos;) = TO_CHAR(SYSDATE, &apos;MM/yyyy&apos;)&lt;br/&gt;  ),&lt;br/&gt;  pmms AS&lt;br/&gt;  (SELECT PMM.NOME AS pmm, PMM.INICIO, PMM.FIM FROM PMM&lt;br/&gt;  ),&lt;br/&gt;  regionais_x_dias_x_pmms AS&lt;br/&gt;  (SELECT * FROM regionais r, pmms p&lt;br/&gt;  ),&lt;br/&gt;  dados_traducao_sem_vinculo AS&lt;br/&gt;  (SELECT VIEW_MSC_VINCULO_SMP3.DATA,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP3.HORA,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP3.PMM,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP3.CN,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP3.MSC,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP3.SCV,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP3.CHAM,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP3.OKT,&lt;br/&gt;    VIEW_MSC_VINCULO_SMP3.INV&lt;br/&gt;  FROM VIEW_MSC_VINCULO_SMP3&lt;br/&gt;  WHERE VIEW_MSC_VINCULO_SMP3.CODIGO != &apos;NID&apos;&lt;br/&gt;  ),&lt;br/&gt;  dados_x_pmm AS&lt;br/&gt;  (SELECT Reg.NOME AS regional,&lt;br/&gt;    Tab.PMM,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.OKT, 0))), &apos;0&apos;)                                      AS Smp3_A,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.CHAM, 0) - NVL(Tab.SCV, 0) - NVL(Tab.INV, 0))), &apos;0&apos;) AS SMP3_B&lt;br/&gt;  FROM VIEW_MSC_CN_ATIVO_SMP3 b,&lt;br/&gt;    dados_traducao_sem_vinculo Tab&lt;br/&gt;  INNER JOIN Cn Cn&lt;br/&gt;  ON Cn.Nome = Tab.CN&lt;br/&gt;  INNER JOIN Metricview.Rel_Regional_Cod_Nacional Reg_Cod&lt;br/&gt;  ON Reg_Cod.Id_Cn = Cn.Id_Cn&lt;br/&gt;  INNER JOIN regionais Reg&lt;br/&gt;  ON Reg_Cod.Id_Regional = Reg.ID_REGIONAL,&lt;br/&gt;    PMM pmm,&lt;br/&gt;    dias dias&lt;br/&gt;  WHERE TRUNC(dias.data)                               = TRUNC(Tab.DATA)&lt;br/&gt;  AND Tab.MSC                                          = b.MSC&lt;br/&gt;  AND Tab.CN                                           = b.CN&lt;br/&gt;  AND to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO&lt;br/&gt;  AND Tab.HORA BETWEEN pmm.INICIO AND pmm.FIM&lt;br/&gt;  AND b.STATUS = &apos;T&apos;&lt;br/&gt;  GROUP BY Reg.NOME,&lt;br/&gt;    Tab.PMM&lt;br/&gt;  ),&lt;br/&gt;  dados_finais AS&lt;br/&gt;  (SELECT reg.regional,&lt;br/&gt;    reg.pmm,&lt;br/&gt;    CASE&lt;br/&gt;      WHEN dados.SMP3_B            = &apos;0&apos;&lt;br/&gt;      AND dados.Smp3_A            != &apos;0&apos;&lt;br/&gt;      AND to_number(dados.Smp3_A) &gt;= 0&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      WHEN dados.SMP3_B = &apos;0&apos;&lt;br/&gt;      AND dados.Smp3_A != &apos;0&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      WHEN dados.Smp3_A = &apos;0&apos;&lt;br/&gt;      AND dados.SMP3_B != &apos;0&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      ELSE NVL(trim(TO_CHAR(ROUND((dados.Smp3_A * 100 / dados.SMP3_B), 2), &apos;999990D99&apos;)), &apos;0,00&apos;)&lt;br/&gt;    END AS smp3,&lt;br/&gt;    NVL(dados.Smp3_A, &apos;0&apos;) smp3_a,&lt;br/&gt;    NVL(dados.SMP3_B, &apos;0&apos;) smp3_b&lt;br/&gt;  FROM dados_x_pmm dados,&lt;br/&gt;    regionais_x_dias_x_pmms reg&lt;br/&gt;  WHERE reg.regional = dados.regional(+)&lt;br/&gt;  AND reg.pmm        = dados.PMM(+)&lt;br/&gt;  )&lt;br/&gt;SELECT dados_finais.regional,&lt;br/&gt;  dados_finais.pmm,&lt;br/&gt;  CASE&lt;br/&gt;    WHEN dados_finais.smp3          != &apos;0,00&apos;&lt;br/&gt;    AND to_number(dados_finais.smp3) &gt; 100&lt;br/&gt;    THEN &apos;100,00&apos;&lt;br/&gt;    ELSE REPLACE(dados_finais.smp3, &apos;.&apos;, &apos;,&apos;)&lt;br/&gt;  END                 AS SMP3,&lt;br/&gt;  dados_finais.smp3_a AS smp_a,&lt;br/&gt;  dados_finais.smp3_b AS smp_b&lt;br/&gt;FROM dados_finais&lt;br/&gt;ORDER BY 1,&lt;br/&gt;  2,&lt;br/&gt;  3</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;With regionais As (Select REGIONAL.NOME As regional, REGIONAL.* From REGIONAL Where indicador_smp = &apos;T&apos;), dias As (Select data From ddx Where TO_CHAR(ddx.data, &apos;MM/yyyy&apos;) = TO_CHAR(SysDate, &apos;MM/yyyy&apos;)), pmms As (Select PMM.NOME As pmm, PMM.INICIO, PMM.FIM From PMM), regionais_x_dias_x_pmms As (Select * From regionais r, pmms p), dados_traducao_sem_vinculo As (Select VIEW_MSC_VINCULO_SMP3.DATA, VIEW_MSC_VINCULO_SMP3.HORA, VIEW_MSC_VINCULO_SMP3.PMM, VIEW_MSC_VINCULO_SMP3.CN, VIEW_MSC_VINCULO_SMP3.MSC, VIEW_MSC_VINCULO_SMP3.SCV, VIEW_MSC_VINCULO_SMP3.CHAM, VIEW_MSC_VINCULO_SMP3.OKT, VIEW_MSC_VINCULO_SMP3.INV From VIEW_MSC_VINCULO_SMP3 Where VIEW_MSC_VINCULO_SMP3.CODIGO != &apos;NID&apos;), dados_x_pmm As (Select Reg.NOME As regional, Tab.PMM, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0))), &apos;0&apos;) As Smp3_A, NVL(TO_CHAR(Sum(NVL(Tab.CHAM, 0) - NVL(Tab.SCV, 0) - NVL(Tab.INV, 0))), &apos;0&apos;) As SMP3_B From VIEW_MSC_CN_ATIVO_SMP3 b, dados_traducao_sem_vinculo Tab Inner Join Cn Cn On Cn.Nome = Tab.CN Inner Join Metricview.Rel_Regional_Cod_Nacional Reg_Cod On Reg_Cod.Id_Cn = Cn.Id_Cn Inner Join regionais Reg On Reg_Cod.Id_Regional = Reg.ID_REGIONAL, PMM pmm, dias dias Where TRUNC(dias.data) = TRUNC(Tab.DATA) And Tab.MSC = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And Tab.HORA Between pmm.INICIO And pmm.FIM And b.STATUS = &apos;T&apos; Group By Reg.NOME, Tab.PMM), dados_finais As (Select reg.regional, reg.pmm, Case When dados.SMP3_B = &apos;0&apos; And dados.Smp3_A != &apos;0&apos; And to_number(dados.Smp3_A) &gt;= 0 Then &apos;0,00&apos; When dados.SMP3_B = &apos;0&apos; And dados.Smp3_A != &apos;0&apos; Then &apos;0,00&apos; When dados.Smp3_A = &apos;0&apos; And dados.SMP3_B != &apos;0&apos; Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND((dados.Smp3_A * 100 / dados.SMP3_B), 2), &apos;999990D99&apos;)), &apos;0,00&apos;) End As smp3, NVL(dados.Smp3_A, &apos;0&apos;) smp3_a, NVL(dados.SMP3_B, &apos;0&apos;) smp3_b From dados_x_pmm dados, regionais_x_dias_x_pmms reg Where reg.regional = dados.regional(+) And reg.pmm = dados.PMM(+)) Select dados_finais.regional, dados_finais.pmm, Case When dados_finais.smp3 != &apos;0,00&apos; And to_number(dados_finais.smp3) &gt; 100 Then &apos;100,00&apos; Else REPLACE(dados_finais.smp3, &apos;.&apos;, &apos;,&apos;) End As SMP3, dados_finais.smp3_a As smp_a, dados_finais.smp3_b As smp_b From dados_finais Order By 1, 2, 3&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;With regionais As (Select REGIONAL.NOME As regional, REGIONAL.* From REGIONAL Where indicador_smp = &apos;T&apos;), dias As (Select data From ddx Where TO_CHAR(ddx.data, &apos;MM/yyyy&apos;) = TO_CHAR(SysDate, &apos;MM/yyyy&apos;)), pmms As (Select PMM.NOME As pmm, PMM.INICIO, PMM.FIM From PMM), regionais_x_dias_x_pmms As (Select * From regionais r, pmms p), dados_traducao_sem_vinculo As (Select VIEW_MSC_VINCULO_SMP3.DATA, VIEW_MSC_VINCULO_SMP3.HORA, VIEW_MSC_VINCULO_SMP3.PMM, VIEW_MSC_VINCULO_SMP3.CN, VIEW_MSC_VINCULO_SMP3.MSC, VIEW_MSC_VINCULO_SMP3.SCV, VIEW_MSC_VINCULO_SMP3.CHAM, VIEW_MSC_VINCULO_SMP3.OKT, VIEW_MSC_VINCULO_SMP3.INV From VIEW_MSC_VINCULO_SMP3 Where VIEW_MSC_VINCULO_SMP3.CODIGO != &apos;NID&apos;), dados_x_pmm As (Select Reg.NOME As regional, Tab.PMM, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0))), &apos;0&apos;) As Smp3_A, NVL(TO_CHAR(Sum(NVL(Tab.CHAM, 0) - NVL(Tab.SCV, 0) - NVL(Tab.INV, 0))), &apos;0&apos;) As SMP3_B From VIEW_MSC_CN_ATIVO_SMP3 b, dados_traducao_sem_vinculo Tab Inner Join Cn Cn On Cn.Nome = Tab.CN Inner Join Metricview.Rel_Regional_Cod_Nacional Reg_Cod On Reg_Cod.Id_Cn = Cn.Id_Cn Inner Join regionais Reg On Reg_Cod.Id_Regional = Reg.ID_REGIONAL, PMM pmm, dias dias Where TRUNC(dias.data) = TRUNC(Tab.DATA) And Tab.MSC = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And Tab.HORA Between pmm.INICIO And pmm.FIM And b.STATUS = &apos;T&apos; Group By Reg.NOME, Tab.PMM), dados_finais As (Select reg.regional, reg.pmm, Case When dados.SMP3_B = &apos;0&apos; And dados.Smp3_A != &apos;0&apos; And to_number(dados.Smp3_A) &gt;= 0 Then &apos;0,00&apos; When dados.SMP3_B = &apos;0&apos; And dados.Smp3_A != &apos;0&apos; Then &apos;0,00&apos; When dados.Smp3_A = &apos;0&apos; And dados.SMP3_B != &apos;0&apos; Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND((dados.Smp3_A * 100 / dados.SMP3_B), 2), &apos;999990D99&apos;)), &apos;0,00&apos;) End As smp3, NVL(dados.Smp3_A, &apos;0&apos;) smp3_a, NVL(dados.SMP3_B, &apos;0&apos;) smp3_b From dados_x_pmm dados, regionais_x_dias_x_pmms reg Where reg.regional = dados.regional(+) And reg.pmm = dados.PMM(+)) Select dados_finais.regional, dados_finais.pmm, Case When dados_finais.smp3 != &apos;0,00&apos; And to_number(dados_finais.smp3) &gt; 100 Then &apos;100,00&apos; Else REPLACE(dados_finais.smp3, &apos;.&apos;, &apos;,&apos;) End As SMP3, dados_finais.smp3_a As smp_a, dados_finais.smp3_b As smp_b From dados_finais Order By 1, 2, 3&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_finais&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;142&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select REGIONAL.NOME As regional, REGIONAL.* From REGIONAL Where indicador_smp = &apos;T&apos;&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;REGIONAL&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;101&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select data From ddx Where TO_CHAR(ddx.data, &apos;MM/yyyy&apos;) = TO_CHAR(SysDate, &apos;MM/yyyy&apos;)&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;ddx&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;47&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select PMM.NOME As pmm, PMM.INICIO, PMM.FIM From PMM&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;PMM&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;119&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select * From regionais r, pmms p&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;regionais r&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;65&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;pmms p&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;101&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select VIEW_MSC_VINCULO_SMP3.DATA, VIEW_MSC_VINCULO_SMP3.HORA, VIEW_MSC_VINCULO_SMP3.PMM, VIEW_MSC_VINCULO_SMP3.CN, VIEW_MSC_VINCULO_SMP3.MSC, VIEW_MSC_VINCULO_SMP3.SCV, VIEW_MSC_VINCULO_SMP3.CHAM, VIEW_MSC_VINCULO_SMP3.OKT, VIEW_MSC_VINCULO_SMP3.INV From VIEW_MSC_VINCULO_SMP3 Where VIEW_MSC_VINCULO_SMP3.CODIGO != &apos;NID&apos;&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;VIEW_MSC_VINCULO_SMP3&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;191&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Reg.NOME As regional, Tab.PMM, NVL(TO_CHAR(Sum(NVL(Tab.OKT, 0))), &apos;0&apos;) As Smp3_A, NVL(TO_CHAR(Sum(NVL(Tab.CHAM, 0) - NVL(Tab.SCV, 0) - NVL(Tab.INV, 0))), &apos;0&apos;) As SMP3_B From VIEW_MSC_CN_ATIVO_SMP3 b, dados_traducao_sem_vinculo Tab Inner Join Cn Cn On Cn.Nome = Tab.CN Inner Join Metricview.Rel_Regional_Cod_Nacional Reg_Cod On Reg_Cod.Id_Cn = Cn.Id_Cn Inner Join regionais Reg On Reg_Cod.Id_Regional = Reg.ID_REGIONAL, PMM pmm, dias dias Where TRUNC(dias.data) = TRUNC(Tab.DATA) And Tab.MSC = b.MSC And Tab.CN = b.CN And to_date(TO_CHAR(Tab.DATA, &apos;MM/yyyy&apos;), &apos;MM/yyyy&apos;) = b.PERIODO And Tab.HORA Between pmm.INICIO And pmm.FIM And b.STATUS = &apos;T&apos; Group By Reg.NOME, Tab.PMM&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;VIEW_MSC_CN_ATIVO_SMP3 b&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;119&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;dados_traducao_sem_vinculo Tab&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;214&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;Cn Cn&quot; X=&quot;50&quot; Y=&quot;164&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;Metricview.Rel_Regional_Cod_Nacional Reg_Cod&quot; X=&quot;50&quot; Y=&quot;236&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;regionais Reg&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;119&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;PMM pmm&quot; X=&quot;50&quot; Y=&quot;308&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;dias dias&quot; X=&quot;240&quot; Y=&quot;344&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select reg.regional, reg.pmm, Case When dados.SMP3_B = &apos;0&apos; And dados.Smp3_A != &apos;0&apos; And to_number(dados.Smp3_A) &gt;= 0 Then &apos;0,00&apos; When dados.SMP3_B = &apos;0&apos; And dados.Smp3_A != &apos;0&apos; Then &apos;0,00&apos; When dados.Smp3_A = &apos;0&apos; And dados.SMP3_B != &apos;0&apos; Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND((dados.Smp3_A * 100 / dados.SMP3_B), 2), &apos;999990D99&apos;)), &apos;0,00&apos;) End As smp3, NVL(dados.Smp3_A, &apos;0&apos;) smp3_a, NVL(dados.SMP3_B, &apos;0&apos;) smp3_b From dados_x_pmm dados, regionais_x_dias_x_pmms reg Where reg.regional = dados.regional(+) And reg.pmm = dados.PMM(+)&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_x_pmm dados&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;regionais_x_dias_x_pmms reg&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="REGIONAL" id="7AE19E96-EC45-560E-7528-0B130C6EA199">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 12:50:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (45)</dataType>
+<headerAlias>REGIONAL</headerAlias>
+<expression>dados_finais.regional</expression>
+<reference>false</reference>
+<viewID>AED82376-4930-C148-C879-55E95ED75651</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PMM" id="C3FBB8BA-2BF3-7EAA-C68A-13CBAE203E71">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 12:50:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (20)</dataType>
+<headerAlias>PMM</headerAlias>
+<expression>dados_finais.pmm</expression>
+<reference>false</reference>
+<viewID>AED82376-4930-C148-C879-55E95ED75651</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP3" id="EC72AFCA-2B9D-73CD-F780-828D538A9198">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 12:50:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP3</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>SMP3</headerAlias>
+<expression>Case When dados_finais.smp3 != &apos;0,00&apos; And to_number(dados_finais.smp3) &gt; 100 Then &apos;100,00&apos; Else REPLACE(dados_finais.smp3, &apos;.&apos;, &apos;,&apos;) End</expression>
+<reference>false</reference>
+<viewID>AED82376-4930-C148-C879-55E95ED75651</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="smp_a" id="02A336D7-953D-16E8-AD66-40B38B5F2EFB">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 12:50:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>smp_a</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SMP_A</headerAlias>
+<expression>dados_finais.smp3_a</expression>
+<reference>false</reference>
+<viewID>AED82376-4930-C148-C879-55E95ED75651</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="smp_b" id="683B02E9-10BD-0664-157C-BA232C653D3C">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 12:50:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>smp_b</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SMP_B</headerAlias>
+<expression>dados_finais.smp3_b</expression>
+<reference>false</reference>
+<viewID>AED82376-4930-C148-C879-55E95ED75651</viewID>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FE2490EA-1621-FD48-AE63-2FCE99EFB830">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>PMM</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP3</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="1AFFCC74-899C-9D8B-231A-B09F8157F8D6">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP3</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="33F52920-E2E3-8C7F-9745-B9EBE8EDBBE5">
+<columnName>CODIGO</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_VINCULO_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="980C590B-4B68-D123-BB76-3EBB43180549">
+<columnName>MSC</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="CA75C22F-74E4-2055-7840-803B4F95CF34">
+<columnName>CN</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DDB023AF-A437-044F-D8E2-FEFDAAD61F55">
+<columnName>PERIODO</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="0921695F-DC0B-FE9D-A0CA-43C13320924B">
+<columnName>INICIO</columnName>
+<schema>easyview</schema>
+<tableName>PMM</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B5B26751-51B6-BA9B-1F4A-7FBFC28B4C6E">
+<columnName>FIM</columnName>
+<schema>easyview</schema>
+<tableName>PMM</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="79DDAD75-62AB-C3E2-4255-4E03C9E481AF">
+<columnName>STATUS</columnName>
+<schema>easyview</schema>
+<tableName>VIEW_MSC_CN_ATIVO_SMP3</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

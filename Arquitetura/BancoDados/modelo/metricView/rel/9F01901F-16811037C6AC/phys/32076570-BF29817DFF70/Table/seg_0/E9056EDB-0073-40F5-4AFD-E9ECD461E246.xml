@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="REGIONAL" directorySegmentName="seg_0" id="E9056EDB-0073-40F5-4AFD-E9ECD461E246">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:18:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>D9D8A6BB-1384-C0BF-9EA4-6EE3860BD224</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="REGIONAL_PK" id="7D43F6B5-9489-BDFF-6AA0-7D617F6B41C1">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:18:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>D9D8A6BB-1384-C0BF-9EA4-6EE3860BD224</schemaObject>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DESCRICAO" id="4DE740F5-ED44-DA0D-B7B6-0B3895B23933">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:18:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="INDICADOR_SMP" id="60BAA6E5-4DAA-9FA6-9B13-AC1C76B36EC2">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:18:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<defaultValue>&apos;F&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="NOME" id="81A4650B-9099-E3A6-BF0A-D5A537221E19">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:18:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_REGIONAL" id="BC03A250-CEC1-F428-D9AC-D68B82D0D56D">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:18:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<defaultValue>1</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="NOME_RELATORIO" id="E435E765-6AD7-5246-4251-5CD1825EEDFB">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:18:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PERMITE_ALTERACAO" id="F980D872-2AAB-9CE4-0602-ACDE5285B0CF">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:18:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<defaultValue>T</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="REGIONAL_PK" id="E688D853-F3DB-9F29-A136-DC89436E03A0">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:18:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

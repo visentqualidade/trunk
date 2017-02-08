@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A7441B4B-9F50-EA6A-04D8-7A47DD1AFC79" name="TIPO_TECNOLOGIA">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>TIPO_TECNOLOGIA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:52:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Create Sequence Metricview.Seq_tipo_tecnologia Minvalue 0 Maxvalue 9999999999999 Increment By 1 Start With 0 Cache 20 Noorder  Nocycle ;&lt;br/&gt;</afterCreate>
+<endOfScript>Insert into METRICVIEW.TIPO_TECNOLOGIA (ID_TIPO_TECNOLOGIA,DESCRICAO) values (&apos;2&apos;,&apos;VOZ&apos;);&lt;br/&gt;Insert into METRICVIEW.TIPO_TECNOLOGIA (ID_TIPO_TECNOLOGIA,DESCRICAO) values (&apos;3&apos;,&apos;DADOS&apos;);&lt;br/&gt;Insert into METRICVIEW.TIPO_TECNOLOGIA (ID_TIPO_TECNOLOGIA,DESCRICAO) values (&apos;4&apos;,&apos;SMS&apos;);&lt;br/&gt;Insert into METRICVIEW.TIPO_TECNOLOGIA (ID_TIPO_TECNOLOGIA,DESCRICAO) values (&apos;5&apos;,&apos;INDEFINIDO&apos;);&lt;br/&gt;&lt;br/&gt;Insert into METRICVIEW.TECNOLOGIA (ID,NOME,ID_TIPO_TECNOLOGIA) values (&apos;1&apos;,&apos;AIR&apos;,&apos;5&apos;);&lt;br/&gt;Insert into METRICVIEW.TECNOLOGIA (ID,NOME,ID_TIPO_TECNOLOGIA) values (&apos;2&apos;,&apos;GPRS&apos;,&apos;3&apos;);&lt;br/&gt;Insert into METRICVIEW.TECNOLOGIA (ID,NOME,ID_TIPO_TECNOLOGIA) values (&apos;3&apos;,&apos;MMS Comverse&apos;,&apos;5&apos;);&lt;br/&gt;Insert into METRICVIEW.TECNOLOGIA (ID,NOME,ID_TIPO_TECNOLOGIA) values (&apos;4&apos;,&apos;Ericsson GSM v.R10&apos;,&apos;2&apos;);&lt;br/&gt;Insert into METRICVIEW.TECNOLOGIA (ID,NOME,ID_TIPO_TECNOLOGIA) values (&apos;5&apos;,&apos;Nokia&apos;,&apos;2&apos;);&lt;br/&gt;Insert into METRICVIEW.TECNOLOGIA (ID,NOME,ID_TIPO_TECNOLOGIA) values (&apos;6&apos;,&apos;SMS CMG GSM&apos;,&apos;4&apos;);&lt;br/&gt;Insert into METRICVIEW.TECNOLOGIA (ID,NOME,ID_TIPO_TECNOLOGIA) values (&apos;7&apos;,&apos;SMS_ACISION&apos;,&apos;4&apos;);&lt;br/&gt;Insert into METRICVIEW.TECNOLOGIA (ID,NOME,ID_TIPO_TECNOLOGIA) values (&apos;8&apos;,&apos;VPN&apos;,&apos;5&apos;);</endOfScript>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_TECNOLOGIA" id="5B47B670-5897-ED45-B3F1-85FFD2C2A13F">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>TIPO_TECNOLOGIA</sourceObjSchema>
+<sourceObjName>ID_TIPO_TECNOLOGIA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:52:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeSize>22</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRICAO" id="71E4D916-88B0-E158-A3E8-036DB9412700">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>TIPO_TECNOLOGIA</sourceObjSchema>
+<sourceObjName>DESCRICAO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:52:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="70559E30-BE15-2793-3BEE-89C798BE7904" name="TIPO_TECNOLOGIA_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>TIPO_TECNOLOGIA_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:52:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B47B670-5897-ED45-B3F1-85FFD2C2A13F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BC1D8465-9921-10AA-D281-B7F9299415C9" name="TIPO_TECNOLOGIA_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>TIPO_TECNOLOGIA_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:52:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B47B670-5897-ED45-B3F1-85FFD2C2A13F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

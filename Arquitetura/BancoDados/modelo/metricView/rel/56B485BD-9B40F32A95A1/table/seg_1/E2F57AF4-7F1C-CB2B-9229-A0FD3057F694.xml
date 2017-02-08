@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="E2F57AF4-7F1C-CB2B-9229-A0FD3057F694" name="GRUPO_ROTA">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>GRUPO_ROTA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>87200B3D-6535-B907-B980-0C8DD0AF6430</importedID>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_GRUPO_ROTA" id="314DD53A-8364-18BE-5A95-5443B05049C0">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>GRUPO_ROTA</sourceObjSchema>
+<sourceObjName>ID_GRUPO_ROTA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>0F84981A-337A-36BB-2114-558C225540B6</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="3B844016-6B7E-AFA0-B453-FB788212337F">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>GRUPO_ROTA</sourceObjSchema>
+<sourceObjName>NOME</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>15E6EB97-8808-D971-F9B4-C0B16C4BDE7F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TP_GRP_ROTA" id="EAFA8733-4399-284D-B96D-931FC38479EF">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>GRUPO_ROTA</sourceObjSchema>
+<sourceObjName>ID_TP_GRP_ROTA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>B032908A-BF34-5E3C-3893-04AA2C84BB5B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>93C92358-0F39-A31B-AB11-5A5AE649B364</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2EF986EF-1020-59E3-8A63-F015022BCF97" referredColumn="93C92358-0F39-A31B-AB11-5A5AE649B364"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="70023824-DE10-A879-A759-13819D6D8286" name="GRUPO_ROTA_PK">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>GRUPO_ROTA_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>43FFEB97-F70F-27F3-73E1-E7C88ED970E4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="314DD53A-8364-18BE-5A95-5443B05049C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9D6BDECE-F5D9-5BDA-3AD9-1101819BD8D0" name="GRUPO_ROTA_PK">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>GRUPO_ROTA_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>9B2232F8-4DFE-0874-8E77-D0FBB03E2A4A</importedID>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="314DD53A-8364-18BE-5A95-5443B05049C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C1719DEB-5C50-DA95-8B8E-D841CD6E38FB" name="GRUPO_ROTA_FK1">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EAFA8733-4399-284D-B96D-931FC38479EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

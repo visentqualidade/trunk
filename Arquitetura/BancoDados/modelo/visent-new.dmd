@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="visent-new" id="1662414B-156A-2830-8642-6C2CCD0EE8DE" version="3.5">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:37:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>1662414B-156A-2830-8642-6C2CCD0EE8DE</designId>
+</OSDM_Design>

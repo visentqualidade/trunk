@@ -1,0 +1,260 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C5DC42B5-2A86-25F8-752E-5FF2460250E6" name="CDRVIEW_VOZ_SETOR">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>B0CC5274-3126-570A-A0D2-EA5187314CD8</importedID>
+<schemaObject>A36D226E-BC2B-F21D-6766-62C3EFF7964B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATA" id="194A5DF5-579E-F312-EF2A-4EA8FD2AEBE7">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>96AAE7E8-B9A4-E234-3C41-482129CA246D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>46347315-CCAD-FB0C-8CAE-E80C03CE76A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CELULA" id="A7EE8AA0-6521-4563-6DA2-57752F73C3FF">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>30328474-C34F-6B03-9E48-7807631BA358</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4CC618E4-E829-FB15-E9F1-6CBE8CF48CD1</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SETOR" id="47221F7E-6ECC-891B-1745-744F68264A93">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>5406ECA3-474B-DFD2-2847-D1D203487EB5</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2402066B-CCAB-C63E-72B9-833688F4A396</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TAC" id="4764E9AC-D7CC-363D-18DE-60EC3E855B96">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>42E9E534-14B7-A1AA-2D90-20D8627843DA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>DE07794D-9321-78A2-94B0-5C06C7103606</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MODELO" id="C825E4A0-43EA-D5DF-7ED7-EFB3891A41F4">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>C3683CCB-9D3E-6287-0E84-B99C8FAEAA6F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>78C5043E-B58A-7D96-6A16-E81219C11B76</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SERVICO" id="5F95912C-CF3D-CC85-E7B7-F6D83899CB91">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>11B2E67F-3128-C9FC-3ABF-953B881BA75D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>16642D84-D35C-5B63-7176-1AA7F590E177</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF" id="B50F6F0B-49FF-0708-E742-2797493E37C4">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>401A23E6-1FDC-F287-08A2-04877F0134BD</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>71553301-988C-16E3-80BB-FB44FDB109A7</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AREA" id="8D33E27D-EF86-BBBA-D51D-0B69091D79DD">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>78A064A0-6706-E7E1-DBCD-C49653E2889E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>71553301-988C-16E3-80BB-FB44FDB109A7</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_MUNICIPIO" id="CF23153F-3C85-32D3-F8AB-52EC05C1233A">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>E9E00FF4-3A19-E84F-1799-52EBA9FA252E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6A80BC46-2A7C-0998-5766-AAE0548D4835</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MUNICIPIO" id="233D9270-072B-F2EC-681A-15BF5AD9297F">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>BCCE4018-DF4F-0D56-F846-54CAD031C187</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2402066B-CCAB-C63E-72B9-833688F4A396</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM" id="F2D03587-7E26-874B-C5BC-45B10666358F">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>7DDB8546-4A12-60D4-0200-1347CA014C03</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LATITUDE" id="2FC5777F-44C8-9803-93D4-FAE2213E45C5">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>C8216CA7-763A-4CDE-3F71-01549134C582</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LONGITUDE" id="5752A8DD-8083-B4AF-0488-4AD9B483545D">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>07CB2A5A-6B76-BF26-7AD3-60F06A3BCCE9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SETOR_TECNOLOGIA" id="F5C3F180-6ECF-DCA9-A055-37ACF0CDC19A">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>37AF7B07-665D-1CE4-666F-F523573524ED</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>16642D84-D35C-5B63-7176-1AA7F590E177</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TTC" id="F43A9E10-8FA8-6491-A330-25D052BEF987">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>833F3338-1001-4D74-6198-D75A6D5F293F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CELULA_TECNOLOGIAS" id="DBDADEEB-FEAF-AAE4-03D5-EA79D9984439">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>12301A6F-A8B4-CF1D-D2E7-EA1CD8059486</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61EE3B15-9924-45D9-E25E-1338A4EF5610</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TERMINAIS" id="814532FA-D3CD-4D9E-E875-2F95F1372FDE">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>94EB5170-C589-40DA-E99C-5E79507688E6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BANDAS" id="C359945B-346C-D99D-538A-DCEDBBA38ECC">
+<sourceDDLFile>tabela.claro</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:46:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>B230E11F-B59E-6618-E46C-331211A5D4A5</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>78C5043E-B58A-7D96-6A16-E81219C11B76</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="56D26A75-BC17-0CEE-7EE4-0EDFED01B9A4" name="CDRVIEW_VOZ_SETOR_CEL_IDX">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-08 13:49:34 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7EE8AA0-6521-4563-6DA2-57752F73C3FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

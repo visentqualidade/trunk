@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<RoleOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.RoleOraclev10g" name="METRICVIEW_ROLE" directorySegmentName="seg_0" id="688141DB-DDA3-2AC7-D78A-180261B62C15">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjName>METRICVIEW_ROLE</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:47 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</RoleOraclev10g>

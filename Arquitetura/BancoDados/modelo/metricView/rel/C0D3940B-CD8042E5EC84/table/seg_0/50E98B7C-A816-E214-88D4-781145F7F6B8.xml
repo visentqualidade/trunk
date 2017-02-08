@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="50E98B7C-A816-E214-88D4-781145F7F6B8" name="TIPO_ASSINANTE">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>TIPO_ASSINANTE</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_ASSINANTE" id="E2132450-DE54-D10D-0A5B-BD3500940EA2">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>TIPO_ASSINANTE</sourceObjSchema>
+<sourceObjName>ID_TIPO_ASSINANTE</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_FILTRO" id="7E89FB6C-5025-B873-DA04-55A07A866427">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>TIPO_ASSINANTE</sourceObjSchema>
+<sourceObjName>NOME_FILTRO</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_TELA" id="65673118-C894-8088-FBC6-3D9B5AB5E0FD">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>TIPO_ASSINANTE</sourceObjSchema>
+<sourceObjName>NOME_TELA</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO_WIDGET" id="7C41D719-8967-4D3C-0108-B18A68AB44A5">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>TIPO_ASSINANTE</sourceObjSchema>
+<sourceObjName>ID_TIPO_WIDGET</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<delegate>67BFD503-C98E-9045-66A3-6BB7543B7022</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="65BAE1E6-6DE7-F07C-A794-B97CC72CEC97" referredColumn="67BFD503-C98E-9045-66A3-6BB7543B7022"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="29A16824-37D5-08CA-9B6D-9D124F090FE8" name="TIPO_ASSINANTE_PK">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>TIPO_ASSINANTE_PK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2132450-DE54-D10D-0A5B-BD3500940EA2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AC5C348F-8F5B-291D-EC31-C9BFF54281B7" name="TIPO_ASSINANTE_PK">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>TIPO_ASSINANTE_PK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2132450-DE54-D10D-0A5B-BD3500940EA2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B4C2C9F8-D404-87CA-EA5B-CD3C8E7E9E28" name="TIPO_ASSINANTE_TIPO_WIDGE_FK1">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C41D719-8967-4D3C-0108-B18A68AB44A5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

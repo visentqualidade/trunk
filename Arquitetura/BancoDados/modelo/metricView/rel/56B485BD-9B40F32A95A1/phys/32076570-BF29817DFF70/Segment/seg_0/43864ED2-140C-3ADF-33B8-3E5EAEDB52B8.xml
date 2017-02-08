@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SegmentOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SegmentOraclev10g" name="Storage6" directorySegmentName="seg_0" id="43864ED2-140C-3ADF-33B8-3E5EAEDB52B8">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-28 16:18:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<maxTrans>255</maxTrans>
+<scInitialExtent>10485760</scInitialExtent>
+<scMaxExtents>2147483645</scMaxExtents>
+<scNextExtent>10485760</scNextExtent>
+</SegmentOraclev10g>

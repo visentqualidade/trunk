@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A00F1CBC-8826-23A3-B9F6-BA8AAB0F6DB5" name="SERV_APOIO_SMP">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 17:59:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into INTERCONEXAO.SERV_APOIO_SMP (ID,NOME_FILTRO,NOME_TELA) values (&apos;1&apos;,&apos;1050&apos;,&apos;1050&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_APOIO_SMP (ID,NOME_FILTRO,NOME_TELA) values (&apos;2&apos;,&apos;1051&apos;,&apos;1051&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_APOIO_SMP (ID,NOME_FILTRO,NOME_TELA) values (&apos;3&apos;,&apos;1052&apos;,&apos;1052&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_APOIO_SMP (ID,NOME_FILTRO,NOME_TELA) values (&apos;4&apos;,&apos;1053&apos;,&apos;1053&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_APOIO_SMP (ID,NOME_FILTRO,NOME_TELA) values (&apos;5&apos;,&apos;1055&apos;,&apos;1055&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_APOIO_SMP (ID,NOME_FILTRO,NOME_TELA) values (&apos;6&apos;,&apos;1056&apos;,&apos;1056&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_APOIO_SMP (ID,NOME_FILTRO,NOME_TELA) values (&apos;7&apos;,&apos;1057&apos;,&apos;1057&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_APOIO_SMP (ID,NOME_FILTRO,NOME_TELA) values (&apos;8&apos;,&apos;1058&apos;,&apos;1058&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="3090EE8C-61F5-5757-763F-5F1F968A762D">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 17:59:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_FILTRO" id="6EBC51E5-FF31-DD88-B34B-A94E178819BA">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 17:59:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_TELA" id="BEEF6C9E-99FA-4BE5-23DB-510F6AA1D213">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 17:35:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8AF29C97-59B9-F953-F6F5-76DA8EAB253F" name="SERV_APOIO_TVMMDSv1_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 17:59:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3090EE8C-61F5-5757-763F-5F1F968A762D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

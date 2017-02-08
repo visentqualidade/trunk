@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F3A1FFF9-2A51-A008-5ECE-BA219E25FBDC" name="PMM">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-03 13:39:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into EASYVIEW.PMM (ID_PMM,NOME,INICIO,FIM) values (&apos;1&apos;,&apos;PMM1&apos;,to_date(&apos;01/04/13 10:00:00.36000&apos;,&apos;DD/MM/RR HH24:MI:SS.SSSSS&apos;),to_date(&apos;01/10/13 13:00:00.46800&apos;,&apos;DD/MM/RR HH24:MI:SS.SSSSS&apos;));&lt;br/&gt;Insert into EASYVIEW.PMM (ID_PMM,NOME,INICIO,FIM) values (&apos;2&apos;,&apos;PMM2&apos;,to_date(&apos;01/10/13 18:00:00.64800&apos;,&apos;DD/MM/RR HH24:MI:SS.SSSSS&apos;),to_date(&apos;01/10/13 21:00:00.75600&apos;,&apos;DD/MM/RR HH24:MI:SS.SSSSS&apos;));</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PMM" id="FEC0A64F-B898-6DD3-7E4D-5546A2421F8D">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-03 13:46:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="EA6A7A01-9991-38D3-F6E4-918C60B79407">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-03 13:46:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INICIO" id="082B085F-26F5-388C-7040-4A5092DE270C">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-03 13:46:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIM" id="8EB7CD09-85BD-3227-7356-821BCFC04AE1">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-03 13:46:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4A286954-83DA-0D0D-58CE-60C5BCDF6180" name="PMM_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-03 13:46:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="FEC0A64F-B898-6DD3-7E4D-5546A2421F8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

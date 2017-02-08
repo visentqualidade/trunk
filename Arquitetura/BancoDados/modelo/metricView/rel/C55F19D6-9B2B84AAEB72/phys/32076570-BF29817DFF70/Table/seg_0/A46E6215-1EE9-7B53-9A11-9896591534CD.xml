@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="VM_CDRVIEW_DADOS_M2M_VIPS_DF" directorySegmentName="seg_0" id="A46E6215-1EE9-7B53-9A11-9896591534CD">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-09 20:38:38 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+</TableProxyOraclev11g>

@@ -1,0 +1,185 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="902C361E-B01F-E5C9-C604-4E8244FAE7CF" name="PERMISSAO">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>PERMISSAO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<afterCreate>Create Sequence Metricview.Seq_Permissao Minvalue 0 Maxvalue 9999999999999 Increment By 1 Start With 0 Cache 20 Noorder  Nocycle ;</afterCreate>
+<endOfScript>Insert into METRICVIEW.PERMISSAO (ID_PERMISSAO,CODIGO,ID_FERRAMENTA,ID_GRUPO,ID_USUARIO) values (&apos;9350&apos;,&apos;1&apos;,&apos;3&apos;,null,&apos;1&apos;);&lt;br/&gt;Insert into METRICVIEW.PERMISSAO (ID_PERMISSAO,CODIGO,ID_FERRAMENTA,ID_GRUPO,ID_USUARIO) values (&apos;10251&apos;,&apos;1&apos;,&apos;2&apos;,null,&apos;1&apos;);&lt;br/&gt;Insert into METRICVIEW.PERMISSAO (ID_PERMISSAO,CODIGO,ID_FERRAMENTA,ID_GRUPO,ID_USUARIO) values (&apos;11650&apos;,&apos;1&apos;,&apos;1&apos;,null,&apos;1&apos;);&lt;br/&gt;Insert into METRICVIEW.PERMISSAO (ID_PERMISSAO,CODIGO,ID_FERRAMENTA,ID_GRUPO,ID_USUARIO) values (&apos;10551&apos;,&apos;1&apos;,&apos;1&apos;,null,&apos;0&apos;);&lt;br/&gt;Insert into METRICVIEW.PERMISSAO (ID_PERMISSAO,CODIGO,ID_FERRAMENTA,ID_GRUPO,ID_USUARIO) values (&apos;11550&apos;,&apos;1&apos;,&apos;2&apos;,null,&apos;0&apos;);&lt;br/&gt;Insert into METRICVIEW.PERMISSAO (ID_PERMISSAO,CODIGO,ID_FERRAMENTA,ID_GRUPO,ID_USUARIO) values (&apos;11551&apos;,&apos;1&apos;,&apos;3&apos;,null,&apos;0&apos;);</endOfScript>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PERMISSAO" id="F9E0B564-F3AA-CB13-46B4-4121A6669559">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>PERMISSAO</sourceObjSchema>
+<sourceObjName>ID_PERMISSAO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO" id="34C264AA-7198-1EE3-BBBB-19F281B7BBBD">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>PERMISSAO</sourceObjSchema>
+<sourceObjName>CODIGO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeSize>22</dataTypeSize>
+<delegate>35D51DE2-88FD-2B38-4D1D-2459FCD2A0EA</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<generateConstraintInDDL>NO</generateConstraintInDDL>
+<associations>
+<colAssociation fkAssociation="28A1ADCC-B999-3E00-97BA-A5AE9C478EDA" referredColumn="35D51DE2-88FD-2B38-4D1D-2459FCD2A0EA"/>
+</associations>
+</Column>
+<Column name="ID_FERRAMENTA" id="ED188AA0-96B6-05E4-B1C4-3FA930D1445B">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>PERMISSAO</sourceObjSchema>
+<sourceObjName>ID_FERRAMENTA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<delegate>A7497E71-41A7-2575-9005-55F38A9990D7</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8DA4A286-D2F5-15D6-B9BA-0F630B87C6C8" referredColumn="A7497E71-41A7-2575-9005-55F38A9990D7"/>
+</associations>
+</Column>
+<Column name="ID_GRUPO" id="EF7F1ED3-6123-CD1E-A091-059F6896B661">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>PERMISSAO</sourceObjSchema>
+<sourceObjName>ID_GRUPO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<delegate>C88BABFA-1D04-1390-4A8F-ACFCE01275E6</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D20006DC-CDE3-9C6C-79E8-2BB7E0D9320A" referredColumn="C88BABFA-1D04-1390-4A8F-ACFCE01275E6"/>
+</associations>
+</Column>
+<Column name="ID_USUARIO" id="CBFA0453-3611-0F65-005E-E06A1129CE98">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>PERMISSAO</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<delegate>7B84F428-B065-3291-B8D5-24D22E9432CB</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="67D26342-E7FE-8E2C-0A12-6DAE1891209A" referredColumn="7B84F428-B065-3291-B8D5-24D22E9432CB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7B030841-C4EE-931B-3D3D-40189B81F978" name="PERMISSAO_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>PERMISSAO_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9E0B564-F3AA-CB13-46B4-4121A6669559"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="29EA35E5-1C4C-0200-9B4C-077CF0271B26" name="PERMISSAO_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>PERMISSAO_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9E0B564-F3AA-CB13-46B4-4121A6669559"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="295D83E2-9662-A282-FB29-FF365629EF68" name="PERMISSAO_FK_FERRAMENTA">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED188AA0-96B6-05E4-B1C4-3FA930D1445B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2C83C876-214C-8D94-752C-FD919C525C9C" name="PERMISSAO_FK_USUARIO">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:48:48 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBFA0453-3611-0F65-005E-E06A1129CE98"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6EB933C1-4EE5-149B-B50A-E6B878B1891B" name="PERMISSAO_FK_GRUPO">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:48:48 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF7F1ED3-6123-CD1E-A091-059F6896B661"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71F55451-A98B-4B7C-EA18-58753E09EA74" name="PERMISSAO_TIPO_FK_ACESSO">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:02:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="34C264AA-7198-1EE3-BBBB-19F281B7BBBD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

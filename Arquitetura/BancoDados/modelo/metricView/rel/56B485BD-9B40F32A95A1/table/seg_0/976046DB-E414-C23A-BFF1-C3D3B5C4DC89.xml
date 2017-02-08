@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="976046DB-E414-C23A-BFF1-C3D3B5C4DC89" name="VISAO_RESUMIDA">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-23 20:06:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>CREATE SEQUENCE  SEQ_VISAO_RESUMIDA  MINVALUE 0 MAXVALUE 9999999999 INCREMENT BY 1 START WITH 0 CACHE 20 NOORDER  NOCYCLE;</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_VISAO_RESUMIDA" id="96885B68-FB3D-2EC3-C858-4DD69B8074F8">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-23 20:07:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VIEW_BANCO_PMM" id="8BBFCDB7-1095-0C0A-5277-FF644143BB34">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-23 20:07:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_INDICADOR" id="75314E19-44AB-F8FE-0C7D-A3FC89BFA6AF">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-23 20:07:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>462E3300-3166-BCE0-8651-4DDEE9E1EA1B</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08F784FF-6175-0793-B854-51D58EF59EC7" referredColumn="462E3300-3166-BCE0-8651-4DDEE9E1EA1B"/>
+</associations>
+</Column>
+<Column name="VIEW_BANCO_PMM_DDX" id="582B35B7-F37B-0354-7C9D-06AC9B9A9A58">
+<createdBy>osx</createdBy>
+<createdTime>2013-06-27 13:37:00 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLASSE_BUILDER" id="2430E6CA-E651-AB20-9958-25AC29288176">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:55:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="96317091-8FEB-8770-016F-750C1586F510" name="VISAO_RESUMIDA_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-23 20:07:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="96885B68-FB3D-2EC3-C858-4DD69B8074F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9783BCF2-2D02-AD07-B84C-D7C9C2D4B1A6" name="VISAO_RESUMIDA_INDICADOR_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-23 20:07:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<indexColumnUsage>
+<colUsage columnID="75314E19-44AB-F8FE-0C7D-A3FC89BFA6AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

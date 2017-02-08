@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5C9B6C0E-DA09-00D9-5ABA-2A1000209105" name="TB_META_ANATEL_AUDIT">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 18:32:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATA" id="D358D47C-17FD-6443-FD13-0E71893C3FCB">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 18:32:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REV" id="B6FD4D9A-056C-F919-5E67-F44E915A4582">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 18:32:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>B633DF23-6F8B-23C2-7EAF-6AD2A8A9CA7B</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="784B9839-53EC-A09B-5770-E573ACF5E539" referredColumn="B633DF23-6F8B-23C2-7EAF-6AD2A8A9CA7B"/>
+</associations>
+</Column>
+<Column name="REVTYPE" id="209D9D87-0BED-AAC8-A411-742557DFB82E">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 18:32:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_META" id="0539F459-595F-93B5-0EEF-F0B63A6C6196">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 18:32:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_INDICADOR" id="174ACB8C-8517-B001-5A95-4595C481AE8F">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 18:36:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>462E3300-3166-BCE0-8651-4DDEE9E1EA1B</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="578ABEA2-83FA-E734-B3EA-A8617A045544" referredColumn="462E3300-3166-BCE0-8651-4DDEE9E1EA1B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="43657FCB-C7FE-B42C-FCF5-89EE15457D03" name="TB_META_ANATEL_AUDIT_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 18:37:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="D358D47C-17FD-6443-FD13-0E71893C3FCB"/>
+<colUsage columnID="B6FD4D9A-056C-F919-5E67-F44E915A4582"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="710C26BE-3851-07FB-0384-0362DF6033E4" name="META_ANAT_AUDIT_INDIC_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 18:37:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<indexColumnUsage>
+<colUsage columnID="174ACB8C-8517-B001-5A95-4595C481AE8F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8FA4D8F0-2500-9917-9374-B645E6E0E818" name="META_ANAT_AUDIT_REVIS_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 18:41:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<indexColumnUsage>
+<colUsage columnID="B6FD4D9A-056C-F919-5E67-F44E915A4582"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

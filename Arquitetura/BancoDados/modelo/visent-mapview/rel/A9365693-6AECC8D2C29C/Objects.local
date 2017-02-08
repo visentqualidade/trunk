@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="73610622-5C73-7006-3CFC-6167619A285C" name="VM_CELULA" seqName="seg_0"/>
+   <object objectType="Table" objectID="3FE0A8FD-431D-F890-3B62-19BEC1761462" name="VM_CLASSIFICADOR_SETOR" seqName="seg_0"/>
+   <object objectType="Table" objectID="0E807639-1164-9075-238E-DED762EC8570" name="VM_DISTRITO" seqName="seg_0"/>
+   <object objectType="Table" objectID="E38A7E45-429F-B3C9-181D-C63F1268FAAC" name="VM_ESTACAO" seqName="seg_0"/>
+   <object objectType="Table" objectID="8E71A732-0D40-7829-23A3-1A36CF68669C" name="VM_MUNICIPIO" seqName="seg_0"/>
+   <object objectType="Table" objectID="306F0255-FAFC-18E3-0D90-291F0F3EE02A" name="VM_SETOR" seqName="seg_0"/>
+   <object objectType="Table" objectID="D41DEFB5-FC52-CF0C-66EB-D138043F0A23" name="VM_TIPO_CLASSIFICADOR_SETOR" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="A2D01A54-6BF8-2D12-2C1B-40FCC7A6AA3E" name="VM_DISTRITO_VM_MUNICIPIO_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="0AB076EE-8A47-DECF-2040-7A85E9CE2EEB" name="VM_CELULA_VM_ESTACAO_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="6AD89479-CCE0-7884-280C-EBDF54BE1A6B" name="VM_CLASSIFICADOR_SETOR_VM_SETOR_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="93A3B7BF-A0F8-5537-8967-09B2E54ABCE3" name="VM_CLASSIFICADOR_SETOR_VM_TIPO_CLASSIFICADOR_SETOR_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="D134FA27-E9EC-95F5-7A71-AC0BBB962D4B" name="VM_ESTACAO_VM_DISTRITO_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="7B10A127-8E59-AF2B-F613-0C696DC92346" name="VM_SETOR_VM_CELULA_FK" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

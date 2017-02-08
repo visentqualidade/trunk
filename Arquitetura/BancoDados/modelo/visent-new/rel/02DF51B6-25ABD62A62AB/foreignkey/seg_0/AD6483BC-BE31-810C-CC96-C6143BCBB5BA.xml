@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AD6483BC-BE31-810C-CC96-C6143BCBB5BA" name="REL_BILHETADOR_CN_CN_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 20:49:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<containerWithKeyObject>882499AB-BCD5-A4C0-0C4B-5C5D8167B5B1</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>E8B11256-43A8-2DA0-3DD7-A2E272A84FBA</localFKIndex>
+<keyObject>F1CED9B3-C3AF-8B4C-4CDE-27BE62F97E23</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

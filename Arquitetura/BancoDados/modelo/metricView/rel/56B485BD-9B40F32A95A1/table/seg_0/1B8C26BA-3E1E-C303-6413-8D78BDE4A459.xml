@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1B8C26BA-3E1E-C303-6413-8D78BDE4A459" name="VOLUME">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into INTERCONEXAO.VOLUME (ID_VOLUME,NOME_FILTRO,NOME_TELA,ID_COL_VOL_QUA) values (&apos;7&apos;,&apos;ok1t&apos;,&apos;OK1T&apos;,&apos;2&apos;);&lt;br/&gt;Insert into INTERCONEXAO.VOLUME (ID_VOLUME,NOME_FILTRO,NOME_TELA,ID_COL_VOL_QUA) values (&apos;1&apos;,&apos;ttt&apos;,&apos;TTT&apos;,&apos;2&apos;);&lt;br/&gt;Insert into INTERCONEXAO.VOLUME (ID_VOLUME,NOME_FILTRO,NOME_TELA,ID_COL_VOL_QUA) values (&apos;2&apos;,&apos;trafego&apos;,&apos;Tráfego(Erl)&apos;,&apos;1&apos;);&lt;br/&gt;Insert into INTERCONEXAO.VOLUME (ID_VOLUME,NOME_FILTRO,NOME_TELA,ID_COL_VOL_QUA) values (&apos;3&apos;,&apos;cham&apos;,&apos;Cham&apos;,&apos;2&apos;);&lt;br/&gt;Insert into INTERCONEXAO.VOLUME (ID_VOLUME,NOME_FILTRO,NOME_TELA,ID_COL_VOL_QUA) values (&apos;4&apos;,&apos;tto&apos;,&apos;TTO&apos;,&apos;2&apos;);&lt;br/&gt;Insert into INTERCONEXAO.VOLUME (ID_VOLUME,NOME_FILTRO,NOME_TELA,ID_COL_VOL_QUA) values (&apos;5&apos;,&apos;tmc&apos;,&apos;TMC&apos;,&apos;1&apos;);&lt;br/&gt;Insert into INTERCONEXAO.VOLUME (ID_VOLUME,NOME_FILTRO,NOME_TELA,ID_COL_VOL_QUA) values (&apos;6&apos;,&apos;ok5t&apos;,&apos;OK5T&apos;,&apos;2&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_VOLUME" id="BFD0F8A0-3A62-D0E0-35E5-2AC2FAAB6522">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_FILTRO" id="866300AA-7F0F-84A9-75D1-28B84306AAD3">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_TELA" id="8D219B93-A794-9D9C-1A67-F4BD99EFEE1A">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_COL_VOL_QUA" id="534FBFBB-88E5-DA3F-786D-CA50DFF4264F">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 17:39:34 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>B9278654-2C02-DB9D-7F88-6FE80585079C</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F7AF09B5-AC35-27D7-9238-13D39B16EBFE" referredColumn="B9278654-2C02-DB9D-7F88-6FE80585079C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F8A5E347-CD2E-1367-9729-5724D8CDAA91" name="VOLUME_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BFD0F8A0-3A62-D0E0-35E5-2AC2FAAB6522"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B6FCDBA6-AA5C-8564-6F42-93751E274DF5" name="VOL_COL_VOL_QUA_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 17:40:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="534FBFBB-88E5-DA3F-786D-CA50DFF4264F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,76 @@
+	<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" "http://directwebremoting.org/dwr/dwr30.dtd">
+<dwr>
+	<!-- Converter da visent -->
+	<init>
+		<converter id="date" class="br.com.visent.componente.dwr.converter.CustomDateConverter"/>
+	</init>
+	<allow>
+		<create creator="new" javascript="ExcecaoCGIAjax">
+			<param name="class" value="br.com.visent.metricview.ajax.ExcecaoCGIAjax"/>
+		</create>
+		<create creator="new" javascript="LoginAjax">
+			<param name="class" value="br.com.visent.metricview.ajax.LoginAjax"/>
+		</create>
+		<create creator="new" javascript="UsuarioAjax">
+			<param name="class" value="br.com.visent.metricview.ajax.UsuarioAjax"/>
+		</create>
+		<create creator="new" javascript="GrupoAjax">
+			<param name="class" value="br.com.visent.metricview.ajax.GrupoAjax"/>
+		</create>
+		<create creator="new" javascript="RegionalAjax">
+			<param name="class" value="br.com.visent.metricview.ajax.RegionalAjax"/>
+		</create>
+		<create creator="new" javascript="ReverseAjax">
+			<param name="class" value="br.com.visent.componente.dwr.reverse.Reverse"/>
+			<include method="configurarAjaxReverso"/>
+		</create>
+		<create creator="new" javascript="LogAjax">
+			<param name="class" value="br.com.visent.metricview.ajax.LogAjax"/>
+		</create>
+		<create creator="new" javascript="ComboHelperAjax">
+			<param name="class" value="br.com.visent.metricview.util.ComboHelperUtil"/>
+		</create>
+		<create creator="new" javascript="ConstantesMetricViewAjax">
+			<param name="class" value="br.com.visent.metricview.ajax.ConstantesAjax"/>
+		</create>
+		<create creator="new" javascript="PermissaoAjax">
+			<param name="class" value="br.com.visent.metricview.ajax.PermissaoAjax"/>
+		</create>
+		<create creator="new" javascript="FerramentaAjax">
+			<param name="class" value="br.com.visent.metricview.ajax.FerramentaAjax"/>
+		</create>
+		<create creator="new" javascript="BilhetadorAjax">
+			<param name="class" value="br.com.visent.metricview.ajax.BilhetadorAjax"/>
+		</create>
+		<create creator="new" javascript="AlterarDadosAjax">
+			<param name="class" value="br.com.visent.metricview.ajax.AlterarDadosAjax"/>
+		</create>
+		<create creator="new" javascript="AparelhoAjax">
+			<param name="class" value="br.com.visent.metricview.ajax.sistemas.mapview.AparelhoAjax"/>
+		</create>
+		<convert converter="hibernate3" match="br.com.visent.metricview.entidade.Usuario" javascript="Usuario"/>
+		<convert converter="hibernate3" match="br.com.visent.metricview.entidade.Grupo" javascript="Grupo"/>
+		<convert converter="hibernate3" match="br.com.visent.metricview.entidade.Regional" javascript="Regional"/>
+		<convert converter="hibernate3" match="br.com.visent.metricview.entidade.CodigoNacional" javascript="CodigoNacional"/>
+		<convert converter="hibernate3" match="br.com.visent.metricview.entidade.Ferramenta" javascript="Ferramenta"/>
+		<convert converter="hibernate3" match="br.com.visent.metricview.entidade.Bilhetador" javascript="Bilhetador"/>
+		<convert converter="hibernate3" match="br.com.visent.metricview.entidade.LogEntidade" javascript="LogEntidade"/>
+		<convert converter="hibernate3" match="br.com.visent.metricview.entidade.Permissao" javascript="Permissao"/>
+		<convert converter="hibernate3" match="br.com.visent.metricview.entidade.TipoAcesso" javascript="TipoAcesso"/>
+		<convert converter="hibernate3" match="br.com.visent.corporativo.entidade.Entidade" javascript="Entidade"/>
+		<convert converter="bean" match="br.com.visent.metricview.entidade.enuns.ProjetoSolucaoEnum" javascript="ProjetoSolucaoEnum"/>
+		<convert converter="bean" match="java.lang.Object" javascript="Object"/>
+		
+		<convert converter="bean" match="br.com.visent.metricview.to.RegionalTO" javascript="RegionalTO"/>
+		<convert converter="bean" match="br.com.visent.metricview.to.LogsTO" javascript="LogsTO"/>
+		<convert converter="bean" match="br.com.visent.metricview.to.BilhetadorTO" javascript="BilhetadorTO"/>
+		<convert converter="bean" match="br.com.visent.metricview.to.VisualizacaoPermissaoIndividualTO" javascript="VisualizacaoPermissaoIndividualTO"/>
+		<convert converter="bean" match="br.com.visent.metricview.to.VisualizacaoGrupoTO" javascript="VisualizacaoGrupoTO"/>
+		<!-- conversao de excecao -->
+		<convert match="java.lang.Exception" converter="exception">
+			<param name="include" value="message,lineNumber"/>
+		</convert>
+		<convert converter="bean" match="java.lang.StackTraceElement"/>
+		<convert converter="bean" match="br.com.visent.corporativo.exception.CorporativoException" javascript="CorporativoException"/>
+	</allow>
+</dwr>

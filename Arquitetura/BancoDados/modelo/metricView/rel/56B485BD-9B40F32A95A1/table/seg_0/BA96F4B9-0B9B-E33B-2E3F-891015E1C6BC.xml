@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BA96F4B9-0B9B-E33B-2E3F-891015E1C6BC" name="STATUS">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-24 17:49:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into EASYVIEW.STATUS (ID_STATUS,DESCRICAO) values (&apos;1&apos;,&apos;OK&apos;);&lt;br/&gt;Insert into EASYVIEW.STATUS (ID_STATUS,DESCRICAO) values (&apos;2&apos;,&apos;NOK&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_STATUS" id="399A70A8-5FF6-B21A-4871-482878187790">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-24 17:50:06 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRICAO" id="74FB146B-FD17-8BBA-D116-58A065148D8E">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-24 17:50:06 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A587D535-0CEC-147E-FBAD-4AE5024B4884" name="STATUS_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-24 17:50:06 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="399A70A8-5FF6-B21A-4871-482878187790"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

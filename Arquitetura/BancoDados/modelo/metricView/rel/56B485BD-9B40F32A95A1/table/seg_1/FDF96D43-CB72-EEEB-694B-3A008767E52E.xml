@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="FDF96D43-CB72-EEEB-694B-3A008767E52E" name="APARELHO">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-12 12:27:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TAC" id="3839A0E5-3FB6-DE99-7D8D-B8C58FBEBBAB">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-12 12:27:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MODELO" id="1A95C6E5-F48B-4D08-3DDD-DDFA540F7707">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-12 12:27:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FABRICANTE" id="834A6D1F-D617-3EAC-7E16-58E08CEF6DF8">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-12 12:27:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TECNOLOGIA" id="E129BE9E-3A8C-958B-4AE8-BF6594127D8A">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-12 12:27:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BANDAS" id="A9590391-2CA4-C26A-45CA-59FE6DF537D8">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-12 12:32:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_APARELHO" id="7181D23C-78F7-3CF5-E00B-21994D9047CD">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-12 12:33:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QTD_SIM" id="706E266F-D9E2-F1C0-23EE-C4BFC1F3AF13">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-12 12:34:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_SIM" id="29CE12D3-32C7-D58B-2D6B-C21260EBBB9D">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-12 12:35:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A6D4E4F1-FA36-44D7-F6CE-BA3A0CD4FB3D" name="APARELHO_PK">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-12 12:27:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3839A0E5-3FB6-DE99-7D8D-B8C58FBEBBAB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DBFC5438-26B9-9511-CF30-C876A9536182" name="IDX_APARELHO_TAC">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-12 12:27:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3839A0E5-3FB6-DE99-7D8D-B8C58FBEBBAB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

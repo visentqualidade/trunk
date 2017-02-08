@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Note class="oracle.dbtools.crest.model.design.Note" name="Note_2" directorySegmentName="seg_0" id="E868AE25-5F2B-0B3E-E859-ACC99153D83A">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 21:11:40 UTC</createdTime>
+<comment>TIPO_GPRS: &lt;br/&gt;	1- GGSN&lt;br/&gt;	2- SGSN&lt;br/&gt;ESTADO_BILHETADOR&lt;br/&gt;	1-Produção&lt;br/&gt;	2-Teste</comment>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</Note>

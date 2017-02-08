@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="METRICVIEW" directorySegmentName="seg_0" id="F3E2E3E9-1C00-9255-60A4-6304035DFB2E">
+<sourceConnName>visent</sourceConnName>
+<sourceObjName>METRICVIEW</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<permissions>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions1" id="ED42E3D4-183B-0748-2EE9-66AF8429F7A5">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>747D4664-D6F3-A021-988E-DBB8CB0E2419</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions2" id="9374CB81-3AEB-C175-3FBC-AD86E5FEE572">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>8CAD85FD-DC51-A85C-F03D-D69B6F34A544</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions3" id="B18C3BC2-538F-5E78-1E4E-891C43BDADDE">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>B5B19B01-8582-FA2C-5589-88FFD4C2F28C</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions4" id="B5EC1B94-1736-3EDE-D211-A65779B932AB">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>8D37930F-B71D-F129-0829-20A68A0B9EA9</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions5" id="E8B58E57-669A-5FF3-68B6-F4BFA79A8C00">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>882499AB-BCD5-A4C0-0C4B-5C5D8167B5B1</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions6" id="CBAB999E-1D4C-DCA6-474F-E8FA05F73724">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>2556C82B-932F-846B-5978-C0E66FA165C5</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions7" id="FAB51552-611C-4EBB-B87F-CF2930CBAB34">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>62B00801-D80C-533F-5F22-8F4A38CA958A</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions8" id="2E79EBFD-CBD5-D3C7-6E6B-B8B33302997D">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>106A1423-71BB-BF59-5F11-F7EF7471F4D6</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions9" id="5516EBF1-545C-F57D-8B72-5CB9E3C11B4A">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>773459E9-5A0F-531D-2262-8DDAF06F19C6</table>
+</Permission>
+</permissions>
+</UserOraclev10g>

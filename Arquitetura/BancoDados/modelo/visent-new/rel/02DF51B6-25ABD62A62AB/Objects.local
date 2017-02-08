@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="SchemaObject" objectID="20B78FEB-0DDF-18F6-1F22-138BAFA187FC" name="VISENT" seqName="seg_0"/>
+   <object objectType="Table" objectID="747D4664-D6F3-A021-988E-DBB8CB0E2419" name="BILHETADOR" seqName="seg_0"/>
+   <object objectType="Table" objectID="65CB9262-FF3C-B4C9-0B0D-A293E053A123" name="CN" seqName="seg_0"/>
+   <object objectType="Table" objectID="8CAD85FD-DC51-A85C-F03D-D69B6F34A544" name="GEOGRAFIA" seqName="seg_0"/>
+   <object objectType="Table" objectID="B5B19B01-8582-FA2C-5589-88FFD4C2F28C" name="REGIAO" seqName="seg_0"/>
+   <object objectType="Table" objectID="8D37930F-B71D-F129-0829-20A68A0B9EA9" name="REGIONAL" seqName="seg_0"/>
+   <object objectType="Table" objectID="882499AB-BCD5-A4C0-0C4B-5C5D8167B5B1" name="REL_BILHETADOR_CN" seqName="seg_0"/>
+   <object objectType="Table" objectID="710FBD14-8374-E0BE-BA21-E41EE76BE129" name="REL_CN_UF" seqName="seg_0"/>
+   <object objectType="Table" objectID="2556C82B-932F-846B-5978-C0E66FA165C5" name="REL_REGIONAL_CN" seqName="seg_0"/>
+   <object objectType="Table" objectID="38094C7B-8E0F-77F6-0342-624A37A74036" name="TECNOLOGIA_BILHETADOR" seqName="seg_0"/>
+   <object objectType="Table" objectID="773459E9-5A0F-531D-2262-8DDAF06F19C6" name="UF" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="2B7DED5D-CA80-41D4-A899-938400EF0134" name="BILHETADOR_FK_REGIONAL" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="2879615A-DE6F-A085-A0B9-442897A0D302" name="BILHETADOR_FK_TECNOLOGIA_BILHETADOR" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="78FA914D-DDC7-03DB-942C-2DFDEBC41F6E" name="GEOGRAFIA_REGIAO_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="4A9FC0C7-2F95-0658-D77F-B10681F888FE" name="GEOGRAFIA_REGIONAL_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="AD6483BC-BE31-810C-CC96-C6143BCBB5BA" name="REL_BILHETADOR_CN_CN_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="394586CF-DF5E-8933-FCA7-AB1082B3A873" name="REL_BILHETADOR_CN_FK_BIL" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="F9349AA5-CACE-A4F3-8103-D402EFECFEA5" name="REL_CN_UF_CN_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="B3AE3074-46E6-3643-1BEA-917CEDC67A1E" name="REL_CN_UF_UF_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="D3E00278-0B52-9960-5804-4BA080814B3B" name="REL_REGIONAL_CN_CN_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="A3251F78-6A9B-1D29-8BA0-DC4E6017ADED" name="REL_REG_COD_NAC_FK_REG" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="7D78A605-008F-52BA-6DDB-8C6D779B24AF" name="UF_GEOGRAFIA_FK" seqName="seg_0"/>
+   <object objectType="Note" objectID="BFE60253-E511-9B70-A4EB-CF8E8A06D559" name="Note_1" seqName="seg_0"/>
+   <object objectType="Note" objectID="E868AE25-5F2B-0B3E-E859-ACC99153D83A" name="Note_2" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

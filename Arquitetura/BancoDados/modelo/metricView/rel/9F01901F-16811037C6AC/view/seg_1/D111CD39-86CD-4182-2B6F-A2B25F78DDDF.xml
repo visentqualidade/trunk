@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_1" id="D111CD39-86CD-4182-2B6F-A2B25F78DDDF" name="VIEW_MSC_CN_ATIVO_SMP4">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>VIEW_MSC_CN_ATIVO_SMP4</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>2E6F0B21-64DB-F78E-ADC3-BF34E7B1C64C</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW VIEW_MSC_CN_ATIVO_SMP4&lt;br/&gt;AS &lt;br/&gt;WITH meses_tabela_dado AS&lt;br/&gt;  (SELECT menor_data,&lt;br/&gt;    maior_data,&lt;br/&gt;    MONTHS_BETWEEN(maior_data, menor_data) diferenca_datas&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT MIN(to_date(TO_CHAR(data,&apos;MM/yyyy&apos;),&apos;MM/yyyy&apos;)) menor_data,&lt;br/&gt;      MAX(to_date(TO_CHAR(data,&apos;MM/yyyy&apos;),&apos;MM/yyyy&apos;)) maior_data&lt;br/&gt;    FROM cdrview_smp4&lt;br/&gt;    )&lt;br/&gt;  ),&lt;br/&gt;  gerador_meses AS&lt;br/&gt;  ( SELECT menor_data AS meses FROM meses_tabela_dado&lt;br/&gt;  UNION ALL&lt;br/&gt;  SELECT add_months(menor_data,level)&lt;br/&gt;  FROM meses_tabela_dado&lt;br/&gt;    CONNECT BY LEVEL &lt;= diferenca_datas&lt;br/&gt;  ),&lt;br/&gt;  msc_cn_tabela AS&lt;br/&gt;  ( &lt;br/&gt;select distinct bilhetador.nome as msc, cn.nome as cn&lt;br/&gt;  from rel_bilhetador_cn rc,&lt;br/&gt;       bilhetador, &lt;br/&gt;       cn,&lt;br/&gt;       TIPO_TECNOLOGIA,&lt;br/&gt;       tecnologia,&lt;br/&gt;       indicador&lt;br/&gt;where rc.ID_BILHETADOR = bilhetador.ID_BILHETADOR&lt;br/&gt;  and rc.ID_CN = cn.ID_CN&lt;br/&gt;  and bilhetador.ID_TECNOLOGIA = tecnologia.id&lt;br/&gt;  and TIPO_TECNOLOGIA.ID_TIPO_TECNOLOGIA = tecnologia.ID_TIPO_TECNOLOGIA&lt;br/&gt;  and indicador.ID_TIPO_TECNOLOGIA = TIPO_TECNOLOGIA.ID_TIPO_TECNOLOGIA&lt;br/&gt;  and indicador.nome in (&apos;SMP3&apos;,&apos;SMP4&apos;,&apos;SMP5&apos;,&apos;SMP7&apos;)&lt;br/&gt;  ),&lt;br/&gt;  msc_cn_x_meses_gerados AS&lt;br/&gt;  ( SELECT * FROM gerador_meses, msc_cn_tabela&lt;br/&gt;  ),&lt;br/&gt;  msc_cn_meses_x_ativos AS&lt;br/&gt;  (SELECT msc,&lt;br/&gt;    cn,&lt;br/&gt;    meses,&lt;br/&gt;    (SELECT MAX(periodo)&lt;br/&gt;    FROM msc_cn_ativo b&lt;br/&gt;    WHERE a.msc                                         = b.msc&lt;br/&gt;    AND a.cn                                            = b.cn&lt;br/&gt;    AND to_date(TO_CHAR(b.periodo,&apos;MM/yyyy&apos;),&apos;MM/yyyy&apos;) &lt;= a.meses&lt;br/&gt;    ) ultimo_estado&lt;br/&gt;  FROM msc_cn_x_meses_gerados a&lt;br/&gt;  ),&lt;br/&gt;  msc_cn_estado_mes AS&lt;br/&gt;  (SELECT a.msc,&lt;br/&gt;    a.cn,&lt;br/&gt;    a.meses periodo,&lt;br/&gt;    NVL(b.status,&apos;F&apos;) status&lt;br/&gt;  FROM msc_cn_meses_x_ativos a,&lt;br/&gt;    msc_cn_ativo b&lt;br/&gt;  WHERE a.msc         = b.msc (+)&lt;br/&gt;  AND a.cn            = b.cn (+)&lt;br/&gt;  AND a.ultimo_estado = b.periodo (+)&lt;br/&gt;  )&lt;br/&gt;SELECT &quot;MSC&quot;,&quot;CN&quot;,&quot;PERIODO&quot;,&quot;STATUS&quot; FROM msc_cn_estado_mes ORDER BY 1,3</userDefinedSQL>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="MSC" id="213DC55D-5376-9888-9835-957B76233BF7">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>MSC</alias>
+<dataType>VARCHAR2 (255)</dataType>
+<headerAlias>MSC</headerAlias>
+<reference>false</reference>
+<viewID>D111CD39-86CD-4182-2B6F-A2B25F78DDDF</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CN" id="679D6B02-1778-135C-2729-E1D4B4C1787E">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CN</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>CN</headerAlias>
+<reference>false</reference>
+<viewID>D111CD39-86CD-4182-2B6F-A2B25F78DDDF</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PERIODO" id="00419B26-E87B-66AF-A33F-BE93464A4B11">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>PERIODO</alias>
+<dataType>DATE (7)</dataType>
+<headerAlias>PERIODO</headerAlias>
+<reference>false</reference>
+<viewID>D111CD39-86CD-4182-2B6F-A2B25F78DDDF</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="STATUS" id="F32B5E74-0F18-C1CE-01D0-C2DEE538183A">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>STATUS</alias>
+<dataType>VARCHAR2 (1)</dataType>
+<headerAlias>STATUS</headerAlias>
+<reference>false</reference>
+<viewID>D111CD39-86CD-4182-2B6F-A2B25F78DDDF</viewID>
+</viewElement>
+</viewElements>
+</TableView>

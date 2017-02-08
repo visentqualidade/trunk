@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_1" id="2E495E07-C999-4238-DB20-B7A83FF8D088" name="VIEW_SMP11_UL_MAPA_UF">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>VIEW_SMP11_UL_MAPA_UF</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>5E959857-9E53-B414-5644-1D76F155DE59</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW VIEW_SMP11_UL_MAPA_UF&lt;br/&gt;AS &lt;br/&gt;with  dados_traducao_sem_vinculo as&lt;br/&gt;  (select data, uf, campo_42, campo_40 from view_smp10_smp11_dados),&lt;br/&gt;  dados_de_situacao_ativa as (&lt;br/&gt;      SELECT Tab.DATA                                                   AS Data,&lt;br/&gt;             tab.uf                                                     AS UF,&lt;br/&gt;             NVL(TO_CHAR(SUM(NVL(campo_42, 0))), &apos;-&apos;)                   AS campo_42,&lt;br/&gt;             NVL(TO_CHAR(SUM(NVL(campo_40, 0))), &apos;-&apos;)                   AS campo_40&lt;br/&gt;        FROM dados_traducao_sem_vinculo Tab&lt;br/&gt;    GROUP BY tab.data, tab.uf&lt;br/&gt;  ),&lt;br/&gt;  dados_smp_geral AS&lt;br/&gt;  (SELECT Data,&lt;br/&gt;          uf,&lt;br/&gt;          uf.nome_extenso,&lt;br/&gt;          campo_42,&lt;br/&gt;          campo_40,&lt;br/&gt;          CASE&lt;br/&gt;            WHEN campo_40 = &apos;0&apos; AND campo_42 != &apos;-&apos; THEN &lt;br/&gt;                  &apos;0&apos;&lt;br/&gt;            WHEN campo_40 = &apos;-&apos; AND campo_42  = &apos;-&apos; THEN &lt;br/&gt;                  &apos;-&apos;&lt;br/&gt;            WHEN campo_40 != &apos;-&apos; AND campo_42   = &apos;-&apos; THEN &lt;br/&gt;                  &apos;0&apos;&lt;br/&gt;            ELSE &lt;br/&gt;                  NVL(trim(TO_CHAR(ROUND((campo_42 * 100 / campo_40), 2),&apos;999990D99&apos;)), &apos;-&apos;)&lt;br/&gt;          END AS smp&lt;br/&gt;        FROM dados_de_situacao_ativa tab,&lt;br/&gt;             uf &lt;br/&gt;      where uf.nome = tab.uf&lt;br/&gt;             ),&lt;br/&gt;  agrupadores_smp_uf AS&lt;br/&gt;  (SELECT *&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT DISTINCT dados_smp_geral.Data FROM dados_smp_geral&lt;br/&gt;    ) datas,&lt;br/&gt;    (SELECT DISTINCT dados_smp_geral.UF, dados_smp_geral.nome_extenso FROM dados_smp_geral&lt;br/&gt;    ) ufs&lt;br/&gt;  ),&lt;br/&gt;  agrupadores_por_dados AS&lt;br/&gt;  (SELECT agrupadores.Data,&lt;br/&gt;          agrupadores.UF,&lt;br/&gt;          agrupadores.nome_extenso,&lt;br/&gt;          TO_CHAR(DECODE(dados.campo_42, NULL, &apos;-&apos;, dados.campo_42)) campo_42,&lt;br/&gt;          TO_CHAR(DECODE(dados.campo_40, NULL, &apos;-&apos;, dados.campo_40)) campo_40,&lt;br/&gt;          TO_CHAR(DECODE(dados.smp, NULL, &apos;-&apos;, dados.smp)) smp&lt;br/&gt;  FROM  dados_smp_geral dados,&lt;br/&gt;        agrupadores_smp_uf agrupadores&lt;br/&gt;  WHERE agrupadores.Data         = dados.Data(+)&lt;br/&gt;    AND agrupadores.UF           = dados.UF(+)&lt;br/&gt;    AND agrupadores.nome_extenso = dados.nome_extenso(+)&lt;br/&gt;  )&lt;br/&gt;SELECT agrupadores_por_dados.data DATA,&lt;br/&gt;  agrupadores_por_dados.UF,&lt;br/&gt;  &apos;PMT&apos; as pmm,&lt;br/&gt;  NVL(agrupadores_por_dados.nome_extenso, &apos; &apos;) AS nome,&lt;br/&gt;  replace(agrupadores_por_dados.smp,&apos;.&apos;,&apos;,&apos;) AS SMP,&lt;br/&gt;  agrupadores_por_dados.campo_42 AS campo_42,&lt;br/&gt;  agrupadores_por_dados.campo_40 AS campo_40&lt;br/&gt;FROM agrupadores_por_dados&lt;br/&gt;ORDER BY 2,1,3</userDefinedSQL>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DATA" id="9CB1BB04-E0D8-A33F-3A4F-4982362EAB67">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DATA</alias>
+<dataType>VARCHAR2 (7)</dataType>
+<headerAlias>DATA</headerAlias>
+<reference>false</reference>
+<viewID>2E495E07-C999-4238-DB20-B7A83FF8D088</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="UF" id="19BD1C8B-D666-8F6E-FB82-64A0C4421E9E">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>UF</alias>
+<dataType>VARCHAR2 (2)</dataType>
+<headerAlias>UF</headerAlias>
+<reference>false</reference>
+<viewID>2E495E07-C999-4238-DB20-B7A83FF8D088</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PMM" id="28B50D2E-63C5-5373-09B1-90AB9829051F">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>PMM</alias>
+<dataType>CHAR (3)</dataType>
+<headerAlias>PMM</headerAlias>
+<reference>false</reference>
+<viewID>2E495E07-C999-4238-DB20-B7A83FF8D088</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="NOME" id="167D5E1A-C9F4-5BB4-8FD3-A48CC94CD621">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>NOME</alias>
+<dataType>VARCHAR2 (45)</dataType>
+<headerAlias>NOME</headerAlias>
+<reference>false</reference>
+<viewID>2E495E07-C999-4238-DB20-B7A83FF8D088</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP" id="725BAB3C-C9B2-77E3-28B0-7DE8DBB5B9E4">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>SMP</headerAlias>
+<reference>false</reference>
+<viewID>2E495E07-C999-4238-DB20-B7A83FF8D088</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CAMPO_42" id="09C45418-B2E3-2F42-33E7-F270F3325A35">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CAMPO_42</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CAMPO_42</headerAlias>
+<reference>false</reference>
+<viewID>2E495E07-C999-4238-DB20-B7A83FF8D088</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CAMPO_40" id="1E033F2F-7546-5CC7-7274-C134AABCD3F2">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CAMPO_40</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CAMPO_40</headerAlias>
+<reference>false</reference>
+<viewID>2E495E07-C999-4238-DB20-B7A83FF8D088</viewID>
+</viewElement>
+</viewElements>
+</TableView>

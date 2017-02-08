@@ -1,0 +1,152 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="CDRVIEW_VOZ_EXPURGO" directorySegmentName="seg_0" id="C27127FA-8E24-4CB4-7797-39E1CE769FCA">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>A36D226E-BC2B-F21D-6766-62C3EFF7964B</schemaObject>
+<logging>YES</logging>
+<partitionList class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionListOraclev11g" name="PL1" id="F9891A82-76B0-61E3-A261-E87E73E22D40">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<columnIDs>F229BA08-3BF9-1AF8-2207-6F385C55C9D5</columnIDs>
+<subPartitionsColumnIDs>03129C5F-9492-CFD2-DEA0-ACDDA7E4D0D5</subPartitionsColumnIDs>
+<subPartitionsQuantity>27</subPartitionsQuantity>
+<subpartitionType>HASH</subpartitionType>
+<intervalExpression>NUMTODSINTERVAL(1,&apos;DAY&apos;)</intervalExpression>
+</partitionList>
+<partitioned>YES</partitioned>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<user>B6665735-CC76-0BEF-732A-CB14F6C7239B</user>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="UF" id="03129C5F-9492-CFD2-DEA0-ACDDA7E4D0D5">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SETOR" id="43FB7A5B-64D8-DAF5-6933-7A6A9C4B8D25">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CHAM" id="44312423-008D-8867-DA3F-70B01876648B">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CELULA" id="45307B8F-A6E9-790B-5958-F8DE2B9A065E">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MODELO" id="5BAE8F30-DE7D-96F3-5C42-E1D4E1B8FF66">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SERVICO" id="6A4A135E-F504-796D-F94F-DF6E53C06CFF">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LATITUDE" id="76F9F5A4-A81A-11D5-F3D6-0A683462CF90">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AREA" id="9708D120-C299-A32B-1818-4E97622A0457">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SETOR_TECNOLOGIA" id="B352BA93-BDA3-3CA0-20B6-3D92DC53B7E4">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BANDAS" id="B778E824-6C4B-D81F-D1F2-2707F6CCAF34">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CELULA_TECNOLOGIAS" id="C1FFC62F-2052-0FD1-BF91-6A671658CD35">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LAC" id="C56702AD-2250-F8F0-1E06-4E6BF7434DA4">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:57:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TTC" id="C6620E42-40E0-CD5F-838C-9300C0458498">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="MUNICIPIO" id="C86933FE-EE57-26CD-A3BF-85A778E02F8C">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TAC" id="DA199B77-75C3-3445-0CB1-20B110464B9E">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IMEI" id="E46AFE90-79E8-8836-632F-5CE3966A1D04">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LONGITUDE" id="ED37E5B5-CCCD-1D78-31D7-443C675D86D8">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA" id="F229BA08-3BF9-1AF8-2207-6F385C55C9D5">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_MUNICIPIO" id="F4CF6BD6-826E-8BDC-388A-713700951C14">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<partitions>
+<Partition class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionOraclev11g" name="PARTITION_FIRST" id="D6A260EE-8FA0-8893-4A8C-4C6A9AFC2460">
+<createdBy>osx</createdBy>
+<createdTime>2014-04-28 18:09:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<position>1</position>
+<segment>430F13F9-F21A-6547-544B-BA32AED0E2A5</segment>
+<valueList>TO_DATE(&apos; 2000-01-01 00:00:00&apos;, &apos;SYYYY-MM-DD HH24:MI:SS&apos;, &apos;NLS_CALENDAR=GREGORIAN&apos;)</valueList>
+</Partition>
+</partitions>
+</TableProxyOraclev11g>

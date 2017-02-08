@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SynonymOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="USUARIO_GRUPO" directorySegmentName="seg_0" id="16B4EA3E-69FF-9567-029B-29F73D1F4F4D">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>USUARIO_GRUPO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:17:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<object>USUARIO_GRUPO</object>
+<objectUser>7C23A862-90D1-7B42-9BFB-4851DE206DB0</objectUser>
+<user>6414AE3A-CF19-19CC-4584-40935F6279FB</user>
+</SynonymOraclev10g>

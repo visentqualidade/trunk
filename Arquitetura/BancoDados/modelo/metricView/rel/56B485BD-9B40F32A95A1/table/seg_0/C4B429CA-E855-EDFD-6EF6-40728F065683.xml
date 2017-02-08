@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C4B429CA-E855-EDFD-6EF6-40728F065683" name="AREA_USUARIO">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>AREA_USUARIO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:26:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Create Sequence METRICVIEW.SEQ_AREA_USUARIO Minvalue 0 Maxvalue 9999999999999 Increment By 1 Start With 0 Cache 20 Noorder  Nocycle ;&lt;br/&gt;Insert into METRICVIEW.AREA_USUARIO (ID,DESCRICAO) values (&apos;140102&apos;,null);&lt;br/&gt;Insert into METRICVIEW.AREA_USUARIO (ID,DESCRICAO) values (&apos;140103&apos;,null);&lt;br/&gt;Insert into METRICVIEW.AREA_USUARIO (ID,DESCRICAO) values (&apos;140104&apos;,null);&lt;br/&gt;Insert into METRICVIEW.AREA_USUARIO (ID,DESCRICAO) values (&apos;140105&apos;,null);&lt;br/&gt;Insert into METRICVIEW.AREA_USUARIO (ID,DESCRICAO) values (&apos;140300&apos;,&apos;061&apos;);&lt;br/&gt;Insert into METRICVIEW.AREA_USUARIO (ID,DESCRICAO) values (&apos;140200&apos;,&apos;TESTE AREA&apos;);&lt;br/&gt;Insert into METRICVIEW.AREA_USUARIO (ID,DESCRICAO) values (&apos;140201&apos;,&apos;Area 69&apos;);&lt;br/&gt;Insert into METRICVIEW.AREA_USUARIO (ID,DESCRICAO) values (&apos;140202&apos;,&apos;Area 75&apos;);&lt;br/&gt;Insert into METRICVIEW.AREA_USUARIO (ID,DESCRICAO) values (&apos;140250&apos;,&apos;Area 99&apos;);&lt;br/&gt;Insert into METRICVIEW.AREA_USUARIO (ID,DESCRICAO) values (&apos;140106&apos;,&apos;Area 1&apos;);&lt;br/&gt;Insert into METRICVIEW.AREA_USUARIO (ID,DESCRICAO) values (&apos;140150&apos;,&apos;AreaAutomacao&apos;);</afterCreate>
+<beforeCreate>SET DEFINE OFF;</beforeCreate>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C21166CF-0F53-C749-6574-517885308743">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>AREA_USUARIO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:26:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeSize>22</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRICAO" id="6BB0E213-D90D-7101-6922-A9B1E4766122">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>AREA_USUARIO</sourceObjSchema>
+<sourceObjName>DESCRICAO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:26:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E35605B2-C6AF-AAF1-A1A7-C76905A44D76" name="AREA_USUARIO_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>AREA_USUARIO_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:26:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C21166CF-0F53-C749-6574-517885308743"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5AA8DA6D-0F8B-F5E2-0DD8-5A4EE8B8F1C2" name="AREA_USUARIO_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>AREA_USUARIO_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:26:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C21166CF-0F53-C749-6574-517885308743"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

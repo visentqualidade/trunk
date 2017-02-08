@@ -1,0 +1,6 @@
+Para abrir o modelo do banco, basta executar o arquivo 'easyview.dmd', localizado dentro da pasta resources/modelo/metricview.dmd
+ 
+Programa para Modelagem : Oracle  SQL Developer Data Modeler
+Versão : 3.3.0.747 
+Build :  747
+Download : http://www.oracle.com/technetwork/developer-tools/datamodeler/downloads/index.html

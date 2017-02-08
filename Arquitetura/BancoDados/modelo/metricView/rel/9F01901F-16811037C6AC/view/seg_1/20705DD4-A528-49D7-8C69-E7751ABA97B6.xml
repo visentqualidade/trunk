@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_1" id="20705DD4-A528-49D7-8C69-E7751ABA97B6" name="VIEW_SMP4_TX_ENTREGA_PMM">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>VIEW_SMP4_TX_ENTREGA_PMM</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 18:22:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>4F094532-8AB7-20AE-B352-CB42B36F78B7</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW VIEW_SMP4_TX_ENTREGA_PMM&lt;br/&gt;AS &lt;br/&gt;WITH regionais AS&lt;br/&gt;  (SELECT REGIONAL.NOME AS regional FROM REGIONAL WHERE indicador_smp = &apos;T&apos;&lt;br/&gt;  ),&lt;br/&gt;  dias AS&lt;br/&gt;  (SELECT TRUNC(SYSDATE) data FROM dual&lt;br/&gt;  UNION ALL&lt;br/&gt;  SELECT TRUNC(SYSDATE - Level) FROM dual CONNECT BY Level &lt; 15&lt;br/&gt;  ),&lt;br/&gt;  pmms AS&lt;br/&gt;  (SELECT PMM.NOME AS pmm, PMM.INICIO, PMM.FIM FROM PMM&lt;br/&gt;  ),&lt;br/&gt;  regionais_x_dias_x_pmms AS&lt;br/&gt;  (SELECT * FROM regionais r, dias d, pmms p&lt;br/&gt;  ),&lt;br/&gt;  dados_traducao_sem_vinculo as&lt;br/&gt;  (select * from view_SMP4_tx_entrega_dados where codigo != &apos;NID&apos;&lt;br/&gt;  ),&lt;br/&gt;  dados_x_pmm AS&lt;br/&gt;  (SELECT TRUNC(Tab.DATA) AS Data,&lt;br/&gt;    Reg.NOME              AS Regional,&lt;br/&gt;    Tab.PMM,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.n_chamadas_entregues, 0))),0) AS Smp_A,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.n_tentativas, 0))),0) AS Smp_B&lt;br/&gt;  FROM &lt;br/&gt;  view_msc_cn_ativo_smp4 b,&lt;br/&gt;  dados_traducao_sem_vinculo Tab&lt;br/&gt;  INNER JOIN Cn Cn&lt;br/&gt;  ON Cn.Nome = Tab.CN&lt;br/&gt;  INNER JOIN Metricview.Rel_Regional_Cod_Nacional Reg_Cod&lt;br/&gt;  ON Reg_Cod.Id_Cn = Cn.Id_Cn&lt;br/&gt;  INNER JOIN REGIONAL Reg&lt;br/&gt;  ON Reg_Cod.Id_Regional = Reg.ID_REGIONAL AND Reg.indicador_smp  = &apos;T&apos;,&lt;br/&gt;    dias dias&lt;br/&gt;  WHERE TRUNC(dias.data) = TRUNC(Tab.DATA)&lt;br/&gt;  and tab.msc = b.msc&lt;br/&gt;  and tab.cn = b.cn&lt;br/&gt;  and to_date(to_char(tab.data,&apos;MM/yyyy&apos;),&apos;MM/yyyy&apos;) = b.periodo&lt;br/&gt;  and b.status = &apos;T&apos;&lt;br/&gt;  GROUP BY TRUNC(Tab.DATA),&lt;br/&gt;    Reg.NOME,&lt;br/&gt;    Tab.PMM&lt;br/&gt;  ),&lt;br/&gt;  dados_finais AS&lt;br/&gt;  (SELECT reg.data,&lt;br/&gt;    reg.regional,&lt;br/&gt;    reg.pmm,&lt;br/&gt;    CASE&lt;br/&gt;      WHEN dados.SMP_B = &apos;0&apos;&lt;br/&gt;      AND dados.SMP_A != &apos;0&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      WHEN dados.SMP_B = &apos;0&apos;&lt;br/&gt;      AND dados.SMP_A  = &apos;0&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      WHEN dados.SMP_B != &apos;0&apos;&lt;br/&gt;      AND dados.SMP_A   = &apos;0&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      ELSE NVL(trim(TO_CHAR(ROUND((dados.SMP_A * 100 / dados.SMP_B), 2),&apos;999990D99&apos;)), &apos;0,00&apos;)&lt;br/&gt;    END AS SMP,&lt;br/&gt;    smp_a,&lt;br/&gt;    smp_b&lt;br/&gt;  FROM dados_x_pmm dados,&lt;br/&gt;    regionais_x_dias_x_pmms reg&lt;br/&gt;  WHERE reg.data   = dados.Data(+)&lt;br/&gt;  AND reg.regional = dados.Regional(+)&lt;br/&gt;  AND reg.pmm      = dados.PMM(+)&lt;br/&gt;  )&lt;br/&gt;SELECT dados_finais.data,&lt;br/&gt;  dados_finais.regional,&lt;br/&gt;  dados_finais.pmm,&lt;br/&gt;  CASE&lt;br/&gt;    WHEN dados_finais.SMP          != &apos;0,00&apos;&lt;br/&gt;    AND TO_NUMBER(dados_finais.SMP) &gt; 100&lt;br/&gt;    THEN &apos;100,00&apos;&lt;br/&gt;    ELSE replace(dados_finais.SMP,&apos;.&apos;,&apos;,&apos;)&lt;br/&gt;  END AS SMP,&lt;br/&gt;  smp_a,&lt;br/&gt;  smp_b&lt;br/&gt;FROM dados_finais&lt;br/&gt;ORDER BY 1,2,3</userDefinedSQL>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DATA" id="1E54EE12-9576-09E8-9259-6CB11F866927">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DATA</alias>
+<dataType>DATE (7)</dataType>
+<headerAlias>DATA</headerAlias>
+<reference>false</reference>
+<viewID>20705DD4-A528-49D7-8C69-E7751ABA97B6</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="REGIONAL" id="415DDC49-B67E-D76E-3001-82E480AAF647">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>REGIONAL</alias>
+<dataType>VARCHAR2 (45)</dataType>
+<headerAlias>REGIONAL</headerAlias>
+<reference>false</reference>
+<viewID>20705DD4-A528-49D7-8C69-E7751ABA97B6</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PMM" id="B5E3D4EA-2B64-F686-BB67-2D6F3BC518F2">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>PMM</alias>
+<dataType>VARCHAR2 (20)</dataType>
+<headerAlias>PMM</headerAlias>
+<reference>false</reference>
+<viewID>20705DD4-A528-49D7-8C69-E7751ABA97B6</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP" id="35D610AD-B2E6-FB49-4860-12697A733B4D">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>SMP</headerAlias>
+<reference>false</reference>
+<viewID>20705DD4-A528-49D7-8C69-E7751ABA97B6</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP_A" id="3615628F-8BB3-C85B-8B25-94FB18E2A190">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP_A</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SMP_A</headerAlias>
+<reference>false</reference>
+<viewID>20705DD4-A528-49D7-8C69-E7751ABA97B6</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP_B" id="6432D504-1BBD-1C85-ED89-E7D3C6C5D3E3">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP_B</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>SMP_B</headerAlias>
+<reference>false</reference>
+<viewID>20705DD4-A528-49D7-8C69-E7751ABA97B6</viewID>
+</viewElement>
+</viewElements>
+</TableView>

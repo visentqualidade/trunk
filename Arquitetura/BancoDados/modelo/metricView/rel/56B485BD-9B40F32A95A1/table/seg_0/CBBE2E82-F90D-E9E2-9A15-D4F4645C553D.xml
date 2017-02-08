@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CBBE2E82-F90D-E9E2-9A15-D4F4645C553D" name="UNIDADE_SECUNDARIA">
+<createdBy>osx</createdBy>
+<createdTime>2013-07-01 17:59:06 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>insert into EASYVIEW.REGIAO_PLAT_CODIGO values (&apos;Região I&apos;,&apos;SMSC02RJBRB&apos;,01013);&lt;br/&gt;insert into EASYVIEW.REGIAO_PLAT_CODIGO values (&apos;Região I&apos;,&apos;SMSC02RJIPA&apos;,01014);&lt;br/&gt;insert into EASYVIEW.REGIAO_PLAT_CODIGO values (&apos;Região II&apos;,&apos;SMSC02RJBRB&apos;,01015);&lt;br/&gt;insert into EASYVIEW.REGIAO_PLAT_CODIGO values (&apos;Região II&apos;,&apos;SMSC02RJIPA&apos;,01016);&lt;br/&gt;insert into EASYVIEW.REGIAO_PLAT_CODIGO values (&apos;Região III&apos;,&apos;SMSC02RJBRB&apos;,01013);&lt;br/&gt;insert into EASYVIEW.REGIAO_PLAT_CODIGO values (&apos;Região III&apos;,&apos;SMSC02RJIPA&apos;,01014);&lt;br/&gt;</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CN" id="FE7A5534-B74C-BB03-A404-B4B6066868D4">
+<createdBy>osx</createdBy>
+<createdTime>2013-07-01 18:00:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PLATAFORMA" id="752A4983-3F26-96B6-D2D5-EF68A1FF31D7">
+<createdBy>osx</createdBy>
+<createdTime>2013-07-01 18:00:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO" id="E87C540B-9004-B3FE-142E-92CF8CBC639D">
+<createdBy>osx</createdBy>
+<createdTime>2013-07-01 18:00:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

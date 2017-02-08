@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3FE0A8FD-431D-F890-3B62-19BEC1761462" name="VM_CLASSIFICADOR_SETOR">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:31:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CLASSIFICADOR_SETOR" id="EAE16780-F836-BAF8-84E5-7B01D9D59443">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:38:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>F121C008-990C-3B54-4129-2B449B1AC0E7</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="93A3B7BF-A0F8-5537-8967-09B2E54ABCE3" referredColumn="F121C008-990C-3B54-4129-2B449B1AC0E7"/>
+</associations>
+</Column>
+<Column name="ID_SETOR" id="83DE6F76-B509-B248-9255-99FB9FFBB883">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:33:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<delegate>46FD7CDF-0614-4D85-33A2-6B4B0BA3291E</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6AD89479-CCE0-7884-280C-EBDF54BE1A6B" referredColumn="46FD7CDF-0614-4D85-33A2-6B4B0BA3291E"/>
+</associations>
+</Column>
+<Column name="ID_TIPO_CLASSIFICADOR_SETOR" id="8C8DC750-F7F8-7A79-B29C-3B4ED51ABE82">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:33:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="2DC176C1-4682-5738-C7D9-2D0AB823935F">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:38:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EA1F53C2-329D-CF61-7060-23146B17D366" name="VM_CLASSIFICADOR_SETOR_VM_SETOR_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:38:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="83DE6F76-B509-B248-9255-99FB9FFBB883"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2C8F96AC-DB3A-CBC5-555F-F74FD3B47056" name="VM_CLASSIFICADOR_SETOR_VM_TIPO_CLASSIFICADOR_SETOR_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:40:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EAE16780-F836-BAF8-84E5-7B01D9D59443"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4F7CFFCA-63C1-2E46-BC5A-D173C9B7A759" name="REL_REGIONAL_COD_NACIONAL">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:17:21 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteDesignID>261BA68B-BEC1-951E-9842-18728CBC93F8</remoteDesignID>
+<remoteModelID>56B485BD-642F-0CD7-B4BF-9B40F32A95A1</remoteModelID>
+<remoteObjectID>C024D574-6E63-4398-8D31-B066376BA313</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\56B485BD-9B40F32A95A1\table/seg_0/C024D574-6E63-4398-8D31-B066376BA313.xml</remoteObjectRelativeStorageName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A494D123-AC96-4D3A-1326-317B18AF6C1E" name="REL_REG_COD_NAC_FK_REG">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:18:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="5BFC8374-38B7-0C9E-DF47-BB1A81F01EF5" name="REL_REG_COD_NAC_FK_CN">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-12 19:19:12 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

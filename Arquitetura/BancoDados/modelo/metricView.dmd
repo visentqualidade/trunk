@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="metricView" id="261BA68B-BEC1-951E-9842-18728CBC93F8" version="3.5">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 13:43:04 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>AnatelPro</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>261BA68B-BEC1-951E-9842-18728CBC93F8</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="261BA68B-BEC1-951E-9842-18728CBC93F8">
+<designStoragePath>D:\Documents\MetricView\metricView</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="DCA4A8FA-16F0-DBEA-FE1E-E1BA28B7F6B8">
+<designStoragePath>D:\usr\osx\cdrview\MetricView\metricview-web\src\main\resources\modelo</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="046EE648-49CE-70BD-3D5B-925AF1992307">
+<designStoragePath>D:\usr\osx\cdrview\MetricView\metricview-web\src\main\resources\modelo</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="84559D39-CB66-703C-5076-A4E5120C3396">
+<designStoragePath>D:\views_e_tabelas</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="C5326345-8E23-E709-134D-E0DC9643CA7F">
+<designStoragePath>D:\views_e_tabelas</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="E7313050-17B8-1671-41E3-09610E36A26E">
+<designStoragePath>D:\views_e_tabelas</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="B895E676-4F40-DE4A-76D1-714B61BA9098">
+<designStoragePath>C:\exportar</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="0469F475-EA02-01A8-E603-2F6BC9BB6DAA">
+<designStoragePath>C:\exportarview</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="91751ADE-4D47-132C-1E56-DFA65BDA14C6">
+<designStoragePath>D:\ddl_servico</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="B164D1C7-948E-28F0-59C2-A203FFD8BCDE">
+<designStoragePath>D:\CDRVIEW_DADOS_VOZ</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="65380723-4908-F5FB-6B28-B1FBD6FE9216">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="35DD2CE9-F5EE-4FB4-BC0D-808FAAA2BEB5">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="000702D1-0736-4532-8BFB-3FC1BDFB6340">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="BAF13020-9B60-B9C3-6683-E6B53B1DE50B">
+<designStoragePath>D:\tabela</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="08476382-93FD-781A-A18A-A58A01748F73">
+<designStoragePath>D:\tabela</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="8FCABD30-4829-866C-1A8A-C1142BC3BBDF">
+<designStoragePath>D:\claro</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="841DC737-A313-D29D-1658-29E7A9D3875B">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="6C40C1BF-4CB5-5FD5-8DBB-A3450658D98D">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="08242EE4-7114-4ACC-F808-6969434537C2">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="7D0A46B0-9CD1-798D-8FC2-4B858A4038D2">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="9740DC7F-5914-D43F-034F-3B32A5E8D7E9">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="E3B614C3-023A-E619-6B7A-AA2E710ED614">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="634E10D4-392A-E708-3F42-4ED73A96F4FB">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="B6D6F9BC-8C09-F782-495A-55AD59432888">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="26C79FEC-2881-93B1-6794-A193DCF03D5C">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="8E2A62AA-3895-0907-819B-22386D5602CE">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="60FF9E62-214F-9080-A9E8-AB547A0B8B64">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="793CA5C0-5788-82D2-8924-0789C851A05F">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="35A8A9C6-FF8B-240E-C81F-5A66C49FA1A4">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="BA63C753-4D6F-B49B-8F42-BA0556E2FF4E">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="8722E096-430E-A001-520F-8CD586495FAD">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="133AA004-239E-63B6-ECBC-53323359280C">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="5F91E2B9-3B09-F1A9-9CC8-1B5C86AE0B1D">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="00622F00-4E44-22B5-A0DD-04854B90D4DD">
+<designStoragePath>C:\java\workspace\metricview\Arquitetura\Banco de Dados\modelo</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="B9FE1F55-D532-1D7C-6619-ED23734E9691">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="4191B8CA-5912-3EFC-965F-45ED90BFD67C">
+<designStoragePath>D:\usr\osx\modelo_metric</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

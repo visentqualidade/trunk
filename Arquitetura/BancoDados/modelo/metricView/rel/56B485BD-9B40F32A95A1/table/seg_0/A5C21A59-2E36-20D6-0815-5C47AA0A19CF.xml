@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A5C21A59-2E36-20D6-0815-5C47AA0A19CF" name="META_ANATEL">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:20:03 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATA" id="32AE1260-3607-E36C-5CC8-71F8CA851507">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:21:48 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_INDICADOR" id="DED23C16-8C74-51CF-535B-4FFBEE4C3105">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 21:35:41 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>462E3300-3166-BCE0-8651-4DDEE9E1EA1B</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="554E4A6A-1F7D-9B3F-3BFE-93EBDE0B4056" referredColumn="462E3300-3166-BCE0-8651-4DDEE9E1EA1B"/>
+</associations>
+</Column>
+<Column name="VALOR_META" id="CD79830D-398B-F4BC-8F2B-AD38FE219642">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 21:42:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="666FD65C-2FB6-0FAC-C479-3274CE75D6D3" name="META_ANATEL_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:21:48 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="32AE1260-3607-E36C-5CC8-71F8CA851507"/>
+<colUsage columnID="DED23C16-8C74-51CF-535B-4FFBEE4C3105"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E7DB4C0F-C062-5C5F-855E-0B45D84D7A2F" name="META_ANATEL_INDICADOR_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 21:38:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<indexColumnUsage>
+<colUsage columnID="DED23C16-8C74-51CF-535B-4FFBEE4C3105"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

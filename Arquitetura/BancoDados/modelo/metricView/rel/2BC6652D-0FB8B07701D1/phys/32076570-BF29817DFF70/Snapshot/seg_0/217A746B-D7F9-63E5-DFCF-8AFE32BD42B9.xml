@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SnapshotOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.SnapshotOraclev11g" name="VM_SETOR" directorySegmentName="seg_0" id="217A746B-D7F9-63E5-DFCF-8AFE32BD42B9">
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 12:49:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<defaultSegment>NO</defaultSegment>
+<nextDate>to_date(concat(to_char(sysdate,&apos;dd/mm/yyyy&apos;),&apos; 10:00&apos;),&apos;dd/mm/yyyy hh24:mi&apos;) + 1</nextDate>
+<queryRewrite>ENABLE</queryRewrite>
+<refresh>YES</refresh>
+<refreshType>COMPLETE</refreshType>
+<subquery>SELECT UNIQUE celula.estacao_id AS nome_celula,&lt;br/&gt;    setor.OSS_CELL_ID          AS nome_setor,&lt;br/&gt;    setor.tecnologia           AS servico&lt;br/&gt;  FROM VW_MAPVIEW_ESTACAO_LOCATION celula&lt;br/&gt;  INNER JOIN VW_MAPVIEW_ESTACAO_SITE site ON site.estacao = celula.estacao_id&lt;br/&gt;  INNER JOIN VW_MAPVIEW_CELL setor ON site.site_id        = setor.siteid&lt;br/&gt;  WHERE setor.OSS_CELL_ID IS NOT NULL</subquery>
+<useIndex>YES</useIndex>
+<user>37880A62-C5AF-B901-9ADB-83F361F9100B</user>
+<with></with>
+</SnapshotOraclev11g>

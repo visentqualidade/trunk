@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="ddl_servico_Domains">
+   <domains>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_45 CHAR" id="DE07794D-9321-78A2-94B0-5C06C7103606">
+         <createdBy>osx</createdBy>
+         <createdTime>2014-10-09 21:00:42 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>45 CHAR</dataTypeSize>
+         <fileName>ddl_servico_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+   </domains>
+</DomainFile>

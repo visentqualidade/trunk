@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SnapshotOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.SnapshotOraclev11g" name="VM_CDRVIEW_DADOS_GPRS_MUN" directorySegmentName="seg_0" id="20AB9621-459B-3740-46A9-95E955D34BCA">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-20 18:15:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<columns>DATA</columns>
+<defaultSegment>NO</defaultSegment>
+<partitionList class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionListOraclev11g" name="PL89" id="3CCC7328-8F67-D34E-36F1-2E5459FA4AB2">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-20 18:17:58 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<intervalExpression>NUMTODSINTERVAL(1,&apos;DAY&apos;)</intervalExpression>
+</partitionList>
+<partitioned>YES</partitioned>
+<refreshType>FORCE</refreshType>
+<subquery>SELECT dados_gprs.data,&lt;br/&gt;       dados_gprs.area         as AREA,&lt;br/&gt;       dados_gprs.UF         as UF,&lt;br/&gt;       dados_gprs.ID_MUNICIPIO AS ID_MUNICIPIO,&lt;br/&gt;       dados_gprs.MUNICIPIO    AS MUNICIPIO,       &lt;br/&gt;       SUM(dados_gprs.conexoes)    as conexoes,&lt;br/&gt;       count(distinct((dados_gprs.IMEI))) as TERMINAIS,&lt;br/&gt;       dados_gprs.servico      as SERVICO,&lt;br/&gt;       SUM(dados_gprs.volume_uplink)     as volume_uplink,&lt;br/&gt;       SUM(dados_gprs.volume_downlink)     as volume_downlink,&lt;br/&gt;       SUM(dados_gprs.volume_total)     as volume_total,&lt;br/&gt;       dados_gprs.tipo_aparelho as tipo_aparelho&lt;br/&gt;    FROM cdrview_dados_gprs dados_gprs&lt;br/&gt;    WHERE dados_gprs.data &lt;=&lt;br/&gt;      (SELECT MAX(data)-1 FROM cdrview_dados_gprs&lt;br/&gt;      )&lt;br/&gt;     GROUP BY dados_gprs.data,&lt;br/&gt;      dados_gprs.area,&lt;br/&gt;      dados_gprs.uf,&lt;br/&gt;      dados_gprs.ID_MUNICIPIO,&lt;br/&gt;      dados_gprs.MUNICIPIO,&lt;br/&gt;      dados_gprs.servico,&lt;br/&gt;      dados_gprs.tipo_aparelho</subquery>
+<user>B6665735-CC76-0BEF-732A-CB14F6C7239B</user>
+<with></with>
+<partitions>
+<Partition class="oracle.dbtools.crest.model.design.storage.oracle.v11g.PartitionOraclev11g" name="PARTITION_FIRST" id="AEF08139-29E3-6949-920F-BA2477E6F02A">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-20 18:33:45 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<valueList>TO_DATE(&apos; 2000-01-01 00:00:00&apos;, &apos;SYYYY-MM-DD HH24:MI:SS&apos;, &apos;NLS_CALENDAR=GREGORIAN&apos;)</valueList>
+</Partition>
+</partitions>
+</SnapshotOraclev11g>

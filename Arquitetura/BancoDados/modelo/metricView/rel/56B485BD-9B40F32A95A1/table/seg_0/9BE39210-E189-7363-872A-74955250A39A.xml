@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9BE39210-E189-7363-872A-74955250A39A" name="DDX">
+<createdBy>osx</createdBy>
+<createdTime>2013-05-27 14:16:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>CREATE SEQUENCE SEQ_DDX INCREMENT BY 1 MAXVALUE 9999999999999999999999 MINVALUE 0 CYCLE CACHE 20 ORDER;</afterCreate>
+<beforeCreate>SET DEFINE OFF;&lt;br/&gt;CREATE SYNONYM Bilhetador for metricview.Bilhetador;&lt;br/&gt;CREATE SYNONYM cn for metricview.cn;&lt;br/&gt;CREATE SYNONYM Uf for metricview.Uf;&lt;br/&gt;CREATE SYNONYM Regional for metricview.Regional;&lt;br/&gt;CREATE SYNONYM Tecnologia for metricview.Tecnologia;&lt;br/&gt;CREATE SYNONYM Tipo_Tecnologia for metricview.Tipo_Tecnologia;&lt;br/&gt;CREATE SYNONYM LOG for metricview.log;&lt;br/&gt;CREATE SYNONYM Usuario for metricview.;&lt;br/&gt;CREATE SYNONYM Tipo_Acesso for metricview.Tipo_Acesso;&lt;br/&gt;CREATE SYNONYM Rel_Bilhetador_Cn for metricview.Rel_Bilhetador_Cn;&lt;br/&gt;CREATE SYNONYM Grupo for metricview.Grupo;&lt;br/&gt;CREATE SYNONYM Usuario_Grupo for metricview.Usuario_Grupo;&lt;br/&gt;CREATE SYNONYM Funcionalidade for metricview.Funcionalidade;&lt;br/&gt;CREATE SYNONYM Permissao for metricview.Permissao;&lt;br/&gt;CREATE SYNONYM Ferramenta for metricview.Ferramenta;&lt;br/&gt;CREATE SYNONYM Tb_Revisao for metricview.Tb_Revisao;&lt;br/&gt;CREATE SYNONYM Geografia for metricview.Geografia;&lt;br/&gt;CREATE SYNONYM Rel_Regional_cod_nacional for metricview.Rel_Regional_cod_nacional;&lt;br/&gt;CREATE SYNONYM VIEW_REL_REGIONAL_UF for metricview.VIEW_REL_REGIONAL_UF;&lt;br/&gt;Create Synonym seq_bilhetador for METRICVIEW.seq_bilhetador; &lt;br/&gt;Create Synonym seq_funcionalidade for METRICVIEW.seq_funcionalidade;&lt;br/&gt;Create Synonym seq_grupo for METRICVIEW.seq_grupo;&lt;br/&gt;Create Synonym seq_permissao for METRICVIEW.seq_permissao;&lt;br/&gt;Create Synonym seq_regional for METRICVIEW.seq_regional;&lt;br/&gt;Create Synonym seq_rel_bilhetador_cn for METRICVIEW.seq_rel_bilhetador_cn;&lt;br/&gt;Create Synonym seq_revision for METRICVIEW.seq_revision;&lt;br/&gt;Create Synonym seq_tecnologia for METRICVIEW.seq_tecnologia;&lt;br/&gt;Create Synonym seq_tipo_acesso for METRICVIEW.seq_tipo_acesso;&lt;br/&gt;Create Synonym seq_tipo_tecnologia for METRICVIEW.seq_tipo_tecnologia;&lt;br/&gt;Create Synonym seq_usuario for METRICVIEW.seq_usuario;&lt;br/&gt;Create Synonym seq_unid_federativa for METRICVIEW.seq_unid_federativa;</beforeCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_DDX" id="3260DF6D-0DE9-20B5-AE53-9CF13464223E">
+<createdBy>osx</createdBy>
+<createdTime>2013-05-27 14:17:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA" id="2F863912-238A-71CD-6681-9E42EF74E7D9">
+<createdBy>osx</createdBy>
+<createdTime>2013-05-27 14:17:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7FE30F61-2D57-0CA9-61FB-C692F1735894" name="DDX_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-05-27 14:17:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="3260DF6D-0DE9-20B5-AE53-9CF13464223E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

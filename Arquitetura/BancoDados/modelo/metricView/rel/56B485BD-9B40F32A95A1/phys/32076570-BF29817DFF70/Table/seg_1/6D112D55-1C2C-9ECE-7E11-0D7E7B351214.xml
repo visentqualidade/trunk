@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="MSC_CN_ATIVO" directorySegmentName="seg_1" id="6D112D55-1C2C-9ECE-7E11-0D7E7B351214">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:16:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DA3890FB-F1F2-2E8A-3C7E-06108E2ADE3B</segment>
+<tableSpace>283F5CF1-906A-724B-29E0-413604AF6B1A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="MSC" id="2A67CF65-7BA9-89B3-61F9-8B1A833C18F4">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:16:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STATUS" id="3B391814-B7F1-E18C-E287-FD477F20BFA3">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:16:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CN" id="5449091F-41B9-3BB6-8A24-A630D2C27161">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:16:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PERIODO" id="8D03816C-391A-DD17-948D-D228C27910BE">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:16:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>

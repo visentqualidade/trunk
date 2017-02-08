@@ -1,0 +1,496 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_1" id="CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA" name="VIEW_MSC_VINCULO_SMP3">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>VIEW_MSC_VINCULO_SMP3</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>C4790656-D654-1801-16EA-5A23D62F00AC</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW VIEW_MSC_VINCULO_SMP3&lt;br/&gt;AS &lt;br/&gt;SELECT a.&quot;DATA&quot;,a.&quot;HORA&quot;,a.&quot;PMM&quot;,a.&quot;CN&quot;,a.&quot;BILHETADOR_ORIGINAL&quot;,a.&quot;MSC&quot;,a.&quot;SCV&quot;,a.&quot;CHAM&quot;,a.&quot;OKT&quot;,a.&quot;INV&quot; ,a.&quot;OK1&quot;,&lt;br/&gt;a.&quot;OKVM&quot;,&lt;br/&gt;a.&quot;OK1_TCT&quot;,&lt;br/&gt;a.&quot;OK1_DRP&quot;,&lt;br/&gt;a.&quot;OK1_DRP_TCT&quot;,&lt;br/&gt;a.&quot;BACB&quot;,&lt;br/&gt;a.&quot;NR_VM&quot;,&lt;br/&gt;a.&quot;INEX&quot;,&lt;br/&gt;a.&quot;DESL&quot;,&lt;br/&gt;a.&quot;BLOQ&quot;,&lt;br/&gt;a.&quot;SC&quot;,&lt;br/&gt;a.&quot;OK5&quot;,&lt;br/&gt;a.&quot;OK5TCT&quot;,&lt;br/&gt;a.&quot;OK5DRP&quot;,&lt;br/&gt;a.&quot;OK5DRPTCT&quot;,&lt;br/&gt;a.&quot;LO&quot;,&lt;br/&gt;a.&quot;CO1&quot;,&lt;br/&gt;a.&quot;CO2&quot;,&lt;br/&gt;a.&quot;CO3&quot;,&lt;br/&gt;a.&quot;NR&quot;,&lt;br/&gt;a.&quot;DSA&quot;,&lt;br/&gt;a.&quot;LOS&quot;,&lt;br/&gt;a.&quot;DROP_&quot;,&lt;br/&gt;a.&quot;SRP&quot;,&lt;br/&gt;a.&quot;OU&quot;,&lt;br/&gt;a.&quot;FA1&quot;,&lt;br/&gt;a.&quot;FA2&quot;,&lt;br/&gt;a.&quot;FA3&quot;,&lt;br/&gt;a.&quot;DSS&quot;,&lt;br/&gt;  NVL(&lt;br/&gt;  (SELECT codigo&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT *&lt;br/&gt;    FROM msc_cn_codigo b&lt;br/&gt;    ORDER BY msc,&lt;br/&gt;      cn,&lt;br/&gt;      ultima_atualizacao&lt;br/&gt;    ) b&lt;br/&gt;  WHERE b.msc = NVL(&lt;br/&gt;    (SELECT vinculo.msc_destino&lt;br/&gt;    FROM MSC_CN_VINCULADO vinculo&lt;br/&gt;    WHERE a.MSC            = vinculo.msc_origem&lt;br/&gt;    AND a.cn               = vinculo.cn_origem&lt;br/&gt;    AND TRUNC(a.data,&apos;MM&apos;) = TRUNC(vinculo.data,&apos;MM&apos;)&lt;br/&gt;    ),a.msc )&lt;br/&gt;  AND a.cn                            = b.cn&lt;br/&gt;  AND TRUNC(b.ultima_atualizacao,&apos;MM&apos;) &lt;= TRUNC(a.data,&apos;MM&apos;)&lt;br/&gt;  AND rownum                            = 1&lt;br/&gt;  ),&apos;NID&apos;) codigo&lt;br/&gt;FROM&lt;br/&gt;  (&lt;br/&gt;  SELECT tab.data,&lt;br/&gt;  tab.hora,&lt;br/&gt;  tab.pmm,&lt;br/&gt;  tab.cn,&lt;br/&gt;  tab.msc AS bilhetador_original,&lt;br/&gt;  NVL(&lt;br/&gt;  (SELECT vinculo.msc_destino&lt;br/&gt;  FROM MSC_CN_VINCULADO vinculo&lt;br/&gt;  WHERE Tab.MSC            = vinculo.msc_origem&lt;br/&gt;  AND tab.cn               = vinculo.cn_origem&lt;br/&gt;  AND TRUNC(tab.data,&apos;MM&apos;) = TRUNC(vinculo.data,&apos;MM&apos;)&lt;br/&gt;  ),tab.msc )AS MSC,&lt;br/&gt;  tab.scv,&lt;br/&gt;  tab.cham,&lt;br/&gt;  tab.okt,&lt;br/&gt;  tab.inv,&lt;br/&gt;  Tab.OK1,&lt;br/&gt;  Tab.OKVM,&lt;br/&gt;  Tab.OK1_TCT,&lt;br/&gt;  Tab.OK1_DRP,&lt;br/&gt;  Tab.OK1_DRP_TCT,&lt;br/&gt;  Tab.BACB,&lt;br/&gt;  Tab.NR_VM,&lt;br/&gt;  Tab.INEX,&lt;br/&gt;  Tab.DESL,&lt;br/&gt;  Tab.BLOQ,&lt;br/&gt;  Tab.SC,&lt;br/&gt;  Tab.OK5,&lt;br/&gt;  Tab.OK5TCT,&lt;br/&gt;  Tab.OK5DRP,&lt;br/&gt;  Tab.OK5DRPTCT,&lt;br/&gt;  Tab.LO,&lt;br/&gt;  Tab.CO1,&lt;br/&gt;  Tab.CO2,&lt;br/&gt;  Tab.CO3,&lt;br/&gt;  Tab.NR,&lt;br/&gt;  Tab.DSA,&lt;br/&gt;  Tab.LOS,&lt;br/&gt;  Tab.DROP_,&lt;br/&gt;  Tab.SRP,&lt;br/&gt;  Tab.OU,&lt;br/&gt;  Tab.FA1,&lt;br/&gt;  Tab.FA2,&lt;br/&gt;  Tab.FA3,&lt;br/&gt;  Tab.DSS&lt;br/&gt;FROM cdrview_smp3 tab) a</userDefinedSQL>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DATA" id="2752287C-6FF9-9791-423E-06F7CFB85E18">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DATA</alias>
+<dataType>TIMESTAMP(7)</dataType>
+<headerAlias>DATA</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="HORA" id="EA370AA9-9DC7-34B9-F1F7-F978A3CFBDCC">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>HORA</alias>
+<dataType>DATE (7)</dataType>
+<headerAlias>HORA</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PMM" id="3E9D2566-2688-E509-EF31-4C1FDCA233E0">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>PMM</alias>
+<dataType>VARCHAR2 (5)</dataType>
+<headerAlias>PMM</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CN" id="FC81E422-AF5F-6836-F646-239226F9352A">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CN</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>CN</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="BILHETADOR_ORIGINAL" id="7FC6BA29-178E-22C5-6C89-92EB34516F57">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>BILHETADOR_ORIGINAL</alias>
+<dataType>VARCHAR2 (45)</dataType>
+<headerAlias>BILHETADOR_ORIGINAL</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="MSC" id="3E027275-E4E7-F019-E487-2A3785A01884">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>MSC</alias>
+<dataType>VARCHAR2 (45)</dataType>
+<headerAlias>MSC</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SCV" id="C00422FC-D9DE-0CAB-3158-49B4ABF707E3">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SCV</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>SCV</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CHAM" id="7B2ED93A-5849-D659-1514-56A4C8E224FB">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CHAM</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>CHAM</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OKT" id="8357F5D7-2D8B-22A4-3FCA-515C82ECB259">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OKT</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>OKT</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INV" id="A499055E-8F6E-81FD-EA57-B33727B173CD">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>INV</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>INV</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK1" id="603038C3-F6D7-A75F-F2EC-EA752C73F5BB">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK1</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>OK1</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OKVM" id="D6EE041D-E469-C986-5224-92F53A345601">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OKVM</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>OKVM</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK1_TCT" id="1F6E87AA-94C5-A9A9-BCD1-F574F9BBB67F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK1_TCT</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>OK1_TCT</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK1_DRP" id="78A83145-8AF8-1434-2241-1FA3F02E4678">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK1_DRP</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>OK1_DRP</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK1_DRP_TCT" id="3770C2DC-2B43-4FC7-4206-9A858E6BDD8A">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK1_DRP_TCT</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>OK1_DRP_TCT</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="BACB" id="4D64DB6B-A794-72AB-6B0E-37FD504285D9">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>BACB</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>BACB</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="NR_VM" id="2914B877-1CEA-C77A-FFA3-0289A36E8F9F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>NR_VM</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>NR_VM</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INEX" id="8881F40D-E63C-D55B-47D3-7113861181D6">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>INEX</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>INEX</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DESL" id="B034AD4C-63FD-00B5-D556-1EA0F645B21B">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DESL</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>DESL</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="BLOQ" id="BD84CC5C-B1D3-8C17-E971-D42CDEF71A80">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>BLOQ</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>BLOQ</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SC" id="D68D9D47-88E1-F64D-2D4A-A4926E3A73A8">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SC</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>SC</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK5" id="08C3E392-AFCB-2A0D-EE01-AFA520A43E3E">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK5</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>OK5</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK5TCT" id="C6AF6612-FA44-6757-0AE2-F283850C8F15">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK5TCT</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>OK5TCT</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK5DRP" id="833D21F9-4B05-4631-E271-42960AA4A0B3">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK5DRP</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>OK5DRP</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OK5DRPTCT" id="8D82489B-202B-25E4-3FE1-B37DD05FAFDD">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OK5DRPTCT</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>OK5DRPTCT</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="LO" id="0E6B1D75-4982-4D45-2A05-3EFC1225544C">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>LO</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>LO</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CO1" id="DC55AFA9-FE4A-88C9-789D-B817F29579D9">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CO1</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>CO1</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CO2" id="F0B9BF0A-1887-137F-FB67-EA960BF3BE96">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CO2</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>CO2</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CO3" id="44910376-2A0D-BDE3-1A61-E7347DB02819">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CO3</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>CO3</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="NR" id="FEF74728-3896-C162-F2D5-2700D2EC529F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>NR</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>NR</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DSA" id="919964C6-C717-E193-0287-DE27C71CCEC9">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DSA</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>DSA</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="LOS" id="91C8EB48-FC5F-91A5-F70E-E6C42A51D8F2">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>LOS</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>LOS</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DROP_" id="0DEADC15-68D0-12C2-8983-2C30D4E9C1F8">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DROP_</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>DROP_</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SRP" id="27D7E38A-2864-F7FB-3025-231E07E6BD4E">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SRP</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>SRP</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="OU" id="62D60570-6BC6-E168-F12D-9B075D0AAC21">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>OU</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>OU</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="FA1" id="C1AC9604-ABDA-AA11-8815-1D6E2AEEE2CD">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>FA1</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>FA1</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="FA2" id="5375C0B1-8831-09F4-ED75-573FD2894D35">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>FA2</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>FA2</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="FA3" id="DF476431-96EA-3633-35BE-CCC5EF48B7EA">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>FA3</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>FA3</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DSS" id="CF894BCA-FFBF-C40A-77A2-037C7647DBB2">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DSS</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>DSS</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CODIGO" id="33F52920-E2E3-8C7F-9745-B9EBE8EDBBE5">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:22:40 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CODIGO</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>CODIGO</headerAlias>
+<reference>false</reference>
+<viewID>CBE5F23B-170E-3657-BFC8-23A1F8D5BEAA</viewID>
+</viewElement>
+</viewElements>
+</TableView>

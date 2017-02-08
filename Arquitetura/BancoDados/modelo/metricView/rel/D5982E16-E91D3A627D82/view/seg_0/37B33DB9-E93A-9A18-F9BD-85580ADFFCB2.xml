@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="37B33DB9-E93A-9A18-F9BD-85580ADFFCB2" name="VW_FILTRO_OPERADORA_ORIGEM">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-21 22:49:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT UNIQUE NVL(CDRVIEW_ITX_HORA.OPERADORAS, &apos;--&apos;) AS operadora_origem&lt;br/&gt;FROM CDRVIEW_ITX_HORA&lt;br/&gt;ORDER BY 1</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select Unique NVL(CDRVIEW_ITX_HORA.OPERADORAS, &apos;--&apos;) As operadora_origem From CDRVIEW_ITX_HORA Order By 1&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select Unique NVL(CDRVIEW_ITX_HORA.OPERADORAS, &apos;--&apos;) As operadora_origem From CDRVIEW_ITX_HORA Order By 1&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;CDRVIEW_ITX_HORA&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="operadora_origem" id="47A534DC-908F-3B35-3D4A-A01FD331A6F6">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-21 22:53:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>operadora_origem</alias>
+<expression>NVL(CDRVIEW_ITX_HORA.OPERADORAS, &apos;--&apos;)</expression>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4705E147-BA0E-5CE8-C8BB-B97B6972206C">
+<container>true</container>
+<schema>interconexao</schema>
+<tableName>CDRVIEW_ITX_HORA</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="983DE024-5BB8-E8C4-F948-DEE5BB69A515">
+<columnName>OPERADORAS</columnName>
+<schema>interconexao</schema>
+<tableName>CDRVIEW_ITX_HORA</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

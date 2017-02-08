@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="3A48E424-E3FE-3279-00FD-0E08BDD2E4E0" name="MSC_CN_VINCULADO">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>MSC_CN_VINCULADO</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:16:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>719B3C44-C634-9E4F-6B5B-97EE0A052657</importedID>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MSC_ORIGEM" id="9CA74FE7-C7D9-E80A-018C-DBD1CA92361E">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>MSC_CN_VINCULADO</sourceObjSchema>
+<sourceObjName>MSC_ORIGEM</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:16:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>98017B0F-23C5-8021-2C1C-7865F10B1B3A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CN_ORIGEM" id="30768DF6-9AF2-C052-5E3E-260BB4835951">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>MSC_CN_VINCULADO</sourceObjSchema>
+<sourceObjName>CN_ORIGEM</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:16:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>39ECBCE8-E2FB-C23D-961C-17FCB77F3B3A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MSC_DESTINO" id="EA343B6E-0A03-8787-0276-29E3F193A57F">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>MSC_CN_VINCULADO</sourceObjSchema>
+<sourceObjName>MSC_DESTINO</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:16:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>99CF1EDC-B145-45A9-3CBE-9C3C08E5357A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CN_DESTINO" id="76F58A1E-BFDE-8100-8E3B-A5BA12AE541D">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>MSC_CN_VINCULADO</sourceObjSchema>
+<sourceObjName>CN_DESTINO</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:16:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>109C30BD-8594-455B-4268-E8CF6F71553D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA" id="BD797DD3-9E9F-CE5F-FCC3-F77E11093FFF">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>MSC_CN_VINCULADO</sourceObjSchema>
+<sourceObjName>DATA</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:16:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>1331442A-2889-DFD6-14FE-CC3979BC7B38</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID" id="D26D9B00-6EB6-9B4E-5C0C-3BFEECBAED54">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>MSC_CN_VINCULADO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-10 13:16:28 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>1A3C6DD2-549A-583B-6634-38B9297CD05F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="340B0E35-FECA-051B-F1AA-9BB548BBE7A4" name="DDX">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 21:19:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteDesignID>261BA68B-BEC1-951E-9842-18728CBC93F8</remoteDesignID>
+<remoteModelID>56B485BD-642F-0CD7-B4BF-9B40F32A95A1</remoteModelID>
+<remoteObjectID>9BE39210-E189-7363-872A-74955250A39A</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\56B485BD-9B40F32A95A1\table/seg_0/9BE39210-E189-7363-872A-74955250A39A.xml</remoteObjectRelativeStorageName>
+<afterCreate>CREATE SEQUENCE SEQ_DDX INCREMENT BY 1 MAXVALUE 9999999999999999999999 MINVALUE 0 CYCLE CACHE 20 ORDER;</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_DDX" id="A1D7CB2A-F9C0-3983-2442-B0689DEC3DDE">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 21:19:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>3260DF6D-0DE9-20B5-AE53-9CF13464223E</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA" id="BB88AD5A-38D0-1BEE-1CFD-632A33D35AA7">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 21:19:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>2F863912-238A-71CD-6681-9E42EF74E7D9</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="909D1A39-FC93-DB53-5018-678664D50A6B" name="DDX_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 21:19:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>7FE30F61-2D57-0CA9-61FB-C692F1735894</remoteObjectID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="A1D7CB2A-F9C0-3983-2442-B0689DEC3DDE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7D9C5A68-B827-A14A-805C-409B05B545A5" name="DDX__IDX">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 21:19:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<remoteObjectID>0D94A9EC-6A89-2551-817F-1E4FACD27B8E</remoteObjectID>
+<indexState>Unique Plain Index</indexState>
+<indexColumnUsage>
+<colUsage columnID="BB88AD5A-38D0-1BEE-1CFD-632A33D35AA7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

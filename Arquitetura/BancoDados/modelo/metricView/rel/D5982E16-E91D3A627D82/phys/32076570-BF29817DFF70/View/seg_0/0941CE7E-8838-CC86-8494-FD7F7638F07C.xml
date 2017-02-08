@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableViewProxyOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableViewProxyOraclev10g" name="VIEW_CRIADORA" directorySegmentName="seg_0" id="0941CE7E-8838-CC86-8494-FD7F7638F07C">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-03 19:29:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<definition>CREATE OR REPLACE VIEW VIEW_CRIADORA&lt;br&gt;AS&lt;br&gt;  SELECT * FROM uuf </definition>
+</TableViewProxyOraclev10g>

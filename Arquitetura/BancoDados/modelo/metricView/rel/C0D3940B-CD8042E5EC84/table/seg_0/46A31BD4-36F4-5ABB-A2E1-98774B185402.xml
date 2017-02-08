@@ -1,0 +1,185 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="46A31BD4-36F4-5ABB-A2E1-98774B185402" name="CDRVIEW_TOP_SETOR_CONCATENACAO">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>CDRVIEW_TOP_SETOR_CONCATENACAO</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 12:55:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>CB9F3932-1776-7FD2-139C-9679C88DDCF6</importedID>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATA" id="71EE4CB2-F1CC-7A69-9599-F2697753938D">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>CDRVIEW_TOP_SETOR_CONCATENACAO</sourceObjSchema>
+<sourceObjName>DATA</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 12:55:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>35689993-7790-3B41-0AF4-39F0C6019A93</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AREA" id="9E4C81D0-BA23-47D2-3D88-0A6DB3A22679">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>CDRVIEW_TOP_SETOR_CONCATENACAO</sourceObjSchema>
+<sourceObjName>AREA</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 12:55:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>E4403B7F-A588-67A9-E3AE-CD4ABD1F5079</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BILHETADOR" id="6C8E54B8-4009-2891-D7F4-B061D341C101">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>CDRVIEW_TOP_SETOR_CONCATENACAO</sourceObjSchema>
+<sourceObjName>BILHETADOR</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 12:55:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>D4AF887E-4A0F-36AB-AAF1-1A7C9891B6B3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SETOR" id="B6FEBE4C-BBA4-643B-80F2-07386DB47150">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>CDRVIEW_TOP_SETOR_CONCATENACAO</sourceObjSchema>
+<sourceObjName>SETOR</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 12:55:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>41B65AA1-8177-9958-4780-D37C98C5A78A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM_AGRUPA_CONCATENADA" id="E3CED9AF-ABA9-E4E6-A259-5E26B1F7585C">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>CDRVIEW_TOP_SETOR_CONCATENACAO</sourceObjSchema>
+<sourceObjName>CHAM_AGRUPA_CONCATENADA</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 12:55:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>D99413A4-B924-6B19-1D0B-A80678FED11B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM_UNICA" id="00077C3D-5276-0F80-62D6-711E835CBD14">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>CDRVIEW_TOP_SETOR_CONCATENACAO</sourceObjSchema>
+<sourceObjName>CHAM_UNICA</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 12:55:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>0095DA7F-8C7A-F80C-3CA0-C0D14DD55135</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1DRPTCT_CONCATENADA" id="D192F8F2-29B0-78E1-1054-78B9DFBADD72">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>CDRVIEW_TOP_SETOR_CONCATENACAO</sourceObjSchema>
+<sourceObjName>OK1DRPTCT_CONCATENADA</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 12:55:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>4711A58B-A267-133D-F8C2-21D246C9DD61</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OK1TCT_CONCATENADA" id="E6DBE8E6-B700-9062-80AE-E18D3EAF564A">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>CDRVIEW_TOP_SETOR_CONCATENACAO</sourceObjSchema>
+<sourceObjName>OK1TCT_CONCATENADA</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 12:55:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>B9102317-1081-EC27-E90F-98D897B5DB76</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERIODO" id="8B7576D9-584A-0C39-FC0E-C223B11DD663">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>CDRVIEW_TOP_SETOR_CONCATENACAO</sourceObjSchema>
+<sourceObjName>PERIODO</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 12:55:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>C997612F-4C3B-17AB-C77A-F94DE3A2EF87</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM" id="1DDA0664-DCA8-AA4F-ED73-64F5B810018E">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>CDRVIEW_TOP_SETOR_CONCATENACAO</sourceObjSchema>
+<sourceObjName>CHAM</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 12:55:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>C0FACC6C-D85C-2CB6-34C1-02A97CA6DE03</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM_PERNAS_CONCATENADAS" id="965903B6-66A0-67F8-4966-63C5FF5F9717">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>CDRVIEW_TOP_SETOR_CONCATENACAO</sourceObjSchema>
+<sourceObjName>CHAM_PERNAS_CONCATENADAS</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-28 12:55:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>205F9820-3BF1-1CCE-8D0E-B0ACEE200B23</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

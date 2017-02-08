@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="SchemaObject" objectID="5F09FBDB-D526-8FDC-01ED-30398D36D36E" name="vips" seqName="seg_0"/>
+   <object objectType="Table" objectID="012BD3BB-8898-F742-6888-A4A9700A6732" name="DADOS_VIPS_M2M_APN_SEMANA" seqName="seg_0"/>
+   <object objectType="Table" objectID="0912D29C-CDF8-79CD-EBC6-437FA200E94D" name="CONTROLE_JOBS" seqName="seg_0"/>
+   <object objectType="Table" objectID="166DF5A5-5705-9AB7-984C-FD588354FFB4" name="CONTROLE_ETL" seqName="seg_0"/>
+   <object objectType="Table" objectID="19BCDF94-415F-684D-B43E-D406C435F2C7" name="DADOS_VIPS_M2M_APN_DIA" seqName="seg_0"/>
+   <object objectType="Table" objectID="3726DB67-9779-5948-B4A2-FA41B562F154" name="HISTORICO_IMSI_STATUS" seqName="seg_0"/>
+   <object objectType="Table" objectID="3929EF8B-8BDD-9E54-E7EF-6AC6885F7973" name="DADOS_VIPS_M2M_IMSI_SEMANA" seqName="seg_0"/>
+   <object objectType="Table" objectID="52D790EF-4F24-8468-664B-6B1171F3ACA1" name="DADOS_VIPS_M2M_IMSI_DIA" seqName="seg_0"/>
+   <object objectType="Table" objectID="7010A160-ADFE-6BF7-A322-1A99DB8C2C3C" name="APN" seqName="seg_0"/>
+   <object objectType="Table" objectID="767BDD6E-F01D-4D32-A862-E8F5FDADE340" name="DADOS_VIPS_M2M_IMSI_HORA" seqName="seg_0"/>
+   <object objectType="Table" objectID="8AF04718-1A49-9C31-9F0F-0A600A5E9716" name="DADOS_VIPS_M2M_APN_HORA" seqName="seg_0"/>
+   <object objectType="Table" objectID="D4162D56-F605-BE1C-5734-88F239601CBD" name="CONTROLE_IMSI" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

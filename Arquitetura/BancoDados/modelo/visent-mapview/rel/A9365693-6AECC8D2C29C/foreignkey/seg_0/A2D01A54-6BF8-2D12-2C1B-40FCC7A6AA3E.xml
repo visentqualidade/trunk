@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A2D01A54-6BF8-2D12-2C1B-40FCC7A6AA3E" name="VM_DISTRITO_VM_MUNICIPIO_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 20:47:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<containerWithKeyObject>0E807639-1164-9075-238E-DED762EC8570</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>22D9CD42-9E2E-799E-D118-5E1ED86A657D</localFKIndex>
+<keyObject>1E33A17F-9C61-5806-FEC2-F58362EB6C22</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

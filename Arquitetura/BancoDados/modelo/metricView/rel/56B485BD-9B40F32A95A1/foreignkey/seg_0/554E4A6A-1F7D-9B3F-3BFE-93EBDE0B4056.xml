@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" id="554E4A6A-1F7D-9B3F-3BFE-93EBDE0B4056" directorySegmentName="seg_0" name="META_ANATEL_INDICADOR_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-04-02 21:38:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<containerWithKeyObject>A5C21A59-2E36-20D6-0815-5C47AA0A19CF</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>E7DB4C0F-C062-5C5F-855E-0B45D84D7A2F</localFKIndex>
+<keyObject>E497C9E9-3501-7FB3-2E79-D234410157A5</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+</FKIndexAssociation>

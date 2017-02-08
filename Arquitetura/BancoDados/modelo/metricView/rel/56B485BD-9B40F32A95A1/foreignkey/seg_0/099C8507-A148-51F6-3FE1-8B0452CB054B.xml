@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="099C8507-A148-51F6-3FE1-8B0452CB054B" name="GEOGRAFIA_REGIONAL_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:34:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<containerWithKeyObject>48C99A52-929B-7FCB-9066-D7E7203DE352</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>FA9EF9E6-D541-F7DC-27C2-85EC9E8F89E8</localFKIndex>
+<keyObject>4152763D-EC0B-EBD6-37F7-A3FD2EB7FB51</keyObject>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

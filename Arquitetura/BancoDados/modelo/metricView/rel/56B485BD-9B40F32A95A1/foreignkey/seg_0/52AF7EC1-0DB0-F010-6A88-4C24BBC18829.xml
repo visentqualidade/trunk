@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="52AF7EC1-0DB0-F010-6A88-4C24BBC18829" name="REL_REG_COD_NAC_FK_CN">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 18:23:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<containerWithKeyObject>C024D574-6E63-4398-8D31-B066376BA313</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>717586CB-D8A6-E55B-4828-6FD7108CE8D9</localFKIndex>
+<keyObject>9B77A076-F567-4A23-D773-966C7F161E48</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

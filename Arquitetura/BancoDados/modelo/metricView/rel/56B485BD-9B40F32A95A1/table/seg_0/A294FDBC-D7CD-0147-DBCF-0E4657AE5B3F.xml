@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A294FDBC-D7CD-0147-DBCF-0E4657AE5B3F" name="COLUNA_VOLUME_QUALIDADE">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 16:45:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into INTERCONEXAO.COLUNA_VOLUME_QUALIDADE (ID_VOL_QUA,NOME) values (&apos;1&apos;,&apos;TAXA&apos;);&lt;br/&gt;Insert into INTERCONEXAO.COLUNA_VOLUME_QUALIDADE (ID_VOL_QUA,NOME) values (&apos;2&apos;,&apos;CONTADOR&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_VOL_QUA" id="B9278654-2C02-DB9D-7F88-6FE80585079C">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 16:47:31 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="4F4C38EC-CFBE-071A-72E5-0DD1B04F5405">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 16:47:31 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0D94AC18-B77E-FF29-59FB-FD62906E5DFA" name="COLUNA_VOLUME_QUALIDADE_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 16:47:38 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B9278654-2C02-DB9D-7F88-6FE80585079C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

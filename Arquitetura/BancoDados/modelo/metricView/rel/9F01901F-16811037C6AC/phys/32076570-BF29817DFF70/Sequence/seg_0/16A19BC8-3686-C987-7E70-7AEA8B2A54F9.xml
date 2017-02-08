@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="SEQ_FORMULA" directorySegmentName="seg_0" id="16A19BC8-3686-C987-7E70-7AEA8B2A54F9">
+<sourceConnName>Metric View-easyview_user</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>SEQ_FORMULA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 22:01:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<cache>20</cache>
+<incrementBy>1</incrementBy>
+<maxValue>999</maxValue>
+<minValue>-1</minValue>
+<user>1546960D-93B4-9405-2B97-DEB1F5CC87FD</user>
+</SequenceOraclev10g>

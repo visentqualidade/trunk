@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3B5C078C-DCFF-1584-9E65-143EDC83799B" name="TIPO_TARIFA_TIPO_WIDGE_FK1">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>TIPO_TARIFA_TIPO_WIDGE_FK1</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>93B5D4D8-E027-126A-99B1-26AE45710070</importedID>
+<containerWithKeyObject>7C6CE63A-7EB6-1F8B-81D5-B0CB465C1AA6</containerWithKeyObject>
+<deleteRule>CASCADE</deleteRule>
+<localFKIndex>17BF4C14-2D61-AD50-1912-2D385B2F48CD</localFKIndex>
+<keyObject>70C0B1A5-DE14-3C75-8C0B-53704C9E84A8</keyObject>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

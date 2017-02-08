@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0E36E025-3C11-7E75-F33F-8C83BC9345A2" name="CN_CODIGO">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-14 12:12:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>insert into EASYVIEW.CN_CODIGO values (&apos;11&apos;,00986);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;12&apos;,00990);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;13&apos;,00992);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;14&apos;,00994);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;15&apos;,00996);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;16&apos;,00998);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;17&apos;,01000);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;18&apos;,01002);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;19&apos;,01004);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;21&apos;,00793);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;22&apos;,00799);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;24&apos;,00826);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;27&apos;,00832);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;28&apos;,00835);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;31&apos;,00842);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;32&apos;,00837);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;33&apos;,00848);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;34&apos;,00844);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;35&apos;,00851);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;37&apos;,00840);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;38&apos;,00854);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;41&apos;,00923);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;42&apos;,00926);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;43&apos;,00928);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;44&apos;,00930);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;45&apos;,00938);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;46&apos;,00978);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;47&apos;,00915);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;48&apos;,00940);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;49&apos;,00942);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;51&apos;,00944);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;53&apos;,00947);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;54&apos;,00949);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;55&apos;,00951);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;61&apos;,00953);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;62&apos;,00956);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;63&apos;,00959);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;64&apos;,00962);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;65&apos;,00918);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;66&apos;,00921);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;67&apos;,00972);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;68&apos;,00966);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;69&apos;,00969);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;71&apos;,00858);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;73&apos;,00860);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;74&apos;,00804);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;75&apos;,00862);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;77&apos;,00801);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;79&apos;,00867);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;81&apos;,00812);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;82&apos;,00806);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;83&apos;,00809);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;84&apos;,00818);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;85&apos;,00821);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;86&apos;,00885);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;87&apos;,00816);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;88&apos;,00880);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;89&apos;,00888);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;91&apos;,00897);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;92&apos;,00910);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;93&apos;,00900);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;94&apos;,00902);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;95&apos;,00904);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;96&apos;,00907);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;97&apos;,00913);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;98&apos;,00890);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;99&apos;,00893);&lt;br/&gt;</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO" id="609D94E5-A8E4-B8DC-6DA5-353E679D88D0">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-14 12:14:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CN" id="E7C5F695-3950-E53E-6175-E54981E60719">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-14 12:14:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E68F1FB9-1426-01D2-11C3-7B0784099CA8" name="CN_CODIGO_PK">
+<createdBy>osx</createdBy>
+<createdTime>2014-01-14 12:14:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="609D94E5-A8E4-B8DC-6DA5-353E679D88D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

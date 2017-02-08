@@ -1,0 +1,216 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="96B4E466-5A96-7D4D-BF97-1379596DEAE4" name="CDRVIEW_SMP10_11">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>CDRVIEW_SMP10_11</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>B511F171-50D5-EBED-6B8D-FD8DE87FD0B0</importedID>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="OPERADORA" id="39C9178A-40CE-0939-21A7-463163FF6D6F">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP10_11</sourceObjSchema>
+<sourceObjName>OPERADORA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>42765782-F3E0-6B57-2AC0-25DD244CAEB0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANO" id="2015FA19-8D3B-E56B-CD8D-86E0A3D9A67A">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP10_11</sourceObjSchema>
+<sourceObjName>ANO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>74492BF1-E8B0-7762-3606-CD81B65714D9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MES" id="D9D8933B-F7E2-5833-64ED-6EB0443AE881">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP10_11</sourceObjSchema>
+<sourceObjName>MES</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>5086C42C-C4E0-DC2E-2755-B88A44C9B24A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SMP" id="D0175693-EDA7-35BF-3AE7-F5B3973C3087">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP10_11</sourceObjSchema>
+<sourceObjName>SMP</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>8E73CB1B-7917-87F1-B4C4-8F1329BBC7ED</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UNIDADE_PRIMARIA" id="401AAAE7-7C09-435F-79F0-0D27F73B4310">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP10_11</sourceObjSchema>
+<sourceObjName>UNIDADE_PRIMARIA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>6D5B1B32-E60D-B381-158E-23B285A2DAE6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FAIXA_VELOCIDADE" id="CEF78363-F1A9-E043-436B-66BDA740ADE0">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP10_11</sourceObjSchema>
+<sourceObjName>FAIXA_VELOCIDADE</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>2D6E1324-4E3D-21DD-55A2-49152D51BCBE</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CAMPO_39" id="F378D231-6F68-1AF3-BF67-4168D3E108A1">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP10_11</sourceObjSchema>
+<sourceObjName>CAMPO_39</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>8639D924-FB3D-2C48-E2B2-CD0943F67108</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CAMPO_40" id="770DE8B6-6867-60B6-1AB1-E9B8BD4B4A2D">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP10_11</sourceObjSchema>
+<sourceObjName>CAMPO_40</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>DA056DAD-6D0E-0A0E-6D6B-E7A9A0A04BA6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CAMPO_41" id="539FDA1C-FB76-14B2-5A1C-CCBF1B6AC0DA">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP10_11</sourceObjSchema>
+<sourceObjName>CAMPO_41</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>1EC175AC-C37D-6310-7308-3F289A06B0AA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CAMPO_42" id="1605EC5D-0D32-8570-FB0C-F80420D5A0FA">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>CDRVIEW_SMP10_11</sourceObjSchema>
+<sourceObjName>CAMPO_42</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>1800F8AF-3D7D-C289-3899-35D3831230C9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="72030E25-2DC7-ED73-4927-570B4AFA6FFC" name="CDRVIEW_SMP10_11_INDEX1">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>CDRVIEW_SMP10_11_INDEX1</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>447976E3-1FA7-B43B-9EE4-25A7EC01A3F2</importedID>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="39C9178A-40CE-0939-21A7-463163FF6D6F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="370F9284-7B28-D83C-CD2B-D1BDB89F29D4" name="CDRVIEW_SMP10_11_INDEX2">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>CDRVIEW_SMP10_11_INDEX2</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>A3D58A33-B599-068A-CBE9-ABF00803FCC4</importedID>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2015FA19-8D3B-E56B-CD8D-86E0A3D9A67A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

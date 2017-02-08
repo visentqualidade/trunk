@@ -1,0 +1,223 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="CDRVIEW_PONTO_LDN_SEMANA" directorySegmentName="seg_0" id="4AB1ADD8-B9E0-15A7-E3CB-BD99918BC7CF">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CHAM" id="0089D868-FA9B-3E51-6612-79EC57D74CC1">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OU" id="03307377-34CB-22A7-81F9-35B305E668B6">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PERIODO" id="07A75CB2-54A5-D5E1-C01E-F36888E07C64">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="INV" id="254B25FB-0C30-9AA3-D757-658380606F61">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BLOQ" id="2CC26C5C-10F7-5D38-0869-C5B005576283">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TTT" id="35060442-86E2-ADD4-4808-C21D5C13756D">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SCV" id="36D982C1-2312-C6AB-336C-2D6002598216">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA" id="3B58C959-8D13-B726-CF2A-13BF0784C9CB">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OK5" id="4CBF6F10-60A0-18DE-0501-874F796DB8EA">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OK5_TCT" id="550FE9A0-EC2F-35DE-FAD3-13E72C41D9D9">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TTC" id="5BDC5EF0-E31E-1E77-AF3B-D64C6EAF8DAA">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CLASSE_CHAMADA" id="6155F48B-012F-F101-3974-175B1061640F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AREA" id="70363940-ABF6-94CD-F8AB-C91F3187F77D">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OK1" id="75B69DBA-87E1-7568-97A9-EAEA2774ECA4">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CO1" id="77AE1FF1-FC4E-AEEA-9CFB-68A26D15ADDF">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OK1_C" id="77BDE4C9-EA69-9435-71B9-375F21F5CE2C">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OK1_DRP_TCT" id="7DC483D8-8AC6-7D3A-CE14-C3FB171CB135">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REGIONAL" id="7EF9F928-BD27-915A-9023-B7071FCFEC7F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TIPO_TARIFA" id="7F2541B2-CAD7-F346-743F-5FD2FA1ED4BB">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OK1_DRP" id="82A52504-AF5A-9D1B-2FC4-0BDAB4D9B314">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CO3" id="923AB3E5-F673-191C-F4CE-2FDB6F07AED6">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OKVM" id="92D4FC92-E17B-83F7-7F89-B9BB7CE5F1EC">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CN_B" id="A2D1E47A-3A9C-0FB9-72F1-EF6F9C87CDA9">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CSP" id="A6383C74-A20C-F2B3-56FE-ACF2A2F88EB0">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OPERADORA" id="B37A206B-5BA3-74AF-17DC-ED0D6A2D0B1A">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OK5_DRP_TCT" id="BFA0D9E9-586D-044F-1ED8-D0938A972A5D">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UF" id="CC9AC64F-1010-866E-24B8-843BEA6B06CE">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NR" id="DAA9C96E-5E04-1AB4-710C-F0D1C53FEE0C">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CO2" id="E0B2FB54-47E4-7718-5F2E-C3F165DAB0FB">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BILHETADOR" id="E1E3DEA7-C0A8-923F-A86D-85788B6D3C79">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OK1_TCT" id="E8423D29-6FB3-65FE-DC61-63E04808632F">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TTO" id="F1050EFA-DF8B-CBB7-E183-A17E79F73011">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SEMANA" id="F315C8E8-6F49-DEB7-8A10-89AF7499442B">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:32:04 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NR_VM" id="F90E8E48-9628-BEA8-792A-61AA4448CD55">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OK5_DRP" id="FCDD17AD-20B9-67A1-FD9E-BBBBA7808289">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-25 17:31:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>

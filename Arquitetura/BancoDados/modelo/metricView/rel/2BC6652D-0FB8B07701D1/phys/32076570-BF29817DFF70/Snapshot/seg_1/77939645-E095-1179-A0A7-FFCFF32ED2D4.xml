@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SnapshotOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.SnapshotOraclev11g" name="VM_MUNICIPIO" directorySegmentName="seg_1" id="77939645-E095-1179-A0A7-FFCFF32ED2D4">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-21 11:35:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<defaultSegment>NO</defaultSegment>
+<refreshType>FORCE</refreshType>
+<subquery>SELECT MUNICIPIO.IBGE AS ID_MUNICIPIO ,&lt;br/&gt;    MUNICIPIO.&quot;NOME DO MUNICIPIO&quot; AS MUNICIPIO,&lt;br/&gt;    MUNICIPIO.UF        AS UF,&lt;br/&gt;    MUNICIPIO.&quot;CODIGO NACIONAL&quot;      AS AREA&lt;br/&gt;  FROM VW_MAPVIEW_MUNICIPIO municipio&lt;br/&gt;  WHERE municipio.ibge IN&lt;br/&gt;    (SELECT UNIQUE(IBGE) FROM VW_MAPVIEW_ESTACAO_LOCATION&lt;br/&gt;    )</subquery>
+<user>37880A62-C5AF-B901-9ADB-83F361F9100B</user>
+<with></with>
+</SnapshotOraclev11g>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C15DBDE1-10BB-E69A-010E-BFAFC319F521" name="WIDGET_FK_WIDGET_PAI">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>WIDGET_FK_WIDGET_PAI</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>182198DB-F242-C23C-B4E9-4733CE641EFF</importedID>
+<containerWithKeyObject>530A88C8-CCF3-A210-EA81-0F1C67AE7311</containerWithKeyObject>
+<deleteRule>CASCADE</deleteRule>
+<localFKIndex>41EB374F-9252-37A8-54A9-DCD27C8DDFBE</localFKIndex>
+<keyObject>2D83B7F8-0196-918D-C319-3AC8577658A9</keyObject>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

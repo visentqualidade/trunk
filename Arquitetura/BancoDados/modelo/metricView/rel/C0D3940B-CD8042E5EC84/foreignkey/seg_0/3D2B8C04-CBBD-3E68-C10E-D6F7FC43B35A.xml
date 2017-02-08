@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3D2B8C04-CBBD-3E68-C10E-D6F7FC43B35A" name="GRUPO_ROTA_FK1">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>GRUPO_ROTA_FK1</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<containerWithKeyObject>CC9A444B-550A-7118-E272-D1F15D1A47B0</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>A46DA404-CC54-AF6E-C344-DF3B0CB88F05</localFKIndex>
+<keyObject>56CB7F63-4E1C-67F3-32CB-CDC40FB71B2B</keyObject>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

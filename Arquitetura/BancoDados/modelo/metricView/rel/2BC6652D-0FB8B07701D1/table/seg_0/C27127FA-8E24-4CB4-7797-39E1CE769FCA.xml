@@ -1,0 +1,247 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C27127FA-8E24-4CB4-7797-39E1CE769FCA" name="CDRVIEW_VOZ_EXPURGO">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>A36D226E-BC2B-F21D-6766-62C3EFF7964B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATA" id="F229BA08-3BF9-1AF8-2207-6F385C55C9D5">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CELULA" id="45307B8F-A6E9-790B-5958-F8DE2B9A065E">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SETOR" id="43FB7A5B-64D8-DAF5-6933-7A6A9C4B8D25">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<constraintName>SETOR_CHECK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="SETOR IS NOT NULL"/>
+</checkConstraint>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TAC" id="DA199B77-75C3-3445-0CB1-20B110464B9E">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MODELO" id="5BAE8F30-DE7D-96F3-5C42-E1D4E1B8FF66">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SERVICO" id="6A4A135E-F504-796D-F94F-DF6E53C06CFF">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>16642D84-D35C-5B63-7176-1AA7F590E177</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UF" id="03129C5F-9492-CFD2-DEA0-ACDDA7E4D0D5">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>71553301-988C-16E3-80BB-FB44FDB109A7</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AREA" id="9708D120-C299-A32B-1818-4E97622A0457">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>71553301-988C-16E3-80BB-FB44FDB109A7</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_MUNICIPIO" id="F4CF6BD6-826E-8BDC-388A-713700951C14">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6A80BC46-2A7C-0998-5766-AAE0548D4835</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MUNICIPIO" id="C86933FE-EE57-26CD-A3BF-85A778E02F8C">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2402066B-CCAB-C63E-72B9-833688F4A396</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHAM" id="44312423-008D-8867-DA3F-70B01876648B">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LATITUDE" id="76F9F5A4-A81A-11D5-F3D6-0A683462CF90">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LONGITUDE" id="ED37E5B5-CCCD-1D78-31D7-443C675D86D8">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SETOR_TECNOLOGIA" id="B352BA93-BDA3-3CA0-20B6-3D92DC53B7E4">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>16642D84-D35C-5B63-7176-1AA7F590E177</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TTC" id="C6620E42-40E0-CD5F-838C-9300C0458498">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BBC99FF4-4060-C6B4-E9ED-CAF9FF2A69A0</domain>
+<defaultValue>0</defaultValue>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CELULA_TECNOLOGIAS" id="C1FFC62F-2052-0FD1-BF91-6A671658CD35">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61EE3B15-9924-45D9-E25E-1338A4EF5610</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMEI" id="E46AFE90-79E8-8836-632F-5CE3966A1D04">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>DE07794D-9321-78A2-94B0-5C06C7103606</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BANDAS" id="B778E824-6C4B-D81F-D1F2-2707F6CCAF34">
+<sourceDDLFile>CDRVIEW_DADOS_VOZ.txt</sourceDDLFile>
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:55:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>78C5043E-B58A-7D96-6A16-E81219C11B76</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAC" id="C56702AD-2250-F8F0-1E06-4E6BF7434DA4">
+<createdBy>osx</createdBy>
+<createdTime>2014-11-25 12:57:37 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

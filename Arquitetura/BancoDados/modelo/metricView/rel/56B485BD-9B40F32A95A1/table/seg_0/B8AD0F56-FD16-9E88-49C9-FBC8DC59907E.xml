@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B8AD0F56-FD16-9E88-49C9-FBC8DC59907E" name="FERRAMENTA">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>FERRAMENTA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into METRICVIEW.FERRAMENTA (ID_FERRAMENTA,DESCRICAO,IMAGEM,NOME,URL) values (&apos;1&apos;,&apos;Visões Gerenciais.&apos;,&apos;dashboard.jpg&apos;,&apos;Dashboard&apos;,&apos;http://localhost:8080/dashboard/acessoSistema&apos;);&lt;br/&gt;Insert into METRICVIEW.FERRAMENTA (ID_FERRAMENTA,DESCRICAO,IMAGEM,NOME,URL) values (&apos;2&apos;,&apos;Indicadores Regulatórios.&apos;,&apos;easyview.jpg&apos;,&apos;EasyView&apos;,&apos;http://localhost:8000/easyview/acessoSistema&apos;);&lt;br/&gt;Insert into METRICVIEW.FERRAMENTA (ID_FERRAMENTA,DESCRICAO,IMAGEM,NOME,URL) values (&apos;3&apos;,&apos;Matrizes de Interesse de Interconexão.&apos;,&apos;matriz.jpg&apos;,&apos;Matriz de Interesse&apos;,&apos;http://localhost:8080/matriz/acessoSistema&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_FERRAMENTA" id="A7497E71-41A7-2575-9005-55F38A9990D7">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>FERRAMENTA</sourceObjSchema>
+<sourceObjName>ID_FERRAMENTA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRICAO" id="28DF2A89-0D8D-6335-318A-07CD6C808956">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>FERRAMENTA</sourceObjSchema>
+<sourceObjName>DESCRICAO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMAGEM" id="6510A60E-31A8-C49E-52B1-5D0DCACD8095">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>FERRAMENTA</sourceObjSchema>
+<sourceObjName>IMAGEM</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="D4D46979-B8AA-7EA2-7649-2539E8349A80">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>FERRAMENTA</sourceObjSchema>
+<sourceObjName>NOME</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="URL" id="BD703621-C5A5-BE6F-A6C7-8183CC7F7DAF">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>FERRAMENTA</sourceObjSchema>
+<sourceObjName>URL</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DC189D70-AE50-973F-E817-52FDF1D053C7" name="FERRAMENTA_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>FERRAMENTA_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7497E71-41A7-2575-9005-55F38A9990D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2C1E4D3B-20D2-26D9-066D-783945DE0185" name="FERRAMENTA_BKP_PK">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>FERRAMENTA_BKP_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7497E71-41A7-2575-9005-55F38A9990D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

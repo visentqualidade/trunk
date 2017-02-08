@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SynonymOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="REL_REGIONAL_COD_NACIONAL" directorySegmentName="seg_0" id="051181F6-F7D3-F807-5743-FFD473D543FD">
+<sourceConnName>Metric View-easyview_user</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>REL_REGIONAL_COD_NACIONAL</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 22:01:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<object>REL_REGIONAL_COD_NACIONAL</object>
+<objectUser>9EC34E85-1AB8-C4D7-8936-9473F0A23AC9</objectUser>
+<user>1546960D-93B4-9405-2B97-DEB1F5CC87FD</user>
+</SynonymOraclev10g>

@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableSpaceOraclev10g" name="VIPS" directorySegmentName="seg_0" id="A96E578D-6C5D-5E57-4B79-BBB01F717E8F">
+<sourceDDLFile>exportarview.sql</sourceDDLFile>
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-09 20:29:08 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<emUniformSize>0</emUniformSize>
+<extentManagement>LOCAL</extentManagement>
+</TableSpaceOraclev10g>

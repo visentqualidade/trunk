@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4A9FC0C7-2F95-0658-D77F-B10681F888FE" name="GEOGRAFIA_REGIONAL_FK">
+<sourceConnName>visent</sourceConnName>
+<sourceObjSchema>VISENT</sourceObjSchema>
+<sourceObjName>GEOGRAFIA_REGIONAL_FK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<containerWithKeyObject>8CAD85FD-DC51-A85C-F03D-D69B6F34A544</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>232DA603-E4F0-5C6F-EFF9-268C9C1BAB21</localFKIndex>
+<keyObject>6F879924-2C7B-8AAE-48EB-80C722AFA987</keyObject>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

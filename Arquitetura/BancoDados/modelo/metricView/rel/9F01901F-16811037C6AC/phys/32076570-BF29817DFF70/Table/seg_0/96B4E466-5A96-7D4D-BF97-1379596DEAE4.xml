@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="CDRVIEW_SMP10_11" directorySegmentName="seg_0" id="96B4E466-5A96-7D4D-BF97-1379596DEAE4">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>27AAC1FE-9603-A240-10C3-52115EB3644F</segment>
+<tableSpace>4158720B-E1F6-1A6D-B37F-A5B3AD67B772</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="CDRVIEW_SMP10_11_INDEX2" id="370F9284-7B28-D83C-CD2B-D1BDB89F29D4">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<segment>18454DC5-A93E-0633-36D3-CE9B4EDC2DC9</segment>
+<tableSpace>4158720B-E1F6-1A6D-B37F-A5B3AD67B772</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="CDRVIEW_SMP10_11_INDEX1" id="72030E25-2DC7-ED73-4927-570B4AFA6FFC">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<segment>18454DC5-A93E-0633-36D3-CE9B4EDC2DC9</segment>
+<tableSpace>4158720B-E1F6-1A6D-B37F-A5B3AD67B772</tableSpace>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CAMPO_42" id="1605EC5D-0D32-8570-FB0C-F80420D5A0FA">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ANO" id="2015FA19-8D3B-E56B-CD8D-86E0A3D9A67A">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OPERADORA" id="39C9178A-40CE-0939-21A7-463163FF6D6F">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UNIDADE_PRIMARIA" id="401AAAE7-7C09-435F-79F0-0D27F73B4310">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAMPO_41" id="539FDA1C-FB76-14B2-5A1C-CCBF1B6AC0DA">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAMPO_40" id="770DE8B6-6867-60B6-1AB1-E9B8BD4B4A2D">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FAIXA_VELOCIDADE" id="CEF78363-F1A9-E043-436B-66BDA740ADE0">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SMP" id="D0175693-EDA7-35BF-3AE7-F5B3973C3087">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MES" id="D9D8933B-F7E2-5833-64ED-6EB0443AE881">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAMPO_39" id="F378D231-6F68-1AF3-BF67-4168D3E108A1">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 12:38:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>

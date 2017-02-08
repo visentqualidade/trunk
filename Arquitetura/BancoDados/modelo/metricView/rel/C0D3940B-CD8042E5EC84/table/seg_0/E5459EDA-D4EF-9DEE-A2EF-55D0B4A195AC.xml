@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E5459EDA-D4EF-9DEE-A2EF-55D0B4A195AC" name="FILTRO_WIDGET">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>FILTRO_WIDGET</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_FILTRO_WIDGET" id="A7ED04E5-97F5-1208-8C3D-D4EB97B2C814">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>FILTRO_WIDGET</sourceObjSchema>
+<sourceObjName>ID_FILTRO_WIDGET</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_FILTRO" id="0596AC9B-33F6-AF2B-BBFB-849A9EDE0870">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>FILTRO_WIDGET</sourceObjSchema>
+<sourceObjName>ID_FILTRO</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<delegate>6DEF880B-8536-8BBE-BBB5-29589BF31C54</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51FD4934-3DAF-8425-2E49-254B771B3249" referredColumn="6DEF880B-8536-8BBE-BBB5-29589BF31C54"/>
+</associations>
+</Column>
+<Column name="ID_WIDGET" id="5DDAD919-A6E5-97E0-53D7-98E69AC6D1AB">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>FILTRO_WIDGET</sourceObjSchema>
+<sourceObjName>ID_WIDGET</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>B19C268D-3C75-4C85-A041-FE803B21EA30</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0169731C-A23A-BBD3-731E-98AC7ACF818D" referredColumn="B19C268D-3C75-4C85-A041-FE803B21EA30"/>
+</associations>
+</Column>
+<Column name="VALOR" id="986E7E1D-0FE9-9493-6174-88FAEACD797B">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>FILTRO_WIDGET</sourceObjSchema>
+<sourceObjName>VALOR</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="449D20F5-0C15-62D9-18A5-23577B833C28" name="FILTRO_WIDGET_PK">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>FILTRO_WIDGET_PK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7ED04E5-97F5-1208-8C3D-D4EB97B2C814"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2FAE1219-9DC6-184F-E2FE-12A9ADAE95DA" name="FILTRO_WIDGET_PK">
+<sourceConnName>dashboard</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>FILTRO_WIDGET_PK</sourceObjName>
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>23E13DAF-9A51-2A88-2BE3-AD8456087CBE</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7ED04E5-97F5-1208-8C3D-D4EB97B2C814"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BD695936-79F7-6232-DE13-872E53BAF765" name="FILTRO_WIDGET_FILTRO_FK">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0596AC9B-33F6-AF2B-BBFB-849A9EDE0870"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F998B5E0-DBC6-4ABB-729E-E4A68043951D" name="FILTRO_WIDGET_FK_WIDGET">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-04-30 20:53:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5DDAD919-A6E5-97E0-53D7-98E69AC6D1AB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

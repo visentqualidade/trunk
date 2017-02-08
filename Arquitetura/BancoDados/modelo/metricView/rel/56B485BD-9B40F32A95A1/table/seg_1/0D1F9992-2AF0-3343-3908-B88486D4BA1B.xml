@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="0D1F9992-2AF0-3343-3908-B88486D4BA1B" name="INDICADOR_REFERENCIA">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-17 14:27:53 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_INDICADOR_REFERENCIA" id="B6186F50-74F7-5915-3010-51AB69B7CF67">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-17 14:29:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_VOLUME" id="6221EFEF-8560-AE59-F3E5-EB92605042A9">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-17 14:29:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>BFD0F8A0-3A62-D0E0-35E5-2AC2FAAB6522</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="62028493-997B-755D-CD71-A127014D566E" referredColumn="BFD0F8A0-3A62-D0E0-35E5-2AC2FAAB6522"/>
+</associations>
+</Column>
+<Column name="ID_QUALIDADE" id="41792FC5-D244-56C5-C649-697FF07893C9">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-17 14:32:00 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>DE2A12F4-5947-DD8F-A8EF-9E6DC7ACE085</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B58EB15D-FB76-6F1A-B8CB-B68CB13491A1" referredColumn="DE2A12F4-5947-DD8F-A8EF-9E6DC7ACE085"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FFCE2630-4090-6980-A5C2-A891C68F0DB0" name="INDICADOR_REFERENCIA_PK">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-17 14:37:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B6186F50-74F7-5915-3010-51AB69B7CF67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4588CD77-F5F2-4D3E-FCD9-81E01050D884" name="IND_REF_VOLUME_FK">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-17 14:36:21 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6221EFEF-8560-AE59-F3E5-EB92605042A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AE5B13D3-06F8-5F2B-71B6-401CC8CAB789" name="IND_REF_INDICADOR_QUALIDADE_FK">
+<createdBy>bruno</createdBy>
+<createdTime>2015-03-17 14:37:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41792FC5-D244-56C5-C649-697FF07893C9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,2 @@
+mensagem;tipo(INFO, ERROR);usuario(nome);data_hora;projeto/solucao
+Acessou a visão de Mapa UF.;INFO;Henrique Garcia;2015-03-31 18:43:06:776;EasyView

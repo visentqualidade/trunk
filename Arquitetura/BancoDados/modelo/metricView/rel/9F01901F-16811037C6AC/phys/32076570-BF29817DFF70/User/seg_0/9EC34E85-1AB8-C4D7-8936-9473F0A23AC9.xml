@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="METRICVIEW" directorySegmentName="seg_0" id="9EC34E85-1AB8-C4D7-8936-9473F0A23AC9">
+<sourceConnName>Metric View-easyview_user</sourceConnName>
+<sourceObjName>METRICVIEW</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 22:01:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</UserOraclev10g>

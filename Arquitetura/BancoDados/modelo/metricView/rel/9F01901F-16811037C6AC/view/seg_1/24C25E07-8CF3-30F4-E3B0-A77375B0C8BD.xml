@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_1" id="24C25E07-8CF3-30F4-E3B0-A77375B0C8BD" name="VIEW_SMP4_TX_ENTREGA_PNL_ACOMP">
+<sourceConnName>s_metricview-u_easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>VIEW_SMP4_TX_ENTREGA_PNL_ACOMP</sourceObjName>
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>F205F85B-E891-7423-D011-0B1A0A601F3F</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW VIEW_SMP4_TX_ENTREGA_PNL_ACOMP&lt;br/&gt;AS &lt;br/&gt;WITH Dias AS&lt;br/&gt;  (SELECT UNIQUE TO_CHAR(Dt.DATA, &apos;dd&apos;) AS Data&lt;br/&gt;  FROM CDRVIEW_SMP4 Dt&lt;br/&gt;  WHERE TO_CHAR(Dt.DATA, &apos;dd&apos;) &gt;= 1&lt;br/&gt;  AND TO_CHAR(Dt.DATA, &apos;dd&apos;)   &lt;= 10&lt;br/&gt;  ),&lt;br/&gt;  MesAno AS&lt;br/&gt;  (SELECT UNIQUE TO_CHAR(Dt.DATA, &apos;mm/yyyy&apos;) AS Data FROM CDRVIEW_SMP4 Dt&lt;br/&gt;  ),&lt;br/&gt;  Dia_X_Mes_X_Ano AS&lt;br/&gt;  (SELECT Concat(Concat(Dias.Data, &apos;/&apos;), Mesano.Data) AS data&lt;br/&gt;  FROM Dias Dias,&lt;br/&gt;    Mesano Mesano&lt;br/&gt;  ),&lt;br/&gt;  dados_traducao_sem_vinculo as&lt;br/&gt;  (select * from view_SMP4_tx_entrega_dados where codigo != &apos;NID&apos;&lt;br/&gt;  ),&lt;br/&gt;  Smps_dados AS&lt;br/&gt;  (SELECT Data  AS DATA,&lt;br/&gt;    Pmm         AS PMM,&lt;br/&gt;    TO_CHAR(CN) AS CN,&lt;br/&gt;    CASE&lt;br/&gt;      WHEN SMP_B = &apos;0&apos;&lt;br/&gt;      AND SMP_A != &apos;-&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      WHEN SMP_B = &apos;-&apos;&lt;br/&gt;      AND SMP_A  = &apos;-&apos;&lt;br/&gt;      THEN &apos;-&apos;&lt;br/&gt;      WHEN SMP_B != &apos;-&apos;&lt;br/&gt;      AND SMP_A   = &apos;-&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      ELSE NVL(trim(TO_CHAR(ROUND((SMP_A * 100 / SMP_B), 2),&apos;999990D99&apos;)), &apos;-&apos;)&lt;br/&gt;    END AS SMP&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT TRUNC(Tab.DATA) AS Data,&lt;br/&gt;      tab.pmm              AS Pmm,&lt;br/&gt;      Tab.CN,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.n_chamadas_entregues, 0))),0) AS Smp_A,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(Tab.n_tentativas, 0))),0) AS Smp_B&lt;br/&gt;    FROM &lt;br/&gt;    view_msc_cn_ativo_SMP4 b,&lt;br/&gt;    dados_traducao_sem_vinculo Tab&lt;br/&gt;    WHERE TO_CHAR(Tab.DATA, &apos;dd&apos;) IN&lt;br/&gt;      (SELECT Dias.Data FROM Dias)&lt;br/&gt;      and tab.msc = b.msc&lt;br/&gt;      and tab.cn = b.cn&lt;br/&gt;      and to_date(to_char(tab.data,&apos;MM/yyyy&apos;),&apos;MM/yyyy&apos;) = b.periodo&lt;br/&gt;      and b.status = &apos;T&apos;&lt;br/&gt;    GROUP BY TRUNC(Tab.DATA),&lt;br/&gt;      tab.pmm,&lt;br/&gt;      Tab.CN&lt;br/&gt;    )&lt;br/&gt;  ),&lt;br/&gt;  Dias_X_Cn_X_Pmm AS&lt;br/&gt;  (SELECT to_date(D.data, &apos;dd/mm/yyyy&apos;) AS Data,&lt;br/&gt;    Cn.nome,&lt;br/&gt;    Pmm.NOME AS Pmm&lt;br/&gt;  FROM CN Cn,&lt;br/&gt;    Dia_X_Mes_X_Ano D,&lt;br/&gt;    PMM Pmm&lt;br/&gt;  ),&lt;br/&gt;  Dias_X_Cn_X_Pmm_X_Smp AS&lt;br/&gt;  (SELECT NVL(TRUNC(Smpdados.DATA), Diascnpmm.Data) AS Data,&lt;br/&gt;    Diascnpmm.Pmm,&lt;br/&gt;    NVL(TO_CHAR(Smpdados.SMP), &apos;-&apos;) AS SMP,&lt;br/&gt;    Diascnpmm.nome                   AS Cn&lt;br/&gt;  FROM Dias_X_Cn_X_Pmm Diascnpmm,&lt;br/&gt;    Smps_Dados Smpdados&lt;br/&gt;  WHERE TRUNC(Diascnpmm.Data) = TRUNC(Smpdados.DATA(+))&lt;br/&gt;  AND Diascnpmm.Pmm           = Smpdados.PMM(+)&lt;br/&gt;  AND Diascnpmm.nome          = Smpdados.CN(+)&lt;br/&gt;  )&lt;br/&gt;SELECT TO_CHAR(Dias_X_Cn_X_Pmm_X_Smp.Data, &apos;DD/MM/YYYY&apos;) AS DATA,&lt;br/&gt;  Dias_X_Cn_X_Pmm_X_Smp.Pmm,&lt;br/&gt;  CASE&lt;br/&gt;    WHEN Dias_X_Cn_X_Pmm_X_Smp.SMP          != &apos;-&apos;&lt;br/&gt;    AND TO_NUMBER(Dias_X_Cn_X_Pmm_X_Smp.SMP) &gt; 100&lt;br/&gt;    THEN &apos;100,00&apos;&lt;br/&gt;    ELSE replace(Dias_X_Cn_X_Pmm_X_Smp.SMP,&apos;.&apos;,&apos;,&apos;)&lt;br/&gt;  END                               AS SMP,&lt;br/&gt;  TO_CHAR(Dias_X_Cn_X_Pmm_X_Smp.Cn) AS CN&lt;br/&gt;FROM Dias_X_Cn_X_Pmm_X_Smp&lt;br/&gt;ORDER BY TO_CHAR(Dias_X_Cn_X_Pmm_X_Smp.Cn),&lt;br/&gt;  TO_CHAR(Dias_X_Cn_X_Pmm_X_Smp.Data, &apos;DD/MM/YYYY&apos;),&lt;br/&gt;  Dias_X_Cn_X_Pmm_X_Smp.Pmm</userDefinedSQL>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DATA" id="5353C62A-016D-5588-2063-B1F476F1A0D6">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DATA</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>DATA</headerAlias>
+<reference>false</reference>
+<viewID>24C25E07-8CF3-30F4-E3B0-A77375B0C8BD</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PMM" id="F541BF83-AE8B-5732-159E-B8D10673BD87">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>PMM</alias>
+<dataType>VARCHAR2 (20)</dataType>
+<headerAlias>PMM</headerAlias>
+<reference>false</reference>
+<viewID>24C25E07-8CF3-30F4-E3B0-A77375B0C8BD</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP" id="3B95E5B2-DFCC-08C3-1CA6-B10A564C1F8D">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>SMP</headerAlias>
+<reference>false</reference>
+<viewID>24C25E07-8CF3-30F4-E3B0-A77375B0C8BD</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CN" id="BC8B02D5-D4EF-6C23-5162-BD8652B536E3">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-19 12:53:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>CN</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CN</headerAlias>
+<reference>false</reference>
+<viewID>24C25E07-8CF3-30F4-E3B0-A77375B0C8BD</viewID>
+</viewElement>
+</viewElements>
+</TableView>

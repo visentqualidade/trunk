@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="visent-mapview" id="18499B0A-C6F1-1381-F2EB-F8B6D950AD86" version="3.5">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-23 19:08:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-mapview</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>18499B0A-C6F1-1381-F2EB-F8B6D950AD86</designId>
+</OSDM_Design>

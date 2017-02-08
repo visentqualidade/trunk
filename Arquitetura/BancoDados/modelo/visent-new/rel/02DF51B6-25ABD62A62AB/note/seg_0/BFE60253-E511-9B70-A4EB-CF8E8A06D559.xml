@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Note class="oracle.dbtools.crest.model.design.Note" name="Note_1" directorySegmentName="seg_0" id="BFE60253-E511-9B70-A4EB-CF8E8A06D559">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 21:11:07 UTC</createdTime>
+<comment>TIPO_TECNOLOGIA_BILHETADOR&lt;br/&gt;	1-SMS&lt;br/&gt;	2-DADOS&lt;br/&gt;	3-VOZ&lt;br/&gt;	4-OUTROS&lt;br/&gt;</comment>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</Note>

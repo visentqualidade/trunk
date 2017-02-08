@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="48C99A52-929B-7FCB-9066-D7E7203DE352" name="GEOGRAFIA">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>METRICVIEW</sourceObjSchema>
+<sourceObjName>GEOGRAFIA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:27:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_GEOGRAFIA" id="65A46F4F-BE62-B9F2-CE17-F0DB2DE34C4D">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:28:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="F447430A-7EBF-A509-3C40-631F5F18773D">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:28:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_REGIONAL" id="A140C01D-0CC9-AB83-86E7-8D0E0DEF3603">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:33:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>B952121F-456C-57EE-A477-7D84E2E34E59</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="099C8507-A148-51F6-3FE1-8B0452CB054B" referredColumn="B952121F-456C-57EE-A477-7D84E2E34E59"/>
+</associations>
+</Column>
+<Column name="ID_REGIAO" id="B16CFEFA-888D-1411-C289-AF19AFB5CE48">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-19 13:56:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="248B2EF4-C74D-E5E8-13BC-562FAB8A1DF6" name="GEOGRAFIA_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:28:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="65A46F4F-BE62-B9F2-CE17-F0DB2DE34C4D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0125CF59-C851-6104-BB52-4F1F9951545B" name="GEOGRAFIA_PK">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>METRICVIEW</sourceObjSchema>
+<sourceObjName>GEOGRAFIA_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>486873E8-E944-04D7-216D-E673166A38A1</importedID>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65A46F4F-BE62-B9F2-CE17-F0DB2DE34C4D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="19FB908B-4256-0BCF-BF17-165E4830CAB1" name="GEOGRAFIA_REGIAO_FK">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-19 13:56:45 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B16CFEFA-888D-1411-C289-AF19AFB5CE48"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FA9EF9E6-D541-F7DC-27C2-85EC9E8F89E8" name="GEOGRAFIA_REGIONAL_FK">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 14:34:26 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<indexColumnUsage>
+<colUsage columnID="A140C01D-0CC9-AB83-86E7-8D0E0DEF3603"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="4B8C2AE0-F380-05AC-3F2C-49671B45AEA3" mainViewID="9EA725CF-B94F-D22E-1FCE-3458126488FA">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-07 13:43:04 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>AnatelPro</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

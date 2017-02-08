@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="SEQ_TIPO_ACORDO" directorySegmentName="seg_0" id="C4D72759-DD67-E741-AEA3-9A416DCEF442">
+<sourceConnName>Metric View-easyview_user</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>SEQ_TIPO_ACORDO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 22:01:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<cache>20</cache>
+<incrementBy>1</incrementBy>
+<maxValue>999</maxValue>
+<minValue>-1</minValue>
+<user>1546960D-93B4-9405-2B97-DEB1F5CC87FD</user>
+</SequenceOraclev10g>

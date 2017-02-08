@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4B6B8652-A308-C49A-E63B-E56DE2BA84CA" name="REGIAO">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 22:36:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into METRICVIEW.REGIAO (ID_REGIAO,NOME) values (&apos;1&apos;,&apos;Região I&apos;);&lt;br/&gt;Insert into METRICVIEW.REGIAO (ID_REGIAO,NOME) values (&apos;2&apos;,&apos;Região II&apos;);&lt;br/&gt;Insert into METRICVIEW.REGIAO (ID_REGIAO,NOME) values (&apos;3&apos;,&apos;Região III&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_REGIAO" id="43610630-6326-C090-F74E-B17326AF96D9">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 22:39:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="FAFDAE7F-8CE7-335F-3B1B-55684BD5CA01">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 22:39:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5FB5A12B-1F09-04FD-4681-522B24D2D777" name="REGIAO_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 22:39:14 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="43610630-6326-C090-F74E-B17326AF96D9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

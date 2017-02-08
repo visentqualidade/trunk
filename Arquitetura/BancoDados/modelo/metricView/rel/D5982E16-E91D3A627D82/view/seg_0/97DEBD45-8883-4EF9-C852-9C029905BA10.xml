@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="97DEBD45-8883-4EF9-C852-9C029905BA10" name="VW_FILTRO_PITX_CLARO">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-14 12:55:47 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT DISTINCT NVL(pitx_claro, &apos;-&apos;) AS PITX_CLARO&lt;br/&gt;FROM CDRVIEW_ITX_HORA&lt;br/&gt;ORDER BY 1</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select Distinct NVL(pitx_claro, &apos;-&apos;) As PITX_CLARO From CDRVIEW_ITX_HORA Order By 1&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select Distinct NVL(pitx_claro, &apos;-&apos;) As PITX_CLARO From CDRVIEW_ITX_HORA Order By 1&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;CDRVIEW_ITX_HORA&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PITX_CLARO" id="5C37FA90-399F-E586-846F-46CBC29CB569">
+<createdBy>osx</createdBy>
+<createdTime>2014-10-14 12:55:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>PITX_CLARO</alias>
+<expression>NVL(pitx_claro, &apos;-&apos;)</expression>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+</TableView>

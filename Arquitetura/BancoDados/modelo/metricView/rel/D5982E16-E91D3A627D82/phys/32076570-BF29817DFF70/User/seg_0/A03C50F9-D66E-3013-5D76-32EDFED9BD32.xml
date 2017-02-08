@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="INTERCONEXAO" directorySegmentName="seg_0" id="A03C50F9-D66E-3013-5D76-32EDFED9BD32">
+<sourceConnName>s_metricview-u_interconexao_73</sourceConnName>
+<sourceObjName>INTERCONEXAO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-05-08 18:10:32 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>E4A7CC92-480C-92D9-C705-C2F8B3AC301A</schemaObject>
+</UserOraclev10g>

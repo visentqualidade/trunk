@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableSpaceOraclev10g" name="DASHBOARD" directorySegmentName="seg_0" id="DF13E015-1E0D-7022-482F-477A81CEC8BF">
+<sourceConnName>s_metricview-u_dashboard_11</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>DASHBOARD</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:11:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<emUniformSize>0</emUniformSize>
+<extentManagement>LOCAL</extentManagement>
+</TableSpaceOraclev10g>

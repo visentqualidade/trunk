@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="F1AA7D6C-6A4B-0045-9049-B84EE073EF5C" name="VIEW_REL_REGIONAL_UF">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-27 18:14:35 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT ROWNUM id,&lt;br/&gt;  relacionamento.regional,&lt;br/&gt;  relacionamento.uf&lt;br/&gt;FROM&lt;br/&gt;  (SELECT DISTINCT reg.nome regional,&lt;br/&gt;    uf.nome uf&lt;br/&gt;  FROM regional reg,&lt;br/&gt;    rel_regional_cod_nacional rcn,&lt;br/&gt;    cn cn,&lt;br/&gt;    uf uf&lt;br/&gt;  WHERE rcn.id_regional = reg.id_regional&lt;br/&gt;  AND cn.id_cn          = rcn.id_cn&lt;br/&gt;  AND uf.id_uf          = cn.id_uf&lt;br/&gt;  ORDER BY reg.nome,&lt;br/&gt;    uf.nome&lt;br/&gt;  ) relacionamento</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select RowNum id, relacionamento.regional, relacionamento.uf From (Select Distinct reg.nome regional, uf.nome uf From regional reg, rel_regional_cod_nacional rcn, cn cn, uf uf Where rcn.id_regional = reg.id_regional And cn.id_cn = rcn.id_cn And uf.id_uf = cn.id_uf Order By reg.nome, uf.nome) relacionamento&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select RowNum id, relacionamento.regional, relacionamento.uf From (Select Distinct reg.nome regional, uf.nome uf From regional reg, rel_regional_cod_nacional rcn, cn cn, uf uf Where rcn.id_regional = reg.id_regional And cn.id_cn = rcn.id_cn And uf.id_uf = cn.id_uf Order By reg.nome, uf.nome) relacionamento&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select Distinct reg.nome regional, uf.nome uf From regional reg, rel_regional_cod_nacional rcn, cn cn, uf uf Where rcn.id_regional = reg.id_regional And cn.id_cn = rcn.id_cn And uf.id_uf = cn.id_uf Order By reg.nome, uf.nome) relacionamento&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;81&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct reg.nome regional, uf.nome uf From regional reg, rel_regional_cod_nacional rcn, cn cn, uf uf Where rcn.id_regional = reg.id_regional And cn.id_cn = rcn.id_cn And uf.id_uf = cn.id_uf Order By reg.nome, uf.nome&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;regional reg&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;45&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;rel_regional_cod_nacional rcn&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;45&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;cn cn&quot; X=&quot;50&quot; Y=&quot;85&quot; Height=&quot;45&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;uf uf&quot; X=&quot;240&quot; Y=&quot;85&quot; Height=&quot;45&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="RowNum" id="8367EDA8-8AFA-9BBB-6749-0EC8ED288945">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-27 18:16:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>id</alias>
+<expression>RowNum</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="regional" id="DAD2C0A4-39BE-7067-49F2-BB2F54A7595E">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-27 18:16:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>relacionamento.regional</expression>
+<reference>false</reference>
+<tableAlias>relacionamento</tableAlias>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="uf" id="6D39C817-1728-C3B1-7591-2182F67CBD0E">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-27 18:16:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>relacionamento.uf</expression>
+<reference>false</reference>
+<tableAlias>relacionamento</tableAlias>
+</viewElement>
+</viewElements>
+</TableView>

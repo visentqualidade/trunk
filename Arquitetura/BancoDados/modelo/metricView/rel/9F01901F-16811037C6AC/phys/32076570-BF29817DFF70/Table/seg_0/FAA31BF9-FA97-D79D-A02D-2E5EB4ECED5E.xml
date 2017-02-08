@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="MSC_CN_CODIGO" directorySegmentName="seg_0" id="FAA31BF9-FA97-D79D-A02D-2E5EB4ECED5E">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:15:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CN" id="22E16884-76C7-412A-4E42-C382CAC490A8">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:15:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CODIGO" id="3E9F0BDC-4663-B48C-C861-DF7F58F865B5">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:15:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MSC" id="B11C462E-7DE2-E84D-2E1C-6F61A012D2CB">
+<createdBy>bruno</createdBy>
+<createdTime>2015-02-13 13:15:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>

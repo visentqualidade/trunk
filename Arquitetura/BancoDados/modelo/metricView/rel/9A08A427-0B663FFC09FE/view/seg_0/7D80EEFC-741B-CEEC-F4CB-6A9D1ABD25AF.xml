@@ -1,0 +1,204 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="7D80EEFC-741B-CEEC-F4CB-6A9D1ABD25AF" name="VIEW_SMP3_REGIAO">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>SELECT Data AS DATA,&lt;br/&gt;  Pmm       AS PMM,&lt;br/&gt;  regiao    AS Regiao,&lt;br/&gt;  SMP_A     AS Smp_A,&lt;br/&gt;  SMP_B     AS Smp_B,&lt;br/&gt;  CASE&lt;br/&gt;    WHEN SMP_B = &apos;-&apos;&lt;br/&gt;    AND SMP_A  = &apos;-&apos;&lt;br/&gt;    THEN &apos;-&apos;&lt;br/&gt;    WHEN SMP_B          != &apos;-&apos;&lt;br/&gt;    AND TO_NUMBER(SMP_B) = 0&lt;br/&gt;    THEN &apos;0&apos;&lt;br/&gt;    WHEN (SMP_B         != &apos;-&apos;&lt;br/&gt;    AND TO_NUMBER(SMP_B) &gt; 0)&lt;br/&gt;    AND SMP_A            = &apos;-&apos;&lt;br/&gt;    THEN &apos;0&apos;&lt;br/&gt;    ELSE TO_CHAR(ROUND((SMP_A * 100 / SMP_B), 2))&lt;br/&gt;  END AS SMP,&lt;br/&gt;  Ivr_Nok,&lt;br/&gt;  Ivr_Ok_Moc,&lt;br/&gt;  Ivr_Ok_Uca,&lt;br/&gt;  Sac_Nok,&lt;br/&gt;  Sac_Ok_Moc,&lt;br/&gt;  Sac_Ok_Uca&lt;br/&gt;FROM&lt;br/&gt;  (SELECT TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;)                                                                                                                                                                                                            AS Data,&lt;br/&gt;    PMM.NOME                                                                                                                                                                                                                                         AS Pmm,&lt;br/&gt;    regiao.NOME                                                                                                                                                                                                                                      AS regiao,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.SAC_OK_MOC, 0) + NVL(Tab.SAC_OK_UCA, 0) + NVL(Tab.IVR_OK_MOC, 0) + NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0) + NVL(Tab.CHAM_OK_ERIC, 0))), &apos;-&apos;)                                                                  AS SMP_A,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.SAC_OK_MOC, 0) + NVL(Tab.SAC_OK_UCA, 0) + NVL(Tab.SAC_NOK, 0) + NVL(Tab.IVR_OK_MOC, 0) + NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0) + NVL(Tab.IVR_NOK1, 0) + NVL(Tab.IVR_NOK2, 0) + NVL(Tab.CHAM_ERIC, 0))), &apos;-&apos;) AS SMP_B,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.IVR_NOK1, 0)   + NVL(Tab.IVR_NOK2, 0))), &apos;-&apos;)                                                                                                                                                                            AS Ivr_Nok,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.IVR_OK_MOC, 0))), &apos;-&apos;)                                                                                                                                                                                                   AS Ivr_Ok_Moc,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0))), &apos;-&apos;)                                                                                                                                                                        AS Ivr_Ok_Uca,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.SAC_NOK, 0))), &apos;-&apos;)                                                                                                                                                                                                      AS Sac_Nok,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.SAC_OK_MOC, 0))), &apos;-&apos;)                                                                                                                                                                                                   AS Sac_Ok_Moc,&lt;br/&gt;    NVL(TO_CHAR(SUM(NVL(Tab.SAC_OK_UCA, 0))), &apos;-&apos;)                                                                                                                                                                                                   AS Sac_Ok_Uca&lt;br/&gt;  FROM CDRVIEW_SMP3 Tab&lt;br/&gt;  INNER JOIN PMM PMM&lt;br/&gt;  ON To_Date(TO_CHAR(Tab.DATA, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) BETWEEN To_Date(TO_CHAR(PMM.INICIO, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) AND To_Date(TO_CHAR(PMM.FIM, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;)&lt;br/&gt;  INNER JOIN metricview.regiao regiao&lt;br/&gt;  ON Tab.REGIAO = regiao.nome&lt;br/&gt;  GROUP BY TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;),&lt;br/&gt;    PMM.NOME,&lt;br/&gt;    regiao.NOME&lt;br/&gt;  )&lt;br/&gt;ORDER BY DATA,&lt;br/&gt;  PMM,&lt;br/&gt;  PMM</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;Select Data As DATA, Pmm As PMM, regiao As Regiao, SMP_A As Smp_A, SMP_B As Smp_B, Case When SMP_B = &apos;-&apos; And SMP_A = &apos;-&apos; Then &apos;-&apos; When SMP_B != &apos;-&apos; And TO_NUMBER(SMP_B) = 0 Then &apos;0&apos; When (SMP_B != &apos;-&apos; And TO_NUMBER(SMP_B) &gt; 0) And SMP_A = &apos;-&apos; Then &apos;0&apos; Else TO_CHAR(ROUND((SMP_A * 100 / SMP_B), 2)) End As SMP, Ivr_Nok, Ivr_Ok_Moc, Ivr_Ok_Uca, Sac_Nok, Sac_Ok_Moc, Sac_Ok_Uca From (Select TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;) As Data, PMM.NOME As Pmm, regiao.NOME As regiao, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_MOC, 0) + NVL(Tab.SAC_OK_UCA, 0) + NVL(Tab.IVR_OK_MOC, 0) + NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0) + NVL(Tab.CHAM_OK_ERIC, 0))), &apos;-&apos;) As SMP_A, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_MOC, 0) + NVL(Tab.SAC_OK_UCA, 0) + NVL(Tab.SAC_NOK, 0) + NVL(Tab.IVR_OK_MOC, 0) + NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0) + NVL(Tab.IVR_NOK1, 0) + NVL(Tab.IVR_NOK2, 0) + NVL(Tab.CHAM_ERIC, 0))), &apos;-&apos;) As SMP_B, NVL(TO_CHAR(Sum(NVL(Tab.IVR_NOK1, 0) + NVL(Tab.IVR_NOK2, 0))), &apos;-&apos;) As Ivr_Nok, NVL(TO_CHAR(Sum(NVL(Tab.IVR_OK_MOC, 0))), &apos;-&apos;) As Ivr_Ok_Moc, NVL(TO_CHAR(Sum(NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0))), &apos;-&apos;) As Ivr_Ok_Uca, NVL(TO_CHAR(Sum(NVL(Tab.SAC_NOK, 0))), &apos;-&apos;) As Sac_Nok, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_MOC, 0))), &apos;-&apos;) As Sac_Ok_Moc, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_UCA, 0))), &apos;-&apos;) As Sac_Ok_Uca From CDRVIEW_SMP3 Tab Inner Join PMM PMM On To_Date(TO_CHAR(Tab.DATA, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) Between To_Date(TO_CHAR(PMM.INICIO, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) And To_Date(TO_CHAR(PMM.FIM, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) Inner Join metricview.regiao regiao On Tab.REGIAO = regiao.nome Group By TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;), PMM.NOME, regiao.NOME) Order By DATA, PMM, PMM&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;Select Data As DATA, Pmm As PMM, regiao As Regiao, SMP_A As Smp_A, SMP_B As Smp_B, Case When SMP_B = &apos;-&apos; And SMP_A = &apos;-&apos; Then &apos;-&apos; When SMP_B != &apos;-&apos; And TO_NUMBER(SMP_B) = 0 Then &apos;0&apos; When (SMP_B != &apos;-&apos; And TO_NUMBER(SMP_B) &gt; 0) And SMP_A = &apos;-&apos; Then &apos;0&apos; Else TO_CHAR(ROUND((SMP_A * 100 / SMP_B), 2)) End As SMP, Ivr_Nok, Ivr_Ok_Moc, Ivr_Ok_Uca, Sac_Nok, Sac_Ok_Moc, Sac_Ok_Uca From (Select TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;) As Data, PMM.NOME As Pmm, regiao.NOME As regiao, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_MOC, 0) + NVL(Tab.SAC_OK_UCA, 0) + NVL(Tab.IVR_OK_MOC, 0) + NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0) + NVL(Tab.CHAM_OK_ERIC, 0))), &apos;-&apos;) As SMP_A, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_MOC, 0) + NVL(Tab.SAC_OK_UCA, 0) + NVL(Tab.SAC_NOK, 0) + NVL(Tab.IVR_OK_MOC, 0) + NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0) + NVL(Tab.IVR_NOK1, 0) + NVL(Tab.IVR_NOK2, 0) + NVL(Tab.CHAM_ERIC, 0))), &apos;-&apos;) As SMP_B, NVL(TO_CHAR(Sum(NVL(Tab.IVR_NOK1, 0) + NVL(Tab.IVR_NOK2, 0))), &apos;-&apos;) As Ivr_Nok, NVL(TO_CHAR(Sum(NVL(Tab.IVR_OK_MOC, 0))), &apos;-&apos;) As Ivr_Ok_Moc, NVL(TO_CHAR(Sum(NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0))), &apos;-&apos;) As Ivr_Ok_Uca, NVL(TO_CHAR(Sum(NVL(Tab.SAC_NOK, 0))), &apos;-&apos;) As Sac_Nok, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_MOC, 0))), &apos;-&apos;) As Sac_Ok_Moc, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_UCA, 0))), &apos;-&apos;) As Sac_Ok_Uca From CDRVIEW_SMP3 Tab Inner Join PMM PMM On To_Date(TO_CHAR(Tab.DATA, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) Between To_Date(TO_CHAR(PMM.INICIO, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) And To_Date(TO_CHAR(PMM.FIM, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) Inner Join metricview.regiao regiao On Tab.REGIAO = regiao.nome Group By TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;), PMM.NOME, regiao.NOME) Order By DATA, PMM, PMM&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;) As Data, PMM.NOME As Pmm, regiao.NOME As regiao, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_MOC, 0) + NVL(Tab.SAC_OK_UCA, 0) + NVL(Tab.IVR_OK_MOC, 0) + NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0) + NVL(Tab.CHAM_OK_ERIC, 0))), &apos;-&apos;) As SMP_A, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_MOC, 0) + NVL(Tab.SAC_OK_UCA, 0) + NVL(Tab.SAC_NOK, 0) + NVL(Tab.IVR_OK_MOC, 0) + NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0) + NVL(Tab.IVR_NOK1, 0) + NVL(Tab.IVR_NOK2, 0) + NVL(Tab.CHAM_ERIC, 0))), &apos;-&apos;) As SMP_B, NVL(TO_CHAR(Sum(NVL(Tab.IVR_NOK1, 0) + NVL(Tab.IVR_NOK2, 0))), &apos;-&apos;) As Ivr_Nok, NVL(TO_CHAR(Sum(NVL(Tab.IVR_OK_MOC, 0))), &apos;-&apos;) As Ivr_Ok_Moc, NVL(TO_CHAR(Sum(NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0))), &apos;-&apos;) As Ivr_Ok_Uca, NVL(TO_CHAR(Sum(NVL(Tab.SAC_NOK, 0))), &apos;-&apos;) As Sac_Nok, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_MOC, 0))), &apos;-&apos;) As Sac_Ok_Moc, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_UCA, 0))), &apos;-&apos;) As Sac_Ok_Uca From CDRVIEW_SMP3 Tab Inner Join PMM PMM On To_Date(TO_CHAR(Tab.DATA, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) Between To_Date(TO_CHAR(PMM.INICIO, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) And To_Date(TO_CHAR(PMM.FIM, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) Inner Join metricview.regiao regiao On Tab.REGIAO = regiao.nome Group By TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;), PMM.NOME, regiao.NOME)&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;243&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;) As Data, PMM.NOME As Pmm, regiao.NOME As regiao, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_MOC, 0) + NVL(Tab.SAC_OK_UCA, 0) + NVL(Tab.IVR_OK_MOC, 0) + NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0) + NVL(Tab.CHAM_OK_ERIC, 0))), &apos;-&apos;) As SMP_A, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_MOC, 0) + NVL(Tab.SAC_OK_UCA, 0) + NVL(Tab.SAC_NOK, 0) + NVL(Tab.IVR_OK_MOC, 0) + NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0) + NVL(Tab.IVR_NOK1, 0) + NVL(Tab.IVR_NOK2, 0) + NVL(Tab.CHAM_ERIC, 0))), &apos;-&apos;) As SMP_B, NVL(TO_CHAR(Sum(NVL(Tab.IVR_NOK1, 0) + NVL(Tab.IVR_NOK2, 0))), &apos;-&apos;) As Ivr_Nok, NVL(TO_CHAR(Sum(NVL(Tab.IVR_OK_MOC, 0))), &apos;-&apos;) As Ivr_Ok_Moc, NVL(TO_CHAR(Sum(NVL(Tab.IVR_OK_UCA1, 0) + NVL(Tab.IVR_OK_UCA2, 0))), &apos;-&apos;) As Ivr_Ok_Uca, NVL(TO_CHAR(Sum(NVL(Tab.SAC_NOK, 0))), &apos;-&apos;) As Sac_Nok, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_MOC, 0))), &apos;-&apos;) As Sac_Ok_Moc, NVL(TO_CHAR(Sum(NVL(Tab.SAC_OK_UCA, 0))), &apos;-&apos;) As Sac_Ok_Uca From CDRVIEW_SMP3 Tab Inner Join PMM PMM On To_Date(TO_CHAR(Tab.DATA, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) Between To_Date(TO_CHAR(PMM.INICIO, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) And To_Date(TO_CHAR(PMM.FIM, &apos;HH24:MI&apos;), &apos;HH24:MI&apos;) Inner Join metricview.regiao regiao On Tab.REGIAO = regiao.nome Group By TO_CHAR(Tab.DATA, &apos;DD/MM/YYYY&apos;), PMM.NOME, regiao.NOME&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;CDRVIEW_SMP3 Tab&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;351&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;PMM PMM&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;117&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;metricview.regiao regiao&quot; X=&quot;240&quot; Y=&quot;157&quot; Height=&quot;153&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>024EBBB1-C0B9-AFD1-EB4E-F31F09D33F69</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DATA" id="4F10495D-D66F-D513-2F46-37B6B4280816">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DATA</alias>
+<expression>Data</expression>
+<reference>false</reference>
+<viewID>7D80EEFC-741B-CEEC-F4CB-6A9D1ABD25AF</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PMM" id="B724680B-C556-3410-A5DB-22A9C34204EB">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>PMM</alias>
+<expression>Pmm</expression>
+<reference>false</reference>
+<viewID>7D80EEFC-741B-CEEC-F4CB-6A9D1ABD25AF</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Regiao" id="1A57B865-6C7B-F9BC-C3EC-56FE9B1F3B2A">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>Regiao</alias>
+<expression>regiao</expression>
+<reference>false</reference>
+<viewID>7D80EEFC-741B-CEEC-F4CB-6A9D1ABD25AF</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Smp_A" id="EF02BEAC-6292-2D22-687B-3E76F4ECC0A2">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-31 18:10:38 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>Smp_A</alias>
+<expression>SMP_A</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Smp_B" id="FA87138F-7BC6-E395-3DDB-E0FC615C4214">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-31 18:10:38 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>Smp_B</alias>
+<expression>SMP_B</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP" id="3A0BC708-C1D9-1496-13A4-DA565C1418FD">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-31 18:10:38 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP</alias>
+<expression>Case When SMP_B = &apos;-&apos; And SMP_A = &apos;-&apos; Then &apos;-&apos; When SMP_B != &apos;-&apos; And TO_NUMBER(SMP_B) = 0 Then &apos;0&apos; When (SMP_B != &apos;-&apos; And TO_NUMBER(SMP_B) &gt; 0) And SMP_A = &apos;-&apos; Then &apos;0&apos; Else TO_CHAR(ROUND((SMP_A * 100 / SMP_B), 2)) End</expression>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Ivr_Nok" id="7CBA041B-01C7-CAE5-4081-BC87772DC9C0">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>Ivr_Nok</expression>
+<reference>false</reference>
+<viewID>7D80EEFC-741B-CEEC-F4CB-6A9D1ABD25AF</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Ivr_Ok_Moc" id="387103FE-2E74-8156-C90C-20E9697CFB24">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>Ivr_Ok_Moc</expression>
+<reference>false</reference>
+<viewID>7D80EEFC-741B-CEEC-F4CB-6A9D1ABD25AF</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Ivr_Ok_Uca" id="646E0FD2-BCBD-CE28-ED62-3A4D3B1F2661">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>Ivr_Ok_Uca</expression>
+<reference>false</reference>
+<viewID>7D80EEFC-741B-CEEC-F4CB-6A9D1ABD25AF</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Sac_Nok" id="34D09AF2-6676-5AC6-DB7A-1D7E5572ACF8">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>Sac_Nok</expression>
+<reference>false</reference>
+<viewID>7D80EEFC-741B-CEEC-F4CB-6A9D1ABD25AF</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Sac_Ok_Moc" id="89E19F35-A6EF-5DD8-EF6C-60E93A8E3C1A">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>Sac_Ok_Moc</expression>
+<reference>false</reference>
+<viewID>7D80EEFC-741B-CEEC-F4CB-6A9D1ABD25AF</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="Sac_Ok_Uca" id="B98A30DF-C914-0A84-F677-FFF93E024C5E">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-08 22:17:27 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<expression>Sac_Ok_Uca</expression>
+<reference>false</reference>
+<viewID>7D80EEFC-741B-CEEC-F4CB-6A9D1ABD25AF</viewID>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FAECFF38-6F15-3D3B-F0DD-B0FE2D97C1A7">
+<container>true</container>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="1D7A4B7E-4CD9-2479-078E-666462DFC5EA">
+<columnName>DATA</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="0B5F89FD-598F-47DC-2D53-56C58933BDB8">
+<columnName>SAC_OK_MOC</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="8BE569B4-D009-3F97-57E2-B738465B9BC6">
+<columnName>SAC_OK_UCA</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="0F85F0B8-E57D-49F6-E22E-66E6206F0497">
+<columnName>IVR_OK_MOC</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="139135E0-9A40-FF52-7000-3E476FD8F694">
+<columnName>IVR_OK_UCA1</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="A98B8330-B2DA-997D-D12F-067B66D0B9C9">
+<columnName>IVR_OK_UCA2</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="0561A98B-4F8E-FA75-9FC4-85AAB31A4C61">
+<columnName>CHAM_OK_ERIC</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="ED078D40-91E9-4260-9A76-C30F73DE69ED">
+<columnName>SAC_NOK</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="CE40A709-3E42-7D9B-2A09-78061BE1CF0D">
+<columnName>IVR_NOK1</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="515FF27B-2503-65B5-987D-0DF2D7CF2716">
+<columnName>IVR_NOK2</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="85D855CD-DFFB-C84B-B2D8-2D79D0B96D0D">
+<columnName>CHAM_ERIC</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="220E0946-4D8F-A3CE-39D8-9F14CCB5CC4F">
+<columnName>REGIAO</columnName>
+<schema>easyview</schema>
+<tableName>CDRVIEW_SMP3</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

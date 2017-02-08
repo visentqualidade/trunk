@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B881DA8E-5962-9EE0-1698-2D25819A4827" name="USUARIO_GRUPO">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>METRIC</sourceObjSchema>
+<sourceObjName>USUARIO_GRUPO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:34:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<endOfScript>Insert into METRICVIEW.USUARIO_GRUPO (ID_USUARIO,ID_GRUPO) values (&apos;0&apos;,&apos;7000&apos;);&lt;br/&gt;Insert into METRICVIEW.USUARIO_GRUPO (ID_USUARIO,ID_GRUPO) values (&apos;1&apos;,&apos;5000&apos;);&lt;br/&gt;&lt;br/&gt;Grant All Privileges On Bilhetador To Easyview;&lt;br/&gt;GRANT all privileges ON cn TO easyview;&lt;br/&gt;Grant All Privileges On Uf To Easyview;&lt;br/&gt;Grant All Privileges On Regional To Easyview;&lt;br/&gt;Grant All Privileges On Tecnologia To Easyview;&lt;br/&gt;Grant All Privileges On Tipo_Tecnologia To Easyview;&lt;br/&gt;Grant All Privileges On metricview.LOG To Easyview;&lt;br/&gt;Grant All Privileges On Usuario To Easyview;&lt;br/&gt;Grant All Privileges On Tipo_Acesso To Easyview;&lt;br/&gt;Grant All Privileges On Rel_Bilhetador_Cn To Easyview;&lt;br/&gt;Grant All Privileges On Grupo To Easyview;&lt;br/&gt;Grant All Privileges On Usuario_Grupo To Easyview;&lt;br/&gt;Grant All Privileges On Funcionalidade To Easyview;&lt;br/&gt;Grant All Privileges On Permissao To Easyview;&lt;br/&gt;Grant All Privileges On Ferramenta To Easyview;&lt;br/&gt;Grant All Privileges On Tb_Revisao To Easyview;&lt;br/&gt;Grant All Privileges On Geografia To Easyview;&lt;br/&gt;Grant All Privileges On Rel_Regional_cod_nacional To easyview;&lt;br/&gt;Grant All Privileges On VIEW_REL_REGIONAL_UF To easyview;&lt;br/&gt;grant all Privileges on seq_bilhetador to easyview; &lt;br/&gt;grant all Privileges on seq_funcionalidade to easyview;&lt;br/&gt;grant all Privileges on seq_grupo to easyview;&lt;br/&gt;grant all Privileges on seq_permissao to easyview;&lt;br/&gt;grant all Privileges on seq_regional to easyview;&lt;br/&gt;grant all Privileges on seq_rel_bilhetador_cn to easyview;&lt;br/&gt;grant all Privileges on seq_revision to easyview;&lt;br/&gt;grant all Privileges on seq_tecnologia to easyview;&lt;br/&gt;grant all Privileges on seq_tipo_acesso to easyview;&lt;br/&gt;grant all Privileges on seq_tipo_tecnologia to easyview;&lt;br/&gt;grant all Privileges on seq_usuario to easyview;&lt;br/&gt;grant all Privileges on seq_unid_federativa to easyview;&lt;br/&gt;&lt;br/&gt;Grant All Privileges On Bilhetador To interconexao;&lt;br/&gt;GRANT all privileges ON cn TO interconexao;&lt;br/&gt;Grant All Privileges On Uf To interconexao;&lt;br/&gt;Grant All Privileges On Regional To interconexao;&lt;br/&gt;Grant All Privileges On Tecnologia To interconexao;&lt;br/&gt;Grant All Privileges On Tipo_Tecnologia To interconexao;&lt;br/&gt;Grant All Privileges On Usuario To interconexao;&lt;br/&gt;Grant All Privileges On Rel_Bilhetador_Cn To interconexao;&lt;br/&gt;Grant All Privileges On Rel_Regional_cod_nacional To Interconexao;&lt;br/&gt;Grant All Privileges On usuario_grupo To interconexao;&lt;br/&gt;Grant All Privileges On grupo To interconexao;&lt;br/&gt;Grant All Privileges On permissao To interconexao;&lt;br/&gt;Grant All Privileges On tipo_acesso To interconexao;&lt;br/&gt;Grant All Privileges On ferramenta To interconexao;&lt;br/&gt;grant all Privileges on seq_bilhetador to interconexao; &lt;br/&gt;grant all Privileges on seq_funcionalidade to interconexao;&lt;br/&gt;grant all Privileges on seq_grupo to interconexao;&lt;br/&gt;grant all Privileges on seq_permissao to interconexao;&lt;br/&gt;grant all Privileges on seq_regional to interconexao;&lt;br/&gt;grant all Privileges on seq_rel_bilhetador_cn to interconexao;&lt;br/&gt;grant all Privileges on seq_revision to interconexao;&lt;br/&gt;grant all Privileges on seq_tecnologia to interconexao;&lt;br/&gt;grant all Privileges on seq_tipo_acesso to interconexao;&lt;br/&gt;grant all Privileges on seq_tipo_tecnologia to interconexao;&lt;br/&gt;grant all Privileges on seq_usuario to interconexao;&lt;br/&gt;grant all Privileges on seq_unid_federativa to interconexao;&lt;br/&gt;grant all Privileges on regiao to interconexao;&lt;br/&gt;grant all Privileges on funcionalidade to interconexao;</endOfScript>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_USUARIO" id="7F43FE06-214C-35AB-4A78-CDBC50CB8E97">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>USUARIO_GRUPO</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:34:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<delegate>7B84F428-B065-3291-B8D5-24D22E9432CB</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D109D349-EC74-1119-AF92-AC023F35B5B9" referredColumn="7B84F428-B065-3291-B8D5-24D22E9432CB"/>
+</associations>
+</Column>
+<Column name="ID_GRUPO" id="C5794AFD-60B2-29C9-16E8-70AF57774754">
+<sourceConnName>metricView_12</sourceConnName>
+<sourceObjSchema>USUARIO_GRUPO</sourceObjSchema>
+<sourceObjName>ID_GRUPO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:34:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<delegate>C88BABFA-1D04-1390-4A8F-ACFCE01275E6</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5378D8B7-9686-482B-B067-850D70254624" referredColumn="C88BABFA-1D04-1390-4A8F-ACFCE01275E6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CC22346F-4E92-D748-8955-559D7C0BA58D" name="USUARIO_GRUPO_FK_GRUPO">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:34:54 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5794AFD-60B2-29C9-16E8-70AF57774754"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5DA2090D-0552-FD5B-96A5-47CB3B985415" name="USUARIO_GRUPO_FK_USUARIO">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-10 17:45:07 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F43FE06-214C-35AB-4A78-CDBC50CB8E97"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

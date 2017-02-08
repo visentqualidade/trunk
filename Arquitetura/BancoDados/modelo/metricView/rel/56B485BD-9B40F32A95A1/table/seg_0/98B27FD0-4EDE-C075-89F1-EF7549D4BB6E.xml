@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="98B27FD0-4EDE-C075-89F1-EF7549D4BB6E" name="SERVICOS_CLARO">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 18:03:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;1&apos;,&apos;1052&apos;,&apos;1052&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;2&apos;,&apos;142&apos;,&apos;142&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;3&apos;,&apos;B100&apos;,&apos;B100&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;4&apos;,&apos;B422&apos;,&apos;B422&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;5&apos;,&apos;B400&apos;,&apos;B400&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;6&apos;,&apos;B525&apos;,&apos;B525&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;7&apos;,&apos;B555&apos;,&apos;B555&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;8&apos;,&apos;177&apos;,&apos;177&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;9&apos;,&apos;007&apos;,&apos;007&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;10&apos;,&apos;222&apos;,&apos;222&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;11&apos;,&apos;B9999&apos;,&apos;B9999&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;12&apos;,&apos;B860&apos;,&apos;B860&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERVICOS_CLARO (ID,NOME_FILTRO,NOME_TELA) values (&apos;13&apos;,&apos;B468&apos;,&apos;B468&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="2C109313-4749-B062-C9B5-8C048CAD3A85">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 18:04:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_FILTRO" id="D15BDC52-B2B1-378D-4688-3D7C227E7218">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 18:04:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_TELA" id="8673C276-6788-635F-BBBF-B37A7EA20534">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 17:35:05 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B761A217-7767-85C8-92E9-2381E2F7FB0E" name="SERVICOS_CLARO_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 18:04:29 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C109313-4749-B062-C9B5-8C048CAD3A85"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

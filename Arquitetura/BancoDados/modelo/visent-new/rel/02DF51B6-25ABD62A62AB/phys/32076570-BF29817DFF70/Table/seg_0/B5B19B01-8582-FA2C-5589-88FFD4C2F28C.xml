@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="REGIAO" directorySegmentName="seg_0" id="B5B19B01-8582-FA2C-5589-88FFD4C2F28C">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B13E7DAD-FB1F-28DF-6F07-62DAC61E6AA4</segment>
+<tableSpace>71C6CEFF-EC5C-69BD-C886-6CED1D0B09FF</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="REGIAO_PK" id="2E062621-FBD5-E3C8-3F91-613DA6870832">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<schemaObject>20B78FEB-0DDF-18F6-1F22-138BAFA187FC</schemaObject>
+<segment>FAF852CE-E50B-530F-8CE4-88E96D78BB58</segment>
+<tableSpace>71C6CEFF-EC5C-69BD-C886-6CED1D0B09FF</tableSpace>
+</IndexProxy>
+</indexProxies>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NOME" id="4A6578A9-3978-A03C-2B74-4291C7663D10">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_REGIAO" id="E7100EC2-721D-E210-FA31-878229F981A0">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:55 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="REGIAO_PK" id="5455C490-C4FB-DC11-0F15-59630544A1FD">
+<createdBy>ericksouza</createdBy>
+<createdTime>2015-07-10 19:39:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>visent-new</ownerDesignName>
+<segment>FAF852CE-E50B-530F-8CE4-88E96D78BB58</segment>
+<tableSpace>71C6CEFF-EC5C-69BD-C886-6CED1D0B09FF</tableSpace>
+<existingIndex>2E062621-FBD5-E3C8-3F91-613DA6870832</existingIndex>
+<indexSegment>FAF852CE-E50B-530F-8CE4-88E96D78BB58</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

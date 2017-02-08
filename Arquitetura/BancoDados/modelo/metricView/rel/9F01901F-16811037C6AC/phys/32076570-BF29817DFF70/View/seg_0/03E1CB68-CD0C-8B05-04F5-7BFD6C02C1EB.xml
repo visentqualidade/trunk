@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableViewProxyOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableViewProxyOraclev10g" name="VIEW_SMP7_PMM" directorySegmentName="seg_0" id="03E1CB68-CD0C-8B05-04F5-7BFD6C02C1EB">
+<createdBy>osx</createdBy>
+<createdTime>2013-10-15 18:40:57 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+</TableViewProxyOraclev10g>

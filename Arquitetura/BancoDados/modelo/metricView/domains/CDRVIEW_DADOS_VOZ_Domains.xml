@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="CDRVIEW_DADOS_VOZ_Domains">
+   <domains>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20 CHAR" id="16642D84-D35C-5B63-7176-1AA7F590E177">
+         <createdBy>osx</createdBy>
+         <createdTime>2014-11-18 11:59:01 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>20 CHAR</dataTypeSize>
+         <fileName>CDRVIEW_DADOS_VOZ_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_255 BYTE" id="4CC618E4-E829-FB15-E9F1-6CBE8CF48CD1">
+         <createdBy>osx</createdBy>
+         <createdTime>2014-11-18 11:59:01 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>255 BYTE</dataTypeSize>
+         <fileName>CDRVIEW_DADOS_VOZ_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20 BYTE" id="61EE3B15-9924-45D9-E25E-1338A4EF5610">
+         <createdBy>osx</createdBy>
+         <createdTime>2014-11-18 11:59:01 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>20 BYTE</dataTypeSize>
+         <fileName>CDRVIEW_DADOS_VOZ_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_500 CHAR" id="78C5043E-B58A-7D96-6A16-E81219C11B76">
+         <createdBy>osx</createdBy>
+         <createdTime>2014-11-18 11:59:01 UTC</createdTime>
+         <generatorID>Gerado pelo usuário</generatorID>
+         <ownerDesignName>metricView</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>500 CHAR</dataTypeSize>
+         <fileName>CDRVIEW_DADOS_VOZ_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+   </domains>
+</DomainFile>

@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D1C7A900-87F3-D34D-E33B-B1722D754D17" name="FILTRO">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>FILTRO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:46:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>CREATE SEQUENCE  &quot;DASHBOARD&quot;.&quot;SEQ_ID_FILTRO&quot;  MINVALUE 1 MAXVALUE 99999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 ORDER  CYCLE ;&lt;br/&gt;</afterCreate>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOME" id="1CA8740F-2900-9487-2DFE-FE2C90D85AF0">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:48:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MULTIVALORADO" id="5FFC12C2-F392-5CB0-ED22-E5674BD00252">
+<createdBy>osx</createdBy>
+<createdTime>2014-03-20 17:43:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_TELA" id="2A5E6E66-0085-4779-E660-1A8CDCA8DEFE">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>FILTRO</sourceObjSchema>
+<sourceObjName>NOME_TELA</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-03-20 17:43:22 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_APLICACAO" id="4B843E3E-0586-8E23-6A1A-DD3157C4F494">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>FILTRO</sourceObjSchema>
+<sourceObjName>NOME_APLICACAO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>E27E7887-1C8E-2DEB-198E-CD3770EF4CCE</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BD89179B-A081-BD49-20B7-C74F92AF5C64" name="FILTRO_PK">
+<createdBy>osx</createdBy>
+<createdTime>2014-02-18 17:48:20 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CA8740F-2900-9487-2DFE-FE2C90D85AF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E06D65A8-17F1-B87B-BDF9-13DC1FD62E00" name="FILTRO_PK">
+<sourceConnName>metricview_dashboard_12</sourceConnName>
+<sourceObjSchema>DASHBOARD</sourceObjSchema>
+<sourceObjName>FILTRO_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2014-04-30 21:20:42 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>06A637D6-7DC6-6709-620E-D32AA8B02BFB</importedID>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>4497AF19-C503-FEA3-8125-427C50F93677</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CA8740F-2900-9487-2DFE-FE2C90D85AF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

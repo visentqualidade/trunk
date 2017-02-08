@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0B62E721-294B-3AE2-9773-89A5C30193A9" name="UNIDADE_PRIMARIA_SMP6">
+<createdBy>osx</createdBy>
+<createdTime>2013-07-01 17:58:18 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<afterCreate>insert into EASYVIEW.CN_CODIGO values (&apos;11&apos;,00986);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;12&apos;,00990);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;13&apos;,00992);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;14&apos;,00994);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;15&apos;,00996);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;16&apos;,00998);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;17&apos;,01000);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;18&apos;,01002);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;19&apos;,01004);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;21&apos;,00793);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;22&apos;,00799);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;24&apos;,00826);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;27&apos;,00832);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;28&apos;,00835);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;31&apos;,00842);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;32&apos;,00837);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;33&apos;,00848);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;34&apos;,00844);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;35&apos;,00851);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;37&apos;,00840);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;38&apos;,00854);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;41&apos;,00923);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;42&apos;,00926);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;43&apos;,00928);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;44&apos;,00930);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;45&apos;,00938);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;46&apos;,00978);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;47&apos;,00915);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;48&apos;,00940);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;49&apos;,00942);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;51&apos;,00944);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;53&apos;,00947);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;54&apos;,00949);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;55&apos;,00951);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;61&apos;,00953);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;62&apos;,00956);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;63&apos;,00959);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;64&apos;,00962);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;65&apos;,00918);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;66&apos;,00921);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;67&apos;,00972);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;68&apos;,00966);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;69&apos;,00969);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;71&apos;,00858);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;73&apos;,00860);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;74&apos;,00804);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;75&apos;,00862);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;77&apos;,00801);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;79&apos;,00867);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;81&apos;,00812);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;82&apos;,00806);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;83&apos;,00809);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;84&apos;,00818);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;85&apos;,00821);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;86&apos;,00885);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;87&apos;,00816);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;88&apos;,00880);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;89&apos;,00888);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;91&apos;,00897);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;92&apos;,00910);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;93&apos;,00900);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;94&apos;,00902);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;95&apos;,00904);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;96&apos;,00907);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;97&apos;,00913);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;98&apos;,00890);&lt;br/&gt;insert into EASYVIEW.CN_CODIGO values (&apos;99&apos;,00893);&lt;br/&gt;</afterCreate>
+<beforeCreate>Create Synonym Bilhetador For Metricview.Bilhetador;&lt;br/&gt;Create Synonym Cn For Metricview.Cn;&lt;br/&gt;Create Synonym Uf For Metricview.Uf;&lt;br/&gt;Create Synonym Regional For Metricview.Regional;&lt;br/&gt;Create Synonym Tecnologia For Metricview.Tecnologia;&lt;br/&gt;Create Synonym Tipo_Tecnologia For Metricview.Tipo_Tecnologia;&lt;br/&gt;Create Synonym Log For Metricview.Log;&lt;br/&gt;Create Synonym Usuario For Metricview.Usuario;&lt;br/&gt;Create Synonym Tipo_Acesso For Metricview.Tipo_Acesso;&lt;br/&gt;Create Synonym Rel_Bilhetador_Cn For Metricview.Rel_Bilhetador_Cn;&lt;br/&gt;Create Synonym Grupo For Metricview.Grupo;&lt;br/&gt;Create Synonym Usuario_Grupo For Metricview.Usuario_Grupo;&lt;br/&gt;Create Synonym funcionalidade For Metricview.funcionalidade;&lt;br/&gt;Create Synonym Permissao For Metricview.Permissao;&lt;br/&gt;Create Synonym Ferramenta For Metricview.Ferramenta;&lt;br/&gt;Create Synonym Tb_Revisao For Metricview.Tb_Revisao;&lt;br/&gt;Create Synonym Geografia For Metricview.Geografia;&lt;br/&gt;Create Synonym seq_revision For Metricview.seq_revision;&lt;br/&gt;CREATE synonym Rel_Regional_cod_nacional FOR metricview.Rel_Regional_cod_nacional;</beforeCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>2197248E-57A8-3F61-4929-DB484149CA07</schemaObject>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CN" id="2E9706E0-C595-CF27-4DC7-63AB4EEA46F7">
+<createdBy>osx</createdBy>
+<createdTime>2013-07-01 17:58:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO" id="3D02600C-E773-339B-110A-635DC5826EFF">
+<createdBy>osx</createdBy>
+<createdTime>2013-07-01 17:58:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PLATAFORMA" id="B3864104-251F-5BB9-9C05-8D635CA5D29C">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-05 16:08:33 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ULTIMA_ATUALIZACAO" id="4D75EFB5-CE9F-6B44-0FE1-5A808A8E642A">
+<createdBy>bruno</createdBy>
+<createdTime>2015-05-12 13:58:30 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

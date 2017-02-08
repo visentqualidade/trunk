@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_1" id="073AC139-8D2D-F6A8-B04C-BD2204B761AB" name="VIEW_SMP10_UF">
+<sourceConnName>easyview_73</sourceConnName>
+<sourceObjSchema>EASYVIEW</sourceObjSchema>
+<sourceObjName>VIEW_SMP10_UF</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>88E12F96-9472-B3E7-3847-BFD7C6592E80</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL>WITH ufs AS&lt;br/&gt;  (SELECT nome sigla FROM uf&lt;br/&gt;  ),&lt;br/&gt;  dados_traducao_sem_vinculo AS&lt;br/&gt;  (SELECT data, uf, campo_39, campo_40 FROM view_smp10_smp11_dados&lt;br/&gt;  ),&lt;br/&gt;  dados_smp_uf AS&lt;br/&gt;  (SELECT data,&lt;br/&gt;    uf,&lt;br/&gt;    CASE&lt;br/&gt;      WHEN campo_40 = &apos;0&apos;&lt;br/&gt;      AND campo_39 != &apos;-&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      WHEN campo_40 = &apos;-&apos;&lt;br/&gt;      AND campo_39  = &apos;-&apos;&lt;br/&gt;      THEN &apos;-&apos;&lt;br/&gt;      WHEN campo_40 != &apos;-&apos;&lt;br/&gt;      AND campo_39   = &apos;-&apos;&lt;br/&gt;      THEN &apos;0,00&apos;&lt;br/&gt;      ELSE NVL(trim(TO_CHAR(ROUND((campo_39 * 100 / campo_40), 2), &apos;999990D99&apos;)), &apos;-&apos;)&lt;br/&gt;    END AS smp,&lt;br/&gt;    campo_39,&lt;br/&gt;    campo_40&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT tab.data,&lt;br/&gt;      regionais.uf,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(tab.campo_39, 0))), &apos;-&apos;) AS campo_39,&lt;br/&gt;      NVL(TO_CHAR(SUM(NVL(tab.campo_40, 0))), &apos;-&apos;) AS campo_40&lt;br/&gt;    FROM&lt;br/&gt;      (SELECT DISTINCT Tab.data AS Data,&lt;br/&gt;        uf.nome                 AS uf&lt;br/&gt;      FROM dados_traducao_sem_vinculo Tab&lt;br/&gt;      INNER JOIN uf uf&lt;br/&gt;      ON uf.nome = Tab.uf&lt;br/&gt;      ) regionais,&lt;br/&gt;      dados_traducao_sem_vinculo tab&lt;br/&gt;    WHERE tab.uf = regionais.uf&lt;br/&gt;    AND tab.data = regionais.Data&lt;br/&gt;    GROUP BY tab.data,&lt;br/&gt;      regionais.uf&lt;br/&gt;    )&lt;br/&gt;  ),&lt;br/&gt;  agrupadores_smp_uf AS&lt;br/&gt;  (SELECT *&lt;br/&gt;  FROM&lt;br/&gt;    (SELECT DISTINCT dados_smp_uf.data FROM dados_smp_uf&lt;br/&gt;    ) datas,&lt;br/&gt;    (SELECT DISTINCT ufs.sigla uf FROM ufs&lt;br/&gt;    ) uf&lt;br/&gt;  ),&lt;br/&gt;  agrupadores_por_dados AS&lt;br/&gt;  (SELECT agrupadores.data,&lt;br/&gt;    agrupadores.uf,&lt;br/&gt;    DECODE(dados.smp, NULL, &apos;-&apos;, dados.smp) smp,&lt;br/&gt;    DECODE(dados.campo_39, NULL, &apos;-&apos;, dados.campo_39) campo_39,&lt;br/&gt;    DECODE(dados.campo_40, NULL, &apos;-&apos;, dados.campo_40) campo_40&lt;br/&gt;  FROM dados_smp_uf dados,&lt;br/&gt;    agrupadores_smp_uf agrupadores&lt;br/&gt;  WHERE agrupadores.data = dados.data(+)&lt;br/&gt;  AND agrupadores.uf     = dados.uf(+)&lt;br/&gt;  )&lt;br/&gt;SELECT a.data DATA,&lt;br/&gt;  a.uf,&lt;br/&gt;  CASE&lt;br/&gt;    WHEN a.smp          != &apos;-&apos;&lt;br/&gt;    AND TO_NUMBER(a.smp) &gt; 100&lt;br/&gt;    THEN &apos;100,00&apos;&lt;br/&gt;    ELSE REPLACE(a.smp, &apos;.&apos;, &apos;,&apos;)&lt;br/&gt;  END                                           AS SMP,&lt;br/&gt;  &apos;PMT&apos;                                         AS pmm,&lt;br/&gt;  TO_CHAR(to_date(a.data, &apos;MM/yyyy&apos;), &apos;MON-YY&apos;) AS DT_FORMATADA,&lt;br/&gt;  a.campo_39                                    AS campo_39,&lt;br/&gt;  a.campo_40                                    AS campo_40&lt;br/&gt;FROM agrupadores_por_dados a&lt;br/&gt;ORDER BY 1,&lt;br/&gt;  2,&lt;br/&gt;  3</userDefinedSQL>
+<layoutSQL>&lt;?xml version = &apos;1.0&apos; encoding = &apos;UTF-8&apos;?&gt;&lt;br&gt;&lt;ActiveQueryBuilderLayout&gt;&lt;SQL&gt;With ufs As (Select nome sigla From uf), dados_traducao_sem_vinculo As (Select data, uf, campo_39, campo_40 From view_smp10_smp11_dados), dados_smp_uf As (Select data, uf, Case When campo_40 = &apos;0&apos; And campo_39 != &apos;-&apos; Then &apos;0,00&apos; When campo_40 = &apos;-&apos; And campo_39 = &apos;-&apos; Then &apos;-&apos; When campo_40 != &apos;-&apos; And campo_39 = &apos;-&apos; Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND((campo_39 * 100 / campo_40), 2), &apos;999990D99&apos;)), &apos;-&apos;) End As smp, campo_39, campo_40 From (Select tab.data, regionais.uf, NVL(TO_CHAR(Sum(NVL(tab.campo_39, 0))), &apos;-&apos;) As campo_39, NVL(TO_CHAR(Sum(NVL(tab.campo_40, 0))), &apos;-&apos;) As campo_40 From (Select Distinct Tab.data As Data, uf.nome As uf From dados_traducao_sem_vinculo Tab Inner Join uf uf On uf.nome = Tab.uf) regionais, dados_traducao_sem_vinculo tab Where tab.uf = regionais.uf And tab.data = regionais.Data Group By tab.data, regionais.uf)), agrupadores_smp_uf As (Select * From (Select Distinct dados_smp_uf.data From dados_smp_uf) datas, (Select Distinct ufs.sigla uf From ufs) uf), agrupadores_por_dados As (Select agrupadores.data, agrupadores.uf, DECODE(dados.smp, Null, &apos;-&apos;, dados.smp) smp, DECODE(dados.campo_39, Null, &apos;-&apos;, dados.campo_39) campo_39, DECODE(dados.campo_40, Null, &apos;-&apos;, dados.campo_40) campo_40 From dados_smp_uf dados, agrupadores_smp_uf agrupadores Where agrupadores.data = dados.data(+) And agrupadores.uf = dados.uf(+)) Select a.data DATA, a.uf, Case When a.smp != &apos;-&apos; And TO_NUMBER(a.smp) &gt; 100 Then &apos;100,00&apos; Else REPLACE(a.smp, &apos;.&apos;, &apos;,&apos;) End As SMP, &apos;PMT&apos; As pmm, TO_CHAR(to_date(a.data, &apos;MM/yyyy&apos;), &apos;MON-YY&apos;) As DT_FORMATADA, a.campo_39 As campo_39, a.campo_40 As campo_40 From agrupadores_por_dados a Order By 1, 2, 3&lt;/SQL&gt;&lt;SubQueries&gt;&lt;SubQuery SQL=&quot;With ufs As (Select nome sigla From uf), dados_traducao_sem_vinculo As (Select data, uf, campo_39, campo_40 From view_smp10_smp11_dados), dados_smp_uf As (Select data, uf, Case When campo_40 = &apos;0&apos; And campo_39 != &apos;-&apos; Then &apos;0,00&apos; When campo_40 = &apos;-&apos; And campo_39 = &apos;-&apos; Then &apos;-&apos; When campo_40 != &apos;-&apos; And campo_39 = &apos;-&apos; Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND((campo_39 * 100 / campo_40), 2), &apos;999990D99&apos;)), &apos;-&apos;) End As smp, campo_39, campo_40 From (Select tab.data, regionais.uf, NVL(TO_CHAR(Sum(NVL(tab.campo_39, 0))), &apos;-&apos;) As campo_39, NVL(TO_CHAR(Sum(NVL(tab.campo_40, 0))), &apos;-&apos;) As campo_40 From (Select Distinct Tab.data As Data, uf.nome As uf From dados_traducao_sem_vinculo Tab Inner Join uf uf On uf.nome = Tab.uf) regionais, dados_traducao_sem_vinculo tab Where tab.uf = regionais.uf And tab.data = regionais.Data Group By tab.data, regionais.uf)), agrupadores_smp_uf As (Select * From (Select Distinct dados_smp_uf.data From dados_smp_uf) datas, (Select Distinct ufs.sigla uf From ufs) uf), agrupadores_por_dados As (Select agrupadores.data, agrupadores.uf, DECODE(dados.smp, Null, &apos;-&apos;, dados.smp) smp, DECODE(dados.campo_39, Null, &apos;-&apos;, dados.campo_39) campo_39, DECODE(dados.campo_40, Null, &apos;-&apos;, dados.campo_40) campo_40 From dados_smp_uf dados, agrupadores_smp_uf agrupadores Where agrupadores.data = dados.data(+) And agrupadores.uf = dados.uf(+)) Select a.data DATA, a.uf, Case When a.smp != &apos;-&apos; And TO_NUMBER(a.smp) &gt; 100 Then &apos;100,00&apos; Else REPLACE(a.smp, &apos;.&apos;, &apos;,&apos;) End As SMP, &apos;PMT&apos; As pmm, TO_CHAR(to_date(a.data, &apos;MM/yyyy&apos;), &apos;MON-YY&apos;) As DT_FORMATADA, a.campo_39 As campo_39, a.campo_40 As campo_40 From agrupadores_por_dados a Order By 1, 2, 3&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;agrupadores_por_dados a&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select nome sigla From uf&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;uf&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select data, uf, campo_39, campo_40 From view_smp10_smp11_dados&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;view_smp10_smp11_dados&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select data, uf, Case When campo_40 = &apos;0&apos; And campo_39 != &apos;-&apos; Then &apos;0,00&apos; When campo_40 = &apos;-&apos; And campo_39 = &apos;-&apos; Then &apos;-&apos; When campo_40 != &apos;-&apos; And campo_39 = &apos;-&apos; Then &apos;0,00&apos; Else NVL(trim(TO_CHAR(ROUND((campo_39 * 100 / campo_40), 2), &apos;999990D99&apos;)), &apos;-&apos;) End As smp, campo_39, campo_40 From (Select tab.data, regionais.uf, NVL(TO_CHAR(Sum(NVL(tab.campo_39, 0))), &apos;-&apos;) As campo_39, NVL(TO_CHAR(Sum(NVL(tab.campo_40, 0))), &apos;-&apos;) As campo_40 From (Select Distinct Tab.data As Data, uf.nome As uf From dados_traducao_sem_vinculo Tab Inner Join uf uf On uf.nome = Tab.uf) regionais, dados_traducao_sem_vinculo tab Where tab.uf = regionais.uf And tab.data = regionais.Data Group By tab.data, regionais.uf)&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select tab.data, regionais.uf, NVL(TO_CHAR(Sum(NVL(tab.campo_39, 0))), &apos;-&apos;) As campo_39, NVL(TO_CHAR(Sum(NVL(tab.campo_40, 0))), &apos;-&apos;) As campo_40 From (Select Distinct Tab.data As Data, uf.nome As uf From dados_traducao_sem_vinculo Tab Inner Join uf uf On uf.nome = Tab.uf) regionais, dados_traducao_sem_vinculo tab Where tab.uf = regionais.uf And tab.data = regionais.Data Group By tab.data, regionais.uf)&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select tab.data, regionais.uf, NVL(TO_CHAR(Sum(NVL(tab.campo_39, 0))), &apos;-&apos;) As campo_39, NVL(TO_CHAR(Sum(NVL(tab.campo_40, 0))), &apos;-&apos;) As campo_40 From (Select Distinct Tab.data As Data, uf.nome As uf From dados_traducao_sem_vinculo Tab Inner Join uf uf On uf.nome = Tab.uf) regionais, dados_traducao_sem_vinculo tab Where tab.uf = regionais.uf And tab.data = regionais.Data Group By tab.data, regionais.uf&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select Distinct Tab.data As Data, uf.nome As uf From dados_traducao_sem_vinculo Tab Inner Join uf uf On uf.nome = Tab.uf) regionais&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;88&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;dados_traducao_sem_vinculo tab&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct Tab.data As Data, uf.nome As uf From dados_traducao_sem_vinculo Tab Inner Join uf uf On uf.nome = Tab.uf&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_traducao_sem_vinculo Tab&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;124&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;uf uf&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;52&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select * From (Select Distinct dados_smp_uf.data From dados_smp_uf) datas, (Select Distinct ufs.sigla uf From ufs) uf&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;(Select Distinct dados_smp_uf.data From dados_smp_uf) datas&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;(Select Distinct ufs.sigla uf From ufs) uf&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct dados_smp_uf.data From dados_smp_uf&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_smp_uf&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;142&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select Distinct ufs.sigla uf From ufs&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;ufs&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;70&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;SubQuery SQL=&quot;Select agrupadores.data, agrupadores.uf, DECODE(dados.smp, Null, &apos;-&apos;, dados.smp) smp, DECODE(dados.campo_39, Null, &apos;-&apos;, dados.campo_39) campo_39, DECODE(dados.campo_40, Null, &apos;-&apos;, dados.campo_40) campo_40 From dados_smp_uf dados, agrupadores_smp_uf agrupadores Where agrupadores.data = dados.data(+) And agrupadores.uf = dados.uf(+)&quot;&gt;&lt;UnionSubQuery&gt;&lt;DataSource SQL=&quot;dados_smp_uf dados&quot; X=&quot;50&quot; Y=&quot;20&quot; Height=&quot;142&quot; Width=&quot;140&quot;/&gt;&lt;DataSource SQL=&quot;agrupadores_smp_uf agrupadores&quot; X=&quot;240&quot; Y=&quot;20&quot; Height=&quot;88&quot; Width=&quot;140&quot;/&gt;&lt;/UnionSubQuery&gt;&lt;/SubQuery&gt;&lt;/SubQueries&gt;&lt;/ActiveQueryBuilderLayout&gt;</layoutSQL>
+<parsed>true</parsed>
+<schemaObject>4557F491-498C-47A4-4FCC-3C34A06925BD</schemaObject>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DATA" id="BE4A5E07-EF83-D9E4-F877-4AF5852180D1">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DATA</alias>
+<dataType>VARCHAR2 (7)</dataType>
+<headerAlias>DATA</headerAlias>
+<expression>a.data</expression>
+<reference>false</reference>
+<viewID>073AC139-8D2D-F6A8-B04C-BD2204B761AB</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="UF" id="7BD5D0C9-A411-8857-BDAE-F74E77588214">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<dataType>VARCHAR2 (2)</dataType>
+<headerAlias>UF</headerAlias>
+<expression>a.uf</expression>
+<reference>false</reference>
+<viewID>073AC139-8D2D-F6A8-B04C-BD2204B761AB</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SMP" id="1FA4833E-F5D7-F018-652E-DC5A8AAE95C7">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>SMP</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>SMP</headerAlias>
+<expression>Case When a.smp != &apos;-&apos; And TO_NUMBER(a.smp) &gt; 100 Then &apos;100,00&apos; Else REPLACE(a.smp, &apos;.&apos;, &apos;,&apos;) End</expression>
+<reference>false</reference>
+<viewID>073AC139-8D2D-F6A8-B04C-BD2204B761AB</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="pmm" id="BA3902C4-5E39-E0AD-5B03-94DA4F0F782B">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>pmm</alias>
+<dataType>CHAR (3)</dataType>
+<headerAlias>PMM</headerAlias>
+<expression>&apos;PMT&apos;</expression>
+<reference>false</reference>
+<viewID>073AC139-8D2D-F6A8-B04C-BD2204B761AB</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DT_FORMATADA" id="B6FE9C9C-42C8-E31A-961C-9D99B3C7090E">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>DT_FORMATADA</alias>
+<dataType>VARCHAR2 (6)</dataType>
+<headerAlias>DT_FORMATADA</headerAlias>
+<expression>TO_CHAR(to_date(a.data, &apos;MM/yyyy&apos;), &apos;MON-YY&apos;)</expression>
+<reference>false</reference>
+<viewID>073AC139-8D2D-F6A8-B04C-BD2204B761AB</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="campo_39" id="47502977-63C1-20EA-0DCE-825805C5FCAE">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>campo_39</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CAMPO_39</headerAlias>
+<expression>a.campo_39</expression>
+<reference>false</reference>
+<viewID>073AC139-8D2D-F6A8-B04C-BD2204B761AB</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="campo_40" id="B5FB6330-B88B-D195-581D-611C12C68A87">
+<createdBy>osx</createdBy>
+<createdTime>2015-01-07 13:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<alias>campo_40</alias>
+<dataType>VARCHAR2 (40)</dataType>
+<headerAlias>CAMPO_40</headerAlias>
+<expression>a.campo_40</expression>
+<reference>false</reference>
+<viewID>073AC139-8D2D-F6A8-B04C-BD2204B761AB</viewID>
+</viewElement>
+</viewElements>
+</TableView>

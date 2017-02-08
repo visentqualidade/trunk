@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3786C923-40C9-8CF2-EA53-DBC186EF8499" name="BILHETADOR_GPRS_BILHETADOR_FK">
+<createdBy>OSX</createdBy>
+<createdTime>2014-10-29 20:36:21 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<containerWithKeyObject>411946AA-9FD8-D169-5833-9155985B5DDB</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>07BDED92-8372-9FA8-7C01-F647D931BB10</localFKIndex>
+<keyObject>D94D2D1A-9762-F8CC-B4A1-5B5443601A28</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,3 @@
+mensagem;tipo(INFO, ERROR);usuario(nome);data_hora;projeto/solucao
+Nao foi possivel gravar log;ERROR;Sistema;2014-06-18 14:19:51:602;GravarLogQuartz
+Nao foi possivel gravar log;ERROR;Sistema;2014-06-18 14:19:51:633;GravarLogQuartz

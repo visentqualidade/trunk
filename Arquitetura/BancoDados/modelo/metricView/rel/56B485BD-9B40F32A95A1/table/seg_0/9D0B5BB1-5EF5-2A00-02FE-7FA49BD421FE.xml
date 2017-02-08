@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9D0B5BB1-5EF5-2A00-02FE-7FA49BD421FE" name="TIPO_ASSINANTE">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;37&apos;,&apos;OU&apos;,&apos;OU&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;36&apos;,&apos;Controle Roaming&apos;,&apos;Controle Roaming&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;26&apos;,&apos;POS-PAGO&apos;,&apos;Pós_Pago&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;32&apos;,&apos;Claro Fixo&apos;,&apos;Claro Fixo&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;30&apos;,&apos;VPN&apos;,&apos;VPN&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;28&apos;,&apos;Roaming Int&apos;,&apos;Roaming Int&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;33&apos;,&apos;Associado Claro&apos;,&apos;Associado Claro&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;25&apos;,&apos;Pré-Pago Claro Roaming&apos;,&apos;Pré-Pago Claro Roaming&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;24&apos;,&apos;PRE-PAGO&apos;,&apos;Pré-Pago&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;29&apos;,&apos;Roaming Nac&apos;,&apos;Roaming Nac&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;34&apos;,&apos;Cliente Corporativo&apos;,&apos;Cliente Corporativo&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;31&apos;,&apos;VPN Roaming&apos;,&apos;VPN Roaming&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;35&apos;,&apos;Controle&apos;,&apos;Controle&apos;);&lt;br/&gt;Insert into INTERCONEXAO.TIPO_ASSINANTE (ID_TIPO_ASSINANTE,NOME_FILTRO,NOME_TELA) values (&apos;27&apos;,&apos;Pós-Pago Claro Roaming&apos;,&apos;Pós-Pago Claro Roaming&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_ASSINANTE" id="CEB57931-EB6E-FFAE-D830-719860D06599">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_FILTRO" id="CEC56F3B-710B-87A0-A43A-D76270E172D3">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_TELA" id="68E1DFBB-FDBC-BA91-FB28-2600D32C321A">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 17:37:35 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C777AB4F-FD86-946B-7ABD-C2A1C0D99DB9" name="TIPO_ASSINANTE_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-11-26 16:56:43 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CEB57931-EB6E-FFAE-D830-719860D06599"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

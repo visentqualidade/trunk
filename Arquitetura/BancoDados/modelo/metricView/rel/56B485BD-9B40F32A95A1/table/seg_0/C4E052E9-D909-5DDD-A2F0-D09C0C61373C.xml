@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C4E052E9-D909-5DDD-A2F0-D09C0C61373C" name="TB_REVISAO">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>METRICVIEW</sourceObjSchema>
+<sourceObjName>TB_REVISAO</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-03-27 12:34:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>create sequence seq_revision increment by 1 start with 0 maxvalue 999 minvalue -1 nocycle;</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="B633DF23-6F8B-23C2-7EAF-6AD2A8A9CA7B">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>TB_REVISAO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-03-27 12:36:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeSize>22</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIMESTAMP" id="6937208A-4FB7-F24B-4B87-6E00BB7BC92A">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>TB_REVISAO</sourceObjSchema>
+<sourceObjName>TIMESTAMP</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-03-27 12:36:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeSize>22</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO" id="27B23E1E-F094-6E25-1180-A1734F34EC01">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-27 12:36:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A406D290-4411-7A84-569E-37EE8E7CA57C" name="TB_REVISAO_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-03-27 12:36:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="B633DF23-6F8B-23C2-7EAF-6AD2A8A9CA7B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="201C5028-E009-DB16-FF59-60C0EC88161E" name="TB_REVISAO_PK">
+<sourceConnName>Metric View</sourceConnName>
+<sourceObjSchema>METRICVIEW</sourceObjSchema>
+<sourceObjName>TB_REVISAO_PK</sourceObjName>
+<createdBy>osx</createdBy>
+<createdTime>2013-10-17 21:59:59 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<importedID>2466C703-90F1-97E6-86CD-FD899E7F8649</importedID>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>8A0524AA-B137-B713-9D19-B9361DED2DC1</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B633DF23-6F8B-23C2-7EAF-6AD2A8A9CA7B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

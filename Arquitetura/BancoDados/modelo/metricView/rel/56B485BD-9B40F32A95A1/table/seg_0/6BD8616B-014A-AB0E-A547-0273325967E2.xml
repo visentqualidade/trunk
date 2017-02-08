@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6BD8616B-014A-AB0E-A547-0273325967E2" name="SERV_PUB_EMERGENCIA">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 18:03:02 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<afterCreate>Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;1&apos;,&apos;100&apos;,&apos;100&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;2&apos;,&apos;128&apos;,&apos;128&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;3&apos;,&apos;180&apos;,&apos;180&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;4&apos;,&apos;181&apos;,&apos;181&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;5&apos;,&apos;185&apos;,&apos;185&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;6&apos;,&apos;190&apos;,&apos;190&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;7&apos;,&apos;191&apos;,&apos;191&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;8&apos;,&apos;192&apos;,&apos;192&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;9&apos;,&apos;193&apos;,&apos;193&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;10&apos;,&apos;194&apos;,&apos;194&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;11&apos;,&apos;197&apos;,&apos;197&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;12&apos;,&apos;198&apos;,&apos;198&apos;);&lt;br/&gt;Insert into INTERCONEXAO.SERV_PUB_EMERGENCIA (ID,NOME_FILTRO,NOME_TELA) values (&apos;13&apos;,&apos;199&apos;,&apos;199&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<schemaObject>F427D9E8-B01B-15B5-88EE-B65BB9E9E34B</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="CB4EDC96-D76D-68E8-71B2-7B91712E04F9">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 18:03:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_FILTRO" id="02799A53-5C97-6411-B446-1089553EDFC5">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 18:03:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME_TELA" id="CFFACCD8-96FD-CA18-11DD-9BB41FC6FEAB">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-17 17:36:13 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="61E0BB28-C1CB-6497-F1F2-801A48090BC9" name="SERV_PUB_EMERGENCIA_PK">
+<createdBy>osx</createdBy>
+<createdTime>2013-12-10 18:03:46 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>metricView</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB4EDC96-D76D-68E8-71B2-7B91712E04F9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
